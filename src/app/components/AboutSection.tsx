@@ -1,8 +1,8 @@
-import { CheckCircle, Target, Eye, Heart, Users } from 'lucide-react';
+import { CheckCircle, Target, Eye, Heart, Users, Award, Clock, Handshake, Globe, TrendingUp, Shield } from 'lucide-react';
 
 const definingTraits = [
   {
-    icon: CheckCircle,
+    icon: Eye,
     title: "Effortlessly Comprehend",
     description: "We quickly understand the complexities of your deal or matter"
   },
@@ -12,7 +12,7 @@ const definingTraits = [
     description: "Strategic structuring from both legal and commercial perspectives"
   },
   {
-    icon: Users,
+    icon: Handshake,
     title: "Confident Negotiations",
     description: "Mix of negotiation styles - Integrative, Distributive, or Adversarial"
   },
@@ -22,12 +22,12 @@ const definingTraits = [
     description: "Track record of completing complex deals successfully"
   },
   {
-    icon: Target,
+    icon: TrendingUp,
     title: "Leadership",
     description: "Flexible thinking amid constantly shifting situations and risks"
   },
   {
-    icon: Heart,
+    icon: Clock,
     title: "Always Accessible",
     description: "Available for advice and consultations when you need us most"
   }
@@ -41,24 +41,45 @@ const coreValues = [
   { name: "Unity", description: "Collaborative approach to achieving client goals" }
 ];
 
+const stats = [
+  { number: "33+", label: "Years Combined Experience", icon: Award },
+  { number: "500+", label: "Successful Deals Closed", icon: CheckCircle },
+  { number: "200+", label: "Satisfied Clients", icon: Users },
+  { number: "15+", label: "Practice Areas", icon: Globe }
+];
+
 export default function AboutSection() {
   return (
-    <section id="about" className="py-20 bg-white">
+    <section id="about" className="pt-32 pb-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 lg:px-8">
-        {/* Introduction */}
+        {/* Page Title */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center px-4 py-2 bg-blue-50 border border-blue-200 rounded-full mb-6">
-            <span className="text-sm font-medium text-blue-700">About HRA Legal</span>
-          </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-            Professional Law Firm with Specialized Expertise
-          </h2>
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            About HRA Legal
+          </h1>
           <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
             HRA Legal is a professional law firm with specialized expertise across various legal disciplines, 
             including Civil and Business Law, Intellectual Property Laws (with a niche focus on Media & Entertainment, 
             Technology, and Sports), Corporate and Commercial Law, Company Secretarial and Corporate Governance, 
             Employment and Labor Laws, Environment Law, Property Law, Taxation Law and other specialized areas of law.
           </p>
+        </div>
+
+        {/* Statistics */}
+        <div className="mb-20">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center p-6 bg-gradient-to-b from-blue-50 to-white rounded-2xl border border-blue-100">
+                <div className="flex justify-center mb-4">
+                  <div className="p-3 bg-blue-700 rounded-xl">
+                    <stat.icon className="w-8 h-8 text-white" />
+                  </div>
+                </div>
+                <div className="text-3xl md:text-4xl font-bold text-blue-700 mb-2">{stat.number}</div>
+                <div className="text-sm font-medium text-gray-600">{stat.label}</div>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Why Choose Us */}
@@ -150,6 +171,48 @@ export default function AboutSection() {
           </div>
         </div>
 
+        {/* Our Approach */}
+        <div className="mb-20">
+          <div className="text-center mb-12">
+            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Our Approach</h3>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              We believe in a collaborative, client-focused approach that delivers exceptional results
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="text-center p-6">
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Shield className="w-8 h-8 text-blue-700" />
+              </div>
+              <h4 className="text-xl font-semibold text-gray-900 mb-3">Client-Centric</h4>
+              <p className="text-gray-600">
+                Every decision we make is guided by our clients' best interests and long-term success
+              </p>
+            </div>
+            
+            <div className="text-center p-6">
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <TrendingUp className="w-8 h-8 text-green-700" />
+              </div>
+              <h4 className="text-xl font-semibold text-gray-900 mb-3">Results-Driven</h4>
+              <p className="text-gray-600">
+                We focus on achieving measurable outcomes and creating value for our clients
+              </p>
+            </div>
+            
+            <div className="text-center p-6">
+              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Users className="w-8 h-8 text-purple-700" />
+              </div>
+              <h4 className="text-xl font-semibold text-gray-900 mb-3">Collaborative</h4>
+              <p className="text-gray-600">
+                We work as an extension of your team, fostering open communication and partnership
+              </p>
+            </div>
+          </div>
+        </div>
+
         {/* Services Overview */}
         <div className="text-center p-8 bg-gradient-to-r from-blue-700 to-blue-800 rounded-2xl text-white">
           <h3 className="text-2xl md:text-3xl font-bold mb-4">
@@ -162,13 +225,13 @@ export default function AboutSection() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
-              href="#practice-areas" 
+              href="/practice-areas" 
               className="inline-flex items-center px-8 py-3 bg-white text-blue-700 font-semibold rounded-lg hover:bg-gray-100 transition-colors"
             >
               View Practice Areas
             </a>
             <a 
-              href="#contact" 
+              href="/contact" 
               className="inline-flex items-center px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-700 transition-colors"
             >
               Schedule Consultation

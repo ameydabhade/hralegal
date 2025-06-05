@@ -25,19 +25,12 @@ export default function Header() {
             >
               Home
             </Link>
-            <div className="relative group">
-              <button className="text-gray-700 hover:text-blue-700 transition-colors text-sm font-medium flex items-center gap-1">
-                About Us
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-              <div className="absolute top-full left-0 mt-1 w-48 bg-white border border-gray-200 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                <Link href="/about" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Why Choose Us</Link>
-                <Link href="/about" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Vision & Mission</Link>
-                <Link href="/about" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Values & Culture</Link>
-              </div>
-            </div>
+            <Link 
+              href="/about" 
+              className="text-gray-700 hover:text-blue-700 transition-colors text-sm font-medium"
+            >
+              About Us
+            </Link>
             <Link 
               href="/founders" 
               className="text-gray-700 hover:text-blue-700 transition-colors text-sm font-medium"
