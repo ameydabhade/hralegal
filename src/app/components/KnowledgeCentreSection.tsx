@@ -86,16 +86,16 @@ export default function KnowledgeCentreSection() {
   const activeContent = tabs.find(tab => tab.id === activeTab)?.content || [];
 
   return (
-    <section id="knowledge-centre" className="py-20 bg-gradient-to-b from-gray-50 to-white">
+    <section id="knowledge-centre" className="pt-32 pb-20 bg-gradient-to-b from-gray-50 to-white">
       <div className="max-w-7xl mx-auto px-4 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-4 py-2 bg-blue-50 border border-blue-200 rounded-full mb-6">
             <span className="text-sm font-medium text-blue-700">Knowledge Centre</span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Legal Insights & Updates
-          </h2>
+          </h1>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Stay informed with the latest legal developments, expert insights, and industry analysis 
             from our experienced legal professionals.

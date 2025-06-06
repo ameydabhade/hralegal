@@ -1,9 +1,21 @@
 import Link from 'next/link';
-import { Scale, Shield, Users, Award } from 'lucide-react';
+import { Scale, Shield, Users, Award, Sparkles } from 'lucide-react';
+import { 
+  AnimatedButton, 
+  AnimatedCard, 
+  ParticleBackground, 
+  AnimatedCounter, 
+  TypewriterText,
+  InteractiveIcon,
+  FloatingLegalElements,
+  PulsingOrb,
+  AnimatedLegalProcess
+} from './ui';
 
 export default function HeroSection() {
   return (
     <section className="min-h-screen bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
+      <ParticleBackground />
       <div className="max-w-7xl mx-auto px-4 lg:px-8 pt-32 pb-16">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Hero Content */}
@@ -12,7 +24,11 @@ export default function HeroSection() {
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
                 <span className="bg-gradient-to-r from-blue-700 via-blue-600 to-blue-800 bg-clip-text text-transparent">
                   Professional Legal<br />
-                  Excellence & Trust
+                  <TypewriterText 
+                    texts={["Excellence", "Solutions", "Results"]}
+                    className="bg-gradient-to-r from-blue-700 via-blue-600 to-blue-800 bg-clip-text text-transparent"
+                    speed={150}
+                  />
                 </span>
               </h1>
               
@@ -23,24 +39,63 @@ export default function HeroSection() {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Link 
-                href="#contact"
-                className="inline-flex items-center px-8 py-4 bg-blue-700 text-white font-semibold rounded-lg hover:bg-blue-800 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+              <AnimatedButton 
+                href="/contact"
+                variant="primary"
+                className="px-8 py-4 text-lg font-semibold shadow-lg shadow-blue-600/25"
               >
                 Get Legal Consultation
-              </Link>
-              <Link 
-                href="#about"
-                className="inline-flex items-center px-8 py-4 border-2 border-blue-700 text-blue-700 font-semibold rounded-lg hover:bg-blue-700 hover:text-white transition-all duration-300"
+              </AnimatedButton>
+              <AnimatedButton 
+                href="/about"
+                variant="secondary"
+                className="px-8 py-4 text-lg font-semibold"
               >
                 Learn About Us
-              </Link>
+              </AnimatedButton>
+            </div>
+            
+            {/* Trust Indicators */}
+            <div className="flex flex-wrap items-center gap-6 justify-center lg:justify-start mt-8">
+              <div className="flex items-center gap-2 text-gray-600">
+                <div className="flex -space-x-2">
+                  <div className="w-8 h-8 bg-blue-500 rounded-full border-2 border-white flex items-center justify-center">
+                    <span className="text-xs font-bold text-white">15+</span>
+                  </div>
+                  <div className="w-8 h-8 bg-green-500 rounded-full border-2 border-white flex items-center justify-center">
+                    <span className="text-xs font-bold text-white">✓</span>
+                  </div>
+                  <div className="w-8 h-8 bg-purple-500 rounded-full border-2 border-white flex items-center justify-center">
+                    <span className="text-xs font-bold text-white">⚡</span>
+                  </div>
+                </div>
+                <span className="text-sm font-medium">15+ Years of Excellence</span>
+              </div>
+              
+              <div className="flex items-center gap-2 text-gray-600">
+                <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                <span className="text-sm font-medium">Free Initial Consultation</span>
+              </div>
+              
+              <div className="flex items-center gap-2 text-gray-600">
+                <svg className="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                </svg>
+                <span className="text-sm font-medium">100% Confidential</span>
+              </div>
             </div>
           </div>
 
           {/* Hero Visual - Legal Theme */}
           <div className="relative">
+            <FloatingLegalElements count={10} className="z-0" />
             <div className="relative z-10 max-w-lg mx-auto lg:max-w-none">
+              
+              {/* Interactive Pulsing Orb */}
+              <div className="absolute -top-8 -right-8 z-0">
+                <PulsingOrb size={100} color="blue" className="opacity-60" />
+              </div>
+              
               {/* Main Legal Document/Scale Illustration */}
               <div className="relative">
                 {/* Background circles */}
@@ -51,12 +106,14 @@ export default function HeroSection() {
                 </div>
                 
                 {/* Central legal document mockup */}
-                <div className="relative bg-white rounded-2xl shadow-2xl p-8 transform rotate-2 hover:rotate-0 transition-transform duration-500">
+                <AnimatedCard variant="tilt" className="transform rotate-2 hover:rotate-0">
                   <div className="space-y-6">
                     {/* Document header */}
                     <div className="border-b border-gray-200 pb-4">
                       <div className="flex items-center gap-3 mb-3">
-                        <Scale className="w-8 h-8 text-blue-700" />
+                        <InteractiveIcon magneticStrength={0.5}>
+                          <Scale className="w-8 h-8 text-blue-700" />
+                        </InteractiveIcon>
                         <div>
                           <h3 className="text-lg font-bold text-gray-900">Legal Agreement</h3>
                           <p className="text-sm text-gray-500">Professional Documentation</p>
@@ -88,34 +145,40 @@ export default function HeroSection() {
                       </div>
                     </div>
                   </div>
-                </div>
+                </AnimatedCard>
                 
-                {/* Floating service cards */}
+                {/* Floating service cards with Interactive Icons */}
                 <div className="absolute -left-12 top-24 hidden lg:block">
-                  <div className="bg-white p-4 rounded-xl shadow-lg transform -rotate-12 hover:rotate-0 transition-transform duration-300 border-l-4 border-blue-700">
+                  <AnimatedCard variant="glow" className="p-4 transform -rotate-12 hover:rotate-0 border-l-4 border-blue-700">
                     <div className="flex items-center gap-2">
-                      <Shield className="w-5 h-5 text-blue-700" />
+                      <InteractiveIcon>
+                        <Shield className="w-5 h-5 text-blue-700" />
+                      </InteractiveIcon>
                       <span className="text-sm font-semibold text-gray-900">IP Protection</span>
                     </div>
-                  </div>
+                  </AnimatedCard>
                 </div>
                 
                 <div className="absolute -right-16 bottom-32 hidden lg:block">
-                  <div className="bg-white p-4 rounded-xl shadow-lg transform rotate-12 hover:rotate-0 transition-transform duration-300 border-l-4 border-blue-700">
+                  <AnimatedCard variant="glow" className="p-4 transform rotate-12 hover:rotate-0 border-l-4 border-blue-700">
                     <div className="flex items-center gap-2">
-                      <Users className="w-5 h-5 text-blue-700" />
+                      <InteractiveIcon>
+                        <Users className="w-5 h-5 text-blue-700" />
+                      </InteractiveIcon>
                       <span className="text-sm font-semibold text-gray-900">Corporate Law</span>
                     </div>
-                  </div>
+                  </AnimatedCard>
                 </div>
                 
                 <div className="absolute -left-8 bottom-12 hidden lg:block">
-                  <div className="bg-white p-4 rounded-xl shadow-lg transform -rotate-6 hover:rotate-0 transition-transform duration-300 border-l-4 border-blue-700">
+                  <AnimatedCard variant="glow" className="p-4 transform -rotate-6 hover:rotate-0 border-l-4 border-blue-700">
                     <div className="flex items-center gap-2">
-                      <Award className="w-5 h-5 text-blue-700" />
+                      <InteractiveIcon>
+                        <Award className="w-5 h-5 text-blue-700" />
+                      </InteractiveIcon>
                       <span className="text-sm font-semibold text-gray-900">15+ Years</span>
                     </div>
-                  </div>
+                  </AnimatedCard>
                 </div>
               </div>
             </div>
@@ -125,15 +188,30 @@ export default function HeroSection() {
         {/* Key Stats */}
         <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           <div className="space-y-2">
-            <div className="text-3xl font-bold text-blue-700">15+</div>
+            <AnimatedCounter 
+              end={15} 
+              suffix="+"
+              className="text-3xl font-bold text-blue-700"
+              variant="glow"
+            />
             <div className="text-sm font-medium text-gray-600">Years Experience</div>
           </div>
           <div className="space-y-2">
-            <div className="text-3xl font-bold text-blue-700">500+</div>
+            <AnimatedCounter 
+              end={500} 
+              suffix="+"
+              className="text-3xl font-bold text-blue-700"
+              variant="glow"
+            />
             <div className="text-sm font-medium text-gray-600">Cases Handled</div>
           </div>
           <div className="space-y-2">
-            <div className="text-3xl font-bold text-blue-700">95%</div>
+            <AnimatedCounter 
+              end={95} 
+              suffix="%"
+              className="text-3xl font-bold text-blue-700"
+              variant="glow"
+            />
             <div className="text-sm font-medium text-gray-600">Success Rate</div>
           </div>
           <div className="space-y-2">
@@ -141,18 +219,67 @@ export default function HeroSection() {
             <div className="text-sm font-medium text-gray-600">Legal Support</div>
           </div>
         </div>
+        
+        {/* Interactive Legal Process */}
+        <div className="mt-24">
+          <AnimatedLegalProcess autoPlay={true} />
+        </div>
       </div>
       
       {/* Trusted By Section */}
       <div className="bg-white py-16 border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 lg:px-8 text-center">
           <p className="text-gray-500 mb-8 font-medium">Trusted by Leading Organizations</p>
-          <div className="flex flex-wrap justify-center items-center gap-8 opacity-70">
-            <div className="h-12 w-40 bg-gray-200 rounded flex items-center justify-center text-sm font-medium text-gray-600">Sony Pictures</div>
-            <div className="h-12 w-36 bg-gray-200 rounded flex items-center justify-center text-sm font-medium text-gray-600">Reliance</div>
-            <div className="h-12 w-32 bg-gray-200 rounded flex items-center justify-center text-sm font-medium text-gray-600">Shemaroo</div>
-            <div className="h-12 w-38 bg-gray-200 rounded flex items-center justify-center text-sm font-medium text-gray-600">Goldmines</div>
-            <div className="h-12 w-34 bg-gray-200 rounded flex items-center justify-center text-sm font-medium text-gray-600">Maddock</div>
+          <div className="flex flex-wrap justify-center items-center gap-8">
+            {/* Sony Pictures Entertainment */}
+            <div className="group cursor-pointer transition-all duration-300 hover:scale-105">
+              <div className="h-16 w-44 bg-gradient-to-r from-black to-gray-800 rounded-lg flex items-center justify-center shadow-md group-hover:shadow-lg">
+                <div className="text-center">
+                  <div className="text-white font-bold text-lg tracking-wide">SONY</div>
+                  <div className="text-gray-300 text-xs font-medium tracking-wider">PICTURES</div>
+                </div>
+              </div>
+            </div>
+            
+            {/* Reliance Entertainment */}
+            <div className="group cursor-pointer transition-all duration-300 hover:scale-105">
+              <div className="h-16 w-40 bg-gradient-to-r from-blue-600 to-blue-800 rounded-lg flex items-center justify-center shadow-md group-hover:shadow-lg">
+                <div className="text-white font-bold text-xl tracking-wide">
+                  Reliance
+                </div>
+              </div>
+            </div>
+            
+            {/* Shemaroo Entertainment */}
+            <div className="group cursor-pointer transition-all duration-300 hover:scale-105">
+              <div className="h-16 w-36 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg flex items-center justify-center shadow-md group-hover:shadow-lg">
+                <div className="text-center">
+                  <div className="text-white font-bold text-lg">Shemaroo</div>
+                  <div className="text-orange-100 text-xs font-medium">ENTERTAINMENT</div>
+                </div>
+              </div>
+            </div>
+            
+            {/* Goldmines Telefilms */}
+            <div className="group cursor-pointer transition-all duration-300 hover:scale-105">
+              <div className="h-16 w-40 bg-gradient-to-r from-yellow-500 to-yellow-600 rounded-lg flex items-center justify-center shadow-md group-hover:shadow-lg relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-amber-500 opacity-90"></div>
+                <div className="relative text-center">
+                  <div className="text-white font-bold text-lg tracking-wide drop-shadow-sm">GOLDMINES</div>
+                  <div className="text-yellow-100 text-xs font-medium">TELEFILMS</div>
+                </div>
+              </div>
+            </div>
+            
+            {/* Maddock Films */}
+            <div className="group cursor-pointer transition-all duration-300 hover:scale-105">
+              <div className="h-16 w-36 bg-gradient-to-r from-purple-700 to-indigo-800 rounded-lg flex items-center justify-center shadow-md group-hover:shadow-lg">
+                <div className="text-center">
+                  <div className="text-white font-bold text-lg">MADDOCK</div>
+                  <div className="text-purple-200 text-xs font-medium tracking-wider">FILMS</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

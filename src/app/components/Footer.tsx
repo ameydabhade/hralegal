@@ -1,10 +1,26 @@
 import Link from 'next/link';
 import { Mail, Phone, MapPin } from 'lucide-react';
+import { 
+  FloatingElements, 
+  InteractiveIcon, 
+  FloatingLegalElements,
+  PulsingOrb 
+} from './ui';
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white">
-      <div className="max-w-6xl mx-auto px-4 lg:px-20 py-16">
+    <footer className="bg-gray-900 text-white relative overflow-hidden">
+      <FloatingLegalElements count={8} className="z-0 opacity-20" />
+      
+      {/* Ambient Orbs */}
+      <div className="absolute top-10 right-10 z-0">
+        <PulsingOrb size={70} color="blue" className="opacity-15" />
+      </div>
+      <div className="absolute bottom-20 left-20 z-0">
+        <PulsingOrb size={50} color="purple" className="opacity-20" />
+      </div>
+      
+      <div className="max-w-6xl mx-auto px-4 lg:px-20 py-16 relative z-10">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
@@ -17,15 +33,21 @@ export default function Footer() {
             </p>
             <div className="space-y-2">
               <div className="flex items-center gap-2 text-gray-300">
-                <MapPin className="w-4 h-4 text-blue-400" />
+                <InteractiveIcon magneticStrength={0.3}>
+                  <MapPin className="w-4 h-4 text-blue-400" />
+                </InteractiveIcon>
                 <span className="text-sm">Mumbai, Maharashtra, India</span>
               </div>
               <div className="flex items-center gap-2 text-gray-300">
-                <Phone className="w-4 h-4 text-blue-400" />
+                <InteractiveIcon magneticStrength={0.3}>
+                  <Phone className="w-4 h-4 text-blue-400" />
+                </InteractiveIcon>
                 <span className="text-sm">+91 XXXX-XXXX-XX</span>
               </div>
               <div className="flex items-center gap-2 text-gray-300">
-                <Mail className="w-4 h-4 text-blue-400" />
+                <InteractiveIcon magneticStrength={0.3}>
+                  <Mail className="w-4 h-4 text-blue-400" />
+                </InteractiveIcon>
                 <span className="text-sm">contact@hralegal.com</span>
               </div>
             </div>

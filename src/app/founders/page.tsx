@@ -6,7 +6,7 @@ export default function FoundersPage() {
   return (
     <main className="min-h-screen">
       <Header />
-      <FoundersSection />
+      <FoundersSection standalone={true} />
       <Footer />
     </main>
   );

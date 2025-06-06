@@ -1,5 +1,14 @@
 import { Building, Copyright, Users, FileText, Briefcase, Shield } from 'lucide-react';
 import Link from 'next/link';
+import { 
+  AnimatedCard, 
+  AnimatedButton, 
+  FloatingElements, 
+  TypewriterText,
+  InteractiveIcon,
+  FloatingLegalElements,
+  PulsingOrb
+} from './ui';
 
 const practiceAreas = [
   {
@@ -42,15 +51,29 @@ const practiceAreas = [
 
 export default function HomePracticeAreasSection() {
   return (
-    <section className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 lg:px-8">
+    <section className="py-20 bg-white relative overflow-hidden">
+      <FloatingLegalElements count={12} className="z-0 opacity-30" />
+      
+      {/* Interactive Pulsing Orbs */}
+      <div className="absolute top-10 left-10 z-0">
+        <PulsingOrb size={80} color="blue" className="opacity-20" />
+      </div>
+      <div className="absolute bottom-20 right-20 z-0">
+        <PulsingOrb size={100} color="purple" className="opacity-25" />
+      </div>
+      
+      <div className="max-w-7xl mx-auto px-4 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-4 py-2 bg-gray-100 border border-gray-200 rounded-full mb-6">
             <span className="text-sm font-medium text-gray-700">Our Expertise</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Practice Areas
+            <TypewriterText 
+              texts={["Practice Areas", "Legal Expertise", "Our Specializations"]}
+              className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 bg-clip-text text-transparent"
+              speed={100}
+            />
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             We provide comprehensive legal services across multiple practice areas, 
@@ -61,12 +84,18 @@ export default function HomePracticeAreasSection() {
         {/* Practice Areas Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {practiceAreas.map((area, index) => (
-            <div key={index} className="bg-gray-50 rounded-3xl p-8 hover:bg-white hover:shadow-lg transition-all duration-300 border border-gray-100">
+            <AnimatedCard 
+              key={index} 
+              variant={index % 2 === 0 ? 'tilt' : 'glow'} 
+              className="bg-gray-50 hover:bg-white border border-gray-100"
+            >
               <div className="space-y-6">
-                {/* Icon */}
-                <div className="inline-flex items-center justify-center w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl">
-                  <area.icon className="w-7 h-7 text-white" strokeWidth={1.5} />
-                </div>
+                {/* Interactive Icon */}
+                <InteractiveIcon magneticStrength={0.4} className="inline-block">
+                  <div className="inline-flex items-center justify-center w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl shadow-lg">
+                    <area.icon className="w-7 h-7 text-white" strokeWidth={1.5} />
+                  </div>
+                </InteractiveIcon>
                 
                 {/* Content */}
                 <div>
@@ -88,7 +117,7 @@ export default function HomePracticeAreasSection() {
                   </div>
                 </div>
               </div>
-            </div>
+            </AnimatedCard>
           ))}
         </div>
 
@@ -104,38 +133,38 @@ export default function HomePracticeAreasSection() {
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-            <div className="text-center p-6 bg-white rounded-2xl border border-blue-100">
+            <AnimatedCard variant="tilt" className="text-center p-6 bg-white rounded-2xl border border-blue-100 hover:shadow-lg">
               <h4 className="font-semibold text-gray-900 mb-2">Media & Entertainment</h4>
               <p className="text-sm text-gray-600">Film, TV, Music, Digital Content</p>
-            </div>
-            <div className="text-center p-6 bg-white rounded-2xl border border-blue-100">
+            </AnimatedCard>
+            <AnimatedCard variant="glow" className="text-center p-6 bg-white rounded-2xl border border-blue-100 hover:shadow-lg">
               <h4 className="font-semibold text-gray-900 mb-2">Technology & IT</h4>
               <p className="text-sm text-gray-600">Software, AI, Data Privacy, Fintech</p>
-            </div>
-            <div className="text-center p-6 bg-white rounded-2xl border border-blue-100">
+            </AnimatedCard>
+            <AnimatedCard variant="gradient" className="text-center p-6 bg-white rounded-2xl border border-blue-100 hover:shadow-lg">
               <h4 className="font-semibold text-gray-900 mb-2">Gaming & Sports</h4>
               <p className="text-sm text-gray-600">Esports, Athletes, Tournaments</p>
-            </div>
-            <div className="text-center p-6 bg-white rounded-2xl border border-blue-100">
+            </AnimatedCard>
+            <AnimatedCard variant="glass" className="text-center p-6 bg-white rounded-2xl border border-blue-100 hover:shadow-lg">
               <h4 className="font-semibold text-gray-900 mb-2">Startups & SMEs</h4>
               <p className="text-sm text-gray-600">Growth, Funding, Compliance</p>
-            </div>
+            </AnimatedCard>
           </div>
           
           <div className="text-center">
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
+              <AnimatedButton 
                 href="/practice-areas" 
-                className="inline-flex items-center px-8 py-3 bg-blue-700 text-white font-semibold rounded-lg hover:bg-blue-800 transition-colors"
+                variant="primary"
               >
                 View All Practice Areas
-              </Link>
-              <Link 
+              </AnimatedButton>
+              <AnimatedButton 
                 href="/industries" 
-                className="inline-flex items-center px-8 py-3 border-2 border-blue-700 text-blue-700 font-semibold rounded-lg hover:bg-blue-50 transition-colors"
+                variant="secondary"
               >
                 Explore Industries
-              </Link>
+              </AnimatedButton>
             </div>
           </div>
         </div>

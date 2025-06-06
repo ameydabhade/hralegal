@@ -1,5 +1,13 @@
 import { Phone, Mail, Calendar, ArrowRight, Shield, Clock, Users } from 'lucide-react';
 import Link from 'next/link';
+import { 
+  AnimatedCard, 
+  AnimatedButton, 
+  ParticleBackground, 
+  TypewriterText,
+  InteractiveIcon,
+  PulsingOrb 
+} from './ui';
 
 const contactMethods = [
   {
@@ -48,12 +56,29 @@ const benefits = [
 
 export default function HomeCTASection() {
   return (
-    <section className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-      <div className="max-w-7xl mx-auto px-4 lg:px-8">
+    <section className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 relative overflow-hidden">
+      <ParticleBackground />
+      
+      {/* Interactive Orbs */}
+      <div className="absolute top-20 left-20 z-0">
+        <PulsingOrb size={120} color="blue" className="opacity-30" />
+      </div>
+      <div className="absolute bottom-32 right-32 z-0">
+        <PulsingOrb size={90} color="purple" className="opacity-40" />
+      </div>
+      <div className="absolute top-1/2 left-1/4 z-0">
+        <PulsingOrb size={60} color="indigo" className="opacity-25" />
+      </div>
+      
+      <div className="max-w-7xl mx-auto px-4 lg:px-8 relative z-10">
         {/* Main CTA */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Ready to Get Started?
+            <TypewriterText 
+              texts={["Ready to Get Started?", "Need Legal Assistance?", "Let's Talk Solutions!"]}
+              className="text-white"
+              speed={90}
+            />
           </h2>
           <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed mb-8">
             Don't let legal complexities hold back your business growth. Our expert legal team 
@@ -68,14 +93,20 @@ export default function HomeCTASection() {
         {/* Contact Methods */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           {contactMethods.map((method, index) => (
-            <div key={index} className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 hover:bg-white/20 transition-all duration-300 border border-white/10">
+            <AnimatedCard 
+              key={index} 
+              variant="glass" 
+              className="bg-white/10 backdrop-blur-sm border border-white/10"
+            >
               <div className="text-center space-y-6">
-                <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl ${
-                  method.color === 'blue' ? 'bg-blue-500' :
-                  method.color === 'green' ? 'bg-green-500' : 'bg-purple-500'
-                }`}>
-                  <method.icon className="w-8 h-8 text-white" strokeWidth={1.5} />
-                </div>
+                <InteractiveIcon magneticStrength={0.6} className="inline-block">
+                  <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl shadow-2xl ${
+                    method.color === 'blue' ? 'bg-blue-500' :
+                    method.color === 'green' ? 'bg-green-500' : 'bg-purple-500'
+                  }`}>
+                    <method.icon className="w-8 h-8 text-white" strokeWidth={1.5} />
+                  </div>
+                </InteractiveIcon>
                 
                 <div>
                   <h3 className="text-2xl font-bold text-white mb-2">
@@ -98,7 +129,7 @@ export default function HomeCTASection() {
                   </a>
                 </div>
               </div>
-            </div>
+            </AnimatedCard>
           ))}
         </div>
 
@@ -111,9 +142,11 @@ export default function HomeCTASection() {
           <div className="grid md:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="text-center">
-                <div className="inline-flex items-center justify-center w-14 h-14 bg-gradient-to-br from-blue-400 to-purple-500 rounded-2xl mb-4">
-                  <benefit.icon className="w-7 h-7 text-white" strokeWidth={1.5} />
-                </div>
+                <InteractiveIcon magneticStrength={0.5} className="inline-block mb-4">
+                  <div className="inline-flex items-center justify-center w-14 h-14 bg-gradient-to-br from-blue-400 to-purple-500 rounded-2xl shadow-lg">
+                    <benefit.icon className="w-7 h-7 text-white" strokeWidth={1.5} />
+                  </div>
+                </InteractiveIcon>
                 <h4 className="text-xl font-semibold text-white mb-2">
                   {benefit.title}
                 </h4>
@@ -126,7 +159,7 @@ export default function HomeCTASection() {
         </div>
 
         {/* Urgent Legal Matters */}
-        <div className="bg-gradient-to-r from-red-600 to-orange-600 rounded-3xl p-8 text-center mb-16">
+        <AnimatedCard variant="neon" className="bg-gradient-to-r from-red-600 to-orange-600 text-center mb-16 border-red-400">
           <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
             Urgent Legal Matter?
           </h3>
@@ -141,7 +174,7 @@ export default function HomeCTASection() {
             <Phone className="w-5 h-5" />
             Call for Urgent Matters
           </a>
-        </div>
+        </AnimatedCard>
 
         {/* Knowledge Resources */}
         <div className="grid lg:grid-cols-2 gap-12 mb-16">

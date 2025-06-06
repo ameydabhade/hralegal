@@ -1,92 +1,110 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { AnimatedButton } from './ui';
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-10 backdrop-blur-sm bg-white/95 border-b border-gray-100 shadow-sm">
-      <nav className="max-w-7xl mx-auto px-4 lg:px-8">
-        <div className="flex items-center justify-between py-4">
+        <header className={`fixed top-4 left-4 right-4 z-50 backdrop-blur-sm border border-gray-100 rounded-[32px] transition-all duration-500 ease-out mx-auto max-w-7xl hover:shadow-xl ${
+      isScrolled 
+        ? 'bg-white/98 shadow-2xl border-gray-200' 
+        : 'bg-white/95 shadow-lg hover:bg-white/98'
+    }`}>
+        <nav className="max-w-7xl mx-auto px-4 lg:px-8">
+          <div className="flex items-center justify-between py-2">
           {/* Logo */}
           <Link 
             href="/" 
-            className="text-xl font-bold text-gray-900 hover:text-blue-700 transition-colors"
+            className="text-xl font-bold text-gray-900 hover:text-blue-700 transition-all duration-300 transform hover:scale-105 group"
           >
-            <span className="text-blue-700">HRA</span> Legal
+            <span className="text-blue-700 group-hover:text-blue-800 transition-colors duration-300">HRA</span> 
+            <span className="group-hover:text-blue-600 transition-colors duration-300">Legal</span>
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-8">
             <Link 
               href="/" 
-              className="text-gray-700 hover:text-blue-700 transition-colors text-sm font-medium"
+              className="relative text-gray-700 hover:text-blue-700 transition-all duration-300 text-sm font-medium group transform hover:-translate-y-0.5"
             >
               Home
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-700 transition-all duration-300 group-hover:w-full"></span>
             </Link>
             <Link 
               href="/about" 
-              className="text-gray-700 hover:text-blue-700 transition-colors text-sm font-medium"
+              className="relative text-gray-700 hover:text-blue-700 transition-all duration-300 text-sm font-medium group transform hover:-translate-y-0.5"
             >
               About Us
-            </Link>
-            <Link 
-              href="/founders" 
-              className="text-gray-700 hover:text-blue-700 transition-colors text-sm font-medium"
-            >
-              Founders
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-700 transition-all duration-300 group-hover:w-full"></span>
             </Link>
             <Link 
               href="/practice-areas" 
-              className="text-gray-700 hover:text-blue-700 transition-colors text-sm font-medium"
+              className="relative text-gray-700 hover:text-blue-700 transition-all duration-300 text-sm font-medium group transform hover:-translate-y-0.5"
             >
               Practice Areas
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-700 transition-all duration-300 group-hover:w-full"></span>
             </Link>
             <Link 
               href="/industries" 
-              className="text-gray-700 hover:text-blue-700 transition-colors text-sm font-medium"
+              className="relative text-gray-700 hover:text-blue-700 transition-all duration-300 text-sm font-medium group transform hover:-translate-y-0.5"
             >
               Industries
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-700 transition-all duration-300 group-hover:w-full"></span>
             </Link>
             <Link 
               href="/knowledge-centre" 
-              className="text-gray-700 hover:text-blue-700 transition-colors text-sm font-medium"
+              className="relative text-gray-700 hover:text-blue-700 transition-all duration-300 text-sm font-medium group transform hover:-translate-y-0.5"
             >
               Knowledge Centre
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-700 transition-all duration-300 group-hover:w-full"></span>
             </Link>
             <Link 
               href="/careers" 
-              className="text-gray-700 hover:text-blue-700 transition-colors text-sm font-medium"
+              className="relative text-gray-700 hover:text-blue-700 transition-all duration-300 text-sm font-medium group transform hover:-translate-y-0.5"
             >
               Careers
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-700 transition-all duration-300 group-hover:w-full"></span>
             </Link>
             <Link 
               href="/contact" 
-              className="text-gray-700 hover:text-blue-700 transition-colors text-sm font-medium"
+              className="relative text-gray-700 hover:text-blue-700 transition-all duration-300 text-sm font-medium group transform hover:-translate-y-0.5"
             >
               Contact Us
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-700 transition-all duration-300 group-hover:w-full"></span>
             </Link>
           </div>
 
           {/* CTA Button */}
-          <div className="hidden lg:block">
-            <Link 
+          <div className="hidden lg:block relative z-10">
+            <AnimatedButton 
               href="/contact"
-              className="inline-flex items-center px-6 py-2 bg-blue-700 text-white font-medium rounded-lg hover:bg-blue-800 transition-colors"
+              variant="primary"
+              className="px-6 py-2 text-sm"
             >
               Get Legal Consultation
-            </Link>
+            </AnimatedButton>
           </div>
 
           {/* Mobile Menu Button */}
           <button 
-            className="lg:hidden p-2 rounded-lg bg-gray-100 hover:bg-gray-200 transition-colors"
+            className="lg:hidden p-2 rounded-lg bg-gray-100 hover:bg-gray-200 transition-all duration-300 transform hover:scale-110 hover:rotate-3 group"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle mobile menu"
           >
             <svg 
-              className="w-5 h-5" 
+              className={`w-5 h-5 transition-all duration-300 ${isMobileMenuOpen ? 'rotate-180' : 'rotate-0'}`}
               fill="none" 
               stroke="currentColor" 
               viewBox="0 0 24 24"
@@ -101,9 +119,11 @@ export default function Header() {
         </div>
 
         {/* Mobile Navigation */}
-        {isMobileMenuOpen && (
-          <div className="lg:hidden pb-4 border-t border-gray-100 mt-4 pt-4">
-            <div className="flex flex-col gap-4">
+        <div className={`lg:hidden overflow-hidden transition-all duration-500 ease-out ${
+          isMobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+        }`}>
+          <div className="pb-4 border-t border-gray-100 mt-4 pt-4">
+            <div className="flex flex-col gap-4 animate-in slide-in-from-top duration-300">
               <Link 
                 href="/" 
                 className="text-gray-700 hover:text-blue-700 transition-colors text-sm font-medium"
@@ -117,13 +137,6 @@ export default function Header() {
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 About Us
-              </Link>
-              <Link 
-                href="/founders" 
-                className="text-gray-700 hover:text-blue-700 transition-colors text-sm font-medium"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Founders
               </Link>
               <Link 
                 href="/practice-areas" 
@@ -160,16 +173,18 @@ export default function Header() {
               >
                 Contact Us
               </Link>
-              <Link 
-                href="/contact"
-                className="inline-flex items-center justify-center px-6 py-2 bg-blue-700 text-white font-medium rounded-lg hover:bg-blue-800 transition-colors mt-2"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Get Legal Consultation
-              </Link>
+              <div onClick={() => setIsMobileMenuOpen(false)}>
+                <AnimatedButton 
+                  href="/contact"
+                  variant="primary"
+                  className="px-6 py-2 text-sm mt-2 w-full"
+                >
+                  Get Legal Consultation
+                </AnimatedButton>
+              </div>
             </div>
           </div>
-        )}
+        </div>
       </nav>
     </header>
   );
