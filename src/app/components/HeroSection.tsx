@@ -49,7 +49,7 @@ export default function HeroSection() {
               <AnimatedButton 
                 href="/about"
                 variant="secondary"
-                className="px-8 py-4 text-lg font-semibold"
+                className="px-8 py-4 text-lg font-semibold !text-black hover:!text-white"
               >
                 Learn About Us
               </AnimatedButton>

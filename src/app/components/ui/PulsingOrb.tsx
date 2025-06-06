@@ -49,7 +49,13 @@ export function PulsingOrb({
     >
       {/* Main Orb */}
       <motion.div
-        className={`absolute inset-0 rounded-full cursor-pointer bg-gradient-to-br from-${color}-400 to-${color}-600 shadow-2xl`}
+        className={`absolute inset-0 rounded-full cursor-pointer shadow-2xl ${
+          color === 'blue' ? 'bg-gradient-to-br from-blue-400 to-blue-600' :
+          color === 'purple' ? 'bg-gradient-to-br from-purple-400 to-purple-600' :
+          color === 'indigo' ? 'bg-gradient-to-br from-indigo-400 to-indigo-600' :
+          color === 'green' ? 'bg-gradient-to-br from-green-400 to-green-600' :
+          'bg-gradient-to-br from-blue-400 to-blue-600'
+        }`}
         variants={orbVariants}
         animate={isActive ? 'active' : 'idle'}
         transition={{
@@ -63,7 +69,13 @@ export function PulsingOrb({
       >
         {/* Inner glow */}
         <motion.div
-          className={`absolute inset-2 rounded-full bg-gradient-to-br from-${color}-300 to-${color}-500 opacity-60`}
+          className={`absolute inset-2 rounded-full opacity-60 ${
+            color === 'blue' ? 'bg-gradient-to-br from-blue-300 to-blue-500' :
+            color === 'purple' ? 'bg-gradient-to-br from-purple-300 to-purple-500' :
+            color === 'indigo' ? 'bg-gradient-to-br from-indigo-300 to-indigo-500' :
+            color === 'green' ? 'bg-gradient-to-br from-green-300 to-green-500' :
+            'bg-gradient-to-br from-blue-300 to-blue-500'
+          }`}
           animate={{
             scale: [1, 1.1, 1],
             opacity: [0.6, 0.8, 0.6]
@@ -94,7 +106,13 @@ export function PulsingOrb({
       {ripples.map((rippleId) => (
         <motion.div
           key={rippleId}
-          className={`absolute inset-0 rounded-full border-2 border-${color}-400`}
+          className={`absolute inset-0 rounded-full border-2 ${
+            color === 'blue' ? 'border-blue-400' :
+            color === 'purple' ? 'border-purple-400' :
+            color === 'indigo' ? 'border-indigo-400' :
+            color === 'green' ? 'border-green-400' :
+            'border-blue-400'
+          }`}
           initial={{ scale: 1, opacity: 0.8 }}
           animate={{ scale: 2.5, opacity: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
@@ -105,7 +123,13 @@ export function PulsingOrb({
       {Array.from({ length: 6 }, (_, i) => (
         <motion.div
           key={i}
-          className={`absolute w-1 h-1 bg-${color}-400 rounded-full`}
+          className={`absolute w-1 h-1 rounded-full ${
+            color === 'blue' ? 'bg-blue-400' :
+            color === 'purple' ? 'bg-purple-400' :
+            color === 'indigo' ? 'bg-indigo-400' :
+            color === 'green' ? 'bg-green-400' :
+            'bg-blue-400'
+          }`}
           animate={{
             x: [0, Math.cos(i * 60 * Math.PI / 180) * (size * 0.8)],
             y: [0, Math.sin(i * 60 * Math.PI / 180) * (size * 0.8)],
