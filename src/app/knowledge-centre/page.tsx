@@ -2,11 +2,6 @@
 import { useState } from 'react';
 import { BookOpen, TrendingUp, Calendar, Clock, User, ChevronRight, Search } from 'lucide-react';
 
-export const metadata = {
-  title: 'Knowledge Centre - HRA Legal',
-  description: 'Stay informed with the latest legal insights, industry updates, and expert analysis from HRA Legal team.',
-}
-
 export default function KnowledgeCentrePage() {
   const [activeTab, setActiveTab] = useState('blogs');
 

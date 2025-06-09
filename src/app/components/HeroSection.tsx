@@ -18,7 +18,11 @@ export default function HeroSection() {
               </h1>
               
               <p className="text-xl text-gray-700 leading-relaxed max-w-2xl">
-                A professional law firm with specialized expertise across Civil and Business Law, Intellectual Property Laws, Corporate and Commercial Law, and other specialized areas of law.
+                Specialized law firm with <strong>15+ years of expertise</strong> across multiple legal disciplines.
+              </p>
+              
+              <p className="text-lg text-gray-600 leading-relaxed max-w-2xl">
+                We provide comprehensive legal solutions in Civil & Business Law, Intellectual Property, Corporate Law, and specialized areas.
               </p>
             </div>
             
@@ -102,12 +106,36 @@ export default function HeroSection() {
         <div className="mb-20">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-8">About HRA Legal</h2>
-            <p className="text-lg text-gray-700 leading-relaxed mb-8">
-              HRA Legal is a professional law firm with specialized expertise across various legal disciplines, including Civil and Business Law, Intellectual Property Laws (with a niche focus on Media & Entertainment, Technology, and Sports), Corporate and Commercial Law, Company Secretarial and Corporate Governance, Employment and Labor Laws, Environment Law, Property Law, Taxation Law and other specialized areas of law.
-            </p>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              At HRA Legal, our seasoned and diligent lawyers provide personalized solutions to cater to the specific requirements of each client. We pride ourselves on delivering prompt, reliable and qualitative services that enables businesses to navigate the complexities of the law with confidence and clarity.
-            </p>
+            
+            <div className="space-y-6">
+              <p className="text-lg text-gray-700 leading-relaxed">
+                <strong>Professional law firm</strong> with specialized expertise across various legal disciplines.
+              </p>
+              
+              <div className="grid md:grid-cols-2 gap-8 text-left">
+                <div className="bg-white rounded-lg p-6 shadow-md">
+                  <h3 className="text-xl font-bold text-beige-400 mb-3">Our Expertise</h3>
+                  <ul className="space-y-2 text-gray-700">
+                    <li>• Civil and Business Law</li>
+                    <li>• Intellectual Property Laws</li>
+                    <li>• Corporate and Commercial Law</li>
+                    <li>• Employment and Labor Laws</li>
+                    <li>• Environment & Property Law</li>
+                  </ul>
+                </div>
+                
+                <div className="bg-white rounded-lg p-6 shadow-md">
+                  <h3 className="text-xl font-bold text-beige-400 mb-3">Our Approach</h3>
+                  <ul className="space-y-2 text-gray-700">
+                    <li>• Personalized legal solutions</li>
+                    <li>• Prompt and reliable service</li>
+                    <li>• Quality-focused delivery</li>
+                    <li>• Business-oriented guidance</li>
+                    <li>• Confidence and clarity</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -121,7 +149,7 @@ export default function HeroSection() {
                   <CheckCircle className="w-8 h-8 text-beige-400 mr-3" />
                   <h3 className="text-xl font-bold text-gray-900">Effortless Comprehension</h3>
                 </div>
-                <p className="text-gray-700">Effortlessly comprehend the deal/matter with deep understanding and analysis.</p>
+                <p className="text-gray-700">Deep understanding and analysis of every deal and matter.</p>
               </div>
               
               <div className="bg-white rounded-lg shadow-lg p-6 border border-gray-100">
@@ -129,7 +157,7 @@ export default function HeroSection() {
                   <Target className="w-8 h-8 text-beige-400 mr-3" />
                   <h3 className="text-xl font-bold text-gray-900">Effective Structuring</h3>
                 </div>
-                <p className="text-gray-700">Effective structuring and strategizing the deal from legal and commercial perspective.</p>
+                <p className="text-gray-700">Strategic deal structuring from legal and commercial perspectives.</p>
               </div>
               
               <div className="bg-white rounded-lg shadow-lg p-6 border border-gray-100">
@@ -137,7 +165,7 @@ export default function HeroSection() {
                   <Users className="w-8 h-8 text-beige-400 mr-3" />
                   <h3 className="text-xl font-bold text-gray-900">Confident Negotiations</h3>
                 </div>
-                <p className="text-gray-700">Confident negotiations with mix of styles - Integrative, Distributive or Adversarial.</p>
+                <p className="text-gray-700">Expert negotiations using proven methodologies and strategies.</p>
               </div>
               
               <div className="bg-white rounded-lg shadow-lg p-6 border border-gray-100">
@@ -145,7 +173,7 @@ export default function HeroSection() {
                   <Award className="w-8 h-8 text-beige-400 mr-3" />
                   <h3 className="text-xl font-bold text-gray-900">Successful Closures</h3>
                 </div>
-                <p className="text-gray-700">Successful deal closures with win-win outcomes for all parties involved.</p>
+                <p className="text-gray-700">Proven track record of successful deal closures and outcomes.</p>
               </div>
               
               <div className="bg-white rounded-lg shadow-lg p-6 border border-gray-100">
@@ -153,7 +181,7 @@ export default function HeroSection() {
                   <Shield className="w-8 h-8 text-beige-400 mr-3" />
                   <h3 className="text-xl font-bold text-gray-900">Leadership</h3>
                 </div>
-                <p className="text-gray-700">Flexible thinking amid constantly shifting situations and risks.</p>
+                <p className="text-gray-700">Flexible thinking and adaptability in changing situations.</p>
               </div>
               
               <div className="bg-white rounded-lg shadow-lg p-6 border border-gray-100">
@@ -161,7 +189,7 @@ export default function HeroSection() {
                   <Phone className="w-8 h-8 text-beige-400 mr-3" />
                   <h3 className="text-xl font-bold text-gray-900">Always Accessible</h3>
                 </div>
-                <p className="text-gray-700">Always accessible for advice/consultations. Paperwork must, before you make any commitments.</p>
+                <p className="text-gray-700">24/7 availability for advice and consultations.</p>
               </div>
             </div>
           </div>
@@ -172,12 +200,32 @@ export default function HeroSection() {
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 text-center mb-8">Our Services</h2>
             <div className="bg-white rounded-lg shadow-lg p-8 border border-gray-100">
-              <h3 className="text-2xl font-bold text-beige-400 mb-6">Basic and Detailed Services</h3>
-              <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                HRA Legal offers end-to-end Legal services, including without limitation, structuring, drafting, negotiation and execution of all types of contracts/agreements/documents (including definitive agreements, long form agreements, non-disclosure agreements, no objection certificates, letters, et al), drafting of notices & replies, legal research and analysis, consultations and advisory services, preparing policies of several compliances, tabulating databases, setting up of processes, systems, SOP's (standard operating procedures), providing opinions, solutions, et al for established and emerging businesses, and/or managing entire legal department of your company.
-              </p>
-              <p className="text-gray-600 italic">
-                Our detailed services for each area of practice can be referred in its respective tab.
+              <h3 className="text-2xl font-bold text-beige-400 mb-6">End-to-End Legal Solutions</h3>
+              
+              <div className="grid md:grid-cols-2 gap-6">
+                <div>
+                  <h4 className="font-bold text-gray-900 mb-3">Documentation & Contracts</h4>
+                  <ul className="space-y-1 text-gray-700 text-sm">
+                    <li>• Definitive agreements</li>
+                    <li>• Long form agreements</li>
+                    <li>• Non-disclosure agreements</li>
+                    <li>• No objection certificates</li>
+                  </ul>
+                </div>
+                
+                <div>
+                  <h4 className="font-bold text-gray-900 mb-3">Legal Support</h4>
+                  <ul className="space-y-1 text-gray-700 text-sm">
+                    <li>• Legal research and analysis</li>
+                    <li>• Consultation and advisory</li>
+                    <li>• Compliance policies</li>
+                    <li>• Standard operating procedures</li>
+                  </ul>
+                </div>
+              </div>
+              
+              <p className="text-gray-600 italic mt-6 text-center">
+                Detailed services for each practice area available in respective sections.
               </p>
             </div>
           </div>

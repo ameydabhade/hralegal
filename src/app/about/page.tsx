@@ -27,8 +27,12 @@ export default function AboutPage() {
       <section className="pb-16">
         <div className="max-w-4xl mx-auto px-4 lg:px-8">
           <div className="bg-white rounded-lg shadow-lg p-8 border border-gray-100 mb-16">
-            <p className="text-lg text-gray-700 leading-relaxed">
-              HRA Legal works on an ever evolving and diverse outlook consistently aligned with the prevalent market dynamics, and technology shifts. Just like technology, law is continuously evolving, and so does HRA Legal.
+            <h3 className="text-2xl font-bold text-beige-400 mb-4">Our Evolution</h3>
+            <p className="text-lg text-gray-700 leading-relaxed mb-4">
+              HRA Legal works with an <strong>ever-evolving and diverse outlook</strong> consistently aligned with prevalent market dynamics and technology shifts.
+            </p>
+            <p className="text-gray-600">
+              Just like technology, law is continuously evolving — and so does HRA Legal.
             </p>
           </div>
         </div>
@@ -46,9 +50,25 @@ export default function AboutPage() {
                 </div>
               </div>
               <div className="md:w-2/3 p-8">
-                <p className="text-lg text-gray-700 leading-relaxed">
-                  Our mission is to offer outstanding legal services that meet the diverse needs of our clients, while maintaining the highest standards of our Core Values, and foster a growth-oriented environment for our team, ensuring long-term success and profitability for both our clients and our firm.
-                </p>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Our Commitment</h3>
+                <ul className="space-y-3 text-gray-700">
+                  <li className="flex items-start">
+                    <div className="w-2 h-2 bg-beige-400 rounded-full mr-3 mt-2"></div>
+                    <span>Offer outstanding legal services for diverse client needs</span>
+                  </li>
+                  <li className="flex items-start">
+                    <div className="w-2 h-2 bg-beige-400 rounded-full mr-3 mt-2"></div>
+                    <span>Maintain highest standards of our Core Values</span>
+                  </li>
+                  <li className="flex items-start">
+                    <div className="w-2 h-2 bg-beige-400 rounded-full mr-3 mt-2"></div>
+                    <span>Foster growth-oriented environment for our team</span>
+                  </li>
+                  <li className="flex items-start">
+                    <div className="w-2 h-2 bg-beige-400 rounded-full mr-3 mt-2"></div>
+                    <span>Ensure long-term success for clients and firm</span>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
@@ -61,9 +81,28 @@ export default function AboutPage() {
           <div className="bg-white rounded-lg shadow-lg border border-gray-100 overflow-hidden">
             <div className="md:flex">
               <div className="md:w-2/3 p-8">
-                <p className="text-lg text-gray-700 leading-relaxed">
-                  Our vision is to establish ourselves as a premier law firm, renowned for delivering exceptional legal services to a diverse range of global and domestic clients, including governments and economic entities, while upholding a strong focus on our Core Values, consistent profitability, long term sustainability, and social responsibility, while fostering a dynamic, passionate and inclusive work environment for our professionals.
-                </p>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Our Aspiration</h3>
+                <div className="space-y-4">
+                  <div className="bg-gray-50 rounded-lg p-4">
+                    <h4 className="font-semibold text-gray-900 mb-2">Premier Law Firm Status</h4>
+                    <p className="text-gray-700">Establish ourselves as a renowned legal service provider</p>
+                  </div>
+                  
+                  <div className="bg-gray-50 rounded-lg p-4">
+                    <h4 className="font-semibold text-gray-900 mb-2">Global & Domestic Reach</h4>
+                    <p className="text-gray-700">Serve diverse clients including governments and economic entities</p>
+                  </div>
+                  
+                  <div className="bg-gray-50 rounded-lg p-4">
+                    <h4 className="font-semibold text-gray-900 mb-2">Sustainable Growth</h4>
+                    <p className="text-gray-700">Focus on profitability, sustainability, and social responsibility</p>
+                  </div>
+                  
+                  <div className="bg-gray-50 rounded-lg p-4">
+                    <h4 className="font-semibold text-gray-900 mb-2">Team Environment</h4>
+                    <p className="text-gray-700">Foster dynamic, passionate, and inclusive workplace</p>
+                  </div>
+                </div>
               </div>
               <div className="md:w-1/3 bg-beige-600 p-8 flex items-center justify-center">
                 <div className="text-center">
@@ -84,8 +123,8 @@ export default function AboutPage() {
               <Heart className="w-12 h-12 text-beige-700 mr-4" />
               <h2 className="text-4xl font-bold text-gray-900">Core Values</h2>
             </div>
-            <p className="text-lg text-gray-700">
-              Our core values of Integrity, Trust, Respect, Humility, and Unity are consistently reflected in our business ethics and are embedded in the professional legal services we offer worldwide.
+            <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+              <strong>Five fundamental principles</strong> reflected in our business ethics and embedded in our professional legal services worldwide.
             </p>
           </div>
           
@@ -93,31 +132,31 @@ export default function AboutPage() {
             <div className="bg-white rounded-lg shadow-lg p-6 border border-gray-100 text-center">
               <Shield className="w-12 h-12 text-beige-700 mx-auto mb-4" />
               <h3 className="text-xl font-bold text-gray-900 mb-2">Integrity</h3>
-              <p className="text-gray-600">Upholding honesty and moral principles in all our actions</p>
+              <p className="text-gray-600">Honesty and moral principles in all actions</p>
             </div>
             
             <div className="bg-white rounded-lg shadow-lg p-6 border border-gray-100 text-center">
               <HandHeart className="w-12 h-12 text-beige-700 mx-auto mb-4" />
               <h3 className="text-xl font-bold text-gray-900 mb-2">Trust</h3>
-              <p className="text-gray-600">Building reliable relationships with clients and colleagues</p>
+              <p className="text-gray-600">Reliable relationships with clients and colleagues</p>
             </div>
             
             <div className="bg-white rounded-lg shadow-lg p-6 border border-gray-100 text-center">
               <Users className="w-12 h-12 text-beige-700 mx-auto mb-4" />
               <h3 className="text-xl font-bold text-gray-900 mb-2">Respect</h3>
-              <p className="text-gray-600">Treating everyone with dignity and consideration</p>
+              <p className="text-gray-600">Dignity and consideration for everyone</p>
             </div>
             
             <div className="bg-white rounded-lg shadow-lg p-6 border border-gray-100 text-center">
               <Lightbulb className="w-12 h-12 text-beige-700 mx-auto mb-4" />
               <h3 className="text-xl font-bold text-gray-900 mb-2">Humility</h3>
-              <p className="text-gray-600">Staying grounded and learning from every experience</p>
+              <p className="text-gray-600">Grounded approach and continuous learning</p>
             </div>
             
             <div className="bg-white rounded-lg shadow-lg p-6 border border-gray-100 text-center">
               <Award className="w-12 h-12 text-beige-700 mx-auto mb-4" />
               <h3 className="text-xl font-bold text-gray-900 mb-2">Unity</h3>
-              <p className="text-gray-600">Working together towards common goals and success</p>
+              <p className="text-gray-600">Collaboration towards common goals</p>
             </div>
           </div>
         </div>
@@ -129,8 +168,8 @@ export default function AboutPage() {
           <div className="bg-white rounded-lg shadow-lg border border-gray-100 p-8">
             <div className="text-center mb-8">
               <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Culture</h2>
-              <p className="text-lg text-gray-700 leading-relaxed">
-                Our culture is driven by an entrepreneurial mindset, strong conviction, principled leadership, resilience, and focus on work-life balance, all fostered within a vibrant and enjoyable workspace.
+              <p className="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto">
+                <strong>Five key elements</strong> that drive our culture within a vibrant and enjoyable workspace.
               </p>
             </div>
             
