@@ -4,7 +4,7 @@ import { Scale, Shield, Users, Award, Phone, ArrowRight, CheckCircle } from 'luc
 
 export default function HeroSection() {
   return (
-    <section className="min-h-screen bg-gradient-to-br from-beige-100 via-beige-50 to-white relative overflow-hidden">
+    <section className="min-h-screen bg-gradient-to-br from-beige-200 via-beige-100 to-beige-50 relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-20 w-32 h-32 bg-beige-300 rounded-full blur-3xl"></div>
@@ -80,10 +80,10 @@ export default function HeroSection() {
               <div className="space-y-6">
                 {/* Header */}
                 <div className="flex items-center border-b border-beige-200 pb-4">
-                  <div className="w-12 h-12 bg-beige-400 rounded-xl flex items-center justify-center">
+                  <div className="w-12 h-12 bg-beige-400 rounded-xl flex items-center justify-center ">
                     <Scale className="w-6 h-6 text-white" />
                   </div>
-                  <div className="ml-4">
+                  <div className="ml-8">
                     <h3 className="text-xl font-bold text-gray-900">Legal Contract</h3>
                     <p className="text-beige-600">Professional Documentation</p>
                   </div>
@@ -159,8 +159,7 @@ export default function HeroSection() {
           <div className="border-t border-beige-200 pt-8">
             <p className="text-center text-gray-600 mb-6">Trusted by leading organizations</p>
             <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
-              <Image src="/Logos/sony.svg" alt="Sony Pictures" width={100} height={32} className="h-8 w-auto" />
-              <Image src="/Logos/relience.svg" alt="Reliance Entertainment" width={90} height={32} className="h-8 w-auto" />
+                  <Image src="/Logos/relience.svg" alt="Reliance Entertainment" width={90} height={32} className="h-8 w-auto" />
               <Image src="/Logos/shemaroo.svg" alt="Shemaroo Entertainment" width={85} height={32} className="h-8 w-auto" />
               <Image src="/Logos/goldmines.webp" alt="Goldmines Telefilms" width={90} height={32} className="h-8 w-auto" />
               <Image src="/Logos/maddock.webp" alt="Maddock Films" width={85} height={32} className="h-8 w-auto" />
