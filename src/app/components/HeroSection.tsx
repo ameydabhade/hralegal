@@ -62,41 +62,43 @@ export default function HeroSection() {
             </div>
           </div>
 
-          {/* Professional Image/Illustration */}
+          {/* Professional Stats & Highlights */}
           <div className="relative">
-            <div className="bg-white rounded-lg shadow-xl p-8 border border-gray-100">
-              {/* Legal Document Mockup */}
-              <div className="space-y-6">
-                {/* Document Header */}
-                <div className="flex items-center border-b border-gray-200 pb-4">
-                  <Scale className="w-8 h-8 text-beige-400 mr-4" />
+            <div className="grid grid-cols-1 gap-6">
+              {/* Main Stats Card */}
+              <div className="bg-gradient-to-br from-beige-100 to-beige-200 rounded-2xl p-8 border border-beige-300 shadow-lg">
+                <div className="text-center space-y-6">
+                  <div className="inline-flex items-center justify-center w-16 h-16 bg-beige-400 rounded-full shadow-lg">
+                    <Scale className="w-8 h-8 text-white" />
+                  </div>
                   <div>
-                    <h3 className="text-xl font-bold text-gray-900">Legal Agreement</h3>
-                    <p className="text-gray-600">Professional Documentation</p>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-2">Trusted Legal Partner</h3>
+                    <p className="text-gray-600">Professional excellence in legal services</p>
+                  </div>
+                  
+                  {/* Key Stats */}
+                  <div className="grid grid-cols-3 gap-4 pt-6 border-t border-beige-300">
+                    <div className="text-center">
+                      <div className="text-2xl font-bold text-beige-600">15+</div>
+                      <div className="text-sm text-gray-600">Years</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-2xl font-bold text-beige-600">500+</div>
+                      <div className="text-sm text-gray-600">Cases</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-2xl font-bold text-beige-600">95%</div>
+                      <div className="text-sm text-gray-600">Success</div>
+                    </div>
                   </div>
                 </div>
+              </div>
+              
+              {/* Secondary Cards */}
+              <div className="grid grid-cols-2 gap-4">
+            
                 
-                {/* Document Content */}
-                <div className="space-y-4">
-                  <div className="h-4 bg-gray-100 rounded w-full"></div>
-                  <div className="h-4 bg-gray-100 rounded w-4/5"></div>
-                  <div className="h-4 bg-gray-100 rounded w-5/6"></div>
-                  <div className="h-4 bg-beige-100 rounded w-3/4"></div>
-                  <div className="h-4 bg-gray-100 rounded w-2/3"></div>
-                  <div className="h-4 bg-gray-100 rounded w-4/5"></div>
-                </div>
-                
-                {/* Signature Area */}
-                <div className="border-t border-gray-200 pt-4 flex justify-between items-center">
-                  <div>
-                    <div className="h-8 w-32 bg-beige-400 rounded opacity-20 mb-2"></div>
-                    <p className="text-sm text-gray-500">Digital Signature</p>
-                  </div>
-                  <div className="text-right">
-                    <p className="font-bold text-gray-900">HRA Legal</p>
-                    <p className="text-sm text-gray-600">Professional Services</p>
-                  </div>
-                </div>
+      
               </div>
             </div>
           </div>
