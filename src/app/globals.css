@@ -3,13 +3,157 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  
+  /* Sage Green Palette for Option 1 */
+  --sage-50: #f6f7f6;
+  --sage-100: #e8ebe7;
+  --sage-200: #d1d7cf;
+  --sage-300: #adb8a9;
+  --sage-400: #87967f;
+  --sage-500: #6a7a60;
+  --sage-600: #546349;
+  --sage-700: #44523a;
+  --sage-800: #394430;
+  --sage-900: #313a29;
+  
+  /* Cream/Stone complements */
+  --cream-50: #fefef9;
+  --cream-100: #fefdf4;
+  --cream-200: #fdfbea;
+  --cream-300: #fbf6d6;
+  --cream-400: #f7efb8;
+  --cream-500: #f0e392;
+  --cream-600: #e5d56a;
+  --cream-700: #d4c347;
+  --cream-800: #b0a038;
+  --cream-900: #8f8230;
+  
+  /* Lavender Palette for Option 2 */
+  --lavender-50: #faf9fc;
+  --lavender-100: #f4f1f8;
+  --lavender-200: #e9e4f0;
+  --lavender-300: #d6cbe3;
+  --lavender-400: #bda8d1;
+  --lavender-500: #a287bd;
+  --lavender-600: #8a6ba4;
+  --lavender-700: #775a8a;
+  --lavender-800: #634c72;
+  --lavender-900: #54425f;
+  
+  /* Soft Gray complements for Option 2 */
+  --soft-gray-50: #fafafa;
+  --soft-gray-100: #f4f4f5;
+  --soft-gray-200: #e4e4e7;
+  --soft-gray-300: #d4d4d8;
+  --soft-gray-400: #a1a1aa;
+  --soft-gray-500: #71717a;
+  --soft-gray-600: #52525b;
+  --soft-gray-700: #3f3f46;
+  --soft-gray-800: #27272a;
+  --soft-gray-900: #18181b;
+  
+  /* Warm Peach Palette for Option 3 */
+  --peach-50: #fef7f3;
+  --peach-100: #fdebe2;
+  --peach-200: #fbd4c0;
+  --peach-300: #f7b693;
+  --peach-400: #f2916a;
+  --peach-500: #ec6f42;
+  --peach-600: #da5a37;
+  --peach-700: #b6472a;
+  --peach-800: #943c26;
+  --peach-900: #793224;
+  
+  /* Soft Beige complements for Option 3 */
+  --beige-50: #faf9f7;
+  --beige-100: #f4f2ee;
+  --beige-200: #e8e3db;
+  --beige-300: #d9d0c1;
+  --beige-400: #c7b8a0;
+  --beige-400: #b5a082;
+  --beige-600: #a08b6f;
+  --beige-400: #87735e;
+  --beige-800: #6f5f50;
+  --beige-900: #5a4d42;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-lora);
   --font-mono: var(--font-geist-mono);
+  
+  /* Add sage colors to theme */
+  --color-sage-50: var(--sage-50);
+  --color-sage-100: var(--sage-100);
+  --color-sage-200: var(--sage-200);
+  --color-sage-300: var(--sage-300);
+  --color-sage-400: var(--sage-400);
+  --color-sage-500: var(--sage-500);
+  --color-sage-600: var(--sage-600);
+  --color-sage-700: var(--sage-700);
+  --color-sage-800: var(--sage-800);
+  --color-sage-900: var(--sage-900);
+  
+  /* Add cream colors to theme */
+  --color-cream-50: var(--cream-50);
+  --color-cream-100: var(--cream-100);
+  --color-cream-200: var(--cream-200);
+  --color-cream-300: var(--cream-300);
+  --color-cream-400: var(--cream-400);
+  --color-cream-500: var(--cream-500);
+  --color-cream-600: var(--cream-600);
+  --color-cream-700: var(--cream-700);
+  --color-cream-800: var(--cream-800);
+  --color-cream-900: var(--cream-900);
+  
+  /* Add lavender colors to theme */
+  --color-lavender-50: var(--lavender-50);
+  --color-lavender-100: var(--lavender-100);
+  --color-lavender-200: var(--lavender-200);
+  --color-lavender-300: var(--lavender-300);
+  --color-lavender-400: var(--lavender-400);
+  --color-lavender-500: var(--lavender-500);
+  --color-lavender-600: var(--lavender-600);
+  --color-lavender-700: var(--lavender-700);
+  --color-lavender-800: var(--lavender-800);
+  --color-lavender-900: var(--lavender-900);
+  
+  /* Add soft gray colors to theme */
+  --color-soft-gray-50: var(--soft-gray-50);
+  --color-soft-gray-100: var(--soft-gray-100);
+  --color-soft-gray-200: var(--soft-gray-200);
+  --color-soft-gray-300: var(--soft-gray-300);
+  --color-soft-gray-400: var(--soft-gray-400);
+  --color-soft-gray-500: var(--soft-gray-500);
+  --color-soft-gray-600: var(--soft-gray-600);
+  --color-soft-gray-700: var(--soft-gray-700);
+  --color-soft-gray-800: var(--soft-gray-800);
+  --color-soft-gray-900: var(--soft-gray-900);
+  
+  /* Add peach colors to theme */
+  --color-peach-50: var(--peach-50);
+  --color-peach-100: var(--peach-100);
+  --color-peach-200: var(--peach-200);
+  --color-peach-300: var(--peach-300);
+  --color-peach-400: var(--peach-400);
+  --color-peach-500: var(--peach-500);
+  --color-peach-600: var(--peach-600);
+  --color-peach-700: var(--peach-700);
+  --color-peach-800: var(--peach-800);
+  --color-peach-900: var(--peach-900);
+  
+  /* Add beige colors to theme */
+  --color-beige-50: var(--beige-50);
+  --color-beige-100: var(--beige-100);
+  --color-beige-200: var(--beige-200);
+  --color-beige-300: var(--beige-300);
+  --color-beige-400: var(--beige-400);
+  --color-beige-400: var(--beige-400);
+  --color-beige-600: var(--beige-600);
+  --color-beige-400: var(--beige-400);
+  --color-beige-800: var(--beige-800);
+  --color-beige-900: var(--beige-900);
 }
 
 html {
@@ -19,7 +163,7 @@ html {
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  font-family: var(--font-lora), 'Times New Roman', serif;
   line-height: 1.6;
   margin: 0;
   padding: 0;
@@ -44,80 +188,42 @@ body {
   background: #a8a8a8;
 }
 
-/* Custom animations for uiverse.io inspired components */
-@keyframes shimmer {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(100%);
-  }
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
-}
-
-@keyframes glow {
-  0%, 100% {
-    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
-  }
-  50% {
-    box-shadow: 0 0 30px rgba(59, 130, 246, 0.6);
-  }
-}
-
-@keyframes morphing {
-  0%, 100% {
-    border-radius: 50%;
-    transform: rotate(0deg);
-  }
-  50% {
-    border-radius: 20%;
-    transform: rotate(180deg);
-  }
-}
-
-/* Magnetic button effect */
-.magnetic-button {
-  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-.magnetic-button:hover {
-  transform: scale(1.05) translateY(-2px);
-}
-
-/* Glass morphism effect */
-.glass-effect {
-  backdrop-filter: blur(16px) saturate(180%);
-  -webkit-backdrop-filter: blur(16px) saturate(180%);
-  background-color: rgba(255, 255, 255, 0.75);
-  border: 1px solid rgba(209, 213, 219, 0.3);
-}
-
-/* Text gradient animation */
-.text-gradient-animate {
-  background: linear-gradient(-45deg, #3b82f6, #8b5cf6, #06b6d4, #10b981);
-  background-size: 400% 400%;
-  animation: gradientShift 3s ease infinite;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-@keyframes gradientShift {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+@layer utilities {
+  /* Beige Color Palette */
+  .bg-beige-50 { background-color: #f7f5f1; }
+  .bg-beige-100 { background-color: #ede8df; }
+  .bg-beige-200 { background-color: #ddd4c4; }
+  .bg-beige-300 { background-color: #cdc0a9; }
+  .bg-beige-400 { background-color: #bdac8e; }
+  .bg-beige-400 { background-color: #ad9873; }
+  .bg-beige-600 { background-color: #8b7c5c; }
+  .bg-beige-400 { background-color: #6b5d45; }
+  .bg-beige-800 { background-color: #4a3e2e; }
+  .bg-beige-900 { background-color: #2a1f17; }
+  
+  .text-beige-50 { color: #f7f5f1; }
+  .text-beige-100 { color: #ede8df; }
+  .text-beige-200 { color: #ddd4c4; }
+  .text-beige-300 { color: #cdc0a9; }
+  .text-beige-400 { color: #bdac8e; }
+  .text-beige-400 { color: #ad9873; }
+  .text-beige-600 { color: #8b7c5c; }
+  .text-beige-400 { color: #6b5d45; }
+  .text-beige-800 { color: #4a3e2e; }
+  .text-beige-900 { color: #2a1f17; }
+  
+  .border-beige-50 { border-color: #f7f5f1; }
+  .border-beige-100 { border-color: #ede8df; }
+  .border-beige-200 { border-color: #ddd4c4; }
+  .border-beige-300 { border-color: #cdc0a9; }
+  .border-beige-400 { border-color: #bdac8e; }
+  .border-beige-400 { border-color: #ad9873; }
+  .border-beige-600 { border-color: #8b7c5c; }
+  .border-beige-400 { border-color: #6b5d45; }
+  .border-beige-800 { border-color: #4a3e2e; }
+  .border-beige-900 { border-color: #2a1f17; }
 }

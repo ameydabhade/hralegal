@@ -1,132 +1,242 @@
+import { Shield, Eye, Lock, FileText, Clock, AlertCircle } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
+export const metadata = {
+  title: 'Privacy Policy - HRA Legal',
+  description: 'Privacy Policy for HRA Legal website and services, outlining how we collect, use, and protect your personal information.',
+}
+
 export default function PrivacyPolicyPage() {
   return (
-    <main className="min-h-screen">
-      <Header />
-      <section className="py-20 bg-gradient-to-b from-white to-gray-50">
+    <div className="min-h-screen bg-gradient-to-b from-beige-50 to-white">
+      {/* Hero Section */}
+      <section className="pt-32 pb-16">
         <div className="max-w-4xl mx-auto px-4 lg:px-8">
-          <div className="bg-white rounded-3xl p-8 lg:p-12 shadow-lg border border-gray-100">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
-              Privacy Policy
-            </h1>
+          <div className="text-center mb-16">
+            <div className="flex items-center justify-center mb-6">
+              <Shield className="w-12 h-12 text-beige-400 mr-4" />
+              <h1 className="text-5xl lg:text-6xl font-bold text-gray-900">
+                Privacy Policy
+              </h1>
+            </div>
+            <p className="text-xl text-gray-700 leading-relaxed">
+              Your privacy is important to us. This policy explains how we collect, use, and protect your personal information.
+            </p>
+            <div className="flex items-center justify-center mt-6 text-sm text-gray-600">
+              <Clock className="w-4 h-4 mr-2" />
+              Last updated: January 2024
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Content */}
+      <section className="pb-16">
+        <div className="max-w-4xl mx-auto px-4 lg:px-8">
+          <div className="bg-white rounded-lg shadow-lg border border-gray-100 p-8 md:p-12">
             
-            <div className="space-y-8 text-gray-600 leading-relaxed">
-              <div>
-                <p className="text-sm text-gray-500 mb-6">
-                  Last updated: {new Date().toLocaleDateString()}
-                </p>
-                
-                <p className="mb-6">
-                  At HRA Legal, we respect your privacy and are committed to protecting your personal information. 
-                  This Privacy Policy explains how we collect, use, disclose, and safeguard your information when 
-                  you visit our website or use our services.
-                </p>
+            {/* Introduction */}
+            <div className="mb-12">
+              <div className="flex items-center mb-4">
+                <AlertCircle className="w-6 h-6 text-beige-400 mr-3" />
+                <h2 className="text-2xl font-bold text-gray-900">Introduction</h2>
               </div>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                HRA Legal ("we," "our," or "us") is committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy describes how we collect, use, disclose, and safeguard your information when you visit our website or use our services.
+              </p>
+              <p className="text-gray-700 leading-relaxed">
+                By accessing or using our website and services, you agree to the collection and use of information in accordance with this Privacy Policy.
+              </p>
+            </div>
 
-              <div>
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">Information We Collect</h2>
-                <div className="space-y-4">
-                  <div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2">Personal Information</h3>
-                    <p>We may collect personal information that you voluntarily provide, including:</p>
-                    <ul className="list-disc list-inside mt-2 space-y-1">
-                      <li>Name and contact information</li>
-                      <li>Email address and phone number</li>
-                      <li>Company/organization details</li>
-                      <li>Legal matter details and correspondence</li>
-                    </ul>
-                  </div>
-                  
-                  <div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2">Usage Information</h3>
-                    <p>We automatically collect certain information when you use our website:</p>
-                    <ul className="list-disc list-inside mt-2 space-y-1">
-                      <li>IP address and browser information</li>
-                      <li>Pages visited and time spent on our website</li>
-                      <li>Referring website information</li>
-                    </ul>
-                  </div>
-                </div>
+            {/* Information We Collect */}
+            <div className="mb-12">
+              <div className="flex items-center mb-4">
+                <Eye className="w-6 h-6 text-beige-400 mr-3" />
+                <h2 className="text-2xl font-bold text-gray-900">Information We Collect</h2>
               </div>
+              
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Personal Information</h3>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                We may collect personal information that you voluntarily provide to us, including:
+              </p>
+              <ul className="space-y-2 mb-6">
+                <li className="flex items-start">
+                  <div className="w-2 h-2 bg-beige-400 rounded-full mr-3 mt-2"></div>
+                  <span className="text-gray-700">Name, email address, and phone number</span>
+                </li>
+                <li className="flex items-start">
+                  <div className="w-2 h-2 bg-beige-400 rounded-full mr-3 mt-2"></div>
+                  <span className="text-gray-700">Business or organization name and address</span>
+                </li>
+                <li className="flex items-start">
+                  <div className="w-2 h-2 bg-beige-400 rounded-full mr-3 mt-2"></div>
+                  <span className="text-gray-700">Legal matter details and case information</span>
+                </li>
+                <li className="flex items-start">
+                  <div className="w-2 h-2 bg-beige-400 rounded-full mr-3 mt-2"></div>
+                  <span className="text-gray-700">Communication preferences and inquiry details</span>
+                </li>
+              </ul>
 
-              <div>
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">How We Use Your Information</h2>
-                <p>We use the information we collect to:</p>
-                <ul className="list-disc list-inside mt-4 space-y-2">
-                  <li>Provide legal services and respond to your inquiries</li>
-                  <li>Communicate with you about your legal matters</li>
-                  <li>Improve our website and services</li>
-                  <li>Comply with legal obligations and professional requirements</li>
-                  <li>Send you relevant updates about our services (with your consent)</li>
-                </ul>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Automatically Collected Information</h3>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                When you visit our website, we may automatically collect certain information, including:
+              </p>
+              <ul className="space-y-2">
+                <li className="flex items-start">
+                  <div className="w-2 h-2 bg-beige-400 rounded-full mr-3 mt-2"></div>
+                  <span className="text-gray-700">IP address and browser information</span>
+                </li>
+                <li className="flex items-start">
+                  <div className="w-2 h-2 bg-beige-400 rounded-full mr-3 mt-2"></div>
+                  <span className="text-gray-700">Pages visited and time spent on our website</span>
+                </li>
+                <li className="flex items-start">
+                  <div className="w-2 h-2 bg-beige-400 rounded-full mr-3 mt-2"></div>
+                  <span className="text-gray-700">Device type and operating system</span>
+                </li>
+                <li className="flex items-start">
+                  <div className="w-2 h-2 bg-beige-400 rounded-full mr-3 mt-2"></div>
+                  <span className="text-gray-700">Referral sources and search terms</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* How We Use Information */}
+            <div className="mb-12">
+              <div className="flex items-center mb-4">
+                <FileText className="w-6 h-6 text-beige-400 mr-3" />
+                <h2 className="text-2xl font-bold text-gray-900">How We Use Your Information</h2>
               </div>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                We use the information we collect for the following purposes:
+              </p>
+              <ul className="space-y-2">
+                <li className="flex items-start">
+                  <div className="w-2 h-2 bg-beige-400 rounded-full mr-3 mt-2"></div>
+                  <span className="text-gray-700">To provide legal services and consultations</span>
+                </li>
+                <li className="flex items-start">
+                  <div className="w-2 h-2 bg-beige-400 rounded-full mr-3 mt-2"></div>
+                  <span className="text-gray-700">To respond to inquiries and communicate with clients</span>
+                </li>
+                <li className="flex items-start">
+                  <div className="w-2 h-2 bg-beige-400 rounded-full mr-3 mt-2"></div>
+                  <span className="text-gray-700">To improve our website and services</span>
+                </li>
+                <li className="flex items-start">
+                  <div className="w-2 h-2 bg-beige-400 rounded-full mr-3 mt-2"></div>
+                  <span className="text-gray-700">To send legal updates and newsletters (with consent)</span>
+                </li>
+                <li className="flex items-start">
+                  <div className="w-2 h-2 bg-beige-400 rounded-full mr-3 mt-2"></div>
+                  <span className="text-gray-700">To comply with legal obligations and professional standards</span>
+                </li>
+              </ul>
+            </div>
 
-              <div>
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">Attorney-Client Privilege</h2>
-                <p>
-                  We maintain strict confidentiality regarding all client communications and information. 
-                  All information shared with us in connection with legal services is protected by attorney-client 
-                  privilege and professional obligations of confidentiality.
-                </p>
+            {/* Information Sharing */}
+            <div className="mb-12">
+              <div className="flex items-center mb-4">
+                <Lock className="w-6 h-6 text-beige-400 mr-3" />
+                <h2 className="text-2xl font-bold text-gray-900">Information Sharing and Disclosure</h2>
               </div>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                We do not sell, trade, or otherwise transfer your personal information to third parties except in the following circumstances:
+              </p>
+              <ul className="space-y-2">
+                <li className="flex items-start">
+                  <div className="w-2 h-2 bg-beige-400 rounded-full mr-3 mt-2"></div>
+                  <span className="text-gray-700">With your explicit consent</span>
+                </li>
+                <li className="flex items-start">
+                  <div className="w-2 h-2 bg-beige-400 rounded-full mr-3 mt-2"></div>
+                  <span className="text-gray-700">To trusted service providers who assist in our operations</span>
+                </li>
+                <li className="flex items-start">
+                  <div className="w-2 h-2 bg-beige-400 rounded-full mr-3 mt-2"></div>
+                  <span className="text-gray-700">When required by law or legal process</span>
+                </li>
+                <li className="flex items-start">
+                  <div className="w-2 h-2 bg-beige-400 rounded-full mr-3 mt-2"></div>
+                  <span className="text-gray-700">To protect our rights, property, or safety</span>
+                </li>
+              </ul>
+            </div>
 
-              <div>
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">Information Sharing</h2>
-                <p>We do not sell, trade, or otherwise transfer your personal information to third parties, except:</p>
-                <ul className="list-disc list-inside mt-4 space-y-2">
-                  <li>With your explicit consent</li>
-                  <li>To comply with legal obligations</li>
-                  <li>To protect our rights or the rights of others</li>
-                  <li>With service providers who assist us in operating our website or conducting our business</li>
-                </ul>
+            {/* Data Security */}
+            <div className="mb-12">
+              <div className="flex items-center mb-4">
+                <Shield className="w-6 h-6 text-beige-400 mr-3" />
+                <h2 className="text-2xl font-bold text-gray-900">Data Security</h2>
               </div>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                We implement appropriate technical and organizational measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. These measures include:
+              </p>
+              <ul className="space-y-2">
+                <li className="flex items-start">
+                  <div className="w-2 h-2 bg-beige-400 rounded-full mr-3 mt-2"></div>
+                  <span className="text-gray-700">Secure server infrastructure and encryption</span>
+                </li>
+                <li className="flex items-start">
+                  <div className="w-2 h-2 bg-beige-400 rounded-full mr-3 mt-2"></div>
+                  <span className="text-gray-700">Regular security assessments and updates</span>
+                </li>
+                <li className="flex items-start">
+                  <div className="w-2 h-2 bg-beige-400 rounded-full mr-3 mt-2"></div>
+                  <span className="text-gray-700">Limited access to personal information</span>
+                </li>
+                <li className="flex items-start">
+                  <div className="w-2 h-2 bg-beige-400 rounded-full mr-3 mt-2"></div>
+                  <span className="text-gray-700">Employee training on data protection</span>
+                </li>
+              </ul>
+            </div>
 
-              <div>
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">Data Security</h2>
-                <p>
-                  We implement appropriate security measures to protect your personal information against 
-                  unauthorized access, alteration, disclosure, or destruction. However, no method of transmission 
-                  over the internet is 100% secure.
-                </p>
-              </div>
+            {/* Your Rights */}
+            <div className="mb-12">
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">Your Rights</h2>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                You have the following rights regarding your personal information:
+              </p>
+              <ul className="space-y-2">
+                <li className="flex items-start">
+                  <div className="w-2 h-2 bg-beige-400 rounded-full mr-3 mt-2"></div>
+                  <span className="text-gray-700">Access and review your personal information</span>
+                </li>
+                <li className="flex items-start">
+                  <div className="w-2 h-2 bg-beige-400 rounded-full mr-3 mt-2"></div>
+                  <span className="text-gray-700">Request correction of inaccurate information</span>
+                </li>
+                <li className="flex items-start">
+                  <div className="w-2 h-2 bg-beige-400 rounded-full mr-3 mt-2"></div>
+                  <span className="text-gray-700">Request deletion of your information (subject to legal obligations)</span>
+                </li>
+                <li className="flex items-start">
+                  <div className="w-2 h-2 bg-beige-400 rounded-full mr-3 mt-2"></div>
+                  <span className="text-gray-700">Opt-out of marketing communications</span>
+                </li>
+              </ul>
+            </div>
 
-              <div>
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">Your Rights</h2>
-                <p>You have the right to:</p>
-                <ul className="list-disc list-inside mt-4 space-y-2">
-                  <li>Access and review your personal information</li>
-                  <li>Request correction of inaccurate information</li>
-                  <li>Request deletion of your information (subject to legal and professional obligations)</li>
-                  <li>Opt-out of non-essential communications</li>
-                </ul>
-              </div>
-
-              <div>
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">Contact Us</h2>
-                <p>
-                  If you have any questions about this Privacy Policy or our data practices, please contact us at:
-                </p>
-                <div className="mt-4 p-4 bg-gray-50 rounded-lg">
-                  <p><strong>HRA Legal</strong></p>
-                  <p>Email: privacy@hralegal.com</p>
-                  <p>Phone: +91 XXXX-XXXX-XX</p>
-                </div>
-              </div>
-
-              <div>
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">Changes to This Policy</h2>
-                <p>
-                  We may update this Privacy Policy from time to time. We will notify you of any changes by 
-                  posting the new Privacy Policy on this page and updating the "Last updated" date.
-                </p>
+            {/* Contact Information */}
+            <div className="bg-beige-50 rounded-lg p-6">
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">Contact Us</h2>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                If you have any questions about this Privacy Policy or our data practices, please contact us:
+              </p>
+              <div className="space-y-2 text-gray-700">
+                <p><strong>Email:</strong> privacy@hralegal.com</p>
+                <p><strong>Phone:</strong> +91 (0) 123 456 7890</p>
+                <p><strong>Address:</strong> 123 Legal District, Professional Tower, 5th Floor, Mumbai, Maharashtra 400001, India</p>
               </div>
             </div>
           </div>
         </div>
       </section>
       <Footer />
-    </main>
+    </div>
   );
 } 

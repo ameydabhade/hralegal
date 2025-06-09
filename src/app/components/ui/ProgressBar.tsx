@@ -1,77 +1,96 @@
-import React from 'react';
+'use client';
+import React, { useState, useEffect, useRef } from 'react';
 
 interface ProgressBarProps {
-  progress: number; // 0-100
-  variant?: 'default' | 'gradient' | 'neon' | 'legal';
-  size?: 'sm' | 'md' | 'lg';
-  showPercentage?: boolean;
+  progress: number;
+  duration?: number;
+  height?: string;
   className?: string;
+  variant?: 'default' | 'gradient' | 'animated' | 'glow';
+  showPercentage?: boolean;
+  color?: string;
 }
 
-export function ProgressBar({ 
-  progress, 
-  variant = 'default', 
-  size = 'md', 
+export function ProgressBar({
+  progress,
+  duration = 1000,
+  height = 'h-2',
+  className = '',
+  variant = 'default',
   showPercentage = false,
-  className = '' 
+  color = 'bg-blue-600'
 }: ProgressBarProps) {
-  const clampedProgress = Math.min(Math.max(progress, 0), 100);
-  
-  const sizeClasses = {
-    sm: 'h-2',
-    md: 'h-4',
-    lg: 'h-6'
-  };
+  const [currentProgress, setCurrentProgress] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+  const progressRef = useRef<HTMLDivElement>(null);
 
-  const getVariantClasses = () => {
-    switch (variant) {
-      case 'gradient':
-        return {
-          container: 'bg-gray-200 rounded-full overflow-hidden',
-          bar: 'bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 h-full transition-all duration-700 ease-out rounded-full'
-        };
-      case 'neon':
-        return {
-          container: 'bg-gray-800 rounded-full overflow-hidden border border-cyan-400',
-          bar: 'bg-gradient-to-r from-cyan-400 to-purple-500 h-full transition-all duration-700 ease-out rounded-full shadow-[0_0_20px_rgba(34,211,238,0.5)]'
-        };
-      case 'legal':
-        return {
-          container: 'bg-gray-100 rounded-full overflow-hidden border border-blue-200',
-          bar: 'bg-gradient-to-r from-blue-600 to-indigo-600 h-full transition-all duration-700 ease-out rounded-full relative before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/30 before:to-transparent before:translate-x-[-100%] before:animate-[shimmer_2s_infinite] before:rounded-full'
-        };
-      default:
-        return {
-          container: 'bg-gray-200 rounded-full overflow-hidden',
-          bar: 'bg-blue-600 h-full transition-all duration-700 ease-out rounded-full'
-        };
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (progressRef.current) {
+      observer.observe(progressRef.current);
     }
-  };
 
-  const variantClasses = getVariantClasses();
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!isVisible) return;
+
+    let startTime: number;
+    let animationFrame: number;
+
+    const animate = (timestamp: number) => {
+      if (!startTime) startTime = timestamp;
+      const elapsed = timestamp - startTime;
+      const progressValue = Math.min((elapsed / duration) * progress, progress);
+      
+      setCurrentProgress(progressValue);
+
+      if (progressValue < progress) {
+        animationFrame = requestAnimationFrame(animate);
+      }
+    };
+
+    animationFrame = requestAnimationFrame(animate);
+
+    return () => {
+      if (animationFrame) {
+        cancelAnimationFrame(animationFrame);
+      }
+    };
+  }, [isVisible, progress, duration]);
+
+  const variants = {
+    default: `${color}`,
+    gradient: 'bg-gradient-to-r from-blue-500 to-purple-600',
+    animated: `${color} animate-pulse`,
+    glow: `${color} shadow-lg`
+  };
 
   return (
-    <div className={`relative w-full ${className}`}>
-      <div className={`${variantClasses.container} ${sizeClasses[size]}`}>
-        <div 
-          className={variantClasses.bar}
-          style={{ width: `${clampedProgress}%` }}
-        />
-      </div>
-      
+    <div ref={progressRef} className={`w-full ${className}`}>
       {showPercentage && (
-        <div className="absolute right-0 -top-6 text-sm font-medium text-gray-600">
-          {Math.round(clampedProgress)}%
+        <div className="flex justify-between items-center mb-2">
+          <span className="text-sm font-medium text-gray-700">Progress</span>
+          <span className="text-sm font-medium text-gray-700">
+            {Math.round(currentProgress)}%
+          </span>
         </div>
       )}
-      
-      {/* Animated pulse effect for legal variant */}
-      {variant === 'legal' && clampedProgress > 0 && (
-        <div 
-          className="absolute top-0 left-0 h-full bg-blue-400 opacity-30 rounded-full animate-pulse"
-          style={{ width: `${clampedProgress}%` }}
+      <div className={`w-full bg-gray-200 rounded-full ${height} overflow-hidden`}>
+        <div
+          className={`${height} rounded-full transition-all duration-300 ease-out ${variants[variant]}`}
+          style={{ width: `${currentProgress}%` }}
         />
-      )}
+      </div>
     </div>
   );
 } 

@@ -1,79 +1,63 @@
-import React from 'react';
-import Link from 'next/link';
+'use client';
 
 interface AnimatedButtonProps {
   children: React.ReactNode;
-  variant?: 'primary' | 'secondary' | 'glow' | 'magnetic' | 'morphing';
-  onClick?: () => void;
-  href?: string;
   className?: string;
+  href?: string;
+  variant?: 'primary' | 'secondary' | 'accent' | 'subtle' | 'modern';
+  onClick?: () => void;
 }
 
-export function AnimatedButton({ 
-  children, 
-  variant = 'primary', 
-  onClick, 
-  href, 
-  className = '' 
-}: AnimatedButtonProps) {
-  const baseClasses = "relative inline-flex items-center justify-center px-8 py-4 font-semibold text-white rounded-[32px] transition-all duration-300 overflow-hidden group";
+export const AnimatedButton = ({ children, className = '', href, variant = 'primary', onClick }: AnimatedButtonProps) => {
+  const baseClasses = "relative inline-flex items-center justify-center px-6 py-3 font-semibold text-sm transition-all duration-300 ease-out transform hover:scale-105 active:scale-95 rounded-lg group overflow-hidden";
   
   const variants = {
     primary: `
-      bg-gradient-to-r from-blue-600 to-blue-700 
-      hover:from-blue-700 hover:to-blue-800 
-      shadow-lg hover:shadow-2xl 
-      transform hover:-translate-y-1 
-      before:absolute before:inset-0 
-      before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent 
-      before:translate-x-[-100%] hover:before:translate-x-[100%] 
-      before:transition-transform before:duration-700
+      bg-gradient-to-r from-beige-600 to-beige-700
+      hover:from-beige-700 hover:to-beige-800
+      text-white shadow-lg hover:shadow-xl
+      before:absolute before:inset-0 before:bg-gradient-to-r before:from-white before:to-transparent 
+      before:opacity-0 before:transition-opacity before:duration-300 hover:before:opacity-20
     `,
     secondary: `
-      bg-transparent border-2 border-blue-600 text-blue-600
-      hover:bg-blue-600 hover:text-white hover:border-blue-700
-      before:absolute before:inset-0 before:bg-blue-600 
-      before:scale-x-0 hover:before:scale-x-100 
-      before:origin-left before:transition-transform before:duration-300
-      before:z-[-1]
+      bg-transparent border-2 border-beige-600 text-beige-600
+      hover:bg-beige-600 hover:text-white hover:border-beige-700
+      before:absolute before:inset-0 before:bg-beige-600
+      before:scale-x-0 before:origin-left before:transition-transform before:duration-300
+      hover:before:scale-x-100 before:-z-10
     `,
-    glow: `
-      bg-gradient-to-r from-purple-500 to-pink-500
-      hover:from-purple-600 hover:to-pink-600
-      shadow-lg hover:shadow-purple-500/25
-      before:absolute before:inset-0 before:rounded-[32px]
-      before:p-[2px] before:bg-gradient-to-r before:from-purple-400 before:to-pink-400
-      before:content-[''] before:z-[-1] before:animate-pulse
+    accent: `
+      bg-gradient-to-r from-beige-400 to-emerald-500
+      hover:from-beige-600 hover:to-emerald-600
+      shadow-lg hover:shadow-beige-400/25
+      text-white relative
+      before:p-[2px] before:bg-gradient-to-r before:from-beige-400 before:to-emerald-400
+      before:absolute before:inset-0 before:rounded-lg before:-z-10
     `,
-    magnetic: `
-      bg-gradient-to-r from-indigo-500 to-blue-600
-      hover:from-indigo-600 hover:to-blue-700
-      shadow-xl hover:shadow-2xl
-      transition-all duration-200 ease-out
-      hover:scale-105 active:scale-95
+    subtle: `
+      bg-gradient-to-r from-beige-400 to-beige-600
+      hover:from-beige-600 hover:to-beige-700
+      text-white shadow-md hover:shadow-lg
+      backdrop-blur-sm
     `,
-    morphing: `
-      bg-gradient-to-r from-emerald-500 to-teal-600
-      hover:from-emerald-600 hover:to-teal-700
-      rounded-full hover:rounded-[32px]
-      transition-all duration-500 ease-in-out
-      transform hover:rotate-3 hover:scale-110
+    modern: `
+      bg-gradient-to-r from-emerald-500 to-beige-600
+      hover:from-emerald-600 hover:to-beige-700
+      text-white shadow-lg hover:shadow-xl
+      border border-white/20
     `
   };
 
-  const buttonClasses = `${baseClasses} ${variants[variant]} ${className}`;
-
-  if (href) {
-    return (
-      <Link href={href} className={buttonClasses}>
-        <span className="relative z-10">{children}</span>
-      </Link>
-    );
-  }
-
+  const Component = href ? 'a' : 'button';
+  const combinedClasses = `${baseClasses} ${variants[variant]} ${className}`.replace(/\s+/g, ' ').trim();
+  
   return (
-    <button onClick={onClick} className={buttonClasses}>
+    <Component
+      href={href}
+      onClick={onClick}
+      className={combinedClasses}
+    >
       <span className="relative z-10">{children}</span>
-    </button>
+    </Component>
   );
-} 
+}; 

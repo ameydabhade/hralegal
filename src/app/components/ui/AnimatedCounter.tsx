@@ -3,86 +3,104 @@ import React, { useState, useEffect, useRef } from 'react';
 
 interface AnimatedCounterProps {
   end: number;
+  start?: number;
   duration?: number;
   suffix?: string;
   prefix?: string;
   className?: string;
-  variant?: 'default' | 'glow' | 'typewriter';
+  variant?: 'default' | 'glow' | 'bounce' | 'fade';
+  trigger?: boolean;
 }
 
-export function AnimatedCounter({ 
-  end, 
-  duration = 2000, 
-  suffix = '', 
+export function AnimatedCounter({
+  end,
+  start = 0,
+  duration = 2000,
+  suffix = '',
   prefix = '',
   className = '',
-  variant = 'default'
+  variant = 'default',
+  trigger = true
 }: AnimatedCounterProps) {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(start);
   const [isVisible, setIsVisible] = useState(false);
-  const counterRef = useRef<HTMLDivElement>(null);
+  const countRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting && !isVisible) {
+        if (entry.isIntersecting && trigger) {
           setIsVisible(true);
         }
       },
       { threshold: 0.1 }
     );
 
-    if (counterRef.current) {
-      observer.observe(counterRef.current);
+    if (countRef.current) {
+      observer.observe(countRef.current);
     }
 
     return () => observer.disconnect();
-  }, [isVisible]);
+  }, [trigger]);
 
   useEffect(() => {
     if (!isVisible) return;
 
     let startTime: number;
-    let animationId: number;
+    let animationFrame: number;
 
     const animate = (timestamp: number) => {
       if (!startTime) startTime = timestamp;
       const progress = Math.min((timestamp - startTime) / duration, 1);
       
-      const easeOutExpo = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
-      setCount(Math.floor(easeOutExpo * end));
+      // Easing function for smooth animation
+      const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+      const currentCount = Math.floor(start + (end - start) * easeOutQuart);
+      
+      setCount(currentCount);
 
       if (progress < 1) {
-        animationId = requestAnimationFrame(animate);
+        animationFrame = requestAnimationFrame(animate);
       }
     };
 
-    animationId = requestAnimationFrame(animate);
+    animationFrame = requestAnimationFrame(animate);
 
     return () => {
-      if (animationId) {
-        cancelAnimationFrame(animationId);
+      if (animationFrame) {
+        cancelAnimationFrame(animationFrame);
       }
     };
-  }, [isVisible, end, duration]);
+  }, [isVisible, start, end, duration]);
 
-  const getVariantClasses = () => {
-    switch (variant) {
-      case 'glow':
-        return 'text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600 drop-shadow-[0_0_10px_rgba(59,130,246,0.5)]';
-      case 'typewriter':
-        return 'font-mono border-r-2 border-blue-500 animate-pulse';
-      default:
-        return '';
-    }
+  const variants = {
+    default: 'transition-all duration-300',
+    glow: `
+      transition-all duration-300 
+      text-shadow-lg hover:scale-105
+      before:absolute before:inset-0 before:blur-xl before:opacity-30
+      before:bg-gradient-to-r before:from-current before:to-current
+      relative inline-block
+    `,
+    bounce: `
+      transition-all duration-300 
+      hover:animate-bounce
+      transform hover:scale-110
+    `,
+    fade: `
+      transition-all duration-500
+      hover:opacity-80
+    `
   };
 
   return (
-    <div 
-      ref={counterRef}
-      className={`inline-block ${getVariantClasses()} ${className}`}
+    <div
+      ref={countRef}
+      className={`${variants[variant]} ${className} font-bold`}
     >
-      {prefix}{count.toLocaleString()}{suffix}
+      <span className="relative z-10">
+        {prefix}{count.toLocaleString()}{suffix}
+      </span>
     </div>
   );
 } 

@@ -1,0 +1,73 @@
+'use client';
+import { useState, useEffect } from 'react';
+import { X, AlertCircle } from 'lucide-react';
+
+export default function DisclaimerModal() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    // Check if user has already accepted disclaimer
+    const hasAccepted = localStorage.getItem('hra-legal-disclaimer-accepted');
+    if (!hasAccepted) {
+      setIsVisible(true);
+    }
+  }, []);
+
+  const handleAccept = () => {
+    localStorage.setItem('hra-legal-disclaimer-accepted', 'true');
+    setIsVisible(false);
+  };
+
+  const handleDecline = () => {
+    // Redirect away from the site or show alternate message
+    window.location.href = 'https://www.google.com';
+  };
+
+  if (!isVisible) return null;
+
+  return (
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+      <div className="bg-white rounded-lg shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+        <div className="p-6">
+          <div className="flex items-center justify-between mb-6">
+            <div className="flex items-center">
+              <AlertCircle className="w-8 h-8 text-beige-700 mr-3" />
+              <h2 className="text-2xl font-bold text-gray-900">Important Disclaimer</h2>
+            </div>
+          </div>
+          
+          <div className="space-y-4 mb-8">
+            <p className="text-lg font-semibold text-gray-900 border-b border-gray-200 pb-2">
+              Bar Council of India Disclaimer
+            </p>
+            
+            <p className="text-gray-700 leading-relaxed">
+              As per the rules of the Bar Council of India, lawyers and law firms are not permitted to solicit work or advertise. By clicking on the "I Agree" button, you acknowledge and confirm that you are seeking information relating to HRA Legal on your own accord and that there has been no advertisement, touts, personal communication, solicitation, invitation or any other inducement of any sort whatsoever by or on behalf of HRA Legal or any of its members to solicit any work through this website.
+            </p>
+            
+            <div className="bg-beige-50 border-l-4 border-beige-700 p-4 rounded">
+              <p className="text-sm text-gray-700">
+                <strong>Please note:</strong> This website is intended for informational purposes only and does not constitute legal advice. Any information provided should not be construed as creating an attorney-client relationship.
+              </p>
+            </div>
+          </div>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-end">
+            <button
+              onClick={handleDecline}
+              className="px-6 py-3 border-2 border-gray-300 text-gray-700 font-semibold rounded-md hover:bg-gray-50 transition-colors duration-200"
+            >
+              I Do Not Agree
+            </button>
+            <button
+              onClick={handleAccept}
+              className="px-6 py-3 bg-beige-700 text-white font-semibold rounded-md hover:bg-beige-800 transition-colors duration-200"
+            >
+              I Agree & Continue
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+} 
