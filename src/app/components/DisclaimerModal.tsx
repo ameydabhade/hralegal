@@ -26,12 +26,12 @@ export default function DisclaimerModal() {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-      <div className="bg-white rounded-lg shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+    <div className="fixed inset-0 bg-black/20 backdrop-blur-sm flex items-center justify-center z-50 p-4">
+      <div className="bg-white/95 backdrop-blur-md rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto border border-white/20">
         <div className="p-6">
           <div className="flex items-center justify-between mb-6">
             <div className="flex items-center">
-              <AlertCircle className="w-8 h-8 text-beige-700 mr-3" />
+              <AlertCircle className="w-8 h-8 text-amber-600 mr-3" />
               <h2 className="text-2xl font-bold text-gray-900">Important Disclaimer</h2>
             </div>
           </div>
@@ -45,7 +45,7 @@ export default function DisclaimerModal() {
               As per the rules of the Bar Council of India, lawyers and law firms are not permitted to solicit work or advertise. By clicking on the "I Agree" button, you acknowledge and confirm that you are seeking information relating to HRA Legal on your own accord and that there has been no advertisement, touts, personal communication, solicitation, invitation or any other inducement of any sort whatsoever by or on behalf of HRA Legal or any of its members to solicit any work through this website.
             </p>
             
-            <div className="bg-beige-50 border-l-4 border-beige-700 p-4 rounded">
+            <div className="bg-amber-50 border-l-4 border-amber-500 p-4 rounded">
               <p className="text-sm text-gray-700">
                 <strong>Please note:</strong> This website is intended for informational purposes only and does not constitute legal advice. Any information provided should not be construed as creating an attorney-client relationship.
               </p>
@@ -55,13 +55,13 @@ export default function DisclaimerModal() {
           <div className="flex flex-col sm:flex-row gap-4 justify-end">
             <button
               onClick={handleDecline}
-              className="px-6 py-3 border-2 border-gray-300 text-gray-700 font-semibold rounded-md hover:bg-gray-50 transition-colors duration-200"
+              className="px-6 py-3 border-2 border-gray-300 text-gray-700 font-semibold rounded-lg hover:bg-gray-50 transition-colors duration-200"
             >
               I Do Not Agree
             </button>
             <button
               onClick={handleAccept}
-              className="px-6 py-3 bg-beige-700 text-white font-semibold rounded-md hover:bg-beige-800 transition-colors duration-200"
+              className="px-6 py-3 bg-beige-400 text-white font-semibold rounded-lg hover:bg-beige-500 transition-colors duration-200 shadow-lg"
             >
               I Agree & Continue
             </button>

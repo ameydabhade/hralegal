@@ -115,7 +115,7 @@ export default function HeroSection() {
                         <InteractiveIcon magneticStrength={0.5}>
                           <Scale className="w-8 h-8 text-lavender-700" />
                         </InteractiveIcon>
-                        <div>
+                        <div > 
                           <h3 className="text-lg font-bold text-soft-gray-900">Legal Agreement</h3>
                           <p className="text-sm text-soft-gray-500">Professional Documentation</p>
                         </div>
