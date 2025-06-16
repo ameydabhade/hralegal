@@ -95,7 +95,7 @@ export default function Footer() {
                 Industries We Serve
               </Link>
               <Link href="/knowledge-centre" className="block text-gray-300 hover:text-beige-300 transition-colors">
-                Knowledge Centre
+                Learners Page
               </Link>
               <Link href="/careers" className="block text-gray-300 hover:text-beige-300 transition-colors">
                 Careers

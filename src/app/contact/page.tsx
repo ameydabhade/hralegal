@@ -7,7 +7,7 @@ export const metadata = {
 
 export default function ContactPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-beige-50 to-white">
+    <div className="min-h-screen bg-gradient-to-b from-beige-100 to-white py-20">
       {/* Hero Section */}
       <section className="pt-32 pb-16">
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
@@ -162,7 +162,7 @@ export default function ContactPage() {
                   <input
                     type="tel"
                     className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-beige-400 focus:border-beige-400 transition-colors"
-                    placeholder="+91 98765 43210"
+                    placeholder="+91 99999 99999"
                   />
                 </div>
 

@@ -80,7 +80,7 @@ export default function SectorsPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-beige-50 to-white">
+    <div className="min-h-screen bg-gradient-to-b from-beige-100 to-white py-20">
       {/* Hero Section */}
       <section className="pt-32 pb-16">
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
