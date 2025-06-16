@@ -214,7 +214,7 @@ export default function SectorsPage() {
             Ready to Work with Sector Experts?
           </h2>
           <p className="text-lg text-gray-700 mb-8">
-            Partner with HRA Legal for specialized legal services tailored to your sector's unique requirements and challenges.
+            Partner with HRA Legal for specialized legal services tailored to your sector&apos;s unique requirements and challenges.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 

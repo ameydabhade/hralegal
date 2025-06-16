@@ -43,7 +43,7 @@ export default function PrivacyPolicyPage() {
                 <h2 className="text-2xl font-bold text-gray-900">Introduction</h2>
               </div>
               <p className="text-gray-700 leading-relaxed mb-4">
-                HRA Legal ("we," "our," or "us") is committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy describes how we collect, use, disclose, and safeguard your information when you visit our website or use our services.
+                HRA Legal (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) is committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy describes how we collect, use, disclose, and safeguard your information when you visit our website or use our services.
               </p>
               <p className="text-gray-700 leading-relaxed">
                 By accessing or using our website and services, you agree to the collection and use of information in accordance with this Privacy Policy.
