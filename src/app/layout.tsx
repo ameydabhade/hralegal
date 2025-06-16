@@ -30,7 +30,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${lora.variable} ${geistMono.variable} font-serif antialiased`}>
         <Header />
-        <main className="pt-20">{children}</main>
+        <main >{children}</main>
         <Footer />
         <DisclaimerModal />
       </body>

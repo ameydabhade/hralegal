@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin, Clock, Send } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Send, Linkedin, Instagram, Facebook } from 'lucide-react';
 
 export const metadata = {
   title: 'Contact Us - HRA Legal',
@@ -38,23 +38,21 @@ export default function ContactPage() {
               <div className="space-y-6">
                 <div className="flex items-start">
                   <div className="w-12 h-12 bg-beige-100 rounded-lg flex items-center justify-center mr-4">
-                    <Phone className="w-6 h-6 text-beige-700" />
+                    <Mail className="w-6 h-6 text-beige-700" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">Phone</h3>
-                    <p className="text-gray-700">+91 (0) 123 456 7890</p>
-                    <p className="text-gray-700">+91 (0) 987 654 3210</p>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">Email</h3>
+                    <p className="text-gray-700">rushi@hralegal.com</p>
                   </div>
                 </div>
 
                 <div className="flex items-start">
                   <div className="w-12 h-12 bg-beige-100 rounded-lg flex items-center justify-center mr-4">
-                    <Mail className="w-6 h-6 text-beige-700" />
+                    <Phone className="w-6 h-6 text-beige-700" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">Email</h3>
-                    <p className="text-gray-700">info@hralegal.com</p>
-                    <p className="text-gray-700">legal@hralegal.com</p>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">Phone Number</h3>
+                    <p className="text-gray-700">9967382875</p>
                   </div>
                 </div>
 
@@ -65,10 +63,10 @@ export default function ContactPage() {
                   <div>
                     <h3 className="text-xl font-bold text-gray-900 mb-2">Office Address</h3>
                     <p className="text-gray-700">
-                      123 Legal District<br />
-                      Professional Tower, 5th Floor<br />
-                      Mumbai, Maharashtra 400001<br />
-                      India
+                      93 East Building, 705<br />
+                      Mahakali Caves Road<br />
+                      Near MIDC/Ahura/Onida<br />
+                      Andheri East, Mumbai 400093
                     </p>
                   </div>
                 </div>
@@ -82,8 +80,36 @@ export default function ContactPage() {
                     <p className="text-gray-700">Monday - Friday: 9:00 AM - 6:00 PM</p>
                     <p className="text-gray-700">Saturday: 10:00 AM - 2:00 PM</p>
                     <p className="text-gray-700">Sunday: Closed</p>
-                    <p className="text-sm text-beige-700 mt-2">*Emergency consultations available 24/7</p>
+                    <p className="text-sm text-beige-700 mt-2">*Emergency consultations available upon request</p>
                   </div>
+                </div>
+              </div>
+
+              {/* Social Media Links */}
+              <div className="pt-8 border-t border-gray-200">
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Follow Us</h3>
+                <div className="flex space-x-4">
+                  <a 
+                    href="#" 
+                    className="w-12 h-12 bg-beige-600 rounded-lg flex items-center justify-center hover:bg-beige-700 transition-colors duration-200"
+                    aria-label="LinkedIn"
+                  >
+                    <Linkedin className="w-6 h-6 text-white" />
+                  </a>
+                  <a 
+                    href="#" 
+                    className="w-12 h-12 bg-beige-600 rounded-lg flex items-center justify-center hover:bg-beige-700 transition-colors duration-200"
+                    aria-label="Instagram"
+                  >
+                    <Instagram className="w-6 h-6 text-white" />
+                  </a>
+                  <a 
+                    href="#" 
+                    className="w-12 h-12 bg-beige-600 rounded-lg flex items-center justify-center hover:bg-beige-700 transition-colors duration-200"
+                    aria-label="Facebook"
+                  >
+                    <Facebook className="w-6 h-6 text-white" />
+                  </a>
                 </div>
               </div>
             </div>
@@ -146,12 +172,20 @@ export default function ContactPage() {
                   </label>
                   <select className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-beige-400 focus:border-beige-400 transition-colors">
                     <option value="">Select a service</option>
-                    <option value="corporate">Corporate & Commercial Law</option>
-                    <option value="ip">Intellectual Property Law</option>
-                    <option value="civil">Civil & Business Law</option>
-                    <option value="employment">Employment & Labor Law</option>
-                    <option value="property">Property Law</option>
-                    <option value="taxation">Taxation Law</option>
+                    <option value="contracts">Contracts, Compliances, and Advisory</option>
+                    <option value="corporate">Company Secretarial and Corporate Governance</option>
+                    <option value="compliance">Compliance, Bribery, Anti-Corruption</option>
+                    <option value="trade">International Trade & Export/Import Advisory</option>
+                    <option value="data">Data Privacy, Protection, and Cybersecurity</option>
+                    <option value="employment">Employment, Labour & Industrial Relations</option>
+                    <option value="realestate">Real Estate</option>
+                    <option value="startups">Startups & Emerging Businesses</option>
+                    <option value="ma">Mergers and Acquisitions, JV's, Strategic Alliances</option>
+                    <option value="ip">Intellectual Property</option>
+                    <option value="media">Media, Technology, and Telecommunications</option>
+                    <option value="project">Project Management</option>
+                    <option value="taxation">Taxation</option>
+                    <option value="ai">AI, Blockchain, Metaverse, NFT</option>
                     <option value="other">Other</option>
                   </select>
                 </div>
@@ -170,7 +204,7 @@ export default function ContactPage() {
 
                 <button
                   type="submit"
-                  className="w-full inline-flex items-center justify-center px-6 py-3 bg-beige-700 text-white font-semibold rounded-md hover:bg-beige-800 transition-colors duration-200"
+                  className="w-full inline-flex items-center justify-center px-6 py-3 bg-beige-600 text-white font-semibold rounded-md hover:bg-beige-700 transition-colors duration-200"
                 >
                   <Send className="w-5 h-5 mr-2" />
                   Send Message
@@ -199,29 +233,21 @@ export default function ContactPage() {
           <h2 className="text-3xl font-bold text-gray-900 mb-6">
             Why Choose HRA Legal?
           </h2>
+          <p className="text-lg text-gray-700 mb-8">
+            With 15+ years of experience and a track record of successful outcomes, we're committed to providing exceptional legal services.
+          </p>
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white rounded-lg shadow-md p-6">
-              <div className="w-12 h-12 bg-beige-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <Phone className="w-6 h-6 text-beige-700" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">24/7 Availability</h3>
-              <p className="text-gray-700">Always accessible for urgent legal consultations and advice</p>
+            <div>
+              <div className="text-3xl font-bold text-beige-600 mb-2">15+</div>
+              <div className="text-gray-700">Years of Experience</div>
             </div>
-            
-            <div className="bg-white rounded-lg shadow-md p-6">
-              <div className="w-12 h-12 bg-beige-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <Mail className="w-6 h-6 text-beige-700" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Quick Response</h3>
-              <p className="text-gray-700">Prompt replies to all inquiries within 24 hours</p>
+            <div>
+              <div className="text-3xl font-bold text-beige-600 mb-2">500+</div>
+              <div className="text-gray-700">Successful Cases</div>
             </div>
-            
-            <div className="bg-white rounded-lg shadow-md p-6">
-              <div className="w-12 h-12 bg-beige-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <MapPin className="w-6 h-6 text-beige-700" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Convenient Location</h3>
-              <p className="text-gray-700">Centrally located office with easy access and parking</p>
+            <div>
+              <div className="text-3xl font-bold text-beige-600 mb-2">24/7</div>
+              <div className="text-gray-700">Availability</div>
             </div>
           </div>
         </div>

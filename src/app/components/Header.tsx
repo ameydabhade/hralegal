@@ -28,7 +28,7 @@ export default function Header() {
             href="/" 
             className="text-xl font-bold text-gray-900 hover:text-beige-500 transition-all duration-300 transform hover:scale-105 group"
           >
-            <span className="text-beige-500 group-hover:text-beige-600 transition-colors duration-300">HRA</span> 
+            <span className="text-beige-500 group-hover:text-beige-600 transition-colors duration-300">HRA </span> 
             <span className="group-hover:text-beige-500 transition-colors duration-300">Legal</span>
           </Link>
 
@@ -49,13 +49,6 @@ export default function Header() {
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-beige-400 transition-all duration-300 group-hover:w-full"></span>
             </Link>
             <Link 
-              href="/founders" 
-              className="relative text-gray-700 hover:text-beige-500 transition-all duration-300 text-sm font-medium group transform hover:-translate-y-0.5"
-            >
-              Founders
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-beige-400 transition-all duration-300 group-hover:w-full"></span>
-            </Link>
-            <Link 
               href="/practice-areas" 
               className="relative text-gray-700 hover:text-beige-500 transition-all duration-300 text-sm font-medium group transform hover:-translate-y-0.5"
             >
@@ -63,17 +56,17 @@ export default function Header() {
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-beige-400 transition-all duration-300 group-hover:w-full"></span>
             </Link>
             <Link 
-              href="/industries" 
+              href="/sectors" 
               className="relative text-gray-700 hover:text-beige-500 transition-all duration-300 text-sm font-medium group transform hover:-translate-y-0.5"
             >
-              Industries
+              Sectors
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-beige-400 transition-all duration-300 group-hover:w-full"></span>
             </Link>
             <Link 
-              href="/knowledge-centre" 
+              href="/learners-page" 
               className="relative text-gray-700 hover:text-beige-500 transition-all duration-300 text-sm font-medium group transform hover:-translate-y-0.5"
             >
-              Knowledge Centre
+              Learners Page
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-beige-400 transition-all duration-300 group-hover:w-full"></span>
             </Link>
             <Link 
@@ -144,13 +137,6 @@ export default function Header() {
                 About Us
               </Link>
               <Link 
-                href="/founders" 
-                className="text-gray-700 hover:text-beige-500 transition-colors text-sm font-medium"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Founders
-              </Link>
-              <Link 
                 href="/practice-areas" 
                 className="text-gray-700 hover:text-beige-500 transition-colors text-sm font-medium"
                 onClick={() => setIsMobileMenuOpen(false)}
@@ -158,18 +144,18 @@ export default function Header() {
                 Practice Areas
               </Link>
               <Link 
-                href="/industries" 
+                href="/sectors" 
                 className="text-gray-700 hover:text-beige-500 transition-colors text-sm font-medium"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Industries
+                Sectors
               </Link>
               <Link 
-                href="/knowledge-centre" 
+                href="/learners-page" 
                 className="text-gray-700 hover:text-beige-500 transition-colors text-sm font-medium"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Knowledge Centre
+                Learners Page
               </Link>
               <Link 
                 href="/careers" 

@@ -1,8 +1,38 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { Scale, Shield, Users, Award, Phone, ArrowRight, CheckCircle } from 'lucide-react';
+import { Scale, Shield, Users, Award, Phone, ArrowRight, CheckCircle, Globe, Target, Handshake, TrendingUp, Clock, FileText, Quote } from 'lucide-react';
 
 export default function HeroSection() {
+  const testimonials = [
+    {
+      quote: "HRA Legal's expertise in media law has been instrumental in structuring our content agreements and ensuring compliance across all our platforms.",
+      author: "Media Executive",
+      company: "Leading Entertainment Company",
+      role: "Head of Legal Affairs"
+    },
+    {
+      quote: "Their deep understanding of corporate governance and M&A transactions helped us navigate complex deal structures with confidence.",
+      author: "Business Leader",
+      company: "Tech Startup",
+      role: "Founder & CEO"
+    },
+    {
+      quote: "The team's prompt response and comprehensive legal solutions have made them our go-to legal partners for all corporate matters.",
+      author: "Corporate Client",
+      company: "Multinational Corporation",
+      role: "General Counsel"
+    }
+  ];
+
+  const clients = [
+    { name: "Reliance Entertainment", logo: "/Logos/relience.svg" },
+    { name: "Shemaroo Entertainment", logo: "/Logos/shemaroo.svg" },
+    { name: "Goldmines Telefilms", logo: "/Logos/goldmines.webp" },
+    { name: "Maddock Films", logo: "/Logos/maddock.webp" },
+    { name: "Sony Pictures", logo: "/Logos/sony.svg" },
+    { name: "Jio Studios", logo: "/Logos/jio.svg" }
+  ];
+
   return (
     <section className="min-h-screen bg-gradient-to-br from-beige-200 via-beige-100 to-beige-50 relative overflow-hidden">
       {/* Background Pattern */}
@@ -26,14 +56,16 @@ export default function HeroSection() {
                 HRA
                 <span className="block text-beige-500">Legal</span>
                 <span className="block text-2xl lg:text-3xl font-normal text-gray-600 mt-4">
-                  Your Trusted Legal Partners
+                  Professional Legal Solutions
                 </span>
               </h1>
               
               <p className="text-xl text-gray-700 leading-relaxed max-w-2xl">
-                Expert legal counsel for <span className="font-semibold text-beige-600">Corporate Law</span>, 
-                <span className="font-semibold text-beige-600"> Intellectual Property</span>, and 
-                <span className="font-semibold text-beige-600"> Media & Entertainment</span> with proven results.
+                HRA Legal is a professional law firm with specialized expertise across Civil and Business Law, Intellectual Property Laws, Corporate and Commercial Law, Employment Laws, and other developing areas of law.
+              </p>
+              
+              <p className="text-lg text-gray-600 leading-relaxed max-w-2xl">
+                Our seasoned lawyers provide personalized solutions with prompt, reliable and qualitative services that enable businesses to navigate legal complexities with confidence.
               </p>
             </div>
             
@@ -48,27 +80,11 @@ export default function HeroSection() {
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Link>
               <Link 
-                href="#practice-areas"
+                href="/practice-areas"
                 className="inline-flex items-center justify-center px-8 py-4 border-2 border-beige-400 text-beige-600 font-semibold rounded-lg hover:bg-beige-400 hover:text-white transition-all duration-200"
               >
                 View Our Services
               </Link>
-            </div>
-            
-            {/* Quick Stats */}
-            <div className="grid grid-cols-3 gap-6 pt-8 border-t border-beige-200">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-beige-500">500+</div>
-                <div className="text-sm text-gray-600">Cases Won</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-beige-500">95%</div>
-                <div className="text-sm text-gray-600">Success Rate</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-beige-500">24/7</div>
-                <div className="text-sm text-gray-600">Available</div>
-              </div>
             </div>
           </div>
 
@@ -122,47 +138,67 @@ export default function HeroSection() {
           </div>
         </div>
 
-        {/* Trust Indicators */}
-        <div className="bg-white rounded-2xl shadow-lg border border-beige-100 p-8 mb-20">
-          <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-2">Why Choose HRA Legal?</h3>
-            <p className="text-gray-600">Trusted by leading organizations across industries</p>
+        {/* Sliding Testimonials Section */}
+        <div className="mb-20">
+          <div className="text-center mb-12">
+            <p className="text-sm font-medium text-beige-600 mb-2">TRUSTED BY LEADING ORGANIZATIONS</p>
+            <h3 className="text-2xl font-bold text-gray-900">What Our Clients Say</h3>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8 mb-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-beige-400 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <Users className="w-8 h-8 text-white" />
-              </div>
-              <h4 className="font-semibold text-gray-900 mb-2">Expert Team</h4>
-              <p className="text-sm text-gray-600">15+ years combined experience</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-16 h-16 bg-beige-400 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <Scale className="w-8 h-8 text-white" />
-              </div>
-              <h4 className="font-semibold text-gray-900 mb-2">Proven Results</h4>
-              <p className="text-sm text-gray-600">95% success rate in cases</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-16 h-16 bg-beige-400 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <Shield className="w-8 h-8 text-white" />
-              </div>
-              <h4 className="font-semibold text-gray-900 mb-2">100% Confidential</h4>
-              <p className="text-sm text-gray-600">Your privacy is our priority</p>
+          <div className="relative overflow-hidden">
+            <div className="sliding-testimonials flex animate-slide">
+              {[...testimonials, ...testimonials].map((testimonial, index) => (
+                <div key={index} className="flex-shrink-0 w-full lg:w-1/2 px-4">
+                  <div className="bg-white rounded-2xl shadow-lg border border-beige-100 p-8 h-full">
+                    <Quote className="w-8 h-8 text-beige-400 mb-6" />
+                    <blockquote className="text-lg text-gray-700 leading-relaxed mb-6">
+                      "{testimonial.quote}"
+                    </blockquote>
+                    <div className="flex items-center">
+                      <div className="w-12 h-12 bg-beige-100 rounded-full flex items-center justify-center mr-4">
+                        <Users className="w-6 h-6 text-beige-600" />
+                      </div>
+                      <div>
+                        <div className="font-semibold text-gray-900">{testimonial.author}</div>
+                        <div className="text-sm text-gray-600">{testimonial.role}</div>
+                        <div className="text-sm text-beige-600">{testimonial.company}</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
+        </div>
 
-          {/* Client Logos */}
+    
+
+        {/* Services Section */}
+   
+
+        {/* Sliding Client Logos */}
+        <div className="bg-white rounded-2xl shadow-lg border border-beige-100 p-8">
+          <div className="text-center mb-8">
+            <h3 className="text-2xl font-bold text-gray-900 mb-2">Trusted by Leading Organizations</h3>
+            <p className="text-gray-600">15+ years of experience across industries</p>
+          </div>
+
           <div className="border-t border-beige-200 pt-8">
             <p className="text-center text-gray-600 mb-6">Trusted by leading organizations</p>
-            <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
-                  <Image src="/Logos/relience.svg" alt="Reliance Entertainment" width={90} height={32} className="h-8 w-auto" />
-              <Image src="/Logos/shemaroo.svg" alt="Shemaroo Entertainment" width={85} height={32} className="h-8 w-auto" />
-              <Image src="/Logos/goldmines.webp" alt="Goldmines Telefilms" width={90} height={32} className="h-8 w-auto" />
-              <Image src="/Logos/maddock.webp" alt="Maddock Films" width={85} height={32} className="h-8 w-auto" />
+            <div className="relative overflow-hidden">
+              <div className="sliding-logos flex animate-slide-slow">
+                {[...clients, ...clients].map((client, index) => (
+                  <div key={index} className="flex-shrink-0 flex items-center justify-center px-8">
+                    <Image 
+                      src={client.logo} 
+                      alt={client.name} 
+                      width={120} 
+                      height={40} 
+                      className="h-8 w-auto opacity-60 hover:opacity-100 transition-opacity duration-300" 
+                    />
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>

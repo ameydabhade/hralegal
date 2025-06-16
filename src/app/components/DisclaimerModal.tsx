@@ -42,7 +42,7 @@ export default function DisclaimerModal() {
             </p>
             
             <p className="text-gray-700 leading-relaxed">
-              As per the rules of the Bar Council of India, lawyers and law firms are not permitted to solicit work or advertise. By clicking on the "I Agree" button, you acknowledge and confirm that you are seeking information relating to HRA Legal on your own accord and that there has been no advertisement, touts, personal communication, solicitation, invitation or any other inducement of any sort whatsoever by or on behalf of HRA Legal or any of its members to solicit any work through this website.
+              As per the rules of the Bar Council of India, lawyers and law firms are not permitted to solicit work or advertise. By clicking on the &quot;I Agree&quot; button, you acknowledge and confirm that you are seeking information relating to HRA Legal on your own accord and that there has been no advertisement, touts, personal communication, solicitation, invitation or any other inducement of any sort whatsoever by or on behalf of HRA Legal or any of its members to solicit any work through this website.
             </p>
             
             <div className="bg-amber-50 border-l-4 border-amber-500 p-4 rounded">

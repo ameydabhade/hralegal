@@ -1,4 +1,4 @@
-import { Target, Eye, Heart, Users, Lightbulb, Shield, HandHeart, Award } from 'lucide-react';
+import { Target, Eye, Heart, Users, Lightbulb, Shield, HandHeart, Award, BookOpen, Briefcase, GraduationCap, Trophy } from 'lucide-react';
 
 export const metadata = {
   title: 'About Us | HRA Legal - Professional Law Firm',
@@ -23,13 +23,13 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Introduction */}
+      {/* Our Story */}
       <section className="pb-16">
         <div className="max-w-4xl mx-auto px-4 lg:px-8">
           <div className="bg-white rounded-lg shadow-lg p-8 border border-gray-100 mb-16">
-            <h3 className="text-2xl font-bold text-beige-400 mb-4">Our Evolution</h3>
+            <h3 className="text-2xl font-bold text-beige-400 mb-4">Our Story</h3>
             <p className="text-lg text-gray-700 leading-relaxed mb-4">
-              HRA Legal works with an <strong>ever-evolving and diverse outlook</strong> consistently aligned with prevalent market dynamics and technology shifts.
+              HRA Legal works on an <strong>ever-evolving and diverse outlook</strong> consistently aligned with prevalent market dynamics and technology shifts.
             </p>
             <p className="text-gray-600">
               Just like technology, law is continuously evolving — and so does HRA Legal.
@@ -50,25 +50,10 @@ export default function AboutPage() {
                 </div>
               </div>
               <div className="md:w-2/3 p-8">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Our Commitment</h3>
-                <ul className="space-y-3 text-gray-700">
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 bg-beige-400 rounded-full mr-3 mt-2"></div>
-                    <span>Offer outstanding legal services for diverse client needs</span>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 bg-beige-400 rounded-full mr-3 mt-2"></div>
-                    <span>Maintain highest standards of our Core Values</span>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 bg-beige-400 rounded-full mr-3 mt-2"></div>
-                    <span>Foster growth-oriented environment for our team</span>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 bg-beige-400 rounded-full mr-3 mt-2"></div>
-                    <span>Ensure long-term success for clients and firm</span>
-                  </li>
-                </ul>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Our Mission</h3>
+                <p className="text-gray-700 leading-relaxed mb-6">
+                  Our mission is to deliver outstanding professional legal services to a diverse range of global and domestic clients, including governments and economic entities, while upholding a strong focus on our Core Values, consistent profitability, long term sustainability, and social responsibility, while fostering a dynamic, passionate and inclusive work environment for our professionals.
+                </p>
               </div>
             </div>
           </div>
@@ -81,27 +66,11 @@ export default function AboutPage() {
           <div className="bg-white rounded-lg shadow-lg border border-gray-100 overflow-hidden">
             <div className="md:flex">
               <div className="md:w-2/3 p-8">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Our Aspiration</h3>
-                <div className="space-y-4">
-                  <div className="bg-gray-50 rounded-lg p-4">
-                    <h4 className="font-semibold text-gray-900 mb-2">Premier Law Firm Status</h4>
-                    <p className="text-gray-700">Establish ourselves as a renowned legal service provider</p>
-                  </div>
-                  
-                  <div className="bg-gray-50 rounded-lg p-4">
-                    <h4 className="font-semibold text-gray-900 mb-2">Global & Domestic Reach</h4>
-                    <p className="text-gray-700">Serve diverse clients including governments and economic entities</p>
-                  </div>
-                  
-                  <div className="bg-gray-50 rounded-lg p-4">
-                    <h4 className="font-semibold text-gray-900 mb-2">Sustainable Growth</h4>
-                    <p className="text-gray-700">Focus on profitability, sustainability, and social responsibility</p>
-                  </div>
-                  
-                  <div className="bg-gray-50 rounded-lg p-4">
-                    <h4 className="font-semibold text-gray-900 mb-2">Team Environment</h4>
-                    <p className="text-gray-700">Foster dynamic, passionate, and inclusive workplace</p>
-                  </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Our Vision</h3>
+                <div className="bg-beige-50 rounded-lg p-6">
+                  <p className="text-lg text-gray-700 leading-relaxed text-center">
+                    <strong>Our vision is to be a renowned profitable premier law firm globally.</strong>
+                  </p>
                 </div>
               </div>
               <div className="md:w-1/3 bg-beige-600 p-8 flex items-center justify-center">
@@ -124,39 +93,39 @@ export default function AboutPage() {
               <h2 className="text-4xl font-bold text-gray-900">Core Values</h2>
             </div>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-              <strong>Five fundamental principles</strong> reflected in our business ethics and embedded in our professional legal services worldwide.
+              Our core values of <strong>Integrity, Trust, Respect, Humility, and Unity</strong> are consistently reflected in our business ethics and are embedded in the professional legal services we offer worldwide.
             </p>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
-            <div className="bg-white rounded-lg shadow-lg p-6 border border-gray-100 text-center">
+            <div className="bg-white rounded-lg shadow-lg p-6 border border-gray-100 text-center hover:shadow-xl transition-shadow duration-300">
               <Shield className="w-12 h-12 text-beige-700 mx-auto mb-4" />
               <h3 className="text-xl font-bold text-gray-900 mb-2">Integrity</h3>
-              <p className="text-gray-600">Honesty and moral principles in all actions</p>
+              <p className="text-gray-600">Honesty and moral principles in all our actions</p>
             </div>
             
-            <div className="bg-white rounded-lg shadow-lg p-6 border border-gray-100 text-center">
+            <div className="bg-white rounded-lg shadow-lg p-6 border border-gray-100 text-center hover:shadow-xl transition-shadow duration-300">
               <HandHeart className="w-12 h-12 text-beige-700 mx-auto mb-4" />
               <h3 className="text-xl font-bold text-gray-900 mb-2">Trust</h3>
-              <p className="text-gray-600">Reliable relationships with clients and colleagues</p>
+              <p className="text-gray-600">Building reliable relationships with clients and colleagues</p>
             </div>
             
-            <div className="bg-white rounded-lg shadow-lg p-6 border border-gray-100 text-center">
+            <div className="bg-white rounded-lg shadow-lg p-6 border border-gray-100 text-center hover:shadow-xl transition-shadow duration-300">
               <Users className="w-12 h-12 text-beige-700 mx-auto mb-4" />
               <h3 className="text-xl font-bold text-gray-900 mb-2">Respect</h3>
-              <p className="text-gray-600">Dignity and consideration for everyone</p>
+              <p className="text-gray-600">Treating everyone with dignity and consideration</p>
             </div>
             
-            <div className="bg-white rounded-lg shadow-lg p-6 border border-gray-100 text-center">
+            <div className="bg-white rounded-lg shadow-lg p-6 border border-gray-100 text-center hover:shadow-xl transition-shadow duration-300">
               <Lightbulb className="w-12 h-12 text-beige-700 mx-auto mb-4" />
               <h3 className="text-xl font-bold text-gray-900 mb-2">Humility</h3>
-              <p className="text-gray-600">Grounded approach and continuous learning</p>
+              <p className="text-gray-600">Grounded approach and continuous learning mindset</p>
             </div>
             
-            <div className="bg-white rounded-lg shadow-lg p-6 border border-gray-100 text-center">
+            <div className="bg-white rounded-lg shadow-lg p-6 border border-gray-100 text-center hover:shadow-xl transition-shadow duration-300">
               <Award className="w-12 h-12 text-beige-700 mx-auto mb-4" />
               <h3 className="text-xl font-bold text-gray-900 mb-2">Unity</h3>
-              <p className="text-gray-600">Collaboration towards common goals</p>
+              <p className="text-gray-600">Collaboration and teamwork towards common goals</p>
             </div>
           </div>
         </div>
@@ -166,80 +135,234 @@ export default function AboutPage() {
       <section className="pb-16">
         <div className="max-w-6xl mx-auto px-4 lg:px-8">
           <div className="bg-white rounded-lg shadow-lg border border-gray-100 p-8">
-            <div className="text-center mb-8">
+            <div className="text-center mb-12">
               <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Culture</h2>
               <p className="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto">
-                <strong>Five key elements</strong> that drive our culture within a vibrant and enjoyable workspace.
+                Our culture is driven by an <strong>entrepreneurial mindset, strong conviction, principled leadership, resilience, continuous learning, and focus on work-life balance</strong>, all fostered within a vibrant and enjoyable workspace.
               </p>
             </div>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
-              <div className="text-center">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="text-center p-6 rounded-xl hover:bg-beige-50 transition-all duration-300">
                 <div className="w-16 h-16 bg-beige-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Lightbulb className="w-8 h-8 text-beige-700" />
                 </div>
                 <h3 className="font-bold text-gray-900 mb-2">Entrepreneurial Mindset</h3>
-                <p className="text-sm text-gray-600">Innovation and creative problem-solving</p>
+                <p className="text-sm text-gray-600">Innovation and creative problem-solving approach</p>
               </div>
               
-              <div className="text-center">
+              <div className="text-center p-6 rounded-xl hover:bg-beige-50 transition-all duration-300">
                 <div className="w-16 h-16 bg-beige-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Shield className="w-8 h-8 text-beige-700" />
                 </div>
                 <h3 className="font-bold text-gray-900 mb-2">Strong Conviction</h3>
-                <p className="text-sm text-gray-600">Unwavering commitment to excellence</p>
+                <p className="text-sm text-gray-600">Unwavering commitment to excellence and quality</p>
               </div>
               
-              <div className="text-center">
+              <div className="text-center p-6 rounded-xl hover:bg-beige-50 transition-all duration-300">
                 <div className="w-16 h-16 bg-beige-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Users className="w-8 h-8 text-beige-700" />
                 </div>
                 <h3 className="font-bold text-gray-900 mb-2">Principled Leadership</h3>
-                <p className="text-sm text-gray-600">Ethical guidance and mentorship</p>
+                <p className="text-sm text-gray-600">Ethical guidance and mentorship at all levels</p>
               </div>
               
-              <div className="text-center">
+              <div className="text-center p-6 rounded-xl hover:bg-beige-50 transition-all duration-300">
                 <div className="w-16 h-16 bg-beige-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Award className="w-8 h-8 text-beige-700" />
+                  <Trophy className="w-8 h-8 text-beige-700" />
                 </div>
                 <h3 className="font-bold text-gray-900 mb-2">Resilience</h3>
-                <p className="text-sm text-gray-600">Adapting and thriving through challenges</p>
+                <p className="text-sm text-gray-600">Adaptability and strength in challenging situations</p>
               </div>
               
-              <div className="text-center">
+              <div className="text-center p-6 rounded-xl hover:bg-beige-50 transition-all duration-300">
+                <div className="w-16 h-16 bg-beige-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <BookOpen className="w-8 h-8 text-beige-700" />
+                </div>
+                <h3 className="font-bold text-gray-900 mb-2">Continuous Learning</h3>
+                <p className="text-sm text-gray-600">Commitment to professional development and growth</p>
+              </div>
+              
+              <div className="text-center p-6 rounded-xl hover:bg-beige-50 transition-all duration-300">
                 <div className="w-16 h-16 bg-beige-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Heart className="w-8 h-8 text-beige-700" />
                 </div>
                 <h3 className="font-bold text-gray-900 mb-2">Work-Life Balance</h3>
-                <p className="text-sm text-gray-600">Vibrant and enjoyable workspace</p>
+                <p className="text-sm text-gray-600">Fostering well-being in a vibrant workspace</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Call to Action */}
-      <section className="bg-beige-50 py-16">
-        <div className="max-w-4xl mx-auto px-4 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">
-            Ready to Work with HRA Legal?
-          </h2>
-          <p className="text-lg text-gray-700 mb-8">
-            Experience our values-driven approach to legal services and discover why clients trust us with their most important matters.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
-              href="/contact"
-              className="inline-flex items-center justify-center px-8 py-4 bg-beige-700 text-white font-semibold rounded-md hover:bg-beige-800 transition-colors duration-200"
-            >
-              Get in Touch
-            </a>
-            <a 
-              href="/founders"
-              className="inline-flex items-center justify-center px-8 py-4 border-2 border-beige-700 text-beige-700 font-semibold rounded-md hover:bg-beige-700 hover:text-white transition-colors duration-200"
-            >
-              Meet Our Founders
-            </a>
+      {/* Core Team */}
+      <section className="pb-16">
+        <div className="max-w-6xl mx-auto px-4 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Core Team</h2>
+            <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+              Meet our experienced leadership team with decades of combined expertise
+            </p>
+          </div>
+          
+          {/* Rushi Upadhyaya */}
+          <div className="bg-white rounded-lg shadow-lg border border-gray-100 overflow-hidden mb-12">
+            <div className="md:flex">
+              <div className="md:w-1/3 bg-gradient-to-br from-beige-600 to-beige-700 p-8 flex items-center justify-center">
+                <div className="text-center">
+                  <div className="w-32 h-32 bg-white rounded-full flex items-center justify-center mx-auto mb-6">
+                    <Briefcase className="w-16 h-16 text-beige-600" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-2">Rushi Upadhyaya</h3>
+                  <p className="text-beige-100 font-medium">Founder, HRA Legal</p>
+                </div>
+              </div>
+              <div className="md:w-2/3 p-8">
+                <div className="space-y-6">
+                  <div>
+                    <h4 className="text-xl font-bold text-gray-900 mb-3">Qualifications</h4>
+                    <div className="grid md:grid-cols-2 gap-4">
+                      <div className="flex items-center">
+                        <GraduationCap className="w-5 h-5 text-beige-600 mr-2" />
+                        <span className="text-gray-700">Masters of Business Laws (MBL)</span>
+                      </div>
+                      <div className="flex items-center">
+                        <GraduationCap className="w-5 h-5 text-beige-600 mr-2" />
+                        <span className="text-gray-700">Qualified Company Secretary</span>
+                      </div>
+                      <div className="flex items-center">
+                        <GraduationCap className="w-5 h-5 text-beige-600 mr-2" />
+                        <span className="text-gray-700">Diploma in Intellectual Property Laws (PGIPR)</span>
+                      </div>
+                      <div className="flex items-center">
+                        <GraduationCap className="w-5 h-5 text-beige-600 mr-2" />
+                        <span className="text-gray-700">Law Graduate (LLB)</span>
+                      </div>
+                      <div className="flex items-center">
+                        <GraduationCap className="w-5 h-5 text-beige-600 mr-2" />
+                        <span className="text-gray-700">Management Graduate (BMS)</span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div>
+                    <h4 className="text-xl font-bold text-gray-900 mb-3">Experience</h4>
+                    <p className="text-gray-700 leading-relaxed mb-4">
+                      <strong>15+ years</strong> as an in-house Counsel - Legal, Corporate Affairs and Business Affairs in Media & Entertainment sector.
+                    </p>
+                    <div className="space-y-2">
+                      <p className="text-gray-600"><strong>Previous Organizations:</strong></p>
+                      <ul className="text-gray-600 space-y-1 ml-4">
+                        <li>• Sony Pictures Networks India Pvt. Ltd. (now Culver Max)</li>
+                        <li>• Shemaroo Entertainment Ltd.</li>
+                        <li>• Goldmines Telefilms Ltd.</li>
+                        <li>• Reliance Industries Ltd.-Jio Studios</li>
+                        <li>• Sony Music (India) Pvt. Ltd.</li>
+                        <li>• Maddock Films</li>
+                        <li>• Consultant at Reliance Retail</li>
+                      </ul>
+                    </div>
+                  </div>
+                  
+                  <div>
+                    <h4 className="text-xl font-bold text-gray-900 mb-3">Core Skills</h4>
+                    <div className="grid md:grid-cols-2 gap-4">
+                      <div className="bg-beige-50 p-4 rounded-lg">
+                        <p className="text-gray-700"><strong>Leadership:</strong> Sharp leadership mindset with prompt decision making</p>
+                      </div>
+                      <div className="bg-beige-50 p-4 rounded-lg">
+                        <p className="text-gray-700"><strong>Analysis:</strong> Strong analytical and meticulous approach</p>
+                      </div>
+                      <div className="bg-beige-50 p-4 rounded-lg">
+                        <p className="text-gray-700"><strong>Strategy:</strong> Proficiency in strategic and prolific suggestions</p>
+                      </div>
+                      <div className="bg-beige-50 p-4 rounded-lg">
+                        <p className="text-gray-700"><strong>Solutions:</strong> Competence in balanced win-win solutions</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Ami Upadhyaya */}
+          <div className="bg-white rounded-lg shadow-lg border border-gray-100 overflow-hidden">
+            <div className="md:flex">
+              <div className="md:w-2/3 p-8">
+                <div className="space-y-6">
+                  <div>
+                    <h4 className="text-xl font-bold text-gray-900 mb-3">Qualifications</h4>
+                    <div className="grid md:grid-cols-2 gap-4">
+                      <div className="flex items-center">
+                        <GraduationCap className="w-5 h-5 text-beige-600 mr-2" />
+                        <span className="text-gray-700">Management Graduate (BMS)</span>
+                      </div>
+                      <div className="flex items-center">
+                        <GraduationCap className="w-5 h-5 text-beige-600 mr-2" />
+                        <span className="text-gray-700">Master of Commerce (MCom)</span>
+                      </div>
+                      <div className="flex items-center">
+                        <GraduationCap className="w-5 h-5 text-beige-600 mr-2" />
+                        <span className="text-gray-700">Master of Business Administration (MBA)</span>
+                      </div>
+                      <div className="flex items-center">
+                        <GraduationCap className="w-5 h-5 text-beige-600 mr-2" />
+                        <span className="text-gray-700">Master of Business Laws (MBL)</span>
+                      </div>
+                      <div className="flex items-center">
+                        <GraduationCap className="w-5 h-5 text-beige-600 mr-2" />
+                        <span className="text-gray-700">Certified/Licensed NLP Practitioner</span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div>
+                    <h4 className="text-xl font-bold text-gray-900 mb-3">Experience</h4>
+                    <p className="text-gray-700 leading-relaxed mb-4">
+                      <strong>18+ years</strong> as a Human Resource Professional in IT and Real Estate sector.
+                    </p>
+                    <div className="space-y-2">
+                      <p className="text-gray-600"><strong>Previous Organizations:</strong></p>
+                      <ul className="text-gray-600 space-y-1 ml-4">
+                        <li>• PXL Soft</li>
+                        <li>• Karizma</li>
+                        <li>• Sethia Pride</li>
+                        <li>• One Avigna</li>
+                      </ul>
+                    </div>
+                  </div>
+                  
+                  <div>
+                    <h4 className="text-xl font-bold text-gray-900 mb-3">Core Skills</h4>
+                    <div className="grid md:grid-cols-2 gap-4">
+                      <div className="bg-beige-50 p-4 rounded-lg">
+                        <p className="text-gray-700"><strong>Entrepreneurial:</strong> Entrepreneurial aptitude and vision</p>
+                      </div>
+                      <div className="bg-beige-50 p-4 rounded-lg">
+                        <p className="text-gray-700"><strong>Innovation:</strong> Effortless approach in conventional and new ideas</p>
+                      </div>
+                      <div className="bg-beige-50 p-4 rounded-lg">
+                        <p className="text-gray-700"><strong>Business Acumen:</strong> Profound comprehension of business</p>
+                      </div>
+                      <div className="bg-beige-50 p-4 rounded-lg">
+                        <p className="text-gray-700"><strong>Leadership:</strong> Self-assertive and strategic risk taker</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="md:w-1/3 bg-gradient-to-br from-beige-500 to-beige-600 p-8 flex items-center justify-center">
+                <div className="text-center">
+                  <div className="w-32 h-32 bg-white rounded-full flex items-center justify-center mx-auto mb-6">
+                    <Users className="w-16 h-16 text-beige-600" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-2">Ami Upadhyaya</h3>
+                  <p className="text-beige-100 font-medium">Independent Consultant</p>
+                  <p className="text-beige-100 text-sm mt-2">Founder, HRpreneurs</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

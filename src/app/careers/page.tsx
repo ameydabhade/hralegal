@@ -1,104 +1,60 @@
-import { Briefcase, Users, TrendingUp, Heart, Clock, MapPin, GraduationCap, Star, Award, Coffee } from 'lucide-react';
+import { GraduationCap, Briefcase, Mail, FileText, Heart, Users, TrendingUp, Award } from 'lucide-react';
 
 export const metadata = {
   title: 'Careers - HRA Legal',
-  description: 'Join our team of legal professionals and build your career with HRA Legal. Explore opportunities in law, corporate affairs, and legal research.',
+  description: 'Join our team of legal professionals. Explore internship and retainership opportunities at HRA Legal.',
 }
 
 export default function CareersPage() {
-  const jobOpenings = [
+  const opportunities = [
     {
       id: 1,
-      title: "Senior Legal Associate - Corporate Law",
-      department: "Corporate Affairs",
-      location: "Mumbai, Maharashtra",
-      type: "Full-time",
-      experience: "3-5 years",
-      description: "We are seeking an experienced legal associate to join our Corporate Law team, handling M&A transactions, corporate governance, and commercial contracts.",
+      icon: GraduationCap,
+      title: "Internship",
+      description: "Gain valuable experience and learn from seasoned legal professionals in a dynamic environment.",
       requirements: [
-        "LLB/LLM from a recognized university",
-        "3-5 years experience in corporate law",
-        "Strong drafting and negotiation skills",
-        "Experience with M&A and corporate transactions"
-      ]
+        "Current law student or recent graduate",
+        "Strong academic record",
+        "Passion for learning and professional development",
+        "Excellent communication and research skills"
+      ],
+      application: "Please write to us along with a letter of interest showcasing your educational qualifications and future career path and goals."
     },
     {
       id: 2,
-      title: "Intellectual Property Specialist",
-      department: "IP & Media Law",
-      location: "Mumbai, Maharashtra",
-      type: "Full-time",
-      experience: "2-4 years",
-      description: "Join our specialized IP team working with leading entertainment and technology companies on trademark, copyright, and patent matters.",
+      icon: Briefcase,
+      title: "Retainership",
+      description: "Join our team of retained legal professionals and work on diverse, challenging legal matters.",
       requirements: [
-        "LLB with specialization in IP Law",
-        "2-4 years experience in IP practice",
-        "Knowledge of media and entertainment law",
-        "Experience with IP registration and enforcement"
-      ]
-    },
-    {
-      id: 3,
-      title: "Legal Research Associate",
-      department: "Research & Analysis",
-      location: "Mumbai, Maharashtra",
-      type: "Full-time",
-      experience: "1-2 years",
-      description: "Opportunity for a fresh graduate or junior associate to work on legal research, case analysis, and support senior lawyers in various practice areas.",
-      requirements: [
-        "LLB from a recognized law school",
-        "Strong research and analytical skills",
-        "Excellent written communication",
-        "Proficiency in legal databases"
-      ]
-    },
-    {
-      id: 4,
-      title: "HR Business Partner",
-      department: "Human Resources",
-      location: "Mumbai, Maharashtra",
-      type: "Full-time",
-      experience: "5-7 years",
-      description: "Lead HR initiatives and support our growing team with strategic HR planning, talent development, and organizational excellence.",
-      requirements: [
-        "MBA in HR or related field",
-        "5-7 years of HR experience",
-        "Experience in professional services",
-        "Strong leadership and communication skills"
-      ]
+        "Qualified legal professional",
+        "Relevant experience in legal practice",
+        "Commitment to excellence and professional growth",
+        "Alignment with our values and culture"
+      ],
+      application: "Please write to us along with a letter of interest showcasing your educational qualifications and future career path and goals."
     }
   ];
 
-  const benefits = [
+  const whyJoinUs = [
+    {
+      icon: Users,
+      title: "Collaborative Culture",
+      description: "Work in a dynamic, passionate and inclusive environment that fosters professional growth."
+    },
     {
       icon: TrendingUp,
-      title: "Professional Growth",
-      description: "Continuous learning opportunities, mentorship programs, and clear career progression paths."
+      title: "Professional Development",
+      description: "Continuous learning opportunities and exposure to diverse legal practice areas."
     },
     {
       icon: Heart,
       title: "Work-Life Balance",
-      description: "Flexible working arrangements, wellness programs, and focus on employee well-being."
-    },
-    {
-      icon: Users,
-      title: "Collaborative Culture",
-      description: "Work with experienced professionals in a supportive, team-oriented environment."
+      description: "We believe in fostering well-being within a vibrant and enjoyable workspace."
     },
     {
       icon: Award,
-      title: "Competitive Benefits",
-      description: "Attractive compensation packages, health insurance, and performance-based incentives."
-    },
-    {
-      icon: GraduationCap,
-      title: "Learning & Development",
-      description: "Sponsored training programs, conference attendance, and skill development initiatives."
-    },
-    {
-      icon: Coffee,
-      title: "Modern Workplace",
-      description: "State-of-the-art office facilities, latest technology, and comfortable working environment."
+      title: "Excellence & Innovation",
+      description: "Be part of an entrepreneurial mindset with strong conviction and principled leadership."
     }
   ];
 
@@ -109,35 +65,35 @@ export default function CareersPage() {
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
           <div className="text-center mb-16">
             <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-              Join Our Team
+              Careers
             </h1>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-              Build your legal career with HRA Legal. Join a dynamic team of professionals committed to excellence, innovation, and client success.
+              Join HRA Legal and build your career with a team committed to excellence, integrity, and professional growth.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Why Work With Us */}
+      {/* Why Join Us */}
       <section className="pb-16">
         <div className="max-w-6xl mx-auto px-4 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Why Choose HRA Legal?</h2>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-              At HRA Legal, we believe in fostering a culture of excellence, integrity, and continuous growth. Our team members are our greatest asset.
+              At HRA Legal, we foster a culture driven by entrepreneurial mindset, strong conviction, principled leadership, resilience, continuous learning, and focus on work-life balance.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => {
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {whyJoinUs.map((benefit, index) => {
               const IconComponent = benefit.icon;
               return (
                 <div key={index} className="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition-shadow duration-300">
                   <div className="w-16 h-16 bg-beige-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <IconComponent className="w-8 h-8 text-beige-400" />
+                    <IconComponent className="w-8 h-8 text-beige-600" />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">{benefit.title}</h3>
-                  <p className="text-gray-700">{benefit.description}</p>
+                  <h3 className="text-lg font-bold text-gray-900 mb-3">{benefit.title}</h3>
+                  <p className="text-gray-700 text-sm">{benefit.description}</p>
                 </div>
               );
             })}
@@ -145,63 +101,57 @@ export default function CareersPage() {
         </div>
       </section>
 
-      {/* Current Openings */}
+      {/* Career Opportunities */}
       <section className="bg-beige-50 py-16">
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Current Openings</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Career Opportunities</h2>
             <p className="text-lg text-gray-700">
-              Explore exciting career opportunities and find the perfect role to advance your legal career.
+              Explore opportunities to grow your legal career with HRA Legal.
             </p>
           </div>
 
-          <div className="space-y-6">
-            {jobOpenings.map((job) => (
-              <div key={job.id} className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
-                <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-6">
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-2">{job.title}</h3>
-                    <div className="flex flex-wrap gap-4 text-sm text-gray-600 mb-4">
-                      <div className="flex items-center">
-                        <Briefcase className="w-4 h-4 mr-2 text-beige-400" />
-                        {job.department}
-                      </div>
-                      <div className="flex items-center">
-                        <MapPin className="w-4 h-4 mr-2 text-beige-400" />
-                        {job.location}
-                      </div>
-                      <div className="flex items-center">
-                        <Clock className="w-4 h-4 mr-2 text-beige-400" />
-                        {job.type}
-                      </div>
-                      <div className="flex items-center">
-                        <Star className="w-4 h-4 mr-2 text-beige-400" />
-                        {job.experience}
-                      </div>
+          <div className="grid lg:grid-cols-2 gap-8">
+            {opportunities.map((opportunity) => {
+              const IconComponent = opportunity.icon;
+              return (
+                <div key={opportunity.id} className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
+                  <div className="flex items-center mb-6">
+                    <div className="w-16 h-16 bg-beige-600 rounded-xl flex items-center justify-center mr-6">
+                      <IconComponent className="w-8 h-8 text-white" />
                     </div>
-                    <p className="text-gray-700 mb-4">{job.description}</p>
+                    <div>
+                      <h3 className="text-2xl font-bold text-gray-900 mb-2">{opportunity.title}</h3>
+                      <p className="text-gray-700">{opportunity.description}</p>
+                    </div>
                   </div>
                   
-                  <div className="lg:ml-8">
-                    <button className="w-full lg:w-auto px-6 py-3 bg-beige-400 text-white font-semibold rounded-md hover:bg-beige-800 transition-colors duration-200">
-                      Apply Now
-                    </button>
+                  <div className="mb-6">
+                    <h4 className="text-lg font-semibold text-gray-900 mb-4">What We Look For:</h4>
+                    <ul className="space-y-2">
+                      {opportunity.requirements.map((requirement, index) => (
+                        <li key={index} className="flex items-start">
+                          <div className="w-2 h-2 bg-beige-600 rounded-full mr-3 mt-2 flex-shrink-0"></div>
+                          <span className="text-gray-700">{requirement}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="bg-beige-50 rounded-lg p-6">
+                    <h4 className="text-lg font-semibold text-gray-900 mb-3 flex items-center">
+                      <FileText className="w-5 h-5 mr-2 text-beige-600" />
+                      How to Apply
+                    </h4>
+                    <p className="text-gray-700 mb-4">{opportunity.application}</p>
+                    <div className="flex items-center text-beige-600">
+                      <Mail className="w-5 h-5 mr-2" />
+                      <span className="font-semibold">careers@hralegal.com</span>
+                    </div>
                   </div>
                 </div>
-
-                <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-3">Requirements:</h4>
-                  <ul className="space-y-2">
-                    {job.requirements.map((requirement, index) => (
-                      <li key={index} className="flex items-start">
-                        <div className="w-2 h-2 bg-beige-400 rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                        <span className="text-gray-700">{requirement}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -209,70 +159,65 @@ export default function CareersPage() {
       {/* Application Process */}
       <section className="py-16">
         <div className="max-w-6xl mx-auto px-4 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Application Process</h2>
-            <p className="text-lg text-gray-700">
-              Our streamlined recruitment process ensures we find the best talent while providing a positive candidate experience.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-beige-400 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
-                1
-              </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-2">Submit Application</h3>
-              <p className="text-gray-700">Send your resume and cover letter for the position you're interested in.</p>
+          <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-8">
+            <div className="text-center mb-8">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Application Process</h2>
+              <p className="text-lg text-gray-700">
+                We welcome applications from passionate legal professionals who share our values and commitment to excellence.
+              </p>
             </div>
             
-            <div className="text-center">
-              <div className="w-16 h-16 bg-beige-400 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
-                2
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-beige-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <FileText className="w-8 h-8 text-beige-600" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">1. Submit Application</h3>
+                <p className="text-gray-600">Send your letter of interest along with educational qualifications and career goals</p>
               </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-2">Initial Screening</h3>
-              <p className="text-gray-700">Our HR team will review your application and conduct an initial screening call.</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-16 h-16 bg-beige-400 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
-                3
+              
+              <div className="text-center">
+                <div className="w-16 h-16 bg-beige-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Users className="w-8 h-8 text-beige-600" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">2. Review Process</h3>
+                <p className="text-gray-600">Our team reviews applications and conducts interviews with suitable candidates</p>
               </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-2">Technical Interview</h3>
-              <p className="text-gray-700">Meet with our legal experts to discuss your experience and technical skills.</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-16 h-16 bg-beige-400 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
-                4
+              
+              <div className="text-center">
+                <div className="w-16 h-16 bg-beige-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Award className="w-8 h-8 text-beige-600" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">3. Welcome Aboard</h3>
+                <p className="text-gray-600">Successful candidates join our team and begin their growth journey with HRA Legal</p>
               </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-2">Final Decision</h3>
-              <p className="text-gray-700">Final interview with partners and offer discussion for successful candidates.</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Call to Action */}
+      {/* Contact Section */}
       <section className="bg-beige-50 py-16">
         <div className="max-w-4xl mx-auto px-4 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">
             Ready to Start Your Career Journey?
           </h2>
           <p className="text-lg text-gray-700 mb-8">
-            Don't see a position that matches your skills? We're always looking for talented individuals to join our team.
+            Take the first step towards an exciting career in law with HRA Legal. We look forward to hearing from you.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
-              href="/contact"
-              className="inline-flex items-center justify-center px-8 py-4 bg-beige-400 text-white font-semibold rounded-md hover:bg-beige-800 transition-colors duration-200"
+              href="mailto:careers@hralegal.com"
+              className="inline-flex items-center justify-center px-8 py-4 bg-beige-600 text-white font-semibold rounded-lg hover:bg-beige-700 transition-colors duration-200"
             >
-              Send Your Resume
+              <Mail className="w-5 h-5 mr-2" />
+              Apply Now
             </a>
             <a 
               href="/about"
-              className="inline-flex items-center justify-center px-8 py-4 border-2 border-beige-400 text-beige-400 font-semibold rounded-md hover:bg-beige-400 hover:text-white transition-colors duration-200"
+              className="inline-flex items-center justify-center px-8 py-4 border-2 border-beige-600 text-beige-600 font-semibold rounded-lg hover:bg-beige-600 hover:text-white transition-colors duration-200"
             >
-              Learn About Our Culture
+              Learn More About Us
             </a>
           </div>
         </div>
