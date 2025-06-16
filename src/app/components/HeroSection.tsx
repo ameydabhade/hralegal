@@ -179,12 +179,12 @@ export default function HeroSection() {
         {/* Sliding Client Logos */}
         <div className="bg-white rounded-2xl shadow-lg border border-beige-100 p-8">
           <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-2">Trusted by Leading Organizations</h3>
+            <h3 className="text-2xl font-bold text-gray-900 mb-2">Trusted by</h3>
             <p className="text-gray-600">15+ years of experience across industries</p>
           </div>
 
           <div className="border-t border-beige-200 pt-8">
-            <p className="text-center text-gray-600 mb-6">Trusted by leading organizations</p>
+            
             <div className="relative overflow-hidden">
               <div className="sliding-logos flex animate-slide-slow">
                 {[...clients, ...clients].map((client, index) => (

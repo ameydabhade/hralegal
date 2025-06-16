@@ -100,9 +100,7 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-          <p className="text-gray-400">
-            © 2024 HRA Legal. All rights reserved.
-          </p>
+        
           <div className="flex gap-6">
             <Link href="/terms-of-use" className="text-gray-400 hover:text-beige-300 transition-colors">
               Terms
