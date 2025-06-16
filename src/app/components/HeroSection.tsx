@@ -29,7 +29,7 @@ export default function HeroSection() {
     { name: "Shemaroo Entertainment", logo: "/Logos/shemaroo.svg" },
     { name: "Goldmines Telefilms", logo: "/Logos/goldmines.webp" },
     { name: "Maddock Films", logo: "/Logos/maddock.webp" },
-    { name: "Sony Pictures", logo: "/Logos/sony.svg" },
+    { name: "Sony Pictures", logo: "/Logos/sony.png" },
     { name: "Jio Studios", logo: "/Logos/jio.svg" }
   ];
 

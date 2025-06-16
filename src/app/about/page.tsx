@@ -248,8 +248,8 @@ export default function AboutPage() {
               </p>
               <p className="text-xl text-gray-700 leading-relaxed text-center">
                 Just like technology, law is continuously evolving, and so does HRA Legal.
-              </p>
-            </div>
+            </p>
+          </div>
           </motion.div>
         </div>
       </section>
@@ -353,7 +353,7 @@ export default function AboutPage() {
               >
                 <div className="p-4 bg-beige-400 rounded-2xl inline-block mb-6">
                   <value.icon className="w-8 h-8 text-white" />
-                </div>
+            </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">{value.title}</h3>
                 <p className="text-gray-600 leading-relaxed">{value.description}</p>
               </motion.div>
@@ -409,7 +409,7 @@ export default function AboutPage() {
               </motion.div>
             ))}
           </div>
-        </div>
+                      </div>
       </section>
 
       {/* Call to Action */}
@@ -435,4 +435,4 @@ export default function AboutPage() {
       </section>
     </div>
   );
-}
+} 

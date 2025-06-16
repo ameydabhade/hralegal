@@ -145,18 +145,18 @@ export default function HomeFoundersSection() {
         <div className="text-center">
           <div className="bg-white rounded-3xl p-8 shadow-lg border border-gray-100 max-w-2xl mx-auto">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Learn More About Our Leadership
+              Experienced Legal Leadership
             </h3>
             <p className="text-gray-600 mb-8">
-              Discover the full background, experience, and vision of our founding partners 
-              who lead HRA Legal's mission to provide exceptional legal services.
+              Our founding partners combine decades of experience across corporate law, 
+              intellectual property, and employment law to deliver exceptional legal services.
             </p>
             
             <Link 
-              href="/founders" 
+              href="/about" 
               className="inline-flex items-center gap-2 px-8 py-3 bg-beige-400 text-white font-semibold rounded-lg hover:bg-beige-500 transition-colors"
             >
-              Meet Our Founders
+              Learn More About Us
               <ArrowRight className="w-5 h-5" />
             </Link>
           </div>
