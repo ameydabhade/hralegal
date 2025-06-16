@@ -339,73 +339,13 @@ export default function PracticeAreasPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-beige-50 to-white">
+    <div className="min-h-screen bg-gradient-to-b from-beige-100 to-white py-20">
       {/* Hero Section */}
-      <section className="pt-32 pb-20">
-        <div className="max-w-7xl mx-auto px-4 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
-            <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-              Practice Areas
-            </h1>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              Comprehensive legal expertise across diverse practice areas, delivering tailored solutions 
-              for your business needs with deep industry knowledge and innovative approaches.
-            </p>
-          </motion.div>
-        </div>
-      </section>
 
-      {/* Stats Section */}
-      <section className="py-16 bg-gradient-to-r from-beige-100 to-beige-200">
-        <div className="max-w-7xl mx-auto px-4 lg:px-8">
-          <div className="grid md:grid-cols-4 gap-8 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-            >
-              <div className="text-4xl font-bold mb-2">14</div>
-              <p className="">Expertise Areas</p>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              viewport={{ once: true }}
-            >
-              <div className="text-4xl font-bold mb-2">10</div>
-              <p className="">Developing Areas</p>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-            >
-              <div className="text-4xl font-bold mb-2">15+</div>
-              <p className="">Years Experience</p>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              viewport={{ once: true }}
-            >
-              <div className="text-4xl font-bold mb-2">500+</div>
-              <p className="">Cases Handled</p>
-            </motion.div>
-          </div>
-        </div>
-      </section>
+
 
       {/* Expertise Areas */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 ">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
