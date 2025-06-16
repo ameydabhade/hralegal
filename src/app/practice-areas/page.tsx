@@ -19,14 +19,7 @@ import {
   ChevronDown,
   ChevronRight,
   Award,
-  Briefcase,
-  Scale,
-  Gavel,
-  Target,
-  TrendingUp,
-  Zap,
-  Lock,
-  Compass
+  TrendingUp
 } from 'lucide-react';
 import { useState } from 'react';
 

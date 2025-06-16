@@ -1,5 +1,5 @@
 import { Shield, Eye, Lock, FileText, Clock, AlertCircle } from 'lucide-react';
-import Header from '../components/Header';
+
 import Footer from '../components/Footer';
 
 export const metadata = {

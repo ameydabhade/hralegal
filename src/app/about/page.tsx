@@ -12,8 +12,7 @@ import {
   BookOpen, 
   Lightbulb,
   Trophy,
-  Brain,
-  Zap
+  Brain
 } from 'lucide-react';
 
 export default function AboutPage() {
@@ -46,7 +45,7 @@ export default function AboutPage() {
           >
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Leadership Team</h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              Meet the visionary leaders driving HRA Legal's success with their combined expertise and passion for excellence.
+              Meet the visionary leaders driving HRA Legal&apos;s success with their combined expertise and passion for excellence.
             </p>
           </motion.div>
 

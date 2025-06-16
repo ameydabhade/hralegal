@@ -1,28 +1,9 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { Scale, Shield, Users, Award, Phone, ArrowRight, CheckCircle, Globe, Target, Handshake, TrendingUp, Clock, FileText, Quote } from 'lucide-react';
+import { Scale, Shield, Award, Phone, ArrowRight, CheckCircle } from 'lucide-react';
 
 export default function HeroSection() {
-  const testimonials = [
-    {
-      quote: "HRA Legal's expertise in media law has been instrumental in structuring our content agreements and ensuring compliance across all our platforms.",
-      author: "Media Executive",
-      company: "Leading Entertainment Company",
-      role: "Head of Legal Affairs"
-    },
-    {
-      quote: "Their deep understanding of corporate governance and M&A transactions helped us navigate complex deal structures with confidence.",
-      author: "Business Leader",
-      company: "Tech Startup",
-      role: "Founder & CEO"
-    },
-    {
-      quote: "The team's prompt response and comprehensive legal solutions have made them our go-to legal partners for all corporate matters.",
-      author: "Corporate Client",
-      company: "Multinational Corporation",
-      role: "General Counsel"
-    }
-  ];
+
 
   const clients = [
     { name: "Reliance Entertainment", logo: "/Logos/relience.svg" },

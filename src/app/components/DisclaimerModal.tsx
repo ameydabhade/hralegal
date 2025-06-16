@@ -1,6 +1,6 @@
 'use client';
 import { useState, useEffect } from 'react';
-import { X, AlertCircle } from 'lucide-react';
+import { AlertCircle } from 'lucide-react';
 
 export default function DisclaimerModal() {
   const [isVisible, setIsVisible] = useState(false);

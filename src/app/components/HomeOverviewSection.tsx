@@ -1,5 +1,4 @@
 import { Scale, Users, Trophy, TrendingUp } from 'lucide-react';
-import Link from 'next/link';
 
 const stats = [
   {
