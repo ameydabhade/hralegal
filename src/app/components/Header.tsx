@@ -70,13 +70,6 @@ export default function Header() {
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-beige-400 transition-all duration-300 group-hover:w-full"></span>
             </Link>
             <Link 
-              href="/careers" 
-              className="relative text-gray-700 hover:text-beige-500 transition-all duration-300 text-sm font-medium group transform hover:-translate-y-0.5"
-            >
-              Careers
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-beige-400 transition-all duration-300 group-hover:w-full"></span>
-            </Link>
-            <Link 
               href="/contact" 
               className="relative text-gray-700 hover:text-beige-500 transition-all duration-300 text-sm font-medium group transform hover:-translate-y-0.5"
             >
@@ -156,13 +149,6 @@ export default function Header() {
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Learners Page
-              </Link>
-              <Link 
-                href="/careers" 
-                className="text-gray-700 hover:text-beige-500 transition-colors text-sm font-medium"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Careers
               </Link>
               <Link 
                 href="/contact" 
