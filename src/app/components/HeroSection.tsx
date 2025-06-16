@@ -139,7 +139,7 @@ export default function HeroSection() {
         </div>
 
         {/* Sliding Testimonials Section */}
-        <div className="mb-20">
+        {/* <div className="mb-20">
           <div className="text-center mb-12">
             <p className="text-sm font-medium text-beige-600 mb-2">TRUSTED BY LEADING ORGANIZATIONS</p>
             <h3 className="text-2xl font-bold text-gray-900">What Our Clients Say</h3>
@@ -169,7 +169,7 @@ export default function HeroSection() {
               ))}
             </div>
           </div>
-        </div>
+        </div> */}
 
     
 

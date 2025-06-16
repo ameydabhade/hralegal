@@ -13,16 +13,7 @@ export default function DisclaimerPage() {
             </h1>
             
             <div className="space-y-8 text-gray-600 leading-relaxed">
-              <div className="bg-gradient-to-r from-red-50 to-orange-50 border border-red-200 rounded-lg p-6">
-                <h2 className="text-xl font-bold text-red-900 mb-4">
-                  Important Legal Notice - Bar Council of India Rules
-                </h2>
-                <p className="text-red-800 font-medium">
-                  As per the rules of the Bar Council of India, lawyers and law firms are not permitted to 
-                  solicit work or advertise. The information contained in this website is provided solely 
-                  for informational purposes and should not be construed as solicitation or advertisement.
-                </p>
-              </div>
+          
 
               <div>
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">No Solicitation</h2>

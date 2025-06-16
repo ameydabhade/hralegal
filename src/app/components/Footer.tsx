@@ -96,17 +96,7 @@ export default function Footer() {
         </div>
 
         {/* Bar Council Disclaimer */}
-        <div className="border-t border-gray-800 mt-12 pt-8">
-          <div className="bg-gradient-to-r from-beige-900/20 to-beige-800/20 border border-beige-700/30 rounded-lg p-6">
-            <h3 className="text-lg font-semibold mb-3 text-beige-300">Important Legal Notice</h3>
-            <p className="text-gray-300 leading-relaxed">
-              <strong>As per the rules of the Bar Council of India,</strong> lawyers and law firms are not permitted to 
-              solicit work or advertise. The information contained on this website is provided solely for informational 
-              purposes and should not be construed as solicitation or advertisement. By accessing this website, you 
-              acknowledge that you are seeking information relating to HRA Legal on your own accord.
-            </p>
-          </div>
-        </div>
+      
 
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
