@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Mail, Phone, MapPin, Linkedin, Instagram, Facebook } from 'lucide-react';
+import { Mail, Phone, MapPin } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -30,33 +30,7 @@ export default function Footer() {
               </div>
             </div>
             
-            {/* Social Media Links */}
-            <div className="mt-6">
-              <h4 className="text-lg font-semibold text-white mb-4">Follow Us</h4>
-              <div className="flex space-x-3">
-                <a 
-                  href="#" 
-                  className="w-10 h-10 bg-beige-500 rounded-lg flex items-center justify-center hover:bg-beige-400 transition-colors duration-200"
-                  aria-label="LinkedIn"
-                >
-                  <Linkedin className="w-5 h-5 text-white" />
-                </a>
-                <a 
-                  href="#" 
-                  className="w-10 h-10 bg-beige-500 rounded-lg flex items-center justify-center hover:bg-beige-400 transition-colors duration-200"
-                  aria-label="Instagram"
-                >
-                  <Instagram className="w-5 h-5 text-white" />
-                </a>
-                <a 
-                  href="#" 
-                  className="w-10 h-10 bg-beige-500 rounded-lg flex items-center justify-center hover:bg-beige-400 transition-colors duration-200"
-                  aria-label="Facebook"
-                >
-                  <Facebook className="w-5 h-5 text-white" />
-                </a>
-              </div>
-            </div>
+
           </div>
 
           {/* Legal Services */}
@@ -88,13 +62,13 @@ export default function Footer() {
               <Link href="/about" className="block text-gray-300 hover:text-beige-300 transition-colors">
                 About Us
               </Link>
-              <Link href="/founders" className="block text-gray-300 hover:text-beige-300 transition-colors">
-                Our Founders
+              <Link href="/about" className="block text-gray-300 hover:text-beige-300 transition-colors">
+                Leadership Team
               </Link>
-              <Link href="/industries" className="block text-gray-300 hover:text-beige-300 transition-colors">
-                Industries We Serve
+              <Link href="/sectors" className="block text-gray-300 hover:text-beige-300 transition-colors">
+                Sectors We Serve
               </Link>
-              <Link href="/knowledge-centre" className="block text-gray-300 hover:text-beige-300 transition-colors">
+              <Link href="/learners-page" className="block text-gray-300 hover:text-beige-300 transition-colors">
                 Learners Page
               </Link>
               <Link href="/careers" className="block text-gray-300 hover:text-beige-300 transition-colors">

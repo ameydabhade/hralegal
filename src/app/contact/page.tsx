@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin, Clock, Send, Linkedin, Instagram, Facebook } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Send } from 'lucide-react';
 
 export const metadata = {
   title: 'Contact Us - HRA Legal',
@@ -85,33 +85,7 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              {/* Social Media Links */}
-              <div className="pt-8 border-t border-gray-200">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Follow Us</h3>
-                <div className="flex space-x-4">
-                  <a 
-                    href="#" 
-                    className="w-12 h-12 bg-beige-600 rounded-lg flex items-center justify-center hover:bg-beige-700 transition-colors duration-200"
-                    aria-label="LinkedIn"
-                  >
-                    <Linkedin className="w-6 h-6 text-white" />
-                  </a>
-                  <a 
-                    href="#" 
-                    className="w-12 h-12 bg-beige-600 rounded-lg flex items-center justify-center hover:bg-beige-700 transition-colors duration-200"
-                    aria-label="Instagram"
-                  >
-                    <Instagram className="w-6 h-6 text-white" />
-                  </a>
-                  <a 
-                    href="#" 
-                    className="w-12 h-12 bg-beige-600 rounded-lg flex items-center justify-center hover:bg-beige-700 transition-colors duration-200"
-                    aria-label="Facebook"
-                  >
-                    <Facebook className="w-6 h-6 text-white" />
-                  </a>
-                </div>
-              </div>
+
             </div>
 
             {/* Contact Form */}

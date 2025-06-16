@@ -11,8 +11,7 @@ import {
   Award, 
   BookOpen, 
   Lightbulb,
-  Trophy,
-  Brain
+  Trophy
 } from 'lucide-react';
 
 export default function AboutPage() {
@@ -149,7 +148,7 @@ export default function AboutPage() {
                 {/* Header */}
                 <div className="bg-gradient-to-r from-beige-400 to-beige-500 p-8 text-center">
                   <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
-                    <Brain className="w-12 h-12 text-beige-600" />
+                    <Lightbulb className="w-12 h-12 text-beige-600" />
                   </div>
                   <h3 className="text-2xl text-black font-bold mb-2">Ami Upadhyaya</h3>
                   <p className=" font-medium">HR Consultant & Strategist</p>
