@@ -18,9 +18,9 @@ import {
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-beige-50 to-white">
+    <div className="min-h-screen bg-gradient-to-b from-beige-100 to-white">
       {/* Hero Section */}
-      <section className="pt-32 pb-20">
+      <section className=" pb-20">
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -28,199 +28,9 @@ export default function AboutPage() {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-              About HRA Legal
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Discover our story, mission, vision, values, and culture that drive our commitment to exceptional legal services.
-            </p>
+         
+
           </motion.div>
-        </div>
-      </section>
-
-
-
-      {/* Our Story */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="bg-gradient-to-br from-white to-beige-50 rounded-3xl p-12 shadow-xl border border-beige-100"
-          >
-            <div className="text-center mb-12">
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Our Story</h2>
-            </div>
-            <div className="max-w-4xl mx-auto space-y-6">
-              <p className="text-xl text-gray-700 leading-relaxed text-center">
-                HRA Legal works on an ever evolving and diverse outlook consistently aligned with the 
-                prevalent market dynamics, and technology shifts.
-              </p>
-              <p className="text-xl text-gray-700 leading-relaxed text-center">
-                Just like technology, law is continuously evolving, and so does HRA Legal.
-              </p>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Mission */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-beige-100 to-beige-50">
-        <div className="max-w-6xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="bg-white rounded-3xl shadow-xl overflow-hidden"
-          >
-            <div className="lg:flex">
-              <div className="lg:w-1/3 bg-gradient-to-br from-beige-500 to-beige-600 p-12 flex items-center justify-center">
-                <div className="text-center">
-                  <Target className="w-20 h-20 text-white mx-auto mb-6" />
-                  <h2 className="text-4xl font-bold text-white">Mission</h2>
-                </div>
-              </div>
-              <div className="lg:w-2/3 p-12">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">Our Mission</h3>
-                <p className="text-lg text-gray-700 leading-relaxed">
-                  Our mission is to deliver outstanding professional legal services to a diverse range of global 
-                  and domestic clients, including governments and economic entities, while upholding a strong 
-                  focus on our Core Values, consistent profitability, long term sustainability, and social 
-                  responsibility, while fostering a dynamic, passionate and inclusive work environment for our 
-                  professionals.
-                </p>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Vision */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="bg-white rounded-3xl shadow-xl overflow-hidden"
-          >
-            <div className="lg:flex">
-              <div className="lg:w-2/3 p-12 flex items-center">
-                <div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-6">Our Vision</h3>
-                  <div className="bg-beige-50 rounded-2xl p-8 border-l-4 border-beige-400">
-                    <p className="text-2xl text-gray-800 leading-relaxed font-semibold text-center">
-                      Our vision is to be a renowned profitable premier law firm globally.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="lg:w-1/3 bg-gradient-to-br from-beige-400 to-beige-500 p-12 flex items-center justify-center">
-                <div className="text-center">
-                  <Eye className="w-20 h-20 text-white mx-auto mb-6" />
-                  <h2 className="text-4xl font-bold text-white">Vision</h2>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Core Values */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-beige-50 to-white">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Core Values</h2>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              Our core values of <strong>Integrity, Trust, Respect, Humility, and Unity</strong> are consistently 
-              reflected in our business ethics and are embedded in the professional legal services we offer worldwide.
-            </p>
-          </motion.div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
-            {[
-              { icon: Shield, title: "Integrity", description: "Honesty and moral principles in all our actions" },
-              { icon: HandHeart, title: "Trust", description: "Building reliable relationships with clients and colleagues" },
-              { icon: Users, title: "Respect", description: "Treating everyone with dignity and consideration" },
-              { icon: Heart, title: "Humility", description: "Grounded approach and continuous learning mindset" },
-              { icon: Award, title: "Unity", description: "Collaboration and teamwork towards common goals" }
-            ].map((value, index) => (
-              <motion.div
-                key={value.title}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 text-center"
-              >
-                <div className="p-4 bg-beige-400 rounded-2xl inline-block mb-6">
-                  <value.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">{value.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{value.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Culture */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Our Culture</h2>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              Our culture is driven by an <strong>entrepreneurial mindset, strong conviction, principled leadership, 
-              resilience, continuous learning, and focus on work-life balance</strong>, all fostered within a vibrant 
-              and enjoyable workspace.
-            </p>
-          </motion.div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              { icon: Lightbulb, title: "Entrepreneurial Mindset", description: "Innovation and creative problem-solving approach" },
-              { icon: Shield, title: "Strong Conviction", description: "Unwavering commitment to excellence and quality" },
-              { icon: Users, title: "Principled Leadership", description: "Ethical guidance and mentorship at all levels" },
-              { icon: Trophy, title: "Resilience", description: "Adaptability and strength in challenging situations" },
-              { icon: BookOpen, title: "Continuous Learning", description: "Commitment to professional development and growth" },
-              { icon: Heart, title: "Work-Life Balance", description: "Fostering well-being in a vibrant workspace" }
-            ].map((culture, index) => (
-              <motion.div
-                key={culture.title}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100"
-              >
-                <div className="flex items-start">
-                  <div className="p-3 bg-beige-400 rounded-xl mr-4 flex-shrink-0">
-                    <culture.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-bold text-gray-900 mb-3">{culture.title}</h3>
-                    <p className="text-gray-600 leading-relaxed">{culture.description}</p>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -415,6 +225,190 @@ export default function AboutPage() {
               </div>
             </div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Our Story */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="bg-gradient-to-br from-white to-beige-50 rounded-3xl p-12 shadow-xl border border-beige-100"
+          >
+            <div className="text-center mb-12">
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Our Story</h2>
+            </div>
+            <div className="max-w-4xl mx-auto space-y-6">
+              <p className="text-xl text-gray-700 leading-relaxed text-center">
+                HRA Legal works on an ever evolving and diverse outlook consistently aligned with the 
+                prevalent market dynamics, and technology shifts.
+              </p>
+              <p className="text-xl text-gray-700 leading-relaxed text-center">
+                Just like technology, law is continuously evolving, and so does HRA Legal.
+              </p>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Mission */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-beige-100 to-beige-50">
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="bg-white rounded-3xl shadow-xl overflow-hidden"
+          >
+            <div className="lg:flex">
+              <div className="lg:w-1/3 bg-gradient-to-br from-beige-500 to-beige-600 p-12 flex items-center justify-center">
+                <div className="text-center">
+                  <Target className="w-20 h-20 text-white mx-auto mb-6" />
+                  <h2 className="text-4xl font-bold text-white">Mission</h2>
+                </div>
+              </div>
+              <div className="lg:w-2/3 p-12">
+                <h3 className="text-2xl font-bold text-gray-900 mb-6">Our Mission</h3>
+                <p className="text-lg text-gray-700 leading-relaxed">
+                  Our mission is to deliver outstanding professional legal services to a diverse range of global 
+                  and domestic clients, including governments and economic entities, while upholding a strong 
+                  focus on our Core Values, consistent profitability, long term sustainability, and social 
+                  responsibility, while fostering a dynamic, passionate and inclusive work environment for our 
+                  professionals.
+                </p>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Vision */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="bg-white rounded-3xl shadow-xl overflow-hidden"
+          >
+            <div className="lg:flex">
+              <div className="lg:w-2/3 p-12 flex items-center">
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-6">Our Vision</h3>
+                  <div className="bg-beige-50 rounded-2xl p-8 border-l-4 border-beige-400">
+                    <p className="text-2xl text-gray-800 leading-relaxed font-semibold text-center">
+                      Our vision is to be a renowned profitable premier law firm globally.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="lg:w-1/3 bg-gradient-to-br from-beige-400 to-beige-500 p-12 flex items-center justify-center">
+                <div className="text-center">
+                  <Eye className="w-20 h-20 text-white mx-auto mb-6" />
+                  <h2 className="text-4xl font-bold text-white">Vision</h2>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Core Values */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-beige-50 to-white">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Core Values</h2>
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+              Our core values of <strong>Integrity, Trust, Respect, Humility, and Unity</strong> are consistently 
+              reflected in our business ethics and are embedded in the professional legal services we offer worldwide.
+            </p>
+          </motion.div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
+            {[
+              { icon: Shield, title: "Integrity", description: "Honesty and moral principles in all our actions" },
+              { icon: HandHeart, title: "Trust", description: "Building reliable relationships with clients and colleagues" },
+              { icon: Users, title: "Respect", description: "Treating everyone with dignity and consideration" },
+              { icon: Heart, title: "Humility", description: "Grounded approach and continuous learning mindset" },
+              { icon: Award, title: "Unity", description: "Collaboration and teamwork towards common goals" }
+            ].map((value, index) => (
+              <motion.div
+                key={value.title}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 text-center"
+              >
+                <div className="p-4 bg-beige-400 rounded-2xl inline-block mb-6">
+                  <value.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">{value.title}</h3>
+                <p className="text-gray-600 leading-relaxed">{value.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Culture */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Our Culture</h2>
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+              Our culture is driven by an <strong>entrepreneurial mindset, strong conviction, principled leadership, 
+              resilience, continuous learning, and focus on work-life balance</strong>, all fostered within a vibrant 
+              and enjoyable workspace.
+            </p>
+          </motion.div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              { icon: Lightbulb, title: "Entrepreneurial Mindset", description: "Innovation and creative problem-solving approach" },
+              { icon: Shield, title: "Strong Conviction", description: "Unwavering commitment to excellence and quality" },
+              { icon: Users, title: "Principled Leadership", description: "Ethical guidance and mentorship at all levels" },
+              { icon: Trophy, title: "Resilience", description: "Adaptability and strength in challenging situations" },
+              { icon: BookOpen, title: "Continuous Learning", description: "Commitment to professional development and growth" },
+              { icon: Heart, title: "Work-Life Balance", description: "Fostering well-being in a vibrant workspace" }
+            ].map((culture, index) => (
+              <motion.div
+                key={culture.title}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100"
+              >
+                <div className="flex items-start">
+                  <div className="p-3 bg-beige-400 rounded-xl mr-4 flex-shrink-0">
+                    <culture.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-bold text-gray-900 mb-3">{culture.title}</h3>
+                    <p className="text-gray-600 leading-relaxed">{culture.description}</p>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 
