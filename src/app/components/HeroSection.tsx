@@ -33,20 +33,19 @@ export default function HeroSection() {
             </div>
 
             <div className="space-y-6">
-              <h1 className="text-5xl lg:text-7xl font-bold text-gray-900 leading-tight">
-                HRA
-                <span className="block text-beige-500">Legal</span>
-                <span className="block text-2xl lg:text-3xl font-normal text-gray-600 mt-4">
-                  Professional Legal Solutions
+              <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 leading-tight">
+                Your Legal Partners
+                <span className="block text-3xl lg:text-4xl font-normal text-beige-500 mt-2">
+                  for Business Success
                 </span>
               </h1>
               
               <p className="text-xl text-gray-700 leading-relaxed max-w-2xl">
-                HRA Legal is a professional law firm with specialized expertise across Civil and Business Law, Intellectual Property Laws, Corporate and Commercial Law, Employment Laws, and other developing areas of law.
+                HRA Legal is a professional law firm with specialized expertise across various legal disciplines, including Civil and Business Law, Intellectual Property Laws, Corporate Law, and Employment Laws.
               </p>
               
               <p className="text-lg text-gray-600 leading-relaxed max-w-2xl">
-                Our seasoned lawyers provide personalized solutions with prompt, reliable and qualitative services that enable businesses to navigate legal complexities with confidence.
+                Our seasoned lawyers provide personalized solutions with prompt, reliable and qualitative services that enable businesses to navigate legal complexities with confidence and clarity.
               </p>
             </div>
             
