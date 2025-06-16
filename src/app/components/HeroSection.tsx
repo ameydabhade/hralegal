@@ -6,11 +6,11 @@ export default function HeroSection() {
 
 
   const clients = [
-    { name: "Reliance Entertainment", logo: "/Logos/relience.svg" },
-    { name: "Shemaroo Entertainment", logo: "/Logos/shemaroo.svg" },
-    { name: "Goldmines Telefilms", logo: "/Logos/goldmines.webp" },
-    { name: "Maddock Films", logo: "/Logos/maddock.webp" },
-    { name: "Sony Pictures", logo: "/Logos/sony.png" },
+    { name: "Reliance Entertainment", logo: "/logos/relience.svg" },
+    { name: "Shemaroo Entertainment", logo: "/logos/shemaroo.svg" },
+    { name: "Goldmines Telefilms", logo: "/logos/goldmines.webp" },
+    { name: "Maddock Films", logo: "/logos/maddock.webp" },
+    { name: "Sony Pictures", logo: "/logos/sony.png" },
  
   ];
 
