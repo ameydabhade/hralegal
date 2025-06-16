@@ -102,8 +102,9 @@ export default function TermsOfUsePage() {
                 </p>
                 <div className="mt-4 p-4 bg-gray-50 rounded-lg">
                   <p><strong>HRA Legal</strong></p>
-                  <p>Email: legal@hralegal.com</p>
-                  <p>Phone: +91 XXXX-XXXX-XX</p>
+                  <p>Email: rushi@hralegal.com</p>
+                  <p>Phone: +91 9967382875</p>
+                  <p>Address: 93 East Building, 705, Mahakali Caves Road, Near MIDC/Ahura/Onida, Andheri East, Mumbai 400093</p>
                 </div>
               </div>
 

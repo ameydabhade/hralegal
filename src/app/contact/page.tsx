@@ -227,31 +227,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Why Choose Us */}
-      <section className="bg-beige-50 py-16">
-        <div className="max-w-4xl mx-auto px-4 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">
-            Why Choose HRA Legal?
-          </h2>
-          <p className="text-lg text-gray-700 mb-8">
-            With 15+ years of experience and a track record of successful outcomes, we're committed to providing exceptional legal services.
-          </p>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div>
-              <div className="text-3xl font-bold text-beige-600 mb-2">15+</div>
-              <div className="text-gray-700">Years of Experience</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-beige-600 mb-2">500+</div>
-              <div className="text-gray-700">Successful Cases</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-beige-600 mb-2">24/7</div>
-              <div className="text-gray-700">Availability</div>
-            </div>
-          </div>
-        </div>
-      </section>
+   
     </div>
   );
 } 

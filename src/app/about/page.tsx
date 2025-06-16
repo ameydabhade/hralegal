@@ -271,14 +271,14 @@ export default function AboutPage() {
             >
               <div className="bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden">
                 {/* Header */}
-                <div className="bg-gradient-to-r from-beige-500 to-beige-600 p-8 text-center">
+                <div className="bg-gradient-to-r from-beige-400 to-beige-500 p-8 text-center">
                   <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
                     <Users className="w-12 h-12 text-beige-600" />
                   </div>
-                  <h3 className="text-2xl font-bold text-white mb-2">Rushi Upadhyaya</h3>
-                  <p className="text-beige-100 font-medium">Founder & Legal Expert</p>
-                  <div className="mt-4 bg-white bg-opacity-20 rounded-full px-4 py-2 inline-block">
-                    <span className="text-white text-sm font-semibold">15+ Years Experience</span>
+                  <h3 className="text-2xl text-black font-bold mb-2">Rushi Upadhyaya</h3>
+                  <p className=" font-medium">Founder & Legal Expert</p>
+                  <div className="mt-4 bg-beige-200 bg-opacity-20 rounded-full px-4 py-2 inline-block">
+                    <span className=" text-sm font-semibold">15+ Years Experience</span>
                   </div>
                 </div>
 
@@ -292,9 +292,9 @@ export default function AboutPage() {
                     </h4>
                     <div className="space-y-2">
                       {['Masters of Business Laws (MBL)', 'Qualified Company Secretary', 'Diploma in IP Laws (PGIPR)', 'Law Graduate (LLB)', 'Management Graduate (BMS)'].map((qual, index) => (
-                        <div key={index} className="flex items-center bg-beige-50 p-3 rounded-lg">
-                          <div className="w-2 h-2 bg-beige-400 rounded-full mr-3"></div>
-                          <span className="text-gray-700 text-sm">{qual}</span>
+                        <div key={index} className="flex items-center bg-beige-100 p-3 rounded-lg">
+                          <div className="w-2 h-2 bg-beige-200 rounded-full mr-3"></div>
+                          <span className=" text-black text-sm">{qual}</span>
                         </div>
                       ))}
                     </div>
@@ -340,10 +340,10 @@ export default function AboutPage() {
                   <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
                     <Brain className="w-12 h-12 text-beige-600" />
                   </div>
-                  <h3 className="text-2xl font-bold text-white mb-2">Ami Upadhyaya</h3>
-                  <p className="text-beige-100 font-medium">HR Consultant & Strategist</p>
-                  <div className="mt-4 bg-white bg-opacity-20 rounded-full px-4 py-2 inline-block">
-                    <span className="text-white text-sm font-semibold">18+ Years Experience</span>
+                  <h3 className="text-2xl text-black font-bold mb-2">Ami Upadhyaya</h3>
+                  <p className=" font-medium">HR Consultant & Strategist</p>
+                  <div className="mt-4 bg-beige-200 bg-opacity-20 rounded-full px-4 py-2 inline-block">
+                    <span className=" text-sm font-semibold">18+ Years Experience</span>
                   </div>
                 </div>
 
@@ -357,9 +357,9 @@ export default function AboutPage() {
                     </h4>
                     <div className="space-y-2">
                       {['Master of Commerce (MCom)', 'Master of Business Admin (MBA)', 'Master of Business Laws (MBL)', 'Management Graduate (BMS)', 'Licensed NLP Practitioner'].map((qual, index) => (
-                        <div key={index} className="flex items-center bg-beige-50 p-3 rounded-lg">
-                          <div className="w-2 h-2 bg-beige-400 rounded-full mr-3"></div>
-                          <span className="text-gray-700 text-sm">{qual}</span>
+                        <div key={index} className="flex items-center bg-beige-100 p-3 rounded-lg">
+                          <div className="w-2 h-2 bg-beige-200 rounded-full mr-3"></div>
+                          <span className="  text-black text-sm">{qual}</span>
                         </div>
                       ))}
                     </div>

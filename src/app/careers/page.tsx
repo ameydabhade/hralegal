@@ -146,7 +146,7 @@ export default function CareersPage() {
                     <p className="text-gray-700 mb-4">{opportunity.application}</p>
                     <div className="flex items-center text-beige-600">
                       <Mail className="w-5 h-5 mr-2" />
-                      <span className="font-semibold">careers@hralegal.com</span>
+                      <span className="font-semibold">rushi@hralegal.com</span>
                     </div>
                   </div>
                 </div>
@@ -207,7 +207,7 @@ export default function CareersPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
-              href="mailto:careers@hralegal.com"
+              href="mailto:rushi@hralegal.com"
               className="inline-flex items-center justify-center px-8 py-4 bg-beige-600 text-white font-semibold rounded-lg hover:bg-beige-700 transition-colors duration-200"
             >
               <Mail className="w-5 h-5 mr-2" />

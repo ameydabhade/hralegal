@@ -228,9 +228,9 @@ export default function PrivacyPolicyPage() {
                 If you have any questions about this Privacy Policy or our data practices, please contact us:
               </p>
               <div className="space-y-2 text-gray-700">
-                <p><strong>Email:</strong> privacy@hralegal.com</p>
-                <p><strong>Phone:</strong> +91 (0) 123 456 7890</p>
-                <p><strong>Address:</strong> 123 Legal District, Professional Tower, 5th Floor, Mumbai, Maharashtra 400001, India</p>
+                <p><strong>Email:</strong> rushi@hralegal.com</p>
+                <p><strong>Phone:</strong> +91 9967382875</p>
+                <p><strong>Address:</strong> 93 East Building, 705, Mahakali Caves Road, Near MIDC/Ahura/Onida, Andheri East, Mumbai 400093</p>
               </div>
             </div>
           </div>
