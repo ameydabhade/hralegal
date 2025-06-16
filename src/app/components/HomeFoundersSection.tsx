@@ -116,27 +116,27 @@ export default function HomeFoundersSection() {
         </div>
 
         {/* Combined Experience */}
-        <div className="bg-gradient-to-br from-beige-400 to-beige-500 rounded-3xl p-8 lg:p-12 text-white text-center mb-16">
+        <div className="bg-gradient-to-br from-beige-100 to-beige-200 rounded-3xl p-8 lg:p-12  text-center mb-16">
           <h3 className="text-3xl font-bold mb-4">
             Combined Legal Excellence
           </h3>
-          <p className="text-beige-50 text-lg mb-8 max-w-2xl mx-auto">
+          <p className=" text-lg mb-8 max-w-2xl mx-auto">
             Our founders bring together 33+ years of combined experience across diverse legal domains, 
             offering comprehensive solutions backed by deep industry knowledge.
           </p>
           
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="text-4xl font-bold text-white mb-2">33+</div>
-              <div className="text-beige-50">Years Combined Experience</div>
+              <div className="text-4xl font-bold  mb-2">33+</div>
+              <div className="">Years Combined Experience</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-white mb-2">6</div>
-              <div className="text-beige-50">Advanced Qualifications</div>
+              <div className="text-4xl font-bold  mb-2">6</div>
+              <div className="">Advanced Qualifications</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-white mb-2">5+</div>
-              <div className="text-beige-50">Major Corporate Roles</div>
+              <div className="text-4xl font-bold  mb-2">5+</div>
+              <div className="">Major Corporate Roles</div>
             </div>
           </div>
         </div>

@@ -181,7 +181,7 @@ export default function ServicesSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="bg-gradient-to-br from-beige-500 to-beige-600 rounded-2xl p-8 md:p-12 text-white relative overflow-hidden"
+          className="bg-gradient-to-br from-beige-100 to-beige-200 rounded-2xl p-8 md:p-12  relative overflow-hidden"
         >
           {/* Background Pattern */}
           <div className="absolute inset-0 opacity-10">
@@ -202,7 +202,7 @@ export default function ServicesSection() {
               End-to-End Legal Services
             </h3>
             
-            <p className="text-lg leading-relaxed text-beige-100 max-w-5xl mx-auto text-center">
+            <p className="text-lg leading-relaxed  max-w-5xl mx-auto text-center">
               HRA Legal offers end-to-end Legal services, including, structuring, drafting, negotiation and 
               execution of all types of contracts/agreements/documents/paperwork (including definitive 
               agreements, long form agreements, founder agreements, non-disclosure agreements, no 

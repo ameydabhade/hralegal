@@ -79,7 +79,7 @@ export default function WhyChooseUsSection() {
               className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100"
             >
               <div className="flex items-start">
-                <div className="p-4 bg-gradient-to-br from-beige-400 to-beige-500 rounded-xl shadow-lg mr-4 flex-shrink-0">
+                <div className="p-4 bg-beige-400 rounded-xl shadow-lg mr-4 flex-shrink-0">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
                 <div className="flex-1">
@@ -103,11 +103,11 @@ export default function WhyChooseUsSection() {
           viewport={{ once: true }}
           className="text-center mt-16"
         >
-          <div className="bg-gradient-to-br from-beige-500 to-beige-600 rounded-2xl p-8 md:p-12 text-white">
+          <div className="bg-gradient-to-br from-beige-100 to-beige-200 rounded-2xl p-8 md:p-12 ">
             <h3 className="text-2xl md:text-3xl font-bold mb-4">
               Ready to Experience Excellence?
             </h3>
-            <p className="text-beige-100 mb-8 max-w-2xl mx-auto">
+            <p className=" mb-8 max-w-2xl mx-auto">
               Let us help you navigate your legal challenges with confidence and expertise.
             </p>
             <button className="bg-white text-beige-700 font-semibold px-8 py-3 rounded-lg hover:bg-gray-50 transition-colors duration-200 shadow-lg">
