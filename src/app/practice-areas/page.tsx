@@ -361,9 +361,9 @@ export default function PracticeAreasPage() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-gradient-to-r from-beige-500 to-beige-600">
+      <section className="py-16 bg-gradient-to-r from-beige-100 to-beige-200">
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
-          <div className="grid md:grid-cols-4 gap-8 text-center text-white">
+          <div className="grid md:grid-cols-4 gap-8 text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -371,7 +371,7 @@ export default function PracticeAreasPage() {
               viewport={{ once: true }}
             >
               <div className="text-4xl font-bold mb-2">14</div>
-              <p className="text-beige-100">Expertise Areas</p>
+              <p className="">Expertise Areas</p>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -380,7 +380,7 @@ export default function PracticeAreasPage() {
               viewport={{ once: true }}
             >
               <div className="text-4xl font-bold mb-2">10</div>
-              <p className="text-beige-100">Developing Areas</p>
+              <p className="">Developing Areas</p>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -389,7 +389,7 @@ export default function PracticeAreasPage() {
               viewport={{ once: true }}
             >
               <div className="text-4xl font-bold mb-2">15+</div>
-              <p className="text-beige-100">Years Experience</p>
+              <p className="">Years Experience</p>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -398,7 +398,7 @@ export default function PracticeAreasPage() {
               viewport={{ once: true }}
             >
               <div className="text-4xl font-bold mb-2">500+</div>
-              <p className="text-beige-100">Cases Handled</p>
+              <p className="">Cases Handled</p>
             </motion.div>
           </div>
         </div>
@@ -536,17 +536,17 @@ export default function PracticeAreasPage() {
       </section>
 
       {/* Call to Action */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-beige-500 to-beige-600">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-beige-100 to-beige-200">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-white"
+            className=""
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6">Need Legal Expertise?</h2>
-            <p className="text-xl text-beige-100 mb-8 leading-relaxed">
+            <p className="text-xl  mb-8 leading-relaxed">
               Whether you need assistance in our core expertise areas or developing practice areas, 
               our experienced team is ready to provide comprehensive legal solutions tailored to your needs.
             </p>
@@ -554,7 +554,7 @@ export default function PracticeAreasPage() {
               <button className="bg-white text-beige-600 font-bold px-8 py-4 rounded-lg hover:bg-gray-50 transition-colors duration-200 shadow-lg">
                 Schedule Consultation
               </button>
-              <button className="border-2 border-white text-white font-bold px-8 py-4 rounded-lg hover:bg-white hover:text-beige-600 transition-colors duration-200">
+              <button className="border-2 border-beige-200 bg-beige-200  font-bold px-8 py-4 rounded-lg hover:text-beige-600 transition-colors duration-200">
                 View Our Services
               </button>
             </div>
