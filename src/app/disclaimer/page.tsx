@@ -1,4 +1,4 @@
-import { AlertTriangle, Clock } from 'lucide-react';
+import { AlertTriangle } from 'lucide-react';
 
 export const metadata = {
   title: 'Disclaimer - HRA Legal',

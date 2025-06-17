@@ -1,4 +1,4 @@
-import { Shield, Clock } from 'lucide-react';
+import { Shield } from 'lucide-react';
 
 import Footer from '../components/Footer';
 
@@ -87,7 +87,7 @@ export default function PrivacyPolicyPage() {
                   </li>
                   <li className="flex items-start">
                     <span className="font-semibold mr-2">•</span>
-                    <span><strong>Website Performance and Improvements:</strong> To study traffic patterns in order to improve website performance, to customize the user experience, and to better match the users' interests and preferences, to keep track of preferences you specify while you are using HRP's content or services, and to assist in identifying possible fraudulent activities.</span>
+                    <span><strong>Website Performance and Improvements:</strong> To study traffic patterns in order to improve website performance, to customize the user experience, and to better match the users&apos; interests and preferences, to keep track of preferences you specify while you are using HRP&apos;s content or services, and to assist in identifying possible fraudulent activities.</span>
                   </li>
                 </ul>
                 <p className="mt-4">
@@ -133,7 +133,7 @@ export default function PrivacyPolicyPage() {
                   <strong>b. Deletion:</strong> In accordance with our routine record keeping, we may delete certain records that contain Personal Information You have submitted herein. We are under no obligation to store such Personal Information indefinitely and hereby expressly disclaim any liability arising out of, or related to, the destruction of such Personal Information. In addition, You should be aware that it may not be possible to completely delete all of your Personal Information from our databases due to technical reasons in case of any opt-out preferences made by You. Notwithstanding anything to the contrary contained herein, we may retain your Personal Data where necessary for compliance with a legal obligation applicable to us, or in order to protect our/your interests.
                 </p>
                 <p>
-                  <strong>c. Restricted User:</strong> As per the terms and conditions of use, We have the right to restrict access of any User from the Website and the services offered therein (&quot;Restricted User&quot;). With respect to a Restricted User, We will delete any or all User Information given by the Restricted User, save and except if its required due to a legal requirement under applicable law.
+                  <strong>c. Restricted User:</strong> As per the terms and conditions of use, We have the right to restrict access of any User from the Website and the services offered therein (&quot;Restricted User&quot;). With respect to a Restricted User, We will delete any or all User Information given by the Restricted User, save and except if it&apos;s required due to a legal requirement under applicable law.
                 </p>
               </div>
 

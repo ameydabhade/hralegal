@@ -1,18 +1,7 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import { Scale, Shield, Award, Phone, ArrowRight, CheckCircle } from 'lucide-react';
 
 export default function HeroSection() {
-
-
-  const clients = [
-    { name: "Reliance Entertainment", logo: "/Logos/relience.svg" },
-    { name: "Shemaroo Entertainment", logo: "/Logos/shemaroo.svg" },
-    { name: "Goldmines Telefilms", logo: "/Logos/goldmines.webp" },
-    { name: "Maddock Films", logo: "/Logos/maddock.webp" },
-    { name: "Sony Pictures", logo: "/Logos/sony.png" },
- 
-  ];
 
   return (
     <section className="min-h-screen bg-gradient-to-br from-beige-200 via-beige-100 to-beige-50 relative overflow-hidden">
