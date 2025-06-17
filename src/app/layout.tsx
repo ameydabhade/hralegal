@@ -1,20 +1,68 @@
 import type { Metadata } from "next";
-import { Lora, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import DisclaimerModal from "./components/DisclaimerModal";
 
-const lora = Lora({
-  variable: "--font-lora",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+const kohinoor = localFont({
+  src: [
+    {
+      path: '../../public/fonts/fonnts.com-Kohinoor_Light.otf',
+      weight: '300',
+      style: 'normal',
+    },
+    {
+      path: '../../public/fonts/fonnts.com-Kohinoor_Light_Italic.otf',
+      weight: '300',
+      style: 'italic',
+    },
+    {
+      path: '../../public/fonts/fonnts.com-Kohinoor_Regular.otf',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../../public/fonts/fonnts.com-Kohinoor_Italic.otf',
+      weight: '400',
+      style: 'italic',
+    },
+    {
+      path: '../../public/fonts/fonnts.com-Kohinoor_Medium.otf',
+      weight: '500',
+      style: 'normal',
+    },
+    {
+      path: '../../public/fonts/fonnts.com-Kohinoor_Medium_Italic.otf',
+      weight: '500',
+      style: 'italic',
+    },
+    {
+      path: '../../public/fonts/fonnts.com-Kohinoor_Semibold.otf',
+      weight: '600',
+      style: 'normal',
+    },
+    {
+      path: '../../public/fonts/fonnts.com-Kohinoor_Semibold_Italic.otf',
+      weight: '600',
+      style: 'italic',
+    },
+    {
+      path: '../../public/fonts/fonnts.com-Kohinoor_Bold.otf',
+      weight: '700',
+      style: 'normal',
+    },
+    {
+      path: '../../public/fonts/fonnts.com-Kohinoor_Bold_Italic.otf',
+      weight: '700',
+      style: 'italic',
+    },
+  ],
+  variable: '--font-kohinoor',
+  display: 'swap',
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+// Note: Optima will be handled via CSS fallbacks until font files are added
 
 export const metadata: Metadata = {
   title: "HRA Legal - Professional Legal Services",
@@ -28,7 +76,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${lora.variable} ${geistMono.variable} font-serif antialiased`}>
+      <body className={`${kohinoor.variable} font-sans antialiased`}>
         <Header />
         <main >{children}</main>
         <Footer />
