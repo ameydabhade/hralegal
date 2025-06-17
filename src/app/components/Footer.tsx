@@ -33,9 +33,9 @@ export default function Footer() {
 
           </div>
 
-          {/* Legal Services */}
+          {/* Practice Areas */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-white">Legal Services</h3>
+            <h3 className="text-lg font-semibold text-white">Practice Areas</h3>
             <div className="space-y-3">
               <Link href="/practice-areas" className="block text-gray-300 hover:text-beige-300 transition-colors">
                 Corporate Law

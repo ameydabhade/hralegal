@@ -23,7 +23,7 @@ import {
 } from 'lucide-react';
 import { useState } from 'react';
 
-const expertiseAreas = [
+const practiceAreas = [
   {
     id: 'contracts',
     icon: FileText,
@@ -337,7 +337,7 @@ export default function PracticeAreasPage() {
 
 
 
-      {/* Expertise Areas */}
+      {/* Practice Areas */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 ">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -347,22 +347,22 @@ export default function PracticeAreasPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Expertise Areas</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Practice Areas</h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-              Our core areas of legal expertise where we deliver comprehensive, specialized services 
+              Our core practice areas where we deliver comprehensive, specialized services 
               backed by years of experience and deep industry knowledge.
             </p>
           </motion.div>
 
-          <div className="space-y-6">
-            {expertiseAreas.map((area, index) => (
+          <div className="grid lg:grid-cols-2 gap-8 auto-rows-max">
+            {practiceAreas.map((area, index) => (
               <motion.div
                 key={area.id}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden"
+                className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden hover:shadow-xl transition-all duration-300 self-start"
               >
                 {/* Header */}
                 <div 
@@ -370,16 +370,16 @@ export default function PracticeAreasPage() {
                   onClick={() => toggleArea(area.id)}
                 >
                   <div className="flex items-center justify-between">
-                    <div className="flex items-center">
-                      <div className="p-3 bg-beige-400 rounded-xl mr-4">
+                    <div className="flex items-start">
+                      <div className="p-3 bg-beige-400 rounded-xl mr-4 flex-shrink-0">
                         <area.icon className="w-6 h-6 text-white" />
                       </div>
-                      <div>
+                      <div className="flex-1">
                         <h3 className="text-xl font-bold text-gray-900 mb-2">{area.title}</h3>
-                        <p className="text-gray-600">{area.description}</p>
+                        <p className="text-gray-600 text-sm">{area.description}</p>
                       </div>
                     </div>
-                    <div className="flex items-center">
+                    <div className="flex items-center ml-4">
                       {expandedArea === area.id ? (
                         <ChevronDown className="w-6 h-6 text-gray-400" />
                       ) : (
@@ -399,18 +399,18 @@ export default function PracticeAreasPage() {
                     className="px-6 pb-6"
                   >
                     <div className="border-t border-gray-100 pt-6">
-                      <div className="grid md:grid-cols-2 gap-8">
+                      <div className="space-y-6">
                         {area.categories.map((category, catIndex) => (
-                          <div key={catIndex} className="bg-beige-50 p-6 rounded-xl">
-                            <h4 className="text-lg font-bold text-gray-900 mb-4 flex items-center">
-                              <Award className="w-5 h-5 text-beige-500 mr-2" />
+                          <div key={catIndex} className="bg-beige-50 p-4 rounded-xl">
+                            <h4 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
+                              <Award className="w-4 h-4 text-beige-500 mr-2" />
                               {category.title}
                             </h4>
                             <ul className="space-y-2">
                               {category.items.map((item, itemIndex) => (
                                 <li key={itemIndex} className="flex items-start">
-                                  <div className="w-2 h-2 bg-beige-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                                  <span className="text-gray-700 text-sm">{item}</span>
+                                  <div className="w-1.5 h-1.5 bg-beige-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                  <span className="text-gray-700 text-xs leading-relaxed">{item}</span>
                                 </li>
                               ))}
                             </ul>
@@ -480,7 +480,7 @@ export default function PracticeAreasPage() {
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6">Need Legal Expertise?</h2>
             <p className="text-xl  mb-8 leading-relaxed">
-              Whether you need assistance in our core expertise areas or developing practice areas, 
+              Whether you need assistance in our core practice areas or developing practice areas, 
               our experienced team is ready to provide comprehensive legal solutions tailored to your needs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

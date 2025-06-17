@@ -49,7 +49,7 @@ export default function AboutPage() {
           </motion.div>
 
           {/* Stats Overview */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -68,7 +68,7 @@ export default function AboutPage() {
               <div className="text-4xl font-bold text-beige-500 mb-2">4</div>
               <p className="text-gray-600">Global Organizations Served</p>
             </div>
-          </motion.div>
+          </motion.div> */}
 
           <div className="max-w-2xl mx-auto">
             {/* Rushi Upadhyaya */}
