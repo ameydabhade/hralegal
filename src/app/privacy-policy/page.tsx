@@ -117,7 +117,7 @@ export default function PrivacyPolicyPage() {
                   <strong>c. Corporate Actions:</strong> We may enter into any corporate actions including amalgamation/merger/de-merger/spin-off, sale or transfer of our business assets (which may include your Personal Information) and liabilities. You hereby give us your consent to transfer your Personal Data to transferee, as per applicable laws.
                 </p>
                 <p>
-                  <strong>d. Mandatory Sharing:</strong> We may also release certain limited information when its release is required to comply with the law, enforce our policies, or protect ours or others' rights, property or safety, investigate fraud or respond to a government request. Such disclosures may be carried out without notice to You.
+                  <strong>d. Mandatory Sharing:</strong> We may also release certain limited information when its release is required to comply with the law, enforce our policies, or protect ours or others&apos; rights, property or safety, investigate fraud or respond to a government request. Such disclosures may be carried out without notice to You.
                 </p>
               </div>
 
