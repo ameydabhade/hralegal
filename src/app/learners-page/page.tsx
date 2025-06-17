@@ -26,16 +26,7 @@ export default function KnowledgeCentrePage() {
       category: "Corporate Law",
       image: "/api/placeholder/400/200"
     },
-    {
-      id: 3,
-      title: "Employment Law Updates: What Employers Need to Know",
-      excerpt: "Recent changes in employment regulations and their impact on businesses, including new compliance requirements and best practices.",
-      author: "Ami Upadhyaya",
-      date: "2024-01-05",
-      readTime: "6 min read",
-      category: "Employment Law",
-      image: "/api/placeholder/400/200"
-    },
+
     {
       id: 4,
       title: "Media & Entertainment Law: Navigating Content Licensing",

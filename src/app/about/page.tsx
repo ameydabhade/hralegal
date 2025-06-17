@@ -57,20 +57,20 @@ export default function AboutPage() {
             className="grid md:grid-cols-3 gap-8 mb-20"
           >
             <div className="text-center bg-white rounded-2xl p-8 shadow-lg">
-              <div className="text-4xl font-bold text-beige-500 mb-2">33+</div>
-              <p className="text-gray-600">Combined Years of Experience</p>
+              <div className="text-4xl font-bold text-beige-500 mb-2">15+</div>
+              <p className="text-gray-600">Years of Experience</p>
             </div>
             <div className="text-center bg-white rounded-2xl p-8 shadow-lg">
-              <div className="text-4xl font-bold text-beige-500 mb-2">8+</div>
+              <div className="text-4xl font-bold text-beige-500 mb-2">5</div>
               <p className="text-gray-600">Advanced Qualifications</p>
             </div>
             <div className="text-center bg-white rounded-2xl p-8 shadow-lg">
-              <div className="text-4xl font-bold text-beige-500 mb-2">10+</div>
+              <div className="text-4xl font-bold text-beige-500 mb-2">4</div>
               <p className="text-gray-600">Global Organizations Served</p>
             </div>
           </motion.div>
 
-          <div className="grid lg:grid-cols-2 gap-12">
+          <div className="max-w-2xl mx-auto">
             {/* Rushi Upadhyaya */}
             <motion.div
               initial={{ opacity: 0, y: 50 }}
@@ -136,70 +136,7 @@ export default function AboutPage() {
               </div>
             </motion.div>
 
-            {/* Ami Upadhyaya */}
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="group"
-            >
-              <div className="bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden">
-                {/* Header */}
-                <div className="bg-gradient-to-r from-beige-400 to-beige-500 p-8 text-center">
-                  <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
-                    <Lightbulb className="w-12 h-12 text-beige-600" />
-                  </div>
-                  <h3 className="text-2xl text-black font-bold mb-2">Ami Upadhyaya</h3>
-                  <p className=" font-medium">HR Consultant & Strategist</p>
-                  <div className="mt-4 bg-beige-200 bg-opacity-20 rounded-full px-4 py-2 inline-block">
-                    <span className=" text-sm font-semibold">18+ Years Experience</span>
-                  </div>
-                </div>
 
-                {/* Content */}
-                <div className="p-8 space-y-6">
-                  {/* Qualifications */}
-                  <div>
-                    <h4 className="text-lg font-bold text-gray-900 mb-4 flex items-center">
-                      <Award className="w-5 h-5 text-beige-500 mr-2" />
-                      Triple Masters + More
-                    </h4>
-                    <div className="space-y-2">
-                      {['Master of Commerce (MCom)', 'Master of Business Admin (MBA)', 'Master of Business Laws (MBL)', 'Management Graduate (BMS)', 'Licensed NLP Practitioner'].map((qual, index) => (
-                        <div key={index} className="flex items-center bg-beige-100 p-3 rounded-lg">
-                          <div className="w-2 h-2 bg-beige-200 rounded-full mr-3"></div>
-                          <span className="  text-black text-sm">{qual}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Experience Highlight */}
-                  <div className="bg-gradient-to-r from-beige-50 to-white p-6 rounded-xl border-l-4 border-beige-400">
-                    <h4 className="text-lg font-bold text-gray-900 mb-3">HR & Management Specialist</h4>
-                    <p className="text-gray-600 text-sm leading-relaxed">
-                      Founder of HRpreneurs with extensive experience across IT and Real Estate sectors.
-                    </p>
-                  </div>
-
-                  {/* Core Strengths */}
-                  <div>
-                    <h4 className="text-lg font-bold text-gray-900 mb-4 flex items-center">
-                      <Trophy className="w-5 h-5 text-beige-500 mr-2" />
-                      Core Strengths
-                    </h4>
-                    <div className="grid grid-cols-2 gap-3">
-                      {['Entrepreneurial Vision', 'Strategic Risk-Taking', 'Business Innovation', 'Leadership Excellence'].map((skill, index) => (
-                        <div key={index} className="bg-beige-100 p-3 rounded-lg text-center">
-                          <span className="text-gray-700 text-sm font-medium">{skill}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
           </div>
 
           {/* Bottom Call-to-Action */}
@@ -213,7 +150,7 @@ export default function AboutPage() {
             <div className="bg-white rounded-2xl p-8 shadow-lg border border-beige-200">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Experience Excellence in Leadership</h3>
               <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-                Our founders bring together decades of combined expertise in legal services and human resources, 
+                Our founder brings 15+ years of expertise in legal services, 
                 ensuring comprehensive solutions for your business needs.
               </p>
               <div className="flex flex-wrap justify-center gap-4">

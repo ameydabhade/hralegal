@@ -9,9 +9,9 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       <HeroSection />
+      <HomePracticeAreasGrid />
       <WhyChooseUsSection />
       <ServicesSection />
-      <HomePracticeAreasGrid />
       <HomeOverviewSection />
       <HomeFoundersSection />
     </main>

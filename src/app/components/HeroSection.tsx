@@ -157,7 +157,7 @@ export default function HeroSection() {
    
 
         {/* Sliding Client Logos */}
-        <div className="bg-white rounded-2xl shadow-lg border border-beige-100 p-8">
+        {/* <div className="bg-white rounded-2xl shadow-lg border border-beige-100 p-8">
           <div className="text-center mb-8">
             <h3 className="text-2xl font-bold text-gray-900 mb-2">Trusted by</h3>
             <p className="text-gray-600">15+ years of experience across industries</p>
@@ -181,7 +181,7 @@ export default function HeroSection() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

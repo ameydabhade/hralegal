@@ -14,19 +14,6 @@ const founders = [
       "Entertainment & Media Law Expert"
     ],
     expertise: "Civil/Business Law, IP, Media & Entertainment"
-  },
-  {
-    name: "Ami Upadhyaya",
-    title: "Founding Partner",
-    experience: "18+ Years",
-    specialization: "Employment & HR Law",
-    education: ["MCom", "MBA", "MBL", "NLP Certified"],
-    highlights: [
-      "18+ years in HR & Legal",
-      "Worked with PXL Soft, Sethia Pride",
-      "Employee Relations Specialist"
-    ],
-    expertise: "Employment Law, HR Compliance, Legal Operations"
   }
 ];
 
@@ -40,16 +27,16 @@ export default function HomeFoundersSection() {
             <span className="text-sm font-medium text-beige-600">Leadership</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Meet Our Founders
+            Meet Our Founder
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Our founding partners bring together decades of combined experience in corporate law, 
-            intellectual property, and employment law, with deep industry expertise.
+            Our founding partner brings 15+ years of experience in corporate law, 
+            intellectual property, and media & entertainment law, with deep industry expertise.
           </p>
         </div>
 
-        {/* Founders Grid */}
-        <div className="grid lg:grid-cols-2 gap-12 mb-16">
+        {/* Founder Profile */}
+        <div className="max-w-2xl mx-auto mb-16">
           {founders.map((founder, index) => (
             <div key={index} className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
               <div className="space-y-6">
@@ -115,27 +102,27 @@ export default function HomeFoundersSection() {
           ))}
         </div>
 
-        {/* Combined Experience */}
+        {/* Founder Experience */}
         <div className="bg-gradient-to-br from-beige-100 to-beige-200 rounded-3xl p-8 lg:p-12  text-center mb-16">
           <h3 className="text-3xl font-bold mb-4">
-            Combined Legal Excellence
+            Legal Excellence & Leadership
           </h3>
           <p className=" text-lg mb-8 max-w-2xl mx-auto">
-            Our founders bring together 33+ years of combined experience across diverse legal domains, 
+            Our founder brings 15+ years of experience across diverse legal domains, 
             offering comprehensive solutions backed by deep industry knowledge.
           </p>
           
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="text-4xl font-bold  mb-2">33+</div>
-              <div className="">Years Combined Experience</div>
+              <div className="text-4xl font-bold  mb-2">15+</div>
+              <div className="">Years Experience</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold  mb-2">6</div>
+              <div className="text-4xl font-bold  mb-2">3</div>
               <div className="">Advanced Qualifications</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold  mb-2">5+</div>
+              <div className="text-4xl font-bold  mb-2">3</div>
               <div className="">Major Corporate Roles</div>
             </div>
           </div>
@@ -148,8 +135,8 @@ export default function HomeFoundersSection() {
               Experienced Legal Leadership
             </h3>
             <p className="text-gray-600 mb-8">
-              Our founding partners combine decades of experience across corporate law, 
-              intellectual property, and employment law to deliver exceptional legal services.
+              Our founding partner brings 15+ years of experience across corporate law, 
+              intellectual property, and media & entertainment law to deliver exceptional legal services.
             </p>
             
             <Link 
