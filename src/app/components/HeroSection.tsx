@@ -4,7 +4,7 @@ import { Scale, Shield, Award, Phone, ArrowRight, CheckCircle } from 'lucide-rea
 export default function HeroSection() {
 
   return (
-    <section className="min-h-screen bg-gradient-to-br from-beige-300 via-beige-200 to-beige-100 relative overflow-hidden">
+    <section className="min-h-screen bg-gradient-to-br from-beige-200 via-beige-100 to-beige-50 relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-20 w-32 h-32 bg-beige-300 rounded-full blur-3xl"></div>
