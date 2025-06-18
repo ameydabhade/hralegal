@@ -47,7 +47,7 @@ export default function WhyChooseUsSection() {
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-white via-beige-50 to-beige-100">
       <div className="max-w-7xl mx-auto">
-        {/* Header */}
+        {/* Header - Only badge, no duplicate title */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -55,12 +55,9 @@ export default function WhyChooseUsSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center px-4 py-2 bg-beige-200 border border-beige-300 rounded-full mb-6">
-            <span className="text-sm font-medium text-beige-600">Why Choose Us</span>
+          <div className="inline-flex items-center px-4 py-2 bg-red-100 border border-red-300 rounded-full mb-6">
+            <span className="text-sm font-medium text-red-600">Why Choose Us</span>
           </div>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-            Why Choose HRA Legal?
-          </h2>
           <p className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto">
             Experience excellence in legal services with our comprehensive approach to your business needs
           </p>
@@ -79,11 +76,11 @@ export default function WhyChooseUsSection() {
               className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100"
             >
               <div className="flex items-start">
-                <div className="p-4 bg-beige-400 rounded-xl shadow-lg mr-4 flex-shrink-0">
+                <div className="p-4 bg-red-600 rounded-xl shadow-lg mr-4 flex-shrink-0">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-3 leading-tight">
+                  <h3 className="text-lg font-semibold text-red-600 mb-3 leading-tight border-b border-red-300 pb-1 inline-block">
                     {feature.title}
                   </h3>
                   <p className="text-gray-600 text-sm leading-relaxed">
@@ -94,27 +91,6 @@ export default function WhyChooseUsSection() {
             </motion.div>
           ))}
         </div>
-
-        {/* Bottom CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          viewport={{ once: true }}
-          className="text-center mt-16"
-        >
-          <div className="bg-gradient-to-br from-beige-100 to-beige-200 rounded-2xl p-8 md:p-12 ">
-            <h3 className="text-2xl md:text-3xl font-bold mb-4">
-              Ready to Experience Excellence?
-            </h3>
-            <p className=" mb-8 max-w-2xl mx-auto">
-              Let us help you navigate your legal challenges with confidence and expertise.
-            </p>
-            <button className="bg-white text-beige-700 font-semibold px-8 py-3 rounded-lg hover:bg-gray-50 transition-colors duration-200 shadow-lg">
-              Get Started Today
-            </button>
-          </div>
-        </motion.div>
       </div>
     </section>
   );

@@ -17,17 +17,23 @@ export default function HeroSection() {
         <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[500px] mb-16">
           <div className="space-y-6">
             {/* Badge */}
-            <div className="inline-flex items-center px-3 py-1.5 bg-beige-200 border border-beige-400 rounded-full">
-              <span className="text-xs font-medium text-beige-800">🏆 15+ Years of Legal Excellence</span>
+            <div className="inline-flex items-center px-3 py-1.5 bg-red-100 border border-red-300 rounded-full">
+              <span className="text-xs font-medium text-red-700">🏆 15+ Years of Legal Excellence</span>
             </div>
 
             <div className="space-y-4">
-              <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 leading-tight">
-                Your Legal Partners
-                <span className="block text-2xl lg:text-3xl font-normal text-beige-700 mt-1">
+              {/* Main Title with Red Theme and Underlines */}
+              <div className="space-y-3">
+                <h1 className="text-3xl lg:text-4xl font-bold text-red-600 leading-tight border-b-4 border-red-600 pb-3 inline-block">
+                  Your Legal Partners
+                </h1>
+                <div className="text-xl lg:text-2xl text-gray-700 font-medium">
                   for Business Success
-                </span>
-              </h1>
+                </div>
+                <div className="text-sm text-red-500 font-medium uppercase tracking-wide">
+                  Expert Legal Counsel • Trusted Solutions
+                </div>
+              </div>
               
               <p className="text-base text-gray-800 leading-relaxed max-w-2xl">
                 HRA Legal is a professional law firm with specialized expertise across various legal disciplines, including Civil and Business Law, Intellectual Property Laws, Corporate Law, and Employment Laws.
@@ -38,139 +44,96 @@ export default function HeroSection() {
               </p>
             </div>
             
-            {/* Call to Action Buttons */}
+            {/* Call to Action Buttons - Less prominent Get Legal Consultation */}
             <div className="flex flex-col sm:flex-row gap-3">
               <Link 
-                href="/contact"
-                className="inline-flex items-center justify-center px-6 py-3 bg-beige-400 text-white font-semibold text-sm rounded-lg hover:bg-beige-500 transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                href="/practice-areas"
+                className="inline-flex items-center justify-center px-6 py-3 bg-red-600 text-white font-semibold text-sm rounded-lg hover:bg-red-700 transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl"
               >
-                <Phone className="w-4 h-4 mr-2" />
-                Schedule Consultation
+                View Our Services
                 <ArrowRight className="w-3 h-3 ml-2" />
               </Link>
               <Link 
-                href="/practice-areas"
-                className="inline-flex items-center justify-center px-6 py-3 border-2 border-beige-500 text-beige-800 font-semibold text-sm rounded-lg hover:bg-beige-500 hover:text-white transition-all duration-200"
+                href="/contact"
+                className="inline-flex items-center justify-center px-6 py-3 text-red-600 font-semibold text-sm rounded-lg border-b-2 border-red-600 hover:bg-red-50 transition-all duration-200"
               >
-                View Our Services
+                <Phone className="w-4 h-4 mr-2" />
+                Get Legal Consultation
               </Link>
             </div>
           </div>
 
-          {/* Visual Element */}
+          {/* Visual Element - Professional Background with HRA Legal Info */}
           <div className="relative">
-            {/* Main Visual Card */}
-            <div className="bg-white rounded-2xl shadow-2xl p-6 border border-beige-100 transform rotate-2 hover:rotate-0 transition-transform duration-300">
-              {/* Legal Document Mockup */}
-              <div className="space-y-4">
-                {/* Header */}
-                <div className="flex items-center border-b border-beige-200 pb-3">
-                  <div className="w-10 h-10 bg-beige-400 rounded-xl flex items-center justify-center">
-                    <Scale className="w-5 h-5 text-white" />
+            {/* Professional Background Card */}
+            <div className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 rounded-2xl shadow-2xl p-8 border border-gray-700 text-white relative overflow-hidden">
+              {/* Background Pattern */}
+              <div className="absolute inset-0 opacity-10">
+                <div className="absolute top-4 right-4 w-20 h-20 border border-white rounded-full"></div>
+                <div className="absolute bottom-8 left-8 w-16 h-16 border border-white rounded-full"></div>
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 border border-white rounded-full"></div>
+              </div>
+
+              {/* Content */}
+              <div className="relative z-10 space-y-6">
+                {/* Logo/Header */}
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Scale className="w-8 h-8 text-white" />
                   </div>
-                  <div className="ml-4">
-                    <h3 className="text-lg font-bold text-gray-900">This section will be replaced with a full width image </h3>
-                    <p className="text-xs text-beige-800">Professional Documentation</p>
+                  <h3 className="text-2xl font-bold text-red-400 border-b-2 border-red-400 pb-2 inline-block">
+                    HRA LEGAL
+                  </h3>
+                  <p className="text-gray-300 text-sm mt-2">Professional Legal Services</p>
+                </div>
+                
+                {/* Quote or Mission */}
+                <div className="text-center space-y-4">
+                  <blockquote className="text-lg italic text-gray-200 leading-relaxed">
+                    "Excellence in legal practice through innovative solutions and unwavering commitment to client success"
+                  </blockquote>
+                  
+                  {/* Key Points */}
+                  <div className="grid grid-cols-2 gap-4 mt-6">
+                    <div className="text-center">
+                      <div className="text-2xl font-bold text-red-400">15+</div>
+                      <div className="text-xs text-gray-300">Years Experience</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-2xl font-bold text-red-400">500+</div>
+                      <div className="text-xs text-gray-300">Cases Handled</div>
+                    </div>
                   </div>
                 </div>
                 
-                {/* Content Lines */}
-                <div className="space-y-2">
-                  <div className="h-2 bg-gray-100 rounded-full w-full"></div>
-                  <div className="h-2 bg-beige-100 rounded-full w-4/5"></div>
-                  <div className="h-2 bg-gray-100 rounded-full w-5/6"></div>
-                  <div className="h-2 bg-beige-200 rounded-full w-3/4"></div>
-                  <div className="h-2 bg-gray-100 rounded-full w-2/3"></div>
-                </div>
-                
-                {/* Signature Area */}
-                <div className="border-t border-beige-200 pt-3 flex justify-between items-center">
+                {/* Bottom signature */}
+                <div className="border-t border-gray-700 pt-4 flex justify-between items-center text-sm">
                   <div className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-2" />
-                    <span className="text-xs text-gray-700">Verified & Approved</span>
+                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                    <span className="text-gray-300">Trusted & Verified</span>
                   </div>
-                  <div className="text-right">
-                    <p className="font-bold text-sm text-gray-900">HRA Legal</p>
-                    <p className="text-xs text-beige-800">Professional Services</p>
+                  <div className="text-red-400 font-semibold">
+                    Mumbai, India
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Floating Elements */}
-            <div className="absolute -top-3 -right-3 w-12 h-12 bg-beige-300 rounded-full flex items-center justify-center shadow-lg">
+            <div className="absolute -top-3 -right-3 w-12 h-12 bg-red-500 rounded-full flex items-center justify-center shadow-lg">
               <Award className="w-6 h-6 text-white" />
             </div>
-            <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-beige-400 rounded-full flex items-center justify-center shadow-lg">
+            <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-red-600 rounded-full flex items-center justify-center shadow-lg">
               <Shield className="w-8 h-8 text-white" />
             </div>
           </div>
         </div>
 
-        {/* Sliding Testimonials Section */}
-        {/* <div className="mb-20">
-          <div className="text-center mb-12">
-            <p className="text-sm font-medium text-beige-600 mb-2">TRUSTED BY LEADING ORGANIZATIONS</p>
-            <h3 className="text-2xl font-bold text-gray-900">What Our Clients Say</h3>
-          </div>
-          
-          <div className="relative overflow-hidden">
-            <div className="sliding-testimonials flex animate-slide">
-              {[...testimonials, ...testimonials].map((testimonial, index) => (
-                <div key={index} className="flex-shrink-0 w-full lg:w-1/2 px-4">
-                  <div className="bg-white rounded-2xl shadow-lg border border-beige-100 p-8 h-full">
-                    <Quote className="w-8 h-8 text-beige-400 mb-6" />
-                    <blockquote className="text-lg text-gray-700 leading-relaxed mb-6">
-                      "{testimonial.quote}"
-                    </blockquote>
-                    <div className="flex items-center">
-                      <div className="w-12 h-12 bg-beige-100 rounded-full flex items-center justify-center mr-4">
-                        <Users className="w-6 h-6 text-beige-600" />
-                      </div>
-                      <div>
-                        <div className="font-semibold text-gray-900">{testimonial.author}</div>
-                        <div className="text-sm text-gray-600">{testimonial.role}</div>
-                        <div className="text-sm text-beige-600">{testimonial.company}</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div> */}
-
-    
-
-        {/* Services Section */}
-   
-
-        {/* Sliding Client Logos */}
-        {/* <div className="bg-white rounded-2xl shadow-lg border border-beige-100 p-8">
-          <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-2">Trusted by</h3>
-            <p className="text-gray-600">15+ years of experience across industries</p>
-          </div>
-
-          <div className="border-t border-beige-200 pt-8">
-            
-            <div className="relative overflow-hidden">
-              <div className="sliding-logos flex animate-slide-slow">
-                {[...clients, ...clients].map((client, index) => (
-                  <div key={index} className="flex-shrink-0 flex items-center justify-center px-8">
-                    <Image 
-                      src={client.logo} 
-                      alt={client.name} 
-                      width={120} 
-                      height={40} 
-                      className="h-8 w-auto opacity-60 hover:opacity-100 transition-opacity duration-300" 
-                    />
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div> */}
+        {/* Note for office photos */}
+        <div className="text-center text-gray-600 text-sm mt-8 p-4 bg-gray-100 rounded-lg border-l-4 border-red-600">
+          <p className="font-medium text-red-600 mb-1">Visual Enhancement Option</p>
+          <p>The visual section above can be enhanced with your office photos as watermark background, or we can use a professional legal environment image. Please provide office photos if you'd like to personalize this section.</p>
+        </div>
       </div>
     </section>
   );

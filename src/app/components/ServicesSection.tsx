@@ -74,7 +74,7 @@ export default function ServicesSection() {
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-beige-50 via-white to-beige-100">
       <div className="max-w-7xl mx-auto">
-        {/* Header */}
+        {/* Header - Only badge, no duplicate title */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -82,12 +82,9 @@ export default function ServicesSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center px-4 py-2 bg-beige-200 border border-beige-300 rounded-full mb-6">
-            <span className="text-sm font-medium text-beige-600">Our Services</span>
+          <div className="inline-flex items-center px-4 py-2 bg-red-100 border border-red-300 rounded-full mb-6">
+            <span className="text-sm font-medium text-red-600">Our Services</span>
           </div>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-            Services
-          </h2>
           <p className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto">
             Comprehensive legal solutions tailored to your business needs
           </p>
@@ -100,7 +97,7 @@ export default function ServicesSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center"
+            className="text-3xl md:text-4xl font-bold text-red-600 mb-12 text-center border-b-4 border-red-600 pb-4 inline-block w-full"
           >
             Primary Services
           </motion.h3>
@@ -117,14 +114,14 @@ export default function ServicesSection() {
                 className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100"
               >
                 <div className="flex items-start">
-                  <div className="p-3 bg-beige-400 rounded-xl shadow-lg mr-4 flex-shrink-0">
+                  <div className="p-3 bg-red-600 rounded-xl shadow-lg mr-4 flex-shrink-0">
                     <service.icon className="w-5 h-5 text-white" />
                   </div>
                   <div className="flex-1">
-                    <h4 className="text-lg font-semibold text-gray-900 mb-2 leading-tight">
+                    <h4 className="text-lg font-semibold text-red-600 mb-2 leading-tight border-b border-red-300 pb-1 inline-block">
                       {service.title}
                     </h4>
-                    <p className="text-gray-600 text-sm leading-relaxed">
+                    <p className="text-gray-600 text-sm leading-relaxed mt-3">
                       {service.description}
                     </p>
                   </div>
@@ -141,7 +138,7 @@ export default function ServicesSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center"
+            className="text-3xl md:text-4xl font-bold text-red-600 mb-12 text-center border-b-4 border-red-600 pb-4 inline-block w-full"
           >
             Secondary Services
           </motion.h3>
@@ -158,14 +155,14 @@ export default function ServicesSection() {
                 className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100"
               >
                 <div className="flex items-start">
-                  <div className="p-3 bg-beige-400 rounded-xl shadow-lg mr-4 flex-shrink-0">
+                  <div className="p-3 bg-red-600 rounded-xl shadow-lg mr-4 flex-shrink-0">
                     <service.icon className="w-5 h-5 text-white" />
                   </div>
                   <div className="flex-1">
-                    <h4 className="text-lg font-semibold text-gray-900 mb-2 leading-tight">
+                    <h4 className="text-lg font-semibold text-red-600 mb-2 leading-tight border-b border-red-300 pb-1 inline-block">
                       {service.title}
                     </h4>
-                    <p className="text-gray-600 text-sm leading-relaxed">
+                    <p className="text-gray-600 text-sm leading-relaxed mt-3">
                       {service.description}
                     </p>
                   </div>
@@ -174,46 +171,6 @@ export default function ServicesSection() {
             ))}
           </div>
         </div>
-
-        {/* End-to-End Legal Services Description */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="bg-gradient-to-br from-beige-100 to-beige-200 rounded-2xl p-8 md:p-12  relative overflow-hidden"
-        >
-          {/* Background Pattern */}
-          <div className="absolute inset-0 opacity-10">
-            <motion.div
-              animate={{ rotate: [0, 360] }}
-              transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-              className="absolute top-1/4 left-1/4 w-24 h-24 border border-white rounded-full"
-            />
-            <motion.div
-              animate={{ rotate: [360, 0] }}
-              transition={{ duration: 45, repeat: Infinity, ease: "linear" }}
-              className="absolute top-3/4 right-1/4 w-16 h-16 border border-white rounded-full"
-            />
-          </div>
-
-          <div className="relative z-10">
-            <h3 className="text-3xl md:text-4xl font-bold mb-6 text-center">
-              End-to-End Legal Services
-            </h3>
-            
-            <p className="text-lg leading-relaxed  max-w-5xl mx-auto text-center">
-              HRA Legal offers end-to-end Legal services, including, structuring, drafting, negotiation and 
-              execution of all types of contracts/agreements/documents/paperwork (including definitive 
-              agreements, long form agreements, founder agreements, non-disclosure agreements, no 
-              objection certificates, letters, agency agreements, et al), sending notices & replies, legal 
-              research and analysis, consultations and advisory services, policy drafting and its 
-              implementation manual, tabulating databases, setting up of processes, systems, SOP&apos;s 
-              (standard operating procedures), providing opinions & solutions, et al for established and 
-              emerging businesses, and/or managing entire legal department of your company.
-            </p>
-          </div>
-        </motion.div>
       </div>
     </section>
   );
