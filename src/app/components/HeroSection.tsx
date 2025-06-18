@@ -93,17 +93,7 @@ export default function HeroSection() {
                     "Excellence in legal practice through innovative solutions and unwavering commitment to client success"
                   </blockquote>
                   
-                  {/* Key Points */}
-                  <div className="grid grid-cols-2 gap-4 mt-6">
-                    <div className="text-center">
-                      <div className="text-2xl font-bold text-red-400">15+</div>
-                      <div className="text-xs text-gray-300">Years Experience</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-2xl font-bold text-red-400">500+</div>
-                      <div className="text-xs text-gray-300">Cases Handled</div>
-                    </div>
-                  </div>
+            
                 </div>
                 
                 {/* Bottom signature */}

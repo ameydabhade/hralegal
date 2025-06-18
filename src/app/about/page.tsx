@@ -11,14 +11,15 @@ import {
   Award, 
   BookOpen, 
   Lightbulb,
-  Trophy
+  Trophy,
+  Building
 } from 'lucide-react';
 
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-beige-100 to-white">
       {/* Hero Section */}
-      <section className=" pb-20">
+      <section className="pb-20">
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -26,13 +27,11 @@ export default function AboutPage() {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-         
-
           </motion.div>
         </div>
       </section>
 
-      {/* Leadership Team */}
+      {/* Meet the Founder */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-beige-100 to-beige-50">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -42,35 +41,15 @@ export default function AboutPage() {
             viewport={{ once: true }}
             className="text-center mb-20"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Leadership Team</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-red-600 mb-6 border-b-4 border-red-600 pb-4 inline-block">
+              Meet the Founder
+            </h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              Meet the visionary leaders driving HRA Legal&apos;s success with their combined expertise and passion for excellence.
+              Meet the visionary leader driving HRA Legal's success with her expertise and passion for excellence.
             </p>
           </motion.div>
 
-          {/* Stats Overview */}
-          {/* <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="grid md:grid-cols-3 gap-8 mb-20"
-          >
-            <div className="text-center bg-white rounded-2xl p-8 shadow-lg">
-              <div className="text-4xl font-bold text-beige-500 mb-2">15+</div>
-              <p className="text-gray-600">Years of Experience</p>
-            </div>
-            <div className="text-center bg-white rounded-2xl p-8 shadow-lg">
-              <div className="text-4xl font-bold text-beige-500 mb-2">5</div>
-              <p className="text-gray-600">Advanced Qualifications</p>
-            </div>
-            <div className="text-center bg-white rounded-2xl p-8 shadow-lg">
-              <div className="text-4xl font-bold text-beige-500 mb-2">4</div>
-              <p className="text-gray-600">Global Organizations Served</p>
-            </div>
-          </motion.div> */}
-
-          <div className="max-w-2xl mx-auto">
+          <div className="max-w-4xl mx-auto">
             {/* Rushi Upadhyaya */}
             <motion.div
               initial={{ opacity: 0, y: 50 }}
@@ -81,53 +60,87 @@ export default function AboutPage() {
             >
               <div className="bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden">
                 {/* Header */}
-                <div className="bg-gradient-to-r from-beige-400 to-beige-500 p-8 text-center">
+                <div className="bg-gradient-to-r from-red-500 to-red-600 p-8 text-center">
                   <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
-                    <Users className="w-12 h-12 text-beige-600" />
+                    <Users className="w-12 h-12 text-red-600" />
                   </div>
-                  <h3 className="text-2xl text-black font-bold mb-2">Rushi Upadhyaya</h3>
-                  <p className=" font-medium">Founder & Legal Expert</p>
-                  <div className="mt-4 bg-beige-200 bg-opacity-20 rounded-full px-4 py-2 inline-block">
-                    <span className=" text-sm font-semibold">15+ Years Experience</span>
+                  <h3 className="text-2xl text-white font-bold mb-2">Rushi Upadhyaya</h3>
+                  <p className="text-red-100 font-medium">Founder & Legal Expert</p>
+                  <div className="mt-4 bg-red-400 bg-opacity-20 rounded-full px-4 py-2 inline-block">
+                    <span className="text-white text-sm font-semibold">15+ Years Experience</span>
                   </div>
                 </div>
 
                 {/* Content */}
                 <div className="p-8 space-y-6">
+                  {/* Professional Background */}
+                  <div>
+                    <h4 className="text-lg font-bold text-red-600 mb-4 flex items-center border-b-2 border-red-600 pb-2 inline-block">
+                      <Building className="w-5 h-5 text-red-600 mr-2" />
+                      Professional Background
+                    </h4>
+                    <div className="bg-red-50 p-6 rounded-xl border-l-4 border-red-600">
+                      <p className="text-gray-700 text-sm leading-relaxed mb-4">
+                        Rushi brings extensive in-house experience from leading global organizations:
+                      </p>
+                      <div className="grid grid-cols-2 gap-4">
+                        <div className="bg-white p-3 rounded-lg shadow-sm border border-red-200">
+                          <span className="text-red-600 font-semibold text-sm">Sony Pictures</span>
+                        </div>
+                        <div className="bg-white p-3 rounded-lg shadow-sm border border-red-200">
+                          <span className="text-red-600 font-semibold text-sm">Reliance Entertainment</span>
+                        </div>
+                        <div className="bg-white p-3 rounded-lg shadow-sm border border-red-200">
+                          <span className="text-red-600 font-semibold text-sm">Shemaroo Entertainment</span>
+                        </div>
+                        <div className="bg-white p-3 rounded-lg shadow-sm border border-red-200">
+                          <span className="text-red-600 font-semibold text-sm">Maddock Films</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
                   {/* Qualifications */}
                   <div>
-                    <h4 className="text-lg font-bold text-gray-900 mb-4 flex items-center">
-                      <Award className="w-5 h-5 text-beige-500 mr-2" />
+                    <h4 className="text-lg font-bold text-red-600 mb-4 flex items-center border-b-2 border-red-600 pb-2 inline-block">
+                      <Award className="w-5 h-5 text-red-600 mr-2" />
                       Qualifications
                     </h4>
                     <div className="space-y-2">
-                      {['Masters of Business Laws (MBL)', 'Qualified Company Secretary', 'Diploma in IP Laws (PGIPR)', 'Law Graduate (LLB)', 'Management Graduate (BMS)'].map((qual, index) => (
-                        <div key={index} className="flex items-center bg-beige-100 p-3 rounded-lg">
-                          <div className="w-2 h-2 bg-beige-200 rounded-full mr-3"></div>
-                          <span className=" text-black text-sm">{qual}</span>
+                      {[
+                        'Masters of Business Laws (MBL)', 
+                        'Qualified Company Secretary', 
+                        'Diploma in IP Laws (PGIPR)', 
+                        'Law Graduate (LLB)', 
+                        'Management Graduate (BMS)'
+                      ].map((qual, index) => (
+                        <div key={index} className="flex items-center bg-red-50 p-3 rounded-lg">
+                          <div className="w-2 h-2 bg-red-600 rounded-full mr-3"></div>
+                          <span className="text-gray-700 text-sm">{qual}</span>
                         </div>
                       ))}
                     </div>
                   </div>
 
                   {/* Experience Highlight */}
-                  <div className="bg-gradient-to-r from-beige-50 to-white p-6 rounded-xl border-l-4 border-beige-400">
-                    <h4 className="text-lg font-bold text-gray-900 mb-3">Media & Entertainment Expert</h4>
+                  <div className="bg-gradient-to-r from-red-50 to-white p-6 rounded-xl border-l-4 border-red-600">
+                    <h4 className="text-lg font-bold text-red-600 mb-3">Media & Entertainment Expert</h4>
                     <p className="text-gray-600 text-sm leading-relaxed">
-                      Specialized experience with global giants including Sony Pictures, Reliance, Shemaroo, and Maddock Films.
+                      Specialized experience with global giants in media and entertainment industry, 
+                      bringing deep understanding of content creation, distribution, and licensing.
                     </p>
                   </div>
 
                   {/* Core Strengths */}
                   <div>
-                    <h4 className="text-lg font-bold text-gray-900 mb-4 flex items-center">
-                      <Trophy className="w-5 h-5 text-beige-500 mr-2" />
+                    <h4 className="text-lg font-bold text-red-600 mb-4 flex items-center border-b-2 border-red-600 pb-2 inline-block">
+                      <Trophy className="w-5 h-5 text-red-600 mr-2" />
                       Core Strengths
                     </h4>
                     <div className="grid grid-cols-2 gap-3">
                       {['Strategic Leadership', 'Complex Negotiations', 'Analytical Approach', 'Win-Win Solutions'].map((skill, index) => (
-                        <div key={index} className="bg-beige-100 p-3 rounded-lg text-center">
-                          <span className="text-gray-700 text-sm font-medium">{skill}</span>
+                        <div key={index} className="bg-red-50 p-3 rounded-lg text-center border border-red-200">
+                          <span className="text-red-600 text-sm font-medium">{skill}</span>
                         </div>
                       ))}
                     </div>
@@ -135,11 +148,9 @@ export default function AboutPage() {
                 </div>
               </div>
             </motion.div>
-
-
           </div>
 
-          {/* Bottom Call-to-Action */}
+          {/* Bottom Call-to-Action - Experience Excellence (Optional) */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -147,23 +158,25 @@ export default function AboutPage() {
             viewport={{ once: true }}
             className="text-center mt-16"
           >
-            <div className="bg-white rounded-2xl p-8 shadow-lg border border-beige-200">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Experience Excellence in Leadership</h3>
+            <div className="bg-white rounded-2xl p-8 shadow-lg border border-red-200">
+              <h3 className="text-2xl font-bold text-red-600 mb-4 border-b-2 border-red-600 pb-2 inline-block">
+                Experience Excellence in Leadership
+              </h3>
               <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
                 Our founder brings 15+ years of expertise in legal services, 
                 ensuring comprehensive solutions for your business needs.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
-                <span className="bg-beige-100 text-beige-700 px-4 py-2 rounded-full text-sm font-medium">Legal Excellence</span>
-                <span className="bg-beige-100 text-beige-700 px-4 py-2 rounded-full text-sm font-medium">Strategic Leadership</span>
-                <span className="bg-beige-100 text-beige-700 px-4 py-2 rounded-full text-sm font-medium">Global Experience</span>
+                <span className="bg-red-100 text-red-700 px-4 py-2 rounded-full text-sm font-medium">Legal Excellence</span>
+                <span className="bg-red-100 text-red-700 px-4 py-2 rounded-full text-sm font-medium">Strategic Leadership</span>
+                <span className="bg-red-100 text-red-700 px-4 py-2 rounded-full text-sm font-medium">Global Experience</span>
               </div>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Our Story */}
+      {/* Our Story - Placeholder for new content */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <motion.div
@@ -174,17 +187,25 @@ export default function AboutPage() {
             className="bg-gradient-to-br from-white to-beige-50 rounded-3xl p-12 shadow-xl border border-beige-100"
           >
             <div className="text-center mb-12">
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Our Story</h2>
+              <h2 className="text-4xl md:text-5xl font-bold text-red-600 mb-6 border-b-4 border-red-600 pb-4 inline-block">
+                Our Story
+              </h2>
             </div>
             <div className="max-w-4xl mx-auto space-y-6">
+              {/* Placeholder - Will be replaced with your story content */}
+              <div className="bg-red-50 border border-red-200 rounded-lg p-6 text-center">
+                <p className="text-red-600 font-medium">
+                  📝 Story content will be updated when you provide the new content
+                </p>
+              </div>
               <p className="text-xl text-gray-700 leading-relaxed text-center">
                 HRA Legal works on an ever evolving and diverse outlook consistently aligned with the 
                 prevalent market dynamics, and technology shifts.
               </p>
               <p className="text-xl text-gray-700 leading-relaxed text-center">
                 Just like technology, law is continuously evolving, and so does HRA Legal.
-            </p>
-          </div>
+              </p>
+            </div>
           </motion.div>
         </div>
       </section>
@@ -200,14 +221,16 @@ export default function AboutPage() {
             className="bg-white rounded-3xl shadow-xl overflow-hidden"
           >
             <div className="lg:flex">
-              <div className="lg:w-1/3 bg-gradient-to-br from-beige-500 to-beige-600 p-12 flex items-center justify-center">
+              <div className="lg:w-1/3 bg-gradient-to-br from-red-500 to-red-600 p-12 flex items-center justify-center">
                 <div className="text-center">
                   <Target className="w-20 h-20 text-white mx-auto mb-6" />
                   <h2 className="text-4xl font-bold text-white">Mission</h2>
                 </div>
               </div>
               <div className="lg:w-2/3 p-12">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">Our Mission</h3>
+                <h3 className="text-2xl font-bold text-red-600 mb-6 border-b-2 border-red-600 pb-2 inline-block">
+                  Our Mission
+                </h3>
                 <p className="text-lg text-gray-700 leading-relaxed">
                   Our mission is to deliver outstanding professional legal services to a diverse range of global 
                   and domestic clients, including governments and economic entities, while upholding a strong 
@@ -234,15 +257,17 @@ export default function AboutPage() {
             <div className="lg:flex">
               <div className="lg:w-2/3 p-12 flex items-center">
                 <div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-6">Our Vision</h3>
-                  <div className="bg-beige-50 rounded-2xl p-8 border-l-4 border-beige-400">
+                  <h3 className="text-2xl font-bold text-red-600 mb-6 border-b-2 border-red-600 pb-2 inline-block">
+                    Our Vision
+                  </h3>
+                  <div className="bg-red-50 rounded-2xl p-8 border-l-4 border-red-600">
                     <p className="text-2xl text-gray-800 leading-relaxed font-semibold text-center">
                       Our vision is to be a renowned profitable premier law firm globally.
                     </p>
                   </div>
                 </div>
               </div>
-              <div className="lg:w-1/3 bg-gradient-to-br from-beige-400 to-beige-500 p-12 flex items-center justify-center">
+              <div className="lg:w-1/3 bg-gradient-to-br from-red-500 to-red-600 p-12 flex items-center justify-center">
                 <div className="text-center">
                   <Eye className="w-20 h-20 text-white mx-auto mb-6" />
                   <h2 className="text-4xl font-bold text-white">Vision</h2>
@@ -263,7 +288,9 @@ export default function AboutPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Core Values</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-red-600 mb-6 border-b-4 border-red-600 pb-4 inline-block">
+              Core Values
+            </h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
               Our core values of <strong>Integrity, Trust, Respect, Humility, and Unity</strong> are consistently 
               reflected in our business ethics and are embedded in the professional legal services we offer worldwide.
@@ -286,10 +313,12 @@ export default function AboutPage() {
                 viewport={{ once: true }}
                 className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 text-center"
               >
-                <div className="p-4 bg-beige-400 rounded-2xl inline-block mb-6">
+                <div className="p-4 bg-red-600 rounded-2xl inline-block mb-6">
                   <value.icon className="w-8 h-8 text-white" />
-            </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">{value.title}</h3>
+                </div>
+                <h3 className="text-xl font-bold text-red-600 mb-4 border-b border-red-600 pb-1 inline-block">
+                  {value.title}
+                </h3>
                 <p className="text-gray-600 leading-relaxed">{value.description}</p>
               </motion.div>
             ))}
@@ -307,7 +336,9 @@ export default function AboutPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Our Culture</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-red-600 mb-6 border-b-4 border-red-600 pb-4 inline-block">
+              Our Culture
+            </h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
               Our culture is driven by an <strong>entrepreneurial mindset, strong conviction, principled leadership, 
               resilience, continuous learning, and focus on work-life balance</strong>, all fostered within a vibrant 
@@ -333,39 +364,19 @@ export default function AboutPage() {
                 className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100"
               >
                 <div className="flex items-start">
-                  <div className="p-3 bg-beige-400 rounded-xl mr-4 flex-shrink-0">
+                  <div className="p-3 bg-red-600 rounded-xl mr-4 flex-shrink-0">
                     <culture.icon className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold text-gray-900 mb-3">{culture.title}</h3>
+                    <h3 className="text-lg font-bold text-red-600 mb-3 border-b border-red-600 pb-1 inline-block">
+                      {culture.title}
+                    </h3>
                     <p className="text-gray-600 leading-relaxed">{culture.description}</p>
                   </div>
                 </div>
               </motion.div>
             ))}
           </div>
-                      </div>
-      </section>
-
-      {/* Call to Action */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-beige-100 to-beige-200">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-white"
-          >
-            <h2 className="text-4xl text-black  md:text-5xl font-bold mb-6">Ready to Work With Us?</h2>
-            <p className="text-xl text-black  mb-8 leading-relaxed">
-              Experience the HRA Legal difference. Let us help you navigate your legal challenges with our 
-              expertise, values, and commitment to excellence.
-            </p>
-            <button className="bg-white text-beige-600 font-bold px-8 py-4 rounded-lg hover:bg-gray-50 transition-colors duration-200 shadow-lg text-lg">
-              Get Started Today
-            </button>
-          </motion.div>
         </div>
       </section>
     </div>

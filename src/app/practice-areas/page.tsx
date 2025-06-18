@@ -436,9 +436,11 @@ export default function PracticeAreasPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Developing Areas</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-red-600 mb-6 border-b-4 border-red-600 pb-4 inline-block">
+              Developing Areas
+            </h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-              Emerging practice areas where we provide transactional services, building our expertise 
+              Emerging practice areas where we are building our expertise 
               to meet evolving market demands and client needs.
             </p>
           </motion.div>
@@ -454,12 +456,13 @@ export default function PracticeAreasPage() {
                 className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300"
               >
                 <div className="flex items-center">
-                  <div className="p-3 bg-beige-200 rounded-xl mr-4">
-                    <TrendingUp className="w-5 h-5 text-beige-600" />
+                  <div className="p-3 bg-red-100 rounded-xl mr-4">
+                    <TrendingUp className="w-5 h-5 text-red-600" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-900">{area}</h3>
-                    <p className="text-sm text-gray-600 mt-1">Transactional Services</p>
+                    <h3 className="text-lg font-semibold text-red-600 border-b border-red-600 pb-1 inline-block">
+                      {area}
+                    </h3>
                   </div>
                 </div>
               </motion.div>
