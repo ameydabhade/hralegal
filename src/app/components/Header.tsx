@@ -31,15 +31,15 @@ export default function Header() {
             {/* Corner Bracket Frame */}
             <div className="relative px-3 py-1.5">
               {/* Top-left corner bracket */}
-              <div className="absolute top-0 left-0 w-3 h-3 transition-all duration-300 group-hover:w-4 group-hover:h-4">
-                <div className="absolute top-0 left-0 w-full h-0.5 bg-black group-hover:bg-gray-800"></div>
-                <div className="absolute top-0 left-0 w-0.5 h-full bg-black group-hover:bg-gray-800"></div>
+              <div className="absolute top-0 left-0 w-5 h-5 transition-all duration-300 group-hover:w-6 group-hover:h-6">
+                <div className="absolute top-0 left-0 w-full h-1 bg-black group-hover:bg-gray-800"></div>
+                <div className="absolute top-0 left-0 w-1 h-full bg-black group-hover:bg-gray-800"></div>
               </div>
               
               {/* Bottom-right corner bracket */}
-              <div className="absolute bottom-0 right-0 w-3 h-3 transition-all duration-300 group-hover:w-4 group-hover:h-4">
-                <div className="absolute bottom-0 right-0 w-full h-0.5 bg-black group-hover:bg-gray-800"></div>
-                <div className="absolute bottom-0 right-0 w-0.5 h-full bg-black group-hover:bg-gray-800"></div>
+              <div className="absolute bottom-0 right-0 w-5 h-5 transition-all duration-300 group-hover:w-6 group-hover:h-6">
+                <div className="absolute bottom-0 right-0 w-full h-1 bg-black group-hover:bg-gray-800"></div>
+                <div className="absolute bottom-0 right-0 w-1 h-full bg-black group-hover:bg-gray-800"></div>
               </div>
               
               {/* HRA LEGAL text with hover effects */}
