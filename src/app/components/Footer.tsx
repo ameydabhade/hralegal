@@ -8,21 +8,21 @@ export default function Footer() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {/* Company Info */}
           <div className="space-y-3">
-            <Link href="/" className="text-lg font-bold text-beige-300 hover:text-beige-200 transition-colors group">
-              <div className="relative px-2 py-1">
+            <Link href="/" className="text-lg font-bold text-beige-300 hover:text-beige-200 transition-colors group inline-block">
+              <div className="relative px-3 py-2">
                 {/* Top-left corner bracket */}
-                <div className="absolute top-0 left-0 w-2.5 h-2.5 transition-all duration-300 group-hover:w-3 group-hover:h-3">
-                  <div className="absolute top-0 left-0 w-full h-0.5 bg-black group-hover:bg-gray-800"></div>
-                  <div className="absolute top-0 left-0 w-0.5 h-full bg-black group-hover:bg-gray-800"></div>
+                <div className="absolute top-0 left-0 w-4 h-4 transition-all duration-300 group-hover:w-5 group-hover:h-5">
+                  <div className="absolute top-0 left-0 w-full h-0.5 bg-white group-hover:bg-gray-200"></div>
+                  <div className="absolute top-0 left-0 w-0.5 h-full bg-white group-hover:bg-gray-200"></div>
                 </div>
                 
                 {/* Bottom-right corner bracket */}
-                <div className="absolute bottom-0 right-0 w-2.5 h-2.5 transition-all duration-300 group-hover:w-3 group-hover:h-3">
-                  <div className="absolute bottom-0 right-0 w-full h-0.5 bg-black group-hover:bg-gray-800"></div>
-                  <div className="absolute bottom-0 right-0 w-0.5 h-full bg-black group-hover:bg-gray-800"></div>
+                <div className="absolute bottom-0 right-0 w-4 h-4 transition-all duration-300 group-hover:w-5 group-hover:h-5">
+                  <div className="absolute bottom-0 right-0 w-full h-0.5 bg-white group-hover:bg-gray-200"></div>
+                  <div className="absolute bottom-0 right-0 w-0.5 h-full bg-white group-hover:bg-gray-200"></div>
                 </div>
                 
-                <span className="text-beige-300 font-semibold tracking-wide">HRA LEGAL</span>
+                <span className="text-white font-semibold tracking-wide">HRA LEGAL</span>
               </div>
             </Link>
             <p className="text-gray-400 leading-relaxed text-xs">

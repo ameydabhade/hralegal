@@ -16,10 +16,10 @@ export default function Header() {
   }, []);
 
   return (
-        <header className={`fixed top-4 left-4 right-4 z-50 backdrop-blur-sm border border-beige-200 rounded-[32px] transition-all duration-500 ease-out mx-auto max-w-7xl hover:shadow-xl ${
+        <header className={`fixed top-4 left-4 right-4 z-50 backdrop-blur-sm border border-beige-300 rounded-[32px] transition-all duration-500 ease-out mx-auto max-w-7xl hover:shadow-xl ${
       isScrolled 
-        ? 'bg-beige-100/98 shadow-2xl border-beige-300' 
-        : 'bg-beige-50/95 shadow-lg hover:bg-beige-100/98'
+        ? 'bg-beige-200/98 shadow-2xl border-beige-400' 
+        : 'bg-beige-100/95 shadow-lg hover:bg-beige-200/98'
     }`}>
         <nav className="max-w-7xl mx-auto px-4 lg:px-6">
           <div className="flex items-center justify-between py-2">
@@ -61,45 +61,45 @@ export default function Header() {
           <div className="hidden lg:flex items-center gap-4">
             <Link 
               href="/" 
-              className="relative text-gray-700 hover:text-beige-500 transition-all duration-300 text-sm font-medium group transform hover:-translate-y-0.5"
+              className="relative text-gray-800 hover:text-beige-600 transition-all duration-300 text-sm font-medium group transform hover:-translate-y-0.5"
             >
               Home
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-beige-400 transition-all duration-300 group-hover:w-full"></span>
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-beige-500 transition-all duration-300 group-hover:w-full"></span>
             </Link>
             <Link 
               href="/about" 
-              className="relative text-gray-700 hover:text-beige-500 transition-all duration-300 text-sm font-medium group transform hover:-translate-y-0.5"
+              className="relative text-gray-800 hover:text-beige-600 transition-all duration-300 text-sm font-medium group transform hover:-translate-y-0.5"
             >
               About Us
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-beige-400 transition-all duration-300 group-hover:w-full"></span>
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-beige-500 transition-all duration-300 group-hover:w-full"></span>
             </Link>
             <Link 
               href="/practice-areas" 
-              className="relative text-gray-700 hover:text-beige-500 transition-all duration-300 text-sm font-medium group transform hover:-translate-y-0.5"
+              className="relative text-gray-800 hover:text-beige-600 transition-all duration-300 text-sm font-medium group transform hover:-translate-y-0.5"
             >
               Practice Areas
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-beige-400 transition-all duration-300 group-hover:w-full"></span>
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-beige-500 transition-all duration-300 group-hover:w-full"></span>
             </Link>
             <Link 
               href="/sectors" 
-              className="relative text-gray-700 hover:text-beige-500 transition-all duration-300 text-sm font-medium group transform hover:-translate-y-0.5"
+              className="relative text-gray-800 hover:text-beige-600 transition-all duration-300 text-sm font-medium group transform hover:-translate-y-0.5"
             >
               Sectors
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-beige-400 transition-all duration-300 group-hover:w-full"></span>
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-beige-500 transition-all duration-300 group-hover:w-full"></span>
             </Link>
             <Link 
               href="/learners-page" 
-              className="relative text-gray-700 hover:text-beige-500 transition-all duration-300 text-sm font-medium group transform hover:-translate-y-0.5"
+              className="relative text-gray-800 hover:text-beige-600 transition-all duration-300 text-sm font-medium group transform hover:-translate-y-0.5"
             >
               Learners Page
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-beige-400 transition-all duration-300 group-hover:w-full"></span>
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-beige-500 transition-all duration-300 group-hover:w-full"></span>
             </Link>
             <Link 
               href="/contact" 
-              className="relative text-gray-700 hover:text-beige-500 transition-all duration-300 text-sm font-medium group transform hover:-translate-y-0.5"
+              className="relative text-gray-800 hover:text-beige-600 transition-all duration-300 text-sm font-medium group transform hover:-translate-y-0.5"
             >
               Contact Us
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-beige-400 transition-all duration-300 group-hover:w-full"></span>
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-beige-500 transition-all duration-300 group-hover:w-full"></span>
             </Link>
           </div>
 

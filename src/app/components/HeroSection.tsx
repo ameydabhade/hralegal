@@ -4,7 +4,7 @@ import { Scale, Shield, Award, Phone, ArrowRight, CheckCircle } from 'lucide-rea
 export default function HeroSection() {
 
   return (
-    <section className="min-h-screen bg-gradient-to-br from-beige-200 via-beige-100 to-beige-50 relative overflow-hidden">
+    <section className="min-h-screen bg-gradient-to-br from-beige-300 via-beige-200 to-beige-100 relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-20 w-32 h-32 bg-beige-300 rounded-full blur-3xl"></div>
@@ -17,23 +17,23 @@ export default function HeroSection() {
         <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[500px] mb-16">
           <div className="space-y-6">
             {/* Badge */}
-            <div className="inline-flex items-center px-3 py-1.5 bg-beige-200 border border-beige-300 rounded-full">
-              <span className="text-xs font-medium text-beige-600">🏆 15+ Years of Legal Excellence</span>
+            <div className="inline-flex items-center px-3 py-1.5 bg-beige-200 border border-beige-400 rounded-full">
+              <span className="text-xs font-medium text-beige-800">🏆 15+ Years of Legal Excellence</span>
             </div>
 
             <div className="space-y-4">
               <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 leading-tight">
                 Your Legal Partners
-                <span className="block text-2xl lg:text-3xl font-normal text-beige-500 mt-1">
+                <span className="block text-2xl lg:text-3xl font-normal text-beige-700 mt-1">
                   for Business Success
                 </span>
               </h1>
               
-              <p className="text-base text-gray-700 leading-relaxed max-w-2xl">
+              <p className="text-base text-gray-800 leading-relaxed max-w-2xl">
                 HRA Legal is a professional law firm with specialized expertise across various legal disciplines, including Civil and Business Law, Intellectual Property Laws, Corporate Law, and Employment Laws.
               </p>
               
-              <p className="text-sm text-gray-600 leading-relaxed max-w-2xl">
+              <p className="text-sm text-gray-700 leading-relaxed max-w-2xl">
                 Our seasoned lawyers provide personalized solutions with prompt, reliable and qualitative services that enable businesses to navigate legal complexities with confidence and clarity.
               </p>
             </div>
@@ -50,7 +50,7 @@ export default function HeroSection() {
               </Link>
               <Link 
                 href="/practice-areas"
-                className="inline-flex items-center justify-center px-6 py-3 border-2 border-beige-400 text-beige-600 font-semibold text-sm rounded-lg hover:bg-beige-400 hover:text-white transition-all duration-200"
+                className="inline-flex items-center justify-center px-6 py-3 border-2 border-beige-500 text-beige-800 font-semibold text-sm rounded-lg hover:bg-beige-500 hover:text-white transition-all duration-200"
               >
                 View Our Services
               </Link>
@@ -69,8 +69,8 @@ export default function HeroSection() {
                     <Scale className="w-5 h-5 text-white" />
                   </div>
                   <div className="ml-4">
-                    <h3 className="text-lg font-bold text-gray-900">Legal Contract</h3>
-                    <p className="text-xs text-beige-600">Professional Documentation</p>
+                    <h3 className="text-lg font-bold text-gray-900">This section will be replaced with a full width image </h3>
+                    <p className="text-xs text-beige-800">Professional Documentation</p>
                   </div>
                 </div>
                 
@@ -87,11 +87,11 @@ export default function HeroSection() {
                 <div className="border-t border-beige-200 pt-3 flex justify-between items-center">
                   <div className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-500 mr-2" />
-                    <span className="text-xs text-gray-600">Verified & Approved</span>
+                    <span className="text-xs text-gray-700">Verified & Approved</span>
                   </div>
                   <div className="text-right">
                     <p className="font-bold text-sm text-gray-900">HRA Legal</p>
-                    <p className="text-xs text-beige-600">Professional Services</p>
+                    <p className="text-xs text-beige-800">Professional Services</p>
                   </div>
                 </div>
               </div>
