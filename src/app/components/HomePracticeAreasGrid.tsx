@@ -1,15 +1,8 @@
 "use client"
 import { 
-  FileText, 
-  Building, 
-  Shield, 
-  Database, 
-  Users, 
-  Monitor, 
-  ArrowRight,
   ChevronDown,
   ChevronRight,
-  Award
+  ArrowRight
 } from 'lucide-react';
 import Link from 'next/link';
 import { useState } from 'react';
@@ -18,8 +11,7 @@ import { motion } from 'framer-motion';
 const practiceAreas = [
   {
     id: 'contracts',
-    icon: FileText,
-    title: 'Contracts, Compliances, and Advisory',
+    title: 'Contracts • Compliances • Advisory',
     description: 'Comprehensive contract drafting, review, negotiation, and compliance advisory services.',
     categories: [
       {
@@ -42,8 +34,7 @@ const practiceAreas = [
   },
   {
     id: 'corporate',
-    icon: Building,
-    title: 'Company Secretarial and Corporate Governance',
+    title: 'Corporate • Secretarial • Governance',
     description: 'Corporate structure formation, governance, financing, and restructuring services.',
     categories: [
       {
@@ -66,8 +57,7 @@ const practiceAreas = [
   },
   {
     id: 'compliance',
-    icon: Shield,
-    title: 'Compliance, Bribery, Anti-Corruption & White Collar Crime',
+    title: 'Compliance • Anti-Corruption • White Collar',
     description: 'Comprehensive compliance programs and anti-corruption policies.',
     categories: [
       {
@@ -82,8 +72,7 @@ const practiceAreas = [
   },
   {
     id: 'data',
-    icon: Database,
-    title: 'Data Privacy, Protection, and Cybersecurity',
+    title: 'Data Privacy • Protection • Cybersecurity',
     description: 'Data privacy compliance and cybersecurity legal services.',
     categories: [
       {
@@ -98,8 +87,7 @@ const practiceAreas = [
   },
   {
     id: 'employment',
-    icon: Users,
-    title: 'Employment, Labour & Industrial Relations',
+    title: 'Employment • Labour • Industrial Relations',
     description: 'Complete employment law services and workplace compliance.',
     categories: [
       {
@@ -114,8 +102,7 @@ const practiceAreas = [
   },
   {
     id: 'media',
-    icon: Monitor,
-    title: 'Media, Technology, and Telecommunications',
+    title: 'Media • Technology • Telecommunications',
     description: 'Media production, technology, and telecom legal services.',
     categories: [
       {
@@ -140,12 +127,12 @@ export default function HomePracticeAreasGrid() {
   return (
     <section className="py-20 bg-gradient-to-b from-beige-50 to-white">
       <div className="max-w-7xl mx-auto px-4 lg:px-8">
-        {/* Section Header */}
+        {/* Section Header with Red Theme */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center px-4 py-2 bg-beige-200 border border-beige-300 rounded-full mb-6">
-            <span className="text-sm font-medium text-beige-600">Our Practice Areas</span>
+          <div className="inline-flex items-center px-4 py-2 bg-red-100 border border-red-200 rounded-full mb-6">
+            <span className="text-sm font-medium text-red-600">Our Practice Areas</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-red-600 mb-6 border-b-4 border-red-600 pb-4 inline-block">
             Practice Areas
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -154,7 +141,7 @@ export default function HomePracticeAreasGrid() {
           </p>
         </div>
 
-        {/* Practice Areas Grid */}
+        {/* Practice Areas Grid - Simplified Design */}
         <div className="grid lg:grid-cols-2 gap-8 auto-rows-max mb-16">
           {practiceAreas.map((area, index) => (
             <motion.div
@@ -165,20 +152,17 @@ export default function HomePracticeAreasGrid() {
               viewport={{ once: true }}
               className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden hover:shadow-xl transition-all duration-300 self-start"
             >
-              {/* Header */}
+              {/* Header - Clean Design without Large Icons */}
               <div 
                 className="p-6 cursor-pointer hover:bg-beige-50 transition-colors duration-200"
                 onClick={() => toggleArea(area.id)}
               >
                 <div className="flex items-center justify-between">
-                  <div className="flex items-start">
-                    <div className="p-3 bg-beige-400 rounded-xl mr-4 flex-shrink-0">
-                      <area.icon className="w-6 h-6 text-white" />
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-xl font-bold text-gray-900 mb-2">{area.title}</h3>
-                      <p className="text-gray-600 text-sm">{area.description}</p>
-                    </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold text-red-600 mb-2 border-b-2 border-red-600 pb-1 inline-block">
+                      {area.title}
+                    </h3>
+                    <p className="text-gray-600 text-sm mt-3">{area.description}</p>
                   </div>
                   <div className="flex items-center ml-4">
                     {expandedArea === area.id ? (
@@ -203,14 +187,13 @@ export default function HomePracticeAreasGrid() {
                     <div className="space-y-6">
                       {area.categories.map((category, catIndex) => (
                         <div key={catIndex} className="bg-beige-50 p-4 rounded-xl">
-                          <h4 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
-                            <Award className="w-4 h-4 text-beige-500 mr-2" />
+                          <h4 className="text-lg font-bold text-red-600 mb-3 border-b border-red-300 pb-1 inline-block">
                             {category.title}
                           </h4>
-                          <ul className="space-y-2">
+                          <ul className="space-y-2 mt-4">
                             {category.items.map((item, itemIndex) => (
                               <li key={itemIndex} className="flex items-start">
-                                <div className="w-1.5 h-1.5 bg-beige-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                <span className="text-red-600 mr-3 text-sm font-bold">•</span>
                                 <span className="text-gray-700 text-xs leading-relaxed">{item}</span>
                               </li>
                             ))}
@@ -228,7 +211,7 @@ export default function HomePracticeAreasGrid() {
         {/* Call to Action */}
         <div className="text-center">
           <div className="bg-gradient-to-r from-beige-100 to-beige-200 rounded-2xl p-8 border border-beige-300">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
+            <h3 className="text-2xl font-bold text-red-600 mb-4 border-b-2 border-red-600 pb-2 inline-block">
               Explore Our Complete Legal Services
             </h3>
             <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
@@ -238,14 +221,14 @@ export default function HomePracticeAreasGrid() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 href="/practice-areas" 
-                className="inline-flex items-center px-8 py-3 bg-beige-400 text-white font-semibold rounded-lg hover:bg-beige-500 transition-colors duration-200"
+                className="inline-flex items-center px-8 py-3 bg-red-600 text-white font-semibold rounded-lg hover:bg-red-700 transition-colors duration-200"
               >
                 View All Practice Areas
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
               <Link 
                 href="/contact" 
-                className="inline-flex items-center px-8 py-3 border-2 border-beige-400 text-beige-600 font-semibold rounded-lg hover:bg-beige-400 hover:text-white transition-colors duration-200"
+                className="inline-flex items-center px-8 py-3 border-2 border-red-600 text-red-600 font-semibold rounded-lg hover:bg-red-600 hover:text-white transition-colors duration-200"
               >
                 Schedule Consultation
               </Link>

@@ -1,129 +1,150 @@
 import Link from 'next/link';
-import { Mail, Phone, MapPin } from 'lucide-react';
+import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 lg:px-6 py-8">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {/* Company Info */}
-          <div className="space-y-3">
-            <Link href="/" className="text-lg font-bold text-beige-300 hover:text-beige-200 transition-colors group inline-block">
+    <footer className="bg-gray-900 text-white py-12">
+      <div className="max-w-7xl mx-auto px-4 lg:px-6">
+        {/* Main Footer Content */}
+        <div className="grid md:grid-cols-3 gap-8 mb-8">
+          {/* Company Info & Contact */}
+          <div className="md:col-span-1">
+            <Link href="/" className="text-lg font-bold text-white hover:text-red-400 transition-colors group inline-block mb-4">
               <div className="relative px-3 py-2">
                 {/* Top-left corner bracket */}
                 <div className="absolute top-0 left-0 w-4 h-4 transition-all duration-300 group-hover:w-5 group-hover:h-5">
-                  <div className="absolute top-0 left-0 w-full h-0.5 bg-white group-hover:bg-gray-200"></div>
-                  <div className="absolute top-0 left-0 w-0.5 h-full bg-white group-hover:bg-gray-200"></div>
+                  <div className="absolute top-0 left-0 w-full h-0.5 bg-white group-hover:bg-red-400"></div>
+                  <div className="absolute top-0 left-0 w-0.5 h-full bg-white group-hover:bg-red-400"></div>
                 </div>
                 
                 {/* Bottom-right corner bracket */}
                 <div className="absolute bottom-0 right-0 w-4 h-4 transition-all duration-300 group-hover:w-5 group-hover:h-5">
-                  <div className="absolute bottom-0 right-0 w-full h-0.5 bg-white group-hover:bg-gray-200"></div>
-                  <div className="absolute bottom-0 right-0 w-0.5 h-full bg-white group-hover:bg-gray-200"></div>
+                  <div className="absolute bottom-0 right-0 w-full h-0.5 bg-white group-hover:bg-red-400"></div>
+                  <div className="absolute bottom-0 right-0 w-0.5 h-full bg-white group-hover:bg-red-400"></div>
                 </div>
                 
-                <span className="text-white font-semibold tracking-wide">HRA LEGAL</span>
+                <span className="text-white font-semibold tracking-wide group-hover:text-red-400 transition-colors">HRA LEGAL</span>
               </div>
             </Link>
-            <p className="text-gray-400 leading-relaxed text-xs">
+            
+            <p className="text-gray-400 leading-relaxed text-sm mb-6">
               Expert legal counsel specializing in Corporate Law, Intellectual Property, 
               Media & Entertainment, and comprehensive business legal solutions.
             </p>
-            <div className="space-y-2">
-              <div className="flex items-start gap-2 text-gray-400 text-xs">
-                <MapPin className="w-3 h-3 text-beige-300 flex-shrink-0 mt-0.5" />
-                <span>93 East Building, 705, Mahakali Caves Road, Near MIDC/Ahura/Onida, Andheri East, Mumbai 400093</span>
+
+            {/* Contact Information */}
+            <div className="space-y-3">
+              <div className="flex items-start gap-3 text-gray-400 text-sm">
+                <MapPin className="w-4 h-4 text-red-400 flex-shrink-0 mt-0.5" />
+                <div>
+                  <div className="font-medium text-white mb-1">Mumbai Office</div>
+                  <div>93 East Building, 705, Mahakali Caves Road,<br />
+                  Near MIDC/Ahura/Onida, Andheri East,<br />
+                  Mumbai 400093, India</div>
+                </div>
               </div>
-              <div className="flex items-center gap-2 text-gray-400 text-xs">
-                <Phone className="w-3 h-3 text-beige-300 flex-shrink-0" />
-                <span>+91 9967382875</span>
+              <div className="flex items-center gap-3 text-gray-400 text-sm">
+                <Phone className="w-4 h-4 text-red-400 flex-shrink-0" />
+                <a href="tel:+919967382875" className="hover:text-red-400 transition-colors">+91 9967382875</a>
               </div>
-              <div className="flex items-center gap-2 text-gray-400 text-xs">
-                <Mail className="w-3 h-3 text-beige-300 flex-shrink-0" />
-                <span>rushi@hralegal.com</span>
+              <div className="flex items-center gap-3 text-gray-400 text-sm">
+                <Mail className="w-4 h-4 text-red-400 flex-shrink-0" />
+                <a href="mailto:rushi@hralegal.com" className="hover:text-red-400 transition-colors">rushi@hralegal.com</a>
               </div>
             </div>
           </div>
 
-          {/* Practice Areas */}
-          <div className="space-y-3">
-            <h3 className="text-sm font-semibold text-white">Practice Areas</h3>
-            <div className="space-y-1.5">
-              <Link href="/practice-areas" className="block text-gray-400 hover:text-beige-300 transition-colors text-xs">
-                Corporate Law
-              </Link>
-              <Link href="/practice-areas" className="block text-gray-400 hover:text-beige-300 transition-colors text-xs">
-                Intellectual Property
-              </Link>
-              <Link href="/practice-areas" className="block text-gray-400 hover:text-beige-300 transition-colors text-xs">
-                Media & Entertainment
-              </Link>
-              <Link href="/practice-areas" className="block text-gray-400 hover:text-beige-300 transition-colors text-xs">
-                Employment Law
-              </Link>
-              <Link href="/practice-areas" className="block text-gray-400 hover:text-beige-300 transition-colors text-xs">
-                Contract Drafting
-              </Link>
+          {/* Quick Links */}
+          <div className="md:col-span-1">
+            <h3 className="text-lg font-semibold text-white mb-4 text-red-400 border-b border-red-400 pb-2 inline-block">Quick Links</h3>
+            <div className="grid grid-cols-2 gap-3">
+              <div className="space-y-2">
+                <Link href="/" className="block text-gray-400 hover:text-red-400 transition-colors text-sm">
+                  Home
+                </Link>
+                <Link href="/about" className="block text-gray-400 hover:text-red-400 transition-colors text-sm">
+                  About Us
+                </Link>
+                <Link href="/practice-areas" className="block text-gray-400 hover:text-red-400 transition-colors text-sm">
+                  Practice Areas
+                </Link>
+                <Link href="/sectors" className="block text-gray-400 hover:text-red-400 transition-colors text-sm">
+                  Sectors
+                </Link>
+              </div>
+              <div className="space-y-2">
+                <Link href="/learners-page" className="block text-gray-400 hover:text-red-400 transition-colors text-sm">
+                  Knowledge Centre
+                </Link>
+                <Link href="/contact" className="block text-gray-400 hover:text-red-400 transition-colors text-sm">
+                  Contact Us
+                </Link>
+                <Link href="/careers" className="block text-gray-400 hover:text-red-400 transition-colors text-sm">
+                  Careers
+                </Link>
+              </div>
             </div>
           </div>
 
-          {/* Firm Links */}
-          <div className="space-y-3">
-            <h3 className="text-sm font-semibold text-white">Our Firm</h3>
-            <div className="space-y-1.5">
-              <Link href="/about" className="block text-gray-400 hover:text-beige-300 transition-colors text-xs">
-                About Us
-              </Link>
-              <Link href="/about" className="block text-gray-400 hover:text-beige-300 transition-colors text-xs">
-                Leadership Team
-              </Link>
-              <Link href="/sectors" className="block text-gray-400 hover:text-beige-300 transition-colors text-xs">
-                Sectors We Serve
-              </Link>
-              <Link href="/learners-page" className="block text-gray-400 hover:text-beige-300 transition-colors text-xs">
-                Learners Page
-              </Link>
-              <Link href="/careers" className="block text-gray-400 hover:text-beige-300 transition-colors text-xs">
-                Careers
-              </Link>
-            </div>
-          </div>
-
-          {/* Support & Legal */}
-          <div className="space-y-3">
-            <h3 className="text-sm font-semibold text-white">Support & Legal</h3>
-            <div className="space-y-1.5">
-              <Link href="/contact" className="block text-gray-400 hover:text-beige-300 transition-colors text-xs">
-                Contact Us
-              </Link>
-              <Link href="/disclaimer" className="block text-gray-400 hover:text-beige-300 transition-colors text-xs">
+          {/* Legal & Social */}
+          <div className="md:col-span-1">
+            <h3 className="text-lg font-semibold text-white mb-4 text-red-400 border-b border-red-400 pb-2 inline-block">Legal & Social</h3>
+            
+            {/* Legal Links */}
+            <div className="space-y-2 mb-6">
+              <Link href="/disclaimer" className="block text-gray-400 hover:text-red-400 transition-colors text-sm">
                 Disclaimer
               </Link>
-              <Link href="/privacy-policy" className="block text-gray-400 hover:text-beige-300 transition-colors text-xs">
+              <Link href="/privacy-policy" className="block text-gray-400 hover:text-red-400 transition-colors text-sm">
                 Privacy Policy
               </Link>
-              <Link href="/terms-of-use" className="block text-gray-400 hover:text-beige-300 transition-colors text-xs">
+              <Link href="/terms-of-use" className="block text-gray-400 hover:text-red-400 transition-colors text-sm">
                 Terms of Use
               </Link>
+            </div>
+
+            {/* Social Media Links */}
+            <div>
+              <div className="text-white font-medium mb-3 text-sm">Follow Us</div>
+              <div className="flex gap-3">
+                <a 
+                  href="#" 
+                  className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-red-600 transition-colors"
+                  aria-label="Facebook"
+                >
+                  <Facebook className="w-4 h-4" />
+                </a>
+                <a 
+                  href="#" 
+                  className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-red-600 transition-colors"
+                  aria-label="Twitter"
+                >
+                  <Twitter className="w-4 h-4" />
+                </a>
+                <a 
+                  href="#" 
+                  className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-red-600 transition-colors"
+                  aria-label="LinkedIn"
+                >
+                  <Linkedin className="w-4 h-4" />
+                </a>
+                <a 
+                  href="#" 
+                  className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-red-600 transition-colors"
+                  aria-label="Instagram"
+                >
+                  <Instagram className="w-4 h-4" />
+                </a>
+              </div>
             </div>
           </div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-gray-800 mt-6 pt-4 flex flex-col md:flex-row md:items-center md:justify-between gap-3">
-          <p className="text-gray-500 text-xs">
-            © 2024 HRA Legal. All rights reserved.
-          </p>
-          <div className="flex gap-4">
-            <Link href="/terms-of-use" className="text-gray-500 hover:text-beige-300 transition-colors text-xs">
-              Terms
-            </Link>
-            <Link href="/privacy-policy" className="text-gray-500 hover:text-beige-300 transition-colors text-xs">
-              Privacy
-            </Link>
-            <Link href="/disclaimer" className="text-gray-500 hover:text-beige-300 transition-colors text-xs">
-              Disclaimer
-            </Link>
+        <div className="border-t border-gray-800 pt-6">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+          
+        
           </div>
         </div>
       </div>

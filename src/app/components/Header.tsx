@@ -57,49 +57,49 @@ export default function Header() {
             </div>
           </Link>
 
-          {/* Desktop Navigation - Optimized font sizes */}
+          {/* Desktop Navigation - Clean single titles */}
           <div className="hidden lg:flex items-center gap-4">
             <Link 
               href="/" 
-              className="relative text-gray-800 hover:text-beige-600 transition-all duration-300 text-sm font-medium group transform hover:-translate-y-0.5"
+              className="relative text-red-600 hover:text-red-700 transition-all duration-300 text-sm font-semibold group transform hover:-translate-y-0.5"
             >
               Home
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-beige-500 transition-all duration-300 group-hover:w-full"></span>
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-red-600 transition-all duration-300 group-hover:w-full"></span>
             </Link>
             <Link 
               href="/about" 
-              className="relative text-gray-800 hover:text-beige-600 transition-all duration-300 text-sm font-medium group transform hover:-translate-y-0.5"
+              className="relative text-red-600 hover:text-red-700 transition-all duration-300 text-sm font-semibold group transform hover:-translate-y-0.5"
             >
               About Us
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-beige-500 transition-all duration-300 group-hover:w-full"></span>
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-red-600 transition-all duration-300 group-hover:w-full"></span>
             </Link>
             <Link 
               href="/practice-areas" 
-              className="relative text-gray-800 hover:text-beige-600 transition-all duration-300 text-sm font-medium group transform hover:-translate-y-0.5"
+              className="relative text-red-600 hover:text-red-700 transition-all duration-300 text-sm font-semibold group transform hover:-translate-y-0.5"
             >
               Practice Areas
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-beige-500 transition-all duration-300 group-hover:w-full"></span>
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-red-600 transition-all duration-300 group-hover:w-full"></span>
             </Link>
             <Link 
               href="/sectors" 
-              className="relative text-gray-800 hover:text-beige-600 transition-all duration-300 text-sm font-medium group transform hover:-translate-y-0.5"
+              className="relative text-red-600 hover:text-red-700 transition-all duration-300 text-sm font-semibold group transform hover:-translate-y-0.5"
             >
               Sectors
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-beige-500 transition-all duration-300 group-hover:w-full"></span>
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-red-600 transition-all duration-300 group-hover:w-full"></span>
             </Link>
             <Link 
               href="/learners-page" 
-              className="relative text-gray-800 hover:text-beige-600 transition-all duration-300 text-sm font-medium group transform hover:-translate-y-0.5"
+              className="relative text-red-600 hover:text-red-700 transition-all duration-300 text-sm font-semibold group transform hover:-translate-y-0.5"
             >
-              Learners Page
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-beige-500 transition-all duration-300 group-hover:w-full"></span>
+              Knowledge Centre
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-red-600 transition-all duration-300 group-hover:w-full"></span>
             </Link>
             <Link 
               href="/contact" 
-              className="relative text-gray-800 hover:text-beige-600 transition-all duration-300 text-sm font-medium group transform hover:-translate-y-0.5"
+              className="relative text-red-600 hover:text-red-700 transition-all duration-300 text-sm font-semibold group transform hover:-translate-y-0.5"
             >
               Contact Us
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-beige-500 transition-all duration-300 group-hover:w-full"></span>
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-red-600 transition-all duration-300 group-hover:w-full"></span>
             </Link>
           </div>
 
@@ -134,7 +134,7 @@ export default function Header() {
           </button>
         </div>
 
-        {/* Mobile Navigation - Reduced font sizes */}
+        {/* Mobile Navigation - Clean titles */}
         <div className={`lg:hidden overflow-hidden transition-all duration-500 ease-out ${
           isMobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
         }`}>
@@ -142,42 +142,42 @@ export default function Header() {
             <div className="flex flex-col gap-3 animate-in slide-in-from-top duration-300">
               <Link 
                 href="/" 
-                className="text-gray-700 hover:text-beige-500 transition-colors text-xs font-medium"
+                className="text-red-600 hover:text-red-700 transition-colors text-xs font-medium"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Home
               </Link>
               <Link 
                 href="/about" 
-                className="text-gray-700 hover:text-beige-500 transition-colors text-xs font-medium"
+                className="text-red-600 hover:text-red-700 transition-colors text-xs font-medium"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 About Us
               </Link>
               <Link 
                 href="/practice-areas" 
-                className="text-gray-700 hover:text-beige-500 transition-colors text-xs font-medium"
+                className="text-red-600 hover:text-red-700 transition-colors text-xs font-medium"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Practice Areas
               </Link>
               <Link 
                 href="/sectors" 
-                className="text-gray-700 hover:text-beige-500 transition-colors text-xs font-medium"
+                className="text-red-600 hover:text-red-700 transition-colors text-xs font-medium"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Sectors
               </Link>
               <Link 
                 href="/learners-page" 
-                className="text-gray-700 hover:text-beige-500 transition-colors text-xs font-medium"
+                className="text-red-600 hover:text-red-700 transition-colors text-xs font-medium"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Learners Page
+                Knowledge Centre
               </Link>
               <Link 
                 href="/contact" 
-                className="text-gray-700 hover:text-beige-500 transition-colors text-xs font-medium"
+                className="text-red-600 hover:text-red-700 transition-colors text-xs font-medium"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Contact Us
