@@ -12,45 +12,45 @@ export default function HeroSection() {
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-beige-200 rounded-full blur-3xl"></div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 lg:px-8 pt-32 pb-16 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 lg:px-6 pt-28 pb-12 relative z-10">
         {/* Main Hero Content */}
-        <div className="grid lg:grid-cols-2 gap-16 items-center min-h-[600px] mb-20">
-          <div className="space-y-8">
+        <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[500px] mb-16">
+          <div className="space-y-6">
             {/* Badge */}
-            <div className="inline-flex items-center px-4 py-2 bg-beige-200 border border-beige-300 rounded-full">
-              <span className="text-sm font-medium text-beige-600">🏆 15+ Years of Legal Excellence</span>
+            <div className="inline-flex items-center px-3 py-1.5 bg-beige-200 border border-beige-300 rounded-full">
+              <span className="text-xs font-medium text-beige-600">🏆 15+ Years of Legal Excellence</span>
             </div>
 
-            <div className="space-y-6">
-              <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 leading-tight">
+            <div className="space-y-4">
+              <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 leading-tight">
                 Your Legal Partners
-                <span className="block text-3xl lg:text-4xl font-normal text-beige-500 mt-2">
+                <span className="block text-2xl lg:text-3xl font-normal text-beige-500 mt-1">
                   for Business Success
                 </span>
               </h1>
               
-              <p className="text-xl text-gray-700 leading-relaxed max-w-2xl">
+              <p className="text-base text-gray-700 leading-relaxed max-w-2xl">
                 HRA Legal is a professional law firm with specialized expertise across various legal disciplines, including Civil and Business Law, Intellectual Property Laws, Corporate Law, and Employment Laws.
               </p>
               
-              <p className="text-lg text-gray-600 leading-relaxed max-w-2xl">
+              <p className="text-sm text-gray-600 leading-relaxed max-w-2xl">
                 Our seasoned lawyers provide personalized solutions with prompt, reliable and qualitative services that enable businesses to navigate legal complexities with confidence and clarity.
               </p>
             </div>
             
             {/* Call to Action Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-3">
               <Link 
                 href="/contact"
-                className="inline-flex items-center justify-center px-8 py-4 bg-beige-400 text-white font-semibold rounded-lg hover:bg-beige-500 transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                className="inline-flex items-center justify-center px-6 py-3 bg-beige-400 text-white font-semibold text-sm rounded-lg hover:bg-beige-500 transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl"
               >
-                <Phone className="w-5 h-5 mr-2" />
+                <Phone className="w-4 h-4 mr-2" />
                 Schedule Consultation
-                <ArrowRight className="w-4 h-4 ml-2" />
+                <ArrowRight className="w-3 h-3 ml-2" />
               </Link>
               <Link 
                 href="/practice-areas"
-                className="inline-flex items-center justify-center px-8 py-4 border-2 border-beige-400 text-beige-600 font-semibold rounded-lg hover:bg-beige-400 hover:text-white transition-all duration-200"
+                className="inline-flex items-center justify-center px-6 py-3 border-2 border-beige-400 text-beige-600 font-semibold text-sm rounded-lg hover:bg-beige-400 hover:text-white transition-all duration-200"
               >
                 View Our Services
               </Link>
@@ -60,49 +60,49 @@ export default function HeroSection() {
           {/* Visual Element */}
           <div className="relative">
             {/* Main Visual Card */}
-            <div className="bg-white rounded-2xl shadow-2xl p-8 border border-beige-100 transform rotate-2 hover:rotate-0 transition-transform duration-300">
+            <div className="bg-white rounded-2xl shadow-2xl p-6 border border-beige-100 transform rotate-2 hover:rotate-0 transition-transform duration-300">
               {/* Legal Document Mockup */}
-              <div className="space-y-6">
+              <div className="space-y-4">
                 {/* Header */}
-                <div className="flex items-center border-b border-beige-200 pb-4">
-                  <div className="w-12 h-12 bg-beige-400 rounded-xl flex items-center justify-center ">
-                    <Scale className="w-6 h-6 text-white" />
+                <div className="flex items-center border-b border-beige-200 pb-3">
+                  <div className="w-10 h-10 bg-beige-400 rounded-xl flex items-center justify-center">
+                    <Scale className="w-5 h-5 text-white" />
                   </div>
-                  <div className="ml-8">
-                    <h3 className="text-xl font-bold text-gray-900">Legal Contract</h3>
-                    <p className="text-beige-600">Professional Documentation</p>
+                  <div className="ml-4">
+                    <h3 className="text-lg font-bold text-gray-900">Legal Contract</h3>
+                    <p className="text-xs text-beige-600">Professional Documentation</p>
                   </div>
                 </div>
                 
                 {/* Content Lines */}
-                <div className="space-y-3">
-                  <div className="h-3 bg-gray-100 rounded-full w-full"></div>
-                  <div className="h-3 bg-beige-100 rounded-full w-4/5"></div>
-                  <div className="h-3 bg-gray-100 rounded-full w-5/6"></div>
-                  <div className="h-3 bg-beige-200 rounded-full w-3/4"></div>
-                  <div className="h-3 bg-gray-100 rounded-full w-2/3"></div>
+                <div className="space-y-2">
+                  <div className="h-2 bg-gray-100 rounded-full w-full"></div>
+                  <div className="h-2 bg-beige-100 rounded-full w-4/5"></div>
+                  <div className="h-2 bg-gray-100 rounded-full w-5/6"></div>
+                  <div className="h-2 bg-beige-200 rounded-full w-3/4"></div>
+                  <div className="h-2 bg-gray-100 rounded-full w-2/3"></div>
                 </div>
                 
                 {/* Signature Area */}
-                <div className="border-t border-beige-200 pt-4 flex justify-between items-center">
+                <div className="border-t border-beige-200 pt-3 flex justify-between items-center">
                   <div className="flex items-center">
-                    <CheckCircle className="w-6 h-6 text-green-500 mr-2" />
-                    <span className="text-sm text-gray-600">Verified & Approved</span>
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-2" />
+                    <span className="text-xs text-gray-600">Verified & Approved</span>
                   </div>
                   <div className="text-right">
-                    <p className="font-bold text-gray-900">HRA Legal</p>
-                    <p className="text-sm text-beige-600">Professional Services</p>
+                    <p className="font-bold text-sm text-gray-900">HRA Legal</p>
+                    <p className="text-xs text-beige-600">Professional Services</p>
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Floating Elements */}
-            <div className="absolute -top-4 -right-4 w-16 h-16 bg-beige-300 rounded-full flex items-center justify-center shadow-lg">
-              <Award className="w-8 h-8 text-white" />
+            <div className="absolute -top-3 -right-3 w-12 h-12 bg-beige-300 rounded-full flex items-center justify-center shadow-lg">
+              <Award className="w-6 h-6 text-white" />
             </div>
-            <div className="absolute -bottom-6 -left-6 w-20 h-20 bg-beige-400 rounded-full flex items-center justify-center shadow-lg">
-              <Shield className="w-10 h-10 text-white" />
+            <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-beige-400 rounded-full flex items-center justify-center shadow-lg">
+              <Shield className="w-8 h-8 text-white" />
             </div>
           </div>
         </div>

@@ -21,19 +21,44 @@ export default function Header() {
         ? 'bg-beige-100/98 shadow-2xl border-beige-300' 
         : 'bg-beige-50/95 shadow-lg hover:bg-beige-100/98'
     }`}>
-        <nav className="max-w-7xl mx-auto px-4 lg:px-8">
+        <nav className="max-w-7xl mx-auto px-4 lg:px-6">
           <div className="flex items-center justify-between py-2">
-          {/* Logo */}
+          {/* Logo with Corner Bracket Design */}
           <Link 
             href="/" 
-            className="text-xl font-bold text-gray-900 hover:text-beige-500 transition-all duration-300 transform hover:scale-105 group"
+            className="relative flex items-center text-lg font-bold text-gray-900 transition-all duration-300 transform hover:scale-105 group"
           >
-            <span className="text-beige-500 group-hover:text-beige-600 transition-colors duration-300">HRA </span> 
-            <span className="group-hover:text-beige-500 transition-colors duration-300">Legal</span>
+            {/* Corner Bracket Frame */}
+            <div className="relative px-3 py-1.5">
+              {/* Top-left corner bracket */}
+              <div className="absolute top-0 left-0 w-3 h-3 transition-all duration-300 group-hover:w-4 group-hover:h-4">
+                <div className="absolute top-0 left-0 w-full h-0.5 bg-black group-hover:bg-gray-800"></div>
+                <div className="absolute top-0 left-0 w-0.5 h-full bg-black group-hover:bg-gray-800"></div>
+              </div>
+              
+              {/* Bottom-right corner bracket */}
+              <div className="absolute bottom-0 right-0 w-3 h-3 transition-all duration-300 group-hover:w-4 group-hover:h-4">
+                <div className="absolute bottom-0 right-0 w-full h-0.5 bg-black group-hover:bg-gray-800"></div>
+                <div className="absolute bottom-0 right-0 w-0.5 h-full bg-black group-hover:bg-gray-800"></div>
+              </div>
+              
+              {/* HRA LEGAL text with hover effects */}
+              <div className="relative overflow-hidden">
+                <span className="relative z-10 transition-all duration-300 group-hover:text-red-600 font-semibold tracking-wide">
+                  HRA LEGAL
+                </span>
+                
+                {/* Underline effect on hover */}
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-red-600 transition-all duration-300 group-hover:w-full"></span>
+                
+                {/* Background shape that changes on hover */}
+                <span className="absolute inset-0 bg-beige-700 transform scale-x-0 transition-all duration-300 group-hover:scale-x-100 origin-left opacity-0 group-hover:opacity-10 rounded"></span>
+              </div>
+            </div>
           </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-6">
+          {/* Desktop Navigation - Optimized font sizes */}
+          <div className="hidden lg:flex items-center gap-4">
             <Link 
               href="/" 
               className="relative text-gray-700 hover:text-beige-500 transition-all duration-300 text-sm font-medium group transform hover:-translate-y-0.5"
@@ -78,11 +103,11 @@ export default function Header() {
             </Link>
           </div>
 
-          {/* CTA Button */}
+          {/* CTA Button - Optimized size */}
           <div className="hidden lg:block relative z-10">
             <Link 
               href="/contact"
-              className="inline-flex items-center justify-center px-6 py-2 bg-beige-400 text-white text-sm font-semibold rounded-md hover:bg-beige-500 transition-colors duration-200"
+              className="inline-flex items-center justify-center px-5 py-2 bg-beige-400 text-white text-sm font-semibold rounded-md hover:bg-beige-500 transition-colors duration-200"
             >
               Get Legal Consultation
             </Link>
@@ -95,7 +120,7 @@ export default function Header() {
             aria-label="Toggle mobile menu"
           >
             <svg 
-              className={`w-5 h-5 transition-all duration-300 ${isMobileMenuOpen ? 'rotate-180' : 'rotate-0'}`}
+              className={`w-4 h-4 transition-all duration-300 ${isMobileMenuOpen ? 'rotate-180' : 'rotate-0'}`}
               fill="none" 
               stroke="currentColor" 
               viewBox="0 0 24 24"
@@ -109,50 +134,50 @@ export default function Header() {
           </button>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* Mobile Navigation - Reduced font sizes */}
         <div className={`lg:hidden overflow-hidden transition-all duration-500 ease-out ${
           isMobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
         }`}>
-          <div className="pb-4 border-t border-beige-200 mt-4 pt-4">
-            <div className="flex flex-col gap-4 animate-in slide-in-from-top duration-300">
+          <div className="pb-3 border-t border-beige-200 mt-3 pt-3">
+            <div className="flex flex-col gap-3 animate-in slide-in-from-top duration-300">
               <Link 
                 href="/" 
-                className="text-gray-700 hover:text-beige-500 transition-colors text-sm font-medium"
+                className="text-gray-700 hover:text-beige-500 transition-colors text-xs font-medium"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Home
               </Link>
               <Link 
                 href="/about" 
-                className="text-gray-700 hover:text-beige-500 transition-colors text-sm font-medium"
+                className="text-gray-700 hover:text-beige-500 transition-colors text-xs font-medium"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 About Us
               </Link>
               <Link 
                 href="/practice-areas" 
-                className="text-gray-700 hover:text-beige-500 transition-colors text-sm font-medium"
+                className="text-gray-700 hover:text-beige-500 transition-colors text-xs font-medium"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Practice Areas
               </Link>
               <Link 
                 href="/sectors" 
-                className="text-gray-700 hover:text-beige-500 transition-colors text-sm font-medium"
+                className="text-gray-700 hover:text-beige-500 transition-colors text-xs font-medium"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Sectors
               </Link>
               <Link 
                 href="/learners-page" 
-                className="text-gray-700 hover:text-beige-500 transition-colors text-sm font-medium"
+                className="text-gray-700 hover:text-beige-500 transition-colors text-xs font-medium"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Learners Page
               </Link>
               <Link 
                 href="/contact" 
-                className="text-gray-700 hover:text-beige-500 transition-colors text-sm font-medium"
+                className="text-gray-700 hover:text-beige-500 transition-colors text-xs font-medium"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Contact Us
@@ -160,7 +185,7 @@ export default function Header() {
               <div onClick={() => setIsMobileMenuOpen(false)}>
                 <Link 
                   href="/contact"
-                  className="inline-flex items-center justify-center px-6 py-2 bg-beige-400 text-white text-sm font-semibold rounded-md hover:bg-beige-500 transition-colors duration-200 mt-2 w-full"
+                  className="inline-flex items-center justify-center px-4 py-1.5 bg-beige-400 text-white text-xs font-semibold rounded-md hover:bg-beige-500 transition-colors duration-200 mt-2 w-full"
                 >
                   Get Legal Consultation
                 </Link>
