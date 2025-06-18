@@ -198,10 +198,18 @@ const practiceAreas = [
         items: [
           'Due Diligence',
           'M&A Structuring and Strategy',
-          'M&A Agreements',
+          'Transaction Documentation',
+          'Regulatory Approvals',
+          'Post-Transaction Integration'
+        ]
+      },
+      {
+        title: 'Joint Ventures & Strategic Alliances',
+        items: [
           'Joint Venture Agreements',
-          'Strategic Alliances',
-          'Post-M&A Integration'
+          'Strategic Partnership Structuring',
+          'Technology Transfer Agreements',
+          'Distribution and Licensing Arrangements'
         ]
       }
     ]
@@ -210,101 +218,90 @@ const practiceAreas = [
     id: 'ip',
     icon: Copyright,
     title: 'Intellectual Property',
-    description: 'IP protection, licensing, enforcement, and portfolio management.',
+    description: 'IP protection, enforcement, and strategic advisory services.',
     categories: [
       {
         title: 'IP Services',
         items: [
-          'Trademark and Copyright Protection',
-          'IP Licensing and Monetization',
-          'Brand Protection and Enforcement',
-          'IP Portfolio Management'
+          'Trademark Registration and Protection',
+          'Copyright and Content Protection',
+          'Patent Advisory and Protection',
+          'IP Licensing and Commercialization',
+          'IP Enforcement and Litigation',
+          'Brand Protection Strategies'
         ]
       }
     ]
   },
   {
-    id: 'media',
+    id: 'tech',
     icon: Monitor,
-    title: 'Media, Technology, and Telecommunications',
-    description: 'Comprehensive media production, technology, and telecom legal services.',
+    title: 'Technology, Fintech & Digital Innovation',
+    description: 'Legal services for technology companies and digital innovation.',
     categories: [
       {
-        title: 'Pre-Production',
+        title: 'Technology Services',
         items: [
-          'Development Agreements',
-          'Financing Agreements',
-          'Talent and Crew Agreements',
-          'Location and Rights Agreements'
-        ]
-      },
-      {
-        title: 'Production & Post-Production',
-        items: [
-          'Production Agreements',
-          'Copyright and Trademarks',
-          'Third Party Production Agreements',
-          'Distribution and Licensing'
-        ]
-      },
-      {
-        title: 'Specialized Services',
-        items: [
-          'Standards and Practices Compliance',
-          'Satellite, Broadcasting & Digital Agreements',
-          'Music Agreements',
-          'Technology Contracts'
+          'Fintech Regulatory Compliance',
+          'Digital Product Development',
+          'API and Integration Agreements',
+          'Blockchain and Cryptocurrency Advisory',
+          'AI and Machine Learning Legal Framework'
         ]
       }
     ]
   },
   {
-    id: 'project',
+    id: 'regulatory',
     icon: Settings,
-    title: 'Project Management',
-    description: 'Legal and HR project management, contract lifecycle management.',
+    title: 'Regulatory Advisory & Government Relations',
+    description: 'Regulatory compliance and government relations services.',
     categories: [
       {
-        title: 'Management Services',
+        title: 'Regulatory Services',
         items: [
-          'Legal & HR Project Management',
-          'Contract Lifecycle Management',
-          'Data Management System',
-          'Software Customization Assistance'
+          'Regulatory Research and Analysis',
+          'Government Relations and Advocacy',
+          'Policy Development and Implementation',
+          'Regulatory Risk Assessment',
+          'Compliance Monitoring and Reporting'
         ]
       }
     ]
   },
   {
-    id: 'taxation',
+    id: 'tax',
     icon: Calculator,
-    title: 'Taxation',
-    description: 'Corporate tax planning, compliance, and dispute resolution.',
+    title: 'Tax Planning & Advisory',
+    description: 'Strategic tax planning and advisory services.',
     categories: [
       {
         title: 'Tax Services',
         items: [
           'Corporate Tax Planning',
-          'Tax Compliance',
-          'Tax Disputes and Litigation',
-          'Tax Structuring for M&A'
+          'Transaction Tax Advisory',
+          'International Tax Structuring',
+          'Tax Compliance and Reporting',
+          'Tax Dispute Resolution'
         ]
       }
     ]
   },
   {
-    id: 'emerging',
+    id: 'disputes',
     icon: Brain,
-    title: 'AI, Blockchain, Metaverse, NFT',
-    description: 'Cutting-edge legal services for emerging technologies.',
+    title: 'Dispute Resolution & Litigation',
+    description: 'Comprehensive dispute resolution and litigation services.',
     categories: [
       {
-        title: 'Emerging Tech',
+        title: 'Dispute Resolution',
         items: [
-          'Artificial Intelligence (AI) Agreements',
-          'Blockchain Regulation and Compliance',
-          'Metaverse Legal Framework',
-          'NFT Intellectual Property Protection'
+          'Commercial Litigation',
+          'Arbitration and Mediation',
+          'Contract Disputes',
+          'Employment Disputes',
+          'IP Disputes',
+          'Regulatory Enforcement'
         ]
       }
     ]
@@ -312,11 +309,14 @@ const practiceAreas = [
 ];
 
 const developingAreas = [
-  'Admiralty & Maritime',
-  'Aerospace & Defence', 
-  'Banking and Finance',
-  'Foreign Investment and Exchange Control',
-  'Healthcare & Lifesciences',
+  'Antitrust & Competition',
+  'Banking & Finance',
+  'Capital Markets',
+  'Construction & Infrastructure',
+  'Criminal Law',
+  'Environment & Climate Change',
+  'Family Law',
+  'Healthcare & Life Sciences',
   'Immigration',
   'Insurance',
   'Mining & Resources',
@@ -332,13 +332,28 @@ export default function PracticeAreasPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-beige-100 to-white py-20">
+    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       {/* Hero Section */}
+      <section className="pt-32 pb-16 bg-gradient-to-br from-red-50 to-white">
+        <div className="max-w-7xl mx-auto px-4 lg:px-8">
+          <div className="text-center">
+            <span className="inline-block px-4 py-2 bg-red-100 text-red-600 rounded-full text-sm font-medium mb-6">
+              Our Expertise
+            </span>
+            <h1 className="text-5xl lg:text-6xl font-bold text-red-600 mb-6">
+              Practice Areas
+              <div className="h-1 bg-red-600 w-32 mx-auto mt-4"></div>
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              We provide comprehensive legal services across multiple practice areas, delivering expert 
+              counsel tailored to your specific industry and business needs.
+            </p>
+          </div>
+        </div>
+      </section>
 
-
-
-      {/* Practice Areas */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 ">
+      {/* Expertise Areas */}
+      <section className="py px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -347,11 +362,7 @@ export default function PracticeAreasPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Practice Areas</h2>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-              Our core practice areas where we deliver comprehensive, specialized services 
-              backed by years of experience and deep industry knowledge.
-            </p>
+     
           </motion.div>
 
           <div className="grid lg:grid-cols-2 gap-8 auto-rows-max">
@@ -366,24 +377,27 @@ export default function PracticeAreasPage() {
               >
                 {/* Header */}
                 <div 
-                  className="p-6 cursor-pointer hover:bg-beige-50 transition-colors duration-200"
+                  className="p-6 cursor-pointer hover:bg-red-50 transition-colors duration-200"
                   onClick={() => toggleArea(area.id)}
                 >
                   <div className="flex items-center justify-between">
                     <div className="flex items-start">
-                      <div className="p-3 bg-beige-400 rounded-xl mr-4 flex-shrink-0">
+                      <div className="p-3 bg-red-600 rounded-xl mr-4 flex-shrink-0">
                         <area.icon className="w-6 h-6 text-white" />
                       </div>
                       <div className="flex-1">
-                        <h3 className="text-xl font-bold text-gray-900 mb-2">{area.title}</h3>
+                        <h3 className="text-xl font-bold text-red-600 mb-2">
+                          {area.title}
+                          <div className="h-0.5 bg-red-600 w-16 mt-1"></div>
+                        </h3>
                         <p className="text-gray-600 text-sm">{area.description}</p>
                       </div>
                     </div>
                     <div className="flex items-center ml-4">
                       {expandedArea === area.id ? (
-                        <ChevronDown className="w-6 h-6 text-gray-400" />
+                        <ChevronDown className="w-6 h-6 text-red-600" />
                       ) : (
-                        <ChevronRight className="w-6 h-6 text-gray-400" />
+                        <ChevronRight className="w-6 h-6 text-red-600" />
                       )}
                     </div>
                   </div>
@@ -401,16 +415,17 @@ export default function PracticeAreasPage() {
                     <div className="border-t border-gray-100 pt-6">
                       <div className="space-y-6">
                         {area.categories.map((category, catIndex) => (
-                          <div key={catIndex} className="bg-beige-50 p-4 rounded-xl">
-                            <h4 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
-                              <Award className="w-4 h-4 text-beige-500 mr-2" />
+                          <div key={catIndex} className="bg-red-50 p-4 rounded-xl">
+                            <h4 className="text-lg font-bold text-red-600 mb-3 flex items-center">
+                              <Award className="w-4 h-4 text-red-600 mr-2" />
                               {category.title}
+                              <div className="h-0.5 bg-red-600 w-12 ml-2 mt-0.5"></div>
                             </h4>
                             <ul className="space-y-2">
                               {category.items.map((item, itemIndex) => (
                                 <li key={itemIndex} className="flex items-start">
-                                  <div className="w-1.5 h-1.5 bg-beige-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                                  <span className="text-gray-700 text-xs leading-relaxed">{item}</span>
+                                  <div className="w-1.5 h-1.5 bg-red-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                  <span className="text-gray-700 text-sm leading-relaxed">{item}</span>
                                 </li>
                               ))}
                             </ul>
@@ -427,7 +442,7 @@ export default function PracticeAreasPage() {
       </section>
 
       {/* Developing Areas */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-beige-100 to-beige-50">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 to-white">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -436,8 +451,9 @@ export default function PracticeAreasPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-red-600 mb-6 border-b-4 border-red-600 pb-4 inline-block">
+            <h2 className="text-4xl md:text-5xl font-bold text-red-600 mb-6">
               Developing Areas
+              <div className="h-1 bg-red-600 w-24 mx-auto mt-4"></div>
             </h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto">
               Emerging practice areas where we are building our expertise 
@@ -460,8 +476,9 @@ export default function PracticeAreasPage() {
                     <TrendingUp className="w-5 h-5 text-red-600" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-red-600 border-b border-red-600 pb-1 inline-block">
+                    <h3 className="text-lg font-semibold text-red-600">
                       {area}
+                      <div className="h-0.5 bg-red-600 w-12 mt-1"></div>
                     </h3>
                   </div>
                 </div>
@@ -472,25 +489,27 @@ export default function PracticeAreasPage() {
       </section>
 
       {/* Call to Action */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-beige-100 to-beige-200">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-red-50 to-red-100">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className=""
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">Need Legal Expertise?</h2>
-            <p className="text-xl  mb-8 leading-relaxed">
+            <h2 className="text-4xl md:text-5xl font-bold text-red-600 mb-6">
+              Need Legal Expertise?
+              <div className="h-1 bg-red-600 w-24 mx-auto mt-4"></div>
+            </h2>
+            <p className="text-xl text-gray-700 mb-8 leading-relaxed">
               Whether you need assistance in our core practice areas or developing practice areas, 
               our experienced team is ready to provide comprehensive legal solutions tailored to your needs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-beige-600 font-bold px-8 py-4 rounded-lg hover:bg-gray-50 transition-colors duration-200 shadow-lg">
+              <button className="bg-red-600 text-white font-bold px-8 py-4 rounded-lg hover:bg-red-700 transition-colors duration-200 shadow-lg">
                 Schedule Consultation
               </button>
-              <button className="border-2 border-beige-200 bg-beige-200  font-bold px-8 py-4 rounded-lg hover:text-beige-600 transition-colors duration-200">
+              <button className="border-2 border-red-600 text-red-600 font-bold px-8 py-4 rounded-lg hover:bg-red-600 hover:text-white transition-colors duration-200">
                 View Our Services
               </button>
             </div>

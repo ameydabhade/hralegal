@@ -107,7 +107,7 @@ export default function Header() {
           <div className="hidden lg:block relative z-10">
             <Link 
               href="/contact"
-              className="inline-flex items-center justify-center px-5 py-2 bg-beige-400 text-white text-sm font-semibold rounded-md hover:bg-beige-500 transition-colors duration-200"
+              className="inline-flex items-center justify-center px-5 py-2 bg-red-600 text-white text-sm font-semibold rounded-md hover:bg-red-700 transition-colors duration-200"
             >
               Get Legal Consultation
             </Link>
@@ -185,7 +185,7 @@ export default function Header() {
               <div onClick={() => setIsMobileMenuOpen(false)}>
                 <Link 
                   href="/contact"
-                  className="inline-flex items-center justify-center px-4 py-1.5 bg-beige-400 text-white text-xs font-semibold rounded-md hover:bg-beige-500 transition-colors duration-200 mt-2 w-full"
+                  className="inline-flex items-center justify-center px-4 py-1.5 bg-red-600 text-white text-xs font-semibold rounded-md hover:bg-red-700 transition-colors duration-200 mt-2 w-full"
                 >
                   Get Legal Consultation
                 </Link>
