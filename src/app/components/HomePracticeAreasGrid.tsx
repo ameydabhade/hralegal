@@ -106,9 +106,7 @@ export default function HomePracticeAreasGrid() {
       <div className="max-w-7xl mx-auto px-4 lg:px-8">
         {/* Section Header with Red Theme */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center px-4 py-2 bg-red-100 border border-red-200 rounded-full mb-6">
-            <span className="text-sm font-medium text-red-600">Our Expertise</span>
-          </div>
+        
           <h2 className="text-4xl md:text-5xl font-bold text-red-600 mb-6 border-b-4 border-red-600 pb-4 inline-block">
             Practice Areas
           </h2>
@@ -120,9 +118,7 @@ export default function HomePracticeAreasGrid() {
 
         {/* Expertise Areas */}
         <div className="mb-16">
-          <h3 className="text-3xl font-bold text-red-600 mb-8 text-center border-b-2 border-red-600 pb-3 inline-block w-full">
-            Expertise Areas
-          </h3>
+         
           
           <div className="grid lg:grid-cols-2 gap-6 mb-12">
             {expertiseAreas.map((area, index) => (
