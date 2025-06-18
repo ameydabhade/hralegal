@@ -80,23 +80,8 @@ export default function AboutPage() {
                       Professional Background
                     </h4>
                     <div className="bg-red-50 p-6 rounded-xl border-l-4 border-red-600">
-                      <p className="text-gray-700 text-sm leading-relaxed mb-4">
-                        Rushi brings extensive in-house experience from leading global organizations:
-                      </p>
-                      <div className="grid grid-cols-2 gap-4">
-                        <div className="bg-white p-3 rounded-lg shadow-sm border border-red-200">
-                          <span className="text-red-600 font-semibold text-sm">Sony Pictures</span>
-                        </div>
-                        <div className="bg-white p-3 rounded-lg shadow-sm border border-red-200">
-                          <span className="text-red-600 font-semibold text-sm">Reliance Entertainment</span>
-                        </div>
-                        <div className="bg-white p-3 rounded-lg shadow-sm border border-red-200">
-                          <span className="text-red-600 font-semibold text-sm">Shemaroo Entertainment</span>
-                        </div>
-                        <div className="bg-white p-3 rounded-lg shadow-sm border border-red-200">
-                          <span className="text-red-600 font-semibold text-sm">Maddock Films</span>
-                        </div>
-                      </div>
+                    
+                
                     </div>
                   </div>
 
@@ -297,7 +282,7 @@ export default function AboutPage() {
             </p>
           </motion.div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 lg:gap-8">
             {[
               { icon: Shield, title: "Integrity", description: "Honesty and moral principles in all our actions" },
               { icon: HandHeart, title: "Trust", description: "Building reliable relationships with clients and colleagues" },
@@ -311,15 +296,16 @@ export default function AboutPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 text-center"
+                className="bg-white rounded-2xl p-6 lg:p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 text-center"
               >
-                <div className="p-4 bg-red-600 rounded-2xl inline-block mb-6">
-                  <value.icon className="w-8 h-8 text-white" />
+                <div className="p-3 bg-red-600 rounded-2xl inline-block mb-4">
+                  <value.icon className="w-6 h-6 lg:w-8 lg:h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-red-600 mb-4 border-b border-red-600 pb-1 inline-block">
+                <h3 className="text-lg lg:text-xl font-bold text-red-600 mb-3">
                   {value.title}
+                  <div className="h-0.5 bg-red-600 w-12 mx-auto mt-1"></div>
                 </h3>
-                <p className="text-gray-600 leading-relaxed">{value.description}</p>
+                <p className="text-gray-600 leading-relaxed text-sm lg:text-base">{value.description}</p>
               </motion.div>
             ))}
           </div>
