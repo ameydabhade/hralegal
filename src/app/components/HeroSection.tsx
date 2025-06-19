@@ -36,11 +36,11 @@ export default function HeroSection() {
               </div>
               
               <p className="text-base text-gray-800 leading-relaxed max-w-2xl">
-                HRA Legal is a professional law firm with specialized expertise across various legal disciplines, including Civil and Business Law, Intellectual Property Laws, Corporate Law, and Employment Laws.
+                HRA Legal is a professional law firm with specialized expertise across various legal disciplines, including Civil and Business Law, Intellectual Property Laws (with a niche focus on Media & Entertainment, Technology, and Sports), Corporate and Commercial Law, Company Secretarial and Corporate Governance, Employment and Labor Laws, Environment Law, Property Law, Taxation Law and other developing areas of law.
               </p>
               
               <p className="text-sm text-gray-700 leading-relaxed max-w-2xl">
-                Our seasoned lawyers provide personalized solutions with prompt, reliable and qualitative services that enable businesses to navigate legal complexities with confidence and clarity.
+                At HRA Legal, our seasoned and diligent lawyers provide personalized solutions to cater to the specific requirements of each client. We pride ourselves on delivering prompt, reliable and qualitative services that enables businesses to navigate the complexities of the law with confidence and clarity.
               </p>
             </div>
             
@@ -122,7 +122,7 @@ export default function HeroSection() {
         {/* Note for office photos */}
         <div className="text-center text-gray-600 text-sm mt-8 p-4 bg-gray-100 rounded-lg border-l-4 border-red-600">
           <p className="font-medium text-red-600 mb-1">Visual Enhancement Option</p>
-          <p>The visual section above can be enhanced with your office photos as watermark background, or we can use a professional legal environment image. Please provide office photos if you'd like to personalize this section.</p>
+          <p>The visual section above can be enhanced with your office photos as watermark background, or we can use a professional legal environment image. Please provide office photos  </p>
         </div>
       </div>
     </section>

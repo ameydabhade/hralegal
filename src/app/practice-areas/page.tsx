@@ -352,22 +352,7 @@ export default function PracticeAreasPage() {
       {/* Expertise Areas */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-red-600 mb-6">
-              Expertise Areas
-              <div className="h-1 bg-red-600 w-24 mx-auto mt-4"></div>
-            </h2>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-              Our core practice areas where we deliver comprehensive, specialized services 
-              backed by years of experience and deep industry knowledge.
-            </p>
-          </motion.div>
+ 
 
           <div className="grid lg:grid-cols-2 gap-8 auto-rows-max">
             {practiceAreas.map((area, index) => (

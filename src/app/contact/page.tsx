@@ -58,7 +58,7 @@ export default function ContactPage() {
                     <h3 className="text-lg font-bold text-red-600 mb-2 border-b border-red-600 pb-1 inline-block">
                       Phone Number
                     </h3>
-                    <p className="text-gray-700 text-sm">9999999999</p>
+                    <p className="text-gray-700 text-sm">9967382875</p>
                   </div>
                 </div>
 

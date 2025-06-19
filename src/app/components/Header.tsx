@@ -185,9 +185,10 @@ export default function Header() {
               <div onClick={() => setIsMobileMenuOpen(false)}>
                 <Link 
                   href="/contact"
-                  className="inline-flex items-center justify-center px-4 py-1.5 bg-red-600 text-white text-xs font-semibold rounded-md hover:bg-red-700 transition-colors duration-200 mt-2 w-full"
+                  className="text-red-600 hover:text-red-700 transition-colors text-xs font-medium relative w-full text-center block mt-2"
                 >
                   Get Legal Consultation
+                  <span className="absolute bottom-0 left-0 w-full h-0.5 bg-red-600"></span>
                 </Link>
               </div>
             </div>

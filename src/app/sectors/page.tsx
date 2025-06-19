@@ -15,7 +15,7 @@ export default function SectorsPage() {
     {
       icon: Cpu,
       title: "Technology, Media & Telecommunications",
-      description: "Technology sector legal services, telecom regulations, media convergence, and digital innovation support."
+      description: "Comprehensive legal services for technology, media convergence, and telecommunications including regulatory compliance and digital innovation support."
     },
     {
       icon: Building,

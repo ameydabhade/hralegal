@@ -2,89 +2,161 @@
 import { 
   ChevronDown,
   ChevronRight,
-  ArrowRight
+  ArrowRight,
+  FileText, 
+  Building, 
+  Shield, 
+  Globe, 
+  Database, 
+  Users, 
+  Home, 
+  Rocket, 
+  Handshake, 
+  Copyright, 
+  Monitor, 
+  Settings, 
+  Calculator, 
+  Brain,
+  Award,
+  TrendingUp
 } from 'lucide-react';
 import Link from 'next/link';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 
-// Practice Areas organized like CAM website
-const expertiseAreas = [
+// Featured Expertise Areas for Home Page (subset of main practice areas)
+const featuredExpertiseAreas = [
   {
-    id: 'corporate',
-    title: 'Corporate • Business • Commercial',
-    description: 'Comprehensive corporate legal services for businesses of all sizes.',
-    subAreas: [
-      'Mergers & Acquisitions',
-      'Corporate Governance', 
-      'Business Transactions',
-      'Commercial Agreements',
-      'Joint Ventures',
-      'Corporate Restructuring'
+    id: 'contracts',
+    icon: FileText,
+    title: 'Contracts, Compliances, and Advisory',
+    description: 'Comprehensive contract drafting, review, negotiation, and compliance advisory services.',
+    categories: [
+      {
+        title: 'Contract Drafting & Review',
+        items: [
+          'General Agreements (Partnership, Supply, Service, Employment)',
+          'Digital Agreements (Software Licenses, Cloud Services)',
+          'Technology and SaaS Agreements',
+          'E-Commerce Agreements (Terms & Conditions, Privacy Policies)'
+        ]
+      },
+      {
+        title: 'Compliances & Advisory',
+        items: [
+          'Privacy and Data Protection',
+          'Consumer Protection Compliance',
+          'E-Signature Legal Advisory',
+          'Regulatory Research for E-Commerce'
+        ]
+      }
     ]
   },
   {
-    id: 'ip',
-    title: 'Intellectual Property',
-    description: 'Protecting and monetizing your intellectual assets.',
-    subAreas: [
-      'Patent Law',
-      'Trademark Protection',
-      'Copyright Law',
-      'Trade Secrets',
-      'IP Licensing',
-      'IP Litigation'
+    id: 'corporate',
+    icon: Building,
+    title: 'Company Secretarial and Corporate Governance',
+    description: 'Corporate structure formation, governance, financing, and restructuring services.',
+    categories: [
+      {
+        title: 'Company Secretarial',
+        items: [
+          'Corporate Structure & Formation',
+          'Board Governance',
+          'Regulatory Compliances',
+          'Corporate Filings & Reporting'
+        ]
+      },
+      {
+        title: 'Corporate Financing & Restructuring',
+        items: [
+          'Investment Agreements',
+          'Debt & Refinancing',
+          'Insolvency and Bankruptcy',
+          'Corporate Reorganization'
+        ]
+      }
     ]
   },
   {
     id: 'employment',
-    title: 'Employment • Labour • Industrial Relations',
-    description: 'Complete employment law solutions for modern workplaces.',
-    subAreas: [
-      'Employment Contracts',
-      'Labor Disputes',
-      'Workplace Compliance',
-      'Industrial Relations',
-      'Employee Benefits',
-      'Workplace Safety'
+    icon: Users,
+    title: 'Employment, Labour & Industrial Relations',
+    description: 'Complete employment law services and workplace compliance.',
+    categories: [
+      {
+        title: 'Employment Services',
+        items: [
+          'Employment Contracts and Policies',
+          'Employee Benefits and Compensation',
+          'Labor Disputes',
+          'Workplace Safety and Compliance'
+        ]
+      }
     ]
   },
   {
-    id: 'contracts',
-    title: 'Contracts • Compliance • Advisory',
-    description: 'Contract drafting, review, and compliance advisory services.',
-    subAreas: [
-      'Contract Drafting',
-      'Contract Review & Negotiation',
-      'Regulatory Compliance',
-      'Legal Advisory',
-      'Risk Assessment',
-      'Policy Development'
+    id: 'ma',
+    icon: Handshake,
+    title: 'Mergers & Acquisitions, JVs, Strategic Alliances',
+    description: 'M&A transactions, joint ventures, and strategic partnerships.',
+    categories: [
+      {
+        title: 'M&A Services',
+        items: [
+          'Due Diligence',
+          'M&A Structuring and Strategy',
+          'Transaction Documentation',
+          'Regulatory Approvals'
+        ]
+      },
+      {
+        title: 'Joint Ventures & Strategic Alliances',
+        items: [
+          'Joint Venture Agreements',
+          'Strategic Partnership Structuring',
+          'Technology Transfer Agreements',
+          'Distribution and Licensing Arrangements'
+        ]
+      }
     ]
   }
 ];
 
-const developingAreas = [
+// Featured Developing Areas for Home Page
+const featuredDevelopingAreas = [
   {
     id: 'data',
-    title: 'Data Privacy • Cybersecurity',
-    description: 'Emerging data protection and cybersecurity legal services.',
-    subAreas: [
-      'Data Protection Compliance',
-      'Privacy Policies',
-      'Cybersecurity Framework',
-      'Cross-Border Data Transfers'
+    icon: Database,
+    title: 'Data Privacy, Protection, and Cybersecurity',
+    description: '',
+    categories: [
+      {
+        title: 'Data Protection',
+        items: [
+          'Data Privacy Compliance',
+          'Cross-Border Data Transfers',
+          'Third-Party Data Contracts',
+          'Privacy Policy Drafting'
+        ]
+      }
     ]
   },
   {
-    id: 'media',
-    title: 'Media • Technology • Entertainment',
-    description: 'Legal services for the digital and entertainment industry.',
-    subAreas: [
-      'Media Law',
-      'Technology Contracts',
-      'Entertainment Agreements',
-      'Digital Rights Management'
+    id: 'tech',
+    icon: Monitor,
+    title: 'Technology, Fintech & Digital Innovation',
+    description: '',
+    categories: [
+      {
+        title: 'Technology Services',
+        items: [
+          'Fintech Regulatory Compliance',
+          'Digital Product Development',
+          'API and Integration Agreements',
+          'Blockchain and Cryptocurrency Advisory'
+        ]
+      }
     ]
   }
 ];
@@ -102,15 +174,15 @@ export default function HomePracticeAreasGrid() {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-b from-beige-50 to-white">
+    <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
       <div className="max-w-7xl mx-auto px-4 lg:px-8">
         {/* Section Header with Red Theme */}
         <div className="text-center mb-16">
-        
-          <h2 className="text-4xl md:text-5xl font-bold text-red-600 mb-6 border-b-4 border-red-600 pb-4 inline-block">
+          <h2 className="text-3xl md:text-4xl font-bold text-red-600 mb-6">
             Practice Areas
+            <div className="h-1 bg-red-600 w-24 mx-auto mt-4"></div>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
             We provide comprehensive legal services across multiple practice areas, 
             delivering expert counsel tailored to your specific industry and business needs.
           </p>
@@ -118,10 +190,25 @@ export default function HomePracticeAreasGrid() {
 
         {/* Expertise Areas */}
         <div className="mb-16">
-         
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h3 className="text-2xl md:text-3xl font-bold text-red-600 mb-4">
+              Expertise Areas
+              <div className="h-0.5 bg-red-600 w-20 mx-auto mt-2"></div>
+            </h3>
+            <p className="text-base text-gray-600 max-w-2xl mx-auto">
+              Our core practice areas where we deliver comprehensive, specialized services 
+              backed by years of experience and deep industry knowledge.
+            </p>
+          </motion.div>
           
-          <div className="grid lg:grid-cols-2 gap-6 mb-12">
-            {expertiseAreas.map((area, index) => (
+          <div className="grid lg:grid-cols-2 gap-8 mb-12">
+            {featuredExpertiseAreas.map((area, index) => (
               <motion.div
                 key={area.id}
                 initial={{ opacity: 0, y: 50 }}
@@ -136,17 +223,21 @@ export default function HomePracticeAreasGrid() {
                   onClick={() => toggleExpertise(area.id)}
                 >
                   <div className="flex items-center justify-between">
-                    <div className="flex-1">
-                      <h4 className="text-xl font-bold text-red-600 mb-2 border-b-2 border-red-600 pb-1 inline-block">
-                        {area.title}
-                      </h4>
-                      <p className="text-gray-600 text-sm mt-3">{area.description}</p>
+                    <div className="flex items-start">
+                      <div className="w-3 h-3 bg-red-600 rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                      <div className="flex-1">
+                        <h4 className="text-lg font-bold text-red-600 mb-2">
+                          {area.title}
+                          <div className="h-0.5 bg-red-600 w-16 mt-1"></div>
+                        </h4>
+                        <p className="text-gray-600 text-sm">{area.description}</p>
+                      </div>
                     </div>
                     <div className="flex items-center ml-4">
                       {expandedExpertise === area.id ? (
-                        <ChevronDown className="w-6 h-6 text-gray-400" />
+                        <ChevronDown className="w-5 h-5 text-red-600" />
                       ) : (
-                        <ChevronRight className="w-6 h-6 text-gray-400" />
+                        <ChevronRight className="w-5 h-5 text-red-600" />
                       )}
                     </div>
                   </div>
@@ -161,16 +252,24 @@ export default function HomePracticeAreasGrid() {
                     transition={{ duration: 0.3 }}
                     className="px-6 pb-6"
                   >
-                    <div className="border-t border-gray-100 pt-4">
-                      <div className="bg-red-50 p-4 rounded-xl">
-                        <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                          {area.subAreas.map((subArea, subIndex) => (
-                            <li key={subIndex} className="flex items-start">
-                              <span className="text-red-600 mr-3 text-sm font-bold">•</span>
-                              <span className="text-gray-700 text-sm leading-relaxed">{subArea}</span>
-                            </li>
-                          ))}
-                        </ul>
+                    <div className="border-t border-gray-100 pt-6">
+                      <div className="space-y-6">
+                        {area.categories.map((category, catIndex) => (
+                          <div key={catIndex} className="bg-red-50 p-4 rounded-xl">
+                            <h4 className="text-base font-bold text-red-600 mb-3">
+                              • {category.title}
+                              <div className="h-0.5 bg-red-600 w-12 mt-1"></div>
+                            </h4>
+                            <ul className="space-y-2">
+                              {category.items.map((item, itemIndex) => (
+                                <li key={itemIndex} className="flex items-start">
+                                  <div className="w-1 h-1 bg-red-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                  <span className="text-gray-700 text-sm leading-relaxed">{item}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        ))}
                       </div>
                     </div>
                   </motion.div>
@@ -182,12 +281,25 @@ export default function HomePracticeAreasGrid() {
 
         {/* Developing Areas */}
         <div className="mb-16">
-          <h3 className="text-3xl font-bold text-red-600 mb-8 text-center border-b-2 border-red-600 pb-3 inline-block w-full">
-            Developing Areas
-          </h3>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h3 className="text-2xl md:text-3xl font-bold text-red-600 mb-4">
+              Developing Areas
+              <div className="h-0.5 bg-red-600 w-20 mx-auto mt-2"></div>
+            </h3>
+            <p className="text-base text-gray-600 max-w-2xl mx-auto">
+              Emerging practice areas where we are building our expertise 
+              to meet evolving market demands and client needs.
+            </p>
+          </motion.div>
           
-          <div className="grid lg:grid-cols-2 gap-6 mb-12">
-            {developingAreas.map((area, index) => (
+          <div className="grid lg:grid-cols-2 gap-8 mb-12">
+            {featuredDevelopingAreas.map((area, index) => (
               <motion.div
                 key={area.id}
                 initial={{ opacity: 0, y: 50 }}
@@ -202,17 +314,21 @@ export default function HomePracticeAreasGrid() {
                   onClick={() => toggleDeveloping(area.id)}
                 >
                   <div className="flex items-center justify-between">
-                    <div className="flex-1">
-                      <h4 className="text-xl font-bold text-red-600 mb-2 border-b-2 border-red-600 pb-1 inline-block">
-                        {area.title}
-                      </h4>
-                      <p className="text-gray-600 text-sm mt-3">{area.description}</p>
+                    <div className="flex items-start">
+                      <div className="w-3 h-3 bg-red-600 rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                      <div className="flex-1">
+                        <h4 className="text-lg font-bold text-red-600 mb-2">
+                          {area.title}
+                          <div className="h-0.5 bg-red-600 w-16 mt-1"></div>
+                        </h4>
+                        <p className="text-gray-600 text-sm">{area.description}</p>
+                      </div>
                     </div>
                     <div className="flex items-center ml-4">
                       {expandedDeveloping === area.id ? (
-                        <ChevronDown className="w-6 h-6 text-gray-400" />
+                        <ChevronDown className="w-5 h-5 text-red-600" />
                       ) : (
-                        <ChevronRight className="w-6 h-6 text-gray-400" />
+                        <ChevronRight className="w-5 h-5 text-red-600" />
                       )}
                     </div>
                   </div>
@@ -227,16 +343,24 @@ export default function HomePracticeAreasGrid() {
                     transition={{ duration: 0.3 }}
                     className="px-6 pb-6"
                   >
-                    <div className="border-t border-gray-100 pt-4">
-                      <div className="bg-red-50 p-4 rounded-xl">
-                        <ul className="space-y-2">
-                          {area.subAreas.map((subArea, subIndex) => (
-                            <li key={subIndex} className="flex items-start">
-                              <span className="text-red-600 mr-3 text-sm font-bold">•</span>
-                              <span className="text-gray-700 text-sm leading-relaxed">{subArea}</span>
-                            </li>
-                          ))}
-                        </ul>
+                    <div className="border-t border-gray-100 pt-6">
+                      <div className="space-y-6">
+                        {area.categories.map((category, catIndex) => (
+                          <div key={catIndex} className="bg-red-50 p-4 rounded-xl">
+                            <h4 className="text-base font-bold text-red-600 mb-3">
+                              • {category.title}
+                              <div className="h-0.5 bg-red-600 w-12 mt-1"></div>
+                            </h4>
+                            <ul className="space-y-2">
+                              {category.items.map((item, itemIndex) => (
+                                <li key={itemIndex} className="flex items-start">
+                                  <div className="w-1 h-1 bg-red-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                  <span className="text-gray-700 text-sm leading-relaxed">{item}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        ))}
                       </div>
                     </div>
                   </motion.div>
@@ -248,25 +372,26 @@ export default function HomePracticeAreasGrid() {
 
         {/* Call to Action */}
         <div className="text-center">
-          <div className="bg-gradient-to-r from-beige-100 to-beige-200 rounded-2xl p-8 border border-beige-300">
-            <h3 className="text-2xl font-bold text-red-600 mb-4 border-b-2 border-red-600 pb-2 inline-block">
+          <div className="bg-gradient-to-r from-red-50 to-red-100 rounded-2xl p-8 border border-red-200">
+            <h3 className="text-xl md:text-2xl font-bold text-red-600 mb-4">
               Explore Our Complete Legal Services
+              <div className="h-0.5 bg-red-600 w-20 mx-auto mt-2"></div>
             </h3>
-            <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+            <p className="text-gray-600 mb-6 max-w-2xl mx-auto text-sm">
               From established expertise areas to developing specializations, we offer comprehensive legal solutions 
               across all major practice areas to support your business needs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 href="/practice-areas" 
-                className="inline-flex items-center px-8 py-3 bg-red-600 text-white font-semibold rounded-lg hover:bg-red-700 transition-colors duration-200"
+                className="inline-flex items-center px-6 py-2 bg-red-600 text-white font-semibold rounded-lg hover:bg-red-700 transition-colors duration-200 text-sm"
               >
                 View All Practice Areas
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <ArrowRight className="w-4 h-4 ml-2" />
               </Link>
               <Link 
                 href="/contact" 
-                className="inline-flex items-center px-8 py-3 border-2 border-red-600 text-red-600 font-semibold rounded-lg hover:bg-red-600 hover:text-white transition-colors duration-200"
+                className="inline-flex items-center px-6 py-2 border-2 border-red-600 text-red-600 font-semibold rounded-lg hover:bg-red-600 hover:text-white transition-colors duration-200 text-sm"
               >
                 Schedule Consultation
               </Link>

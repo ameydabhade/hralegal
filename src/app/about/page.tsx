@@ -80,8 +80,22 @@ export default function AboutPage() {
                       Professional Background
                     </h4>
                     <div className="bg-red-50 p-6 rounded-xl border-l-4 border-red-600">
-                    
-                
+                      <p className="text-gray-700 text-sm leading-relaxed mb-4">
+                        Rushi has an extensive experience of 15+ years as an in-house Counsel - Legal, Corporate Affairs and Business Affairs in Media & Entertainment sector, and has worked with global and multinational companies including:
+                      </p>
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-2 mb-4">
+                        {[
+                          
+                        ].map((company, index) => (
+                          <div key={index} className="flex items-center text-sm">
+                            <div className="w-1.5 h-1.5 bg-red-600 rounded-full mr-2"></div>
+                            <span className="text-gray-700">{company}</span>
+                          </div>
+                        ))}
+                      </div>
+                      <p className="text-gray-700 text-sm leading-relaxed">
+                        With her good educational foundation and enriching experience in Legal, Corporate Affairs and Business Affairs, she is adept in structuring, negotiating and executing complex agreements for multifarious businesses, advising on corporate, commercial and intellectual property matters, standard & practices/content regulation, setting up legal processes/systems/standard operating procedures and leading corporate matters including mergers and acquisitions.
+                      </p>
                     </div>
                   </div>
 
@@ -122,12 +136,17 @@ export default function AboutPage() {
                       <Trophy className="w-5 h-5 text-red-600 mr-2" />
                       Core Strengths
                     </h4>
-                    <div className="grid grid-cols-2 gap-3">
-                      {['Strategic Leadership', 'Complex Negotiations', 'Analytical Approach', 'Win-Win Solutions'].map((skill, index) => (
-                        <div key={index} className="bg-red-50 p-3 rounded-lg text-center border border-red-200">
-                          <span className="text-red-600 text-sm font-medium">{skill}</span>
-                        </div>
-                      ))}
+                    <div className="space-y-3">
+                      <p className="text-gray-700 text-sm leading-relaxed mb-4">
+                        Core skills that define her includes a sharp leadership mindset, prompt decision making, strong analytical and meticulous approach, proficiency to provide strategic and prolific suggestions, and competence to provide balanced solutions for a win-win closure.
+                      </p>
+                      <div className="grid grid-cols-2 gap-3">
+                        {['Sharp Leadership Mindset', 'Prompt Decision Making', 'Strong Analytical Approach', 'Strategic Solutions', 'Meticulous Approach', 'Win-Win Closure'].map((skill, index) => (
+                          <div key={index} className="bg-red-50 p-3 rounded-lg text-center border border-red-200">
+                            <span className="text-red-600 text-sm font-medium">{skill}</span>
+                          </div>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 </div>

@@ -31,9 +31,12 @@ export default function PrivacyPolicyPage() {
           <div className="bg-white rounded-lg shadow-lg border border-gray-100 p-8 md:p-12">
             
             <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed space-y-6">
-              <p>
-                <strong>1.</strong> HRA Legal (&quot;HRA Legal&quot;) is committed to safeguarding the privacy of any person who accesses and uses the website (&quot;User&quot;/ &quot;You&quot;) www.hralegal.com (&quot;Website&quot;) that is owned and operated by HRA Legal. In this privacy policy, use of the terms &quot;we&quot;, &quot;us&quot; and &quot;our&quot; refers to HRA Legal, and its directors, partners, affiliates, subsidiaries, group companies etc.
-              </p>
+              <div>
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">1. Introduction</h2>
+                <p>
+                  HRA Legal (&quot;HRA Legal&quot;) is committed to safeguarding the privacy of any person who accesses and uses the website (&quot;User&quot;/ &quot;You&quot;) www.hralegal.com (&quot;Website&quot;) that is owned and operated by HRA Legal. In this privacy policy, use of the terms &quot;we&quot;, &quot;us&quot; and &quot;our&quot; refers to HRA Legal, and its directors, partners, affiliates, subsidiaries, group companies etc.
+                </p>
+              </div>
 
               <div>
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">2. Application</h2>
@@ -91,7 +94,7 @@ export default function PrivacyPolicyPage() {
                   </li>
                 </ul>
                 <p className="mt-4">
-                  If You would like us to delete any Personal Data or information provided by You, You may write to us at <a href="mailto:legal@hralegal.com" className="text-beige-600 hover:text-beige-700 font-semibold">legal@hralegal.com</a>. You may further choose not to provide us with such Personal Data or withdraw your consent at any time. Notwithstanding anything contained in this privacy policy or elsewhere, HRA Legal shall not be held responsible for any loss, damage or misuse of the Personal Data or Usage Information.
+                  If You would like us to delete any Personal Data or information provided by You, You may write to us at <a href="mailto:info@hralegal.com" className="text-beige-600 hover:text-beige-700 font-semibold">info@hralegal.com</a>. You may further choose not to provide us with such Personal Data or withdraw your consent at any time. Notwithstanding anything contained in this privacy policy or elsewhere, HRA Legal shall not be held responsible for any loss, damage or misuse of the Personal Data or Usage Information.
                 </p>
               </div>
 
@@ -155,7 +158,7 @@ export default function PrivacyPolicyPage() {
                   <strong>e. Amendment:</strong> You also have right to request us to update, amend, correct, complete or delete your Personal Data retained by us through email.
                 </p>
                 <p>
-                  <strong>f. Contact:</strong> You may exercise your rights under this section in relation to your Personal Data by writing to us at <a href="mailto:legal@hralegal.com" className="text-beige-600 hover:text-beige-700 font-semibold">legal@hralegal.com</a>.
+                  <strong>f. Contact:</strong> You may exercise your rights under this section in relation to your Personal Data by writing to us at <a href="mailto:info@hralegal.com" className="text-beige-600 hover:text-beige-700 font-semibold">info@hralegal.com</a>.
                 </p>
               </div>
 
@@ -176,7 +179,7 @@ export default function PrivacyPolicyPage() {
               <div>
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">11. Grievances</h2>
                 <p>
-                  If you have grievances or concerns about this policy, You can reach out to us at <a href="mailto:legal@hralegal.com" className="text-beige-600 hover:text-beige-700 font-semibold">legal@hralegal.com</a>
+                  If you have grievances or concerns about this policy, You can reach out to us at <a href="mailto:info@hralegal.com" className="text-beige-600 hover:text-beige-700 font-semibold">info@hralegal.com</a>
                 </p>
               </div>
 

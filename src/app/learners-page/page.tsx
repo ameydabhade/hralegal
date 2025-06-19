@@ -96,7 +96,7 @@ export default function KnowledgeCentrePage() {
               Learners Page
             </h1>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-              Stay informed with the latest legal insights and industry updates.
+              Latest legal insights and industry updates.
             </p>
           </div>
 
