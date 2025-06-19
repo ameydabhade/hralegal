@@ -1,245 +1,280 @@
-import { Building, ShoppingCart, Zap, GraduationCap, Package, Globe, Building2, Shield, Film, Pill, BookOpen, Home, Cpu, Shirt } from 'lucide-react';
+'use client';
 
-export const metadata = {
-  title: 'Sectors We Serve - HRA Legal',
-  description: 'HRA Legal provides specialized legal services across diverse sectors including Banking, E-Commerce, Media & Entertainment, and more.',
-}
+import { motion } from 'framer-motion';
+
+const sectorGroups = [
+  {
+    title: 'Traditional Industries',
+    color: 'blue',
+    underlineColor: 'bg-blue-500',
+    textColor: 'text-blue-600',
+    items: [
+      'Banking & Financial Services',
+      'Insurance & Risk Management',
+      'Real Estate & Construction',
+      'Infrastructure Development',
+      'Energy & Power Distribution',
+      'Textiles & Manufacturing',
+      'Pharmaceuticals & Healthcare',
+      'Publishing & Print Media'
+    ]
+  },
+  {
+    title: 'Digital & Technology',
+    color: 'purple',
+    underlineColor: 'bg-purple-500',
+    textColor: 'text-purple-600',
+    items: [
+      'Technology & Telecommunications',
+      'E-Commerce & Digital Platforms',
+      'Internet & Online Services',
+      'Software & Tech Startups',
+      'Fintech & Digital Banking',
+      'EdTech & E-Learning',
+      'Digital Media & Streaming',
+      'Cybersecurity & Data Privacy'
+    ]
+  },
+  {
+    title: 'Media & Entertainment',
+    color: 'orange',
+    underlineColor: 'bg-orange-500',
+    textColor: 'text-orange-600',
+    items: [
+      'Film & Television Production',
+      'Theatre & Live Entertainment',
+      'Music & Recording Industry',
+      'Satellite & Broadcasting',
+      'Digital Content Creation',
+      'OTT & Streaming Platforms',
+      'Gaming & Interactive Media',
+      'Content Licensing & Distribution'
+    ]
+  },
+  {
+    title: 'Consumer & Retail',
+    color: 'green',
+    underlineColor: 'bg-green-500',
+    textColor: 'text-green-600',
+    items: [
+      'FMCG & Consumer Goods',
+      'Retail & Distribution',
+      'Food & Beverage',
+      'Fashion & Lifestyle',
+      'Automotive & Transportation',
+      'Travel & Hospitality',
+      'Sports & Recreation',
+      'Consumer Electronics'
+    ]
+  }
+];
+
+const emergingSectors = [
+  'Renewable Energy & Clean Tech',
+  'Artificial Intelligence & Machine Learning',
+  'Blockchain & Cryptocurrency',
+  'Biotechnology & Life Sciences',
+  'Space Technology & Aerospace',
+  'Electric Vehicles & Mobility',
+  'Sustainable Agriculture & FoodTech',
+  'Virtual Reality & Metaverse',
+  'Climate Technology & ESG',
+  'Quantum Computing',
+  'Robotics & Automation'
+];
 
 export default function SectorsPage() {
-  const sectors = [
-    {
-      icon: Film,
-      title: "Media & Entertainment",
-      description: "Comprehensive entertainment industry expertise including productions, theatres, satellite, digital and music services."
-    },
-    {
-      icon: Cpu,
-      title: "Technology & Telecommunications",
-      description: "Technology sector legal services, telecom regulations, and digital innovation support."
-    },
-    {
-      icon: Building,
-      title: "Banking",
-      description: "Comprehensive legal services for banking institutions, financial compliance, and regulatory matters."
-    },
-    {
-      icon: ShoppingCart,
-      title: "E-Commerce & Retail",
-      description: "Digital commerce legal support, consumer protection compliance, and retail regulations."
-    },
-    {
-      icon: Zap,
-      title: "Energy",
-      description: "Legal expertise in energy sector regulations, renewable energy projects, and power distribution."
-    },
-    {
-      icon: GraduationCap,
-      title: "Education & Learning",
-      description: "Educational institution support, EdTech compliance, and academic legal frameworks."
-    },
-    {
-      icon: Package,
-      title: "FMCG's",
-      description: "Fast-moving consumer goods legal services, product compliance, and distribution agreements."
-    },
-    {
-      icon: Globe,
-      title: "Internet",
-      description: "Digital platform legal services, online business regulations, and internet compliance."
-    },
-    {
-      icon: Building2,
-      title: "Infrastructure",
-      description: "Infrastructure project legal support, construction contracts, and development regulations."
-    },
-    {
-      icon: Shield,
-      title: "Insurance",
-      description: "Insurance sector legal services, policy compliance, and regulatory frameworks."
-    },
-    {
-      icon: Pill,
-      title: "Pharmaceuticals, Healthcare & Life Sciences",
-      description: "Healthcare legal services, pharmaceutical compliance, and life sciences regulations."
-    },
-    {
-      icon: BookOpen,
-      title: "Publishing",
-      description: "Publishing industry legal support, content rights, and intellectual property management."
-    },
-    {
-      icon: Home,
-      title: "Real Estate",
-      description: "Property legal services, real estate transactions, and development project support."
-    },
-    {
-      icon: Shirt,
-      title: "Textiles",
-      description: "Textile industry legal services, manufacturing compliance, and trade regulations."
-    }
-  ];
-
   return (
-    <div className="min-h-screen bg-gradient-to-b from-beige-100 to-white py-20">
+    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       {/* Hero Section */}
-      <section className="pt-32 pb-16">
+      <section className="pt-32 pb-16 bg-gradient-to-br from-red-50 to-white">
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl lg:text-6xl font-bold text-red-600 mb-6 border-b-4 border-red-600 pb-4 inline-block">
+          <div className="text-center">
+            <h1 className="text-5xl lg:text-6xl font-bold text-red-600 mb-6">
               Sectors We Serve
+              <div className="h-1 bg-red-600 w-32 mx-auto mt-4"></div>
             </h1>
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-              Leveraging sector-specific expertise to provide tailored legal solutions across diverse industries and business environments.
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              Leveraging sector-specific expertise to provide tailored legal solutions across 
+              diverse industries and evolving business environments.
             </p>
           </div>
         </div>
       </section>
 
       {/* Sectors Grid */}
-      <section id="sectors" className="pb-16">
-        <div className="max-w-7xl mx-auto px-4 lg:px-8">
-          <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
-            {sectors.map((sector, index) => {
-              const IconComponent = sector.icon;
-              return (
-                <div key={index} className="bg-white rounded-lg shadow-lg border border-gray-100 p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                  <div className="flex flex-col items-center text-center">
-                    <div className="w-20 h-20 bg-red-100 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-red-200 transition-colors duration-300">
-                      <IconComponent className="w-10 h-10 text-red-600" />
-                    </div>
-                    <h3 className="text-xl font-bold text-red-600 mb-4 border-b border-red-600 pb-1 inline-block">
-                      {sector.title}
-                    </h3>
-                    <p className="text-gray-700 leading-relaxed">{sector.description}</p>
-                  </div>
+      <section id="sectors" className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-12">
+            {sectorGroups.map((group, index) => (
+              <motion.div
+                key={group.title}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="space-y-6"
+              >
+                {/* Group Header */}
+                <div className="mb-8">
+                  <h2 className={`text-2xl font-bold ${group.textColor} mb-2`}>
+                    {group.title}
+                  </h2>
+                  <div className={`h-1 w-24 ${group.underlineColor}`}></div>
                 </div>
-              );
-            })}
+
+                {/* Sector Items */}
+                <div className="space-y-3">
+                  {group.items.map((item, itemIndex) => (
+                    <motion.div
+                      key={itemIndex}
+                      initial={{ opacity: 0, x: -20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.4, delay: (index * 0.1) + (itemIndex * 0.05) }}
+                      viewport={{ once: true }}
+                      className="flex items-start group cursor-pointer"
+                    >
+                      <div className="w-2 h-2 bg-gray-400 rounded-full mt-2 mr-3 flex-shrink-0 group-hover:bg-red-500 transition-colors"></div>
+                      <span className="text-gray-700 text-sm leading-relaxed hover:text-red-600 transition-colors">
+                        {item}
+                      </span>
+                    </motion.div>
+                  ))}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Emerging Sectors */}
+      <section id="emerging" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 to-white">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-red-600 mb-6">
+              Emerging Sectors
+              <div className="h-1 bg-red-600 w-24 mx-auto mt-4"></div>
+            </h2>
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+              Next-generation industries where we are building specialized expertise 
+              to support innovative businesses and future market leaders.
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {emergingSectors.map((sector, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-white p-6 rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition-all duration-300 hover:border-red-200"
+              >
+                <div className="flex items-center">
+                  <div className="w-3 h-3 bg-red-500 rounded-full mr-3"></div>
+                  <h3 className="text-lg font-semibold text-gray-700 hover:text-red-600 transition-colors">
+                    {sector}
+                  </h3>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Featured Sector Highlight - Media & Entertainment */}
-      <section id="featured" className="bg-gradient-to-r from-red-50 to-red-100 py-16">
-        <div className="max-w-7xl mx-auto px-4 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-red-600 mb-6 border-b-2 border-red-600 pb-2 inline-block">
-              Featured Sector: Media & Entertainment
+      <section id="featured" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-red-50 to-red-100">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-red-600 mb-6">
+              Featured Expertise
+              <div className="h-1 bg-red-600 w-24 mx-auto mt-4"></div>
             </h2>
-            <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-              With deep expertise and extensive experience in the Media & Entertainment sector, we provide comprehensive legal services across all aspects of content creation and distribution.
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+              Our deep expertise in Media & Entertainment showcases our commitment to 
+              understanding complex industry dynamics and delivering specialized solutions.
             </p>
-          </div>
+          </motion.div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-white rounded-lg shadow-lg p-6 text-center">
-              <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Film className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-lg font-bold text-red-600 mb-2 border-b border-red-600 pb-1 inline-block">
-                Productions
-              </h3>
-              <p className="text-gray-600 text-sm">Pre-production, production, and post-production legal services</p>
-            </div>
-            
-            <div className="bg-white rounded-lg shadow-lg p-6 text-center">
-              <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Building className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-lg font-bold text-red-600 mb-2 border-b border-red-600 pb-1 inline-block">
-                Theatres
-              </h3>
-              <p className="text-gray-600 text-sm">Theatrical distribution and exhibition agreements</p>
-            </div>
-            
-            <div className="bg-white rounded-lg shadow-lg p-6 text-center">
-              <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Globe className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-lg font-bold text-red-600 mb-2 border-b border-red-600 pb-1 inline-block">
-                Satellite & Digital
-              </h3>
-              <p className="text-gray-600 text-sm">Broadcasting rights and digital platform agreements</p>
-            </div>
-            
-            <div className="bg-white rounded-lg shadow-lg p-6 text-center">
-              <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Zap className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-lg font-bold text-red-600 mb-2 border-b border-red-600 pb-1 inline-block">
-                Music
-              </h3>
-              <p className="text-gray-600 text-sm">Music rights, licensing, and synchronization agreements</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Experience and Expertise */}
-      <section id="expertise" className="py-16">
-        <div className="max-w-6xl mx-auto px-4 lg:px-8">
-          <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-red-600 mb-6 border-b-2 border-red-600 pb-2 inline-block">
-                Cross-Sector Expertise
-              </h2>
-              <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-                Our comprehensive understanding across multiple sectors enables us to provide integrated legal solutions that address the complex, multi-industry challenges that modern businesses face.
-              </p>
-            </div>
-            
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-red-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <Shield className="w-8 h-8 text-red-600" />
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              {
+                title: 'Productions',
+                description: 'Pre-production, production, and post-production legal services'
+              },
+              {
+                title: 'Theatres',
+                description: 'Theatrical distribution and exhibition agreements'
+              },
+              {
+                title: 'Satellite & Digital',
+                description: 'Broadcasting rights and digital platform agreements'
+              },
+              {
+                title: 'Music',
+                description: 'Music rights, licensing, and synchronization agreements'
+              }
+            ].map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-white p-6 rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition-all duration-300 hover:border-red-200"
+              >
+                <div className="flex items-center mb-3">
+                  <div className="w-3 h-3 bg-red-500 rounded-full mr-3"></div>
+                  <h3 className="text-lg font-semibold text-red-600">
+                    {item.title}
+                  </h3>
                 </div>
-                <h3 className="text-xl font-bold text-red-600 mb-3 border-b border-red-600 pb-1 inline-block">
-                  Regulatory Compliance
-                </h3>
-                <p className="text-gray-600">Navigating complex regulatory frameworks across all sectors</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="w-16 h-16 bg-red-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <Building className="w-8 h-8 text-red-600" />
-                </div>
-                <h3 className="text-xl font-bold text-red-600 mb-3 border-b border-red-600 pb-1 inline-block">
-                  Corporate Solutions
-                </h3>
-                <p className="text-gray-600">Tailored corporate legal strategies for sector-specific needs</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="w-16 h-16 bg-red-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <Globe className="w-8 h-8 text-red-600" />
-                </div>
-                <h3 className="text-xl font-bold text-red-600 mb-3 border-b border-red-600 pb-1 inline-block">
-                  Global Perspective
-                </h3>
-                <p className="text-gray-600">International experience across multiple jurisdictions and markets</p>
-              </div>
-            </div>
+                <p className="text-gray-600 text-sm leading-relaxed">{item.description}</p>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Call to Action */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-red-100 to-red-200">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-red-50 to-red-100">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-red-600 mb-6 border-b-4 border-red-600 pb-4 inline-block">
-            Need Sector-Specific Legal Expertise?
-          </h2>
-          <p className="text-xl text-gray-700 mb-8 leading-relaxed">
-            Our industry-focused approach ensures that you receive legal guidance that understands the unique challenges and opportunities within your sector.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-red-600 text-white font-bold px-8 py-4 rounded-lg hover:bg-red-700 transition-colors duration-200 shadow-lg">
-              Schedule Consultation
-            </button>
-            <button className="border-2 border-red-600 text-red-600 font-bold px-8 py-4 rounded-lg hover:bg-red-600 hover:text-white transition-colors duration-200">
-              Explore Our Services
-            </button>
-          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-red-600 mb-6">
+              Need Sector-Specific Expertise?
+              <div className="h-1 bg-red-600 w-24 mx-auto mt-4"></div>
+            </h2>
+            <p className="text-xl text-gray-700 mb-8 leading-relaxed">
+              Our industry-focused approach ensures that you receive legal guidance that understands 
+              the unique challenges and opportunities within your sector.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-red-600 text-white font-bold px-8 py-4 rounded-lg hover:bg-red-700 transition-colors duration-200 shadow-lg">
+                Schedule Consultation
+              </button>
+              <button className="border-2 border-red-600 text-red-600 font-bold px-8 py-4 rounded-lg hover:bg-red-600 hover:text-white transition-colors duration-200">
+                Explore Our Services
+              </button>
+            </div>
+          </motion.div>
         </div>
       </section>
     </div>

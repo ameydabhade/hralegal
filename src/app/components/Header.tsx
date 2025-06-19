@@ -83,6 +83,73 @@ const practiceAreaGroups = [
   }
 ];
 
+const sectorGroups = [
+  {
+    title: 'Traditional Industries',
+    color: 'blue',
+    underlineColor: 'bg-blue-500',
+    textColor: 'text-blue-600',
+    items: [
+      'Banking & Financial Services',
+      'Insurance & Risk Management',
+      'Real Estate & Construction',
+      'Infrastructure Development',
+      'Energy & Power Distribution',
+      'Textiles & Manufacturing',
+      'Pharmaceuticals & Healthcare',
+      'Publishing & Print Media'
+    ]
+  },
+  {
+    title: 'Digital & Technology',
+    color: 'purple',
+    underlineColor: 'bg-purple-500',
+    textColor: 'text-purple-600',
+    items: [
+      'Technology & Telecommunications',
+      'E-Commerce & Digital Platforms',
+      'Internet & Online Services',
+      'Software & Tech Startups',
+      'Fintech & Digital Banking',
+      'EdTech & E-Learning',
+      'Digital Media & Streaming',
+      'Cybersecurity & Data Privacy'
+    ]
+  },
+  {
+    title: 'Media & Entertainment',
+    color: 'orange',
+    underlineColor: 'bg-orange-500',
+    textColor: 'text-orange-600',
+    items: [
+      'Film & Television Production',
+      'Theatre & Live Entertainment',
+      'Music & Recording Industry',
+      'Satellite & Broadcasting',
+      'Digital Content Creation',
+      'OTT & Streaming Platforms',
+      'Gaming & Interactive Media',
+      'Content Licensing & Distribution'
+    ]
+  },
+  {
+    title: 'Consumer & Retail',
+    color: 'green',
+    underlineColor: 'bg-green-500',
+    textColor: 'text-green-600',
+    items: [
+      'FMCG & Consumer Goods',
+      'Retail & Distribution',
+      'Food & Beverage',
+      'Fashion & Lifestyle',
+      'Automotive & Transportation',
+      'Travel & Hospitality',
+      'Sports & Recreation',
+      'Consumer Electronics'
+    ]
+  }
+];
+
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -237,6 +304,8 @@ export default function Header() {
                           onMouseEnter={() => {
                             if (subsection.label === 'Practice Areas') {
                               setActiveMegaMenu('practice-areas');
+                            } else if (subsection.label === 'Sectors') {
+                              setActiveMegaMenu('sectors');
                             } else {
                               setActiveMegaMenu(null);
                             }
@@ -305,6 +374,55 @@ export default function Header() {
                             </div>
                             
 
+                          </div>
+                        )}
+
+                        {/* Mega Menu for Sectors */}
+                        {subsection.label === 'Sectors' && activeMegaMenu === 'sectors' && (
+                          <div 
+                            className="fixed left-1/2 transform -translate-x-1/2 top-32 w-[90vw] max-w-6xl bg-white rounded-lg shadow-xl border border-gray-100 p-6 z-60"
+                            onMouseEnter={() => {
+                              setActiveMegaMenu('sectors');
+                              if (hoverTimeout) {
+                                clearTimeout(hoverTimeout);
+                                setHoverTimeout(null);
+                              }
+                            }}
+                            onMouseLeave={handleMegaMenuLeave}
+                          >
+                            <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-6">
+                              {sectorGroups.map((group, index) => (
+                                <div key={group.title} className="space-y-3">
+                                  {/* Group Header */}
+                                  <div>
+                                    <h3 className={`text-base font-bold ${group.textColor} mb-2`}>
+                                      {group.title}
+                                    </h3>
+                                    <div className={`h-0.5 w-12 ${group.underlineColor}`}></div>
+                                  </div>
+
+                                  {/* Sector Items */}
+                                  <div className="space-y-1.5">
+                                    {group.items.slice(0, 6).map((item, itemIndex) => (
+                                      <div
+                                        key={itemIndex}
+                                        className="flex items-start group cursor-pointer"
+                                      >
+                                        <div className="w-1 h-1 bg-gray-400 rounded-full mt-1.5 mr-2 flex-shrink-0 group-hover:bg-red-500 transition-colors"></div>
+                                        <span className="text-xs text-gray-700 leading-relaxed hover:text-red-600 transition-colors">
+                                          {item}
+                                        </span>
+                                      </div>
+                                    ))}
+                                    {group.items.length > 6 && (
+                                      <div className="text-xs text-red-600 font-medium cursor-pointer hover:text-red-700">
+                                        + {group.items.length - 6} more sectors
+                                      </div>
+                                    )}
+                                  </div>
+                                </div>
+                              ))}
+                            </div>
                           </div>
                         )}
                       </div>
