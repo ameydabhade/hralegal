@@ -304,19 +304,7 @@ export default function Header() {
                               ))}
                             </div>
                             
-                            {/* View All Button */}
-                            <div className="mt-6 text-center border-t border-gray-100 pt-4">
-                              <Link 
-                                href="/practice-areas"
-                                className="inline-flex items-center px-6 py-2 bg-red-600 text-white text-sm font-semibold rounded-lg hover:bg-red-700 transition-colors"
-                                onClick={() => {
-                                  setActiveDropdown(null);
-                                  setActiveMegaMenu(null);
-                                }}
-                              >
-                                View All Practice Areas
-                              </Link>
-                            </div>
+
                           </div>
                         )}
                       </div>

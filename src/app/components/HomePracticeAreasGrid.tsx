@@ -189,21 +189,7 @@ export default function HomePracticeAreasGrid() {
           </div>
         </div>
 
-        {/* View All Button - Centered and Properly Aligned */}
-        <div className="flex justify-center">
-          <Link href="/practice-areas">
-            <motion.button
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: true }}
-              className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-red-600 text-white font-semibold rounded-lg hover:bg-red-700 transition-colors duration-200 shadow-lg"
-            >
-              View All Practice Areas
-              <ArrowRight className="w-5 h-5" />
-            </motion.button>
-          </Link>
-        </div>
+
       </div>
     </section>
   );
