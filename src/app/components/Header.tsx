@@ -74,11 +74,7 @@ export default function Header() {
     {
       label: 'Learners Page',
       href: '/learners-page',
-      dropdown: [
-        { label: 'blogs & articles', href: '/learners-page#blogs' },
-        { label: 'latest news', href: '/learners-page#news' },
-        { label: 'legal insights', href: '/learners-page#insights' }
-      ]
+      dropdown: []
     },
     {
       label: 'Contact',

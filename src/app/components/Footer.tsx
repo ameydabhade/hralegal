@@ -74,13 +74,13 @@ export default function Footer() {
               </div>
               <div className="space-y-1">
                 <Link href="/learners-page" className="block text-gray-400 hover:text-red-400 transition-colors text-xs">
-                  Knowledge Centre
-                </Link>
-                <Link href="/contact" className="block text-gray-400 hover:text-red-400 transition-colors text-xs">
-                  Contact Us
+                  Learners Page
                 </Link>
                 <Link href="/careers" className="block text-gray-400 hover:text-red-400 transition-colors text-xs">
                   Careers
+                </Link>
+                <Link href="/contact" className="block text-gray-400 hover:text-red-400 transition-colors text-xs">
+                  Contact Us
                 </Link>
               </div>
             </div>
