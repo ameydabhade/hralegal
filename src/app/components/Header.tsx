@@ -8,10 +8,86 @@ interface DropdownItem {
   description?: string;
 }
 
+const practiceAreaGroups = [
+  {
+    title: 'HRA Corporate',
+    color: 'blue',
+    underlineColor: 'bg-blue-500',
+    textColor: 'text-blue-600',
+    items: [
+      'Company Secretarial & Corporate Governance',
+      'Corporate Structure & Formation',
+      'Board Governance & Compliance',
+      'Corporate Financing & Restructuring',
+      'Investment Agreements',
+      'CSR, Sustainability and ESG',
+      'Mergers & Acquisitions',
+      'Joint Ventures & Strategic Alliances',
+      'Due Diligence',
+      'Corporate Reorganization'
+    ]
+  },
+  {
+    title: 'HRA Finance',
+    color: 'amber',
+    underlineColor: 'bg-amber-500',
+    textColor: 'text-amber-600',
+    items: [
+      'Banking & Finance Advisory',
+      'Debt & Refinancing',
+      'Capital Markets',
+      'Financial Regulatory Compliance',
+      'Fintech Legal Framework',
+      'Investment Fund Advisory',
+      'Transaction Documentation',
+      'Tax Planning & Advisory',
+      'International Tax Structuring',
+      'Corporate Tax Compliance'
+    ]
+  },
+  {
+    title: 'HRA Dispute Resolution',
+    color: 'orange',
+    underlineColor: 'bg-orange-500',
+    textColor: 'text-orange-600',
+    items: [
+      'Commercial Litigation',
+      'Arbitration & Mediation',
+      'Contract Disputes',
+      'Employment Disputes',
+      'IP Disputes & Enforcement',
+      'Regulatory Enforcement',
+      'White Collar Crime',
+      'Anti-Corruption & Compliance',
+      'Insolvency & Bankruptcy',
+      'Cross-Border Disputes'
+    ]
+  },
+  {
+    title: 'HRA Markets',
+    color: 'green',
+    underlineColor: 'bg-green-500',
+    textColor: 'text-green-600',
+    items: [
+      'Intellectual Property Protection',
+      'Technology & Digital Innovation',
+      'Data Privacy & Cybersecurity',
+      'Media & Entertainment Law',
+      'International Trade Advisory',
+      'Regulatory Advisory',
+      'Employment & Labour Relations',
+      'Real Estate Transactions',
+      'Startup & Emerging Business',
+      'Contract Drafting & Compliance'
+    ]
+  }
+];
+
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [activeMegaMenu, setActiveMegaMenu] = useState<string | null>(null);
   const [hoverTimeout, setHoverTimeout] = useState<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
@@ -147,20 +223,68 @@ export default function Header() {
                      onMouseLeave={handleMouseLeave}
                    >
                     {item.dropdown.map((subsection) => (
-                      <Link
-                        key={subsection.label}
-                        href={subsection.href}
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors duration-200 lowercase"
-                        onClick={() => {
-                           setActiveDropdown(null);
-                           if (hoverTimeout) {
-                             clearTimeout(hoverTimeout);
-                             setHoverTimeout(null);
-                           }
-                         }}
-                      >
-                        {subsection.label}
-                      </Link>
+                      <div key={subsection.label} className="relative">
+                        <Link
+                          href={subsection.href}
+                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors duration-200 lowercase"
+                          onMouseEnter={() => {
+                            if (subsection.label === 'Practice Areas') {
+                              setActiveMegaMenu('practice-areas');
+                            }
+                          }}
+                          onMouseLeave={() => {
+                            // Don't clear immediately - allow time to move to mega menu
+                          }}
+                          onClick={() => {
+                             setActiveDropdown(null);
+                             setActiveMegaMenu(null);
+                             if (hoverTimeout) {
+                               clearTimeout(hoverTimeout);
+                               setHoverTimeout(null);
+                             }
+                           }}
+                        >
+                          {subsection.label}
+                        </Link>
+                        
+                        {/* Mega Menu for Practice Areas */}
+                        {subsection.label === 'Practice Areas' && activeMegaMenu === 'practice-areas' && (
+                          <div 
+                            className="absolute left-full top-0 ml-2 w-[800px] bg-white rounded-lg shadow-xl border border-gray-100 p-6 z-60"
+                            onMouseEnter={() => setActiveMegaMenu('practice-areas')}
+                            onMouseLeave={() => setActiveMegaMenu(null)}
+                          >
+                            <div className="grid grid-cols-4 gap-8">
+                              {practiceAreaGroups.map((group, index) => (
+                                <div key={group.title} className="space-y-4">
+                                  {/* Group Header */}
+                                  <div>
+                                    <h3 className={`text-lg font-bold ${group.textColor} mb-2`}>
+                                      {group.title}
+                                    </h3>
+                                    <div className={`h-1 w-16 ${group.underlineColor}`}></div>
+                                  </div>
+
+                                  {/* Practice Items */}
+                                  <div className="space-y-2">
+                                    {group.items.map((item, itemIndex) => (
+                                      <div
+                                        key={itemIndex}
+                                        className="flex items-start group cursor-pointer"
+                                      >
+                                        <div className="w-1.5 h-1.5 bg-gray-400 rounded-full mt-2 mr-2 flex-shrink-0 group-hover:bg-red-500 transition-colors"></div>
+                                        <span className="text-xs text-gray-700 leading-relaxed hover:text-red-600 transition-colors">
+                                          {item}
+                                        </span>
+                                      </div>
+                                    ))}
+                                  </div>
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                        )}
+                      </div>
                     ))}
                   </div>
                 )}
