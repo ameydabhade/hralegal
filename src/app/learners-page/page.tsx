@@ -95,9 +95,7 @@ export default function KnowledgeCentrePage() {
             <h1 className="text-5xl lg:text-6xl font-bold text-red-600 mb-6 border-b-4 border-red-600 pb-4 inline-block">
               Learners Page
             </h1>
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-              Latest legal insights and industry updates.
-            </p>
+       
           </div>
 
           {/* Search Bar */}

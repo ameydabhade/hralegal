@@ -58,7 +58,7 @@ export default function ContactPage() {
                     <h3 className="text-lg font-bold text-red-600 mb-2 border-b border-red-600 pb-1 inline-block">
                       Phone Number
                     </h3>
-                    <p className="text-gray-700 text-sm">9967382875</p>
+                    <p className="text-gray-700 text-sm">To Be Added</p>
                   </div>
                 </div>
 
@@ -152,7 +152,7 @@ export default function ContactPage() {
                   <input
                     type="tel"
                     className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-red-400 focus:border-red-400 transition-colors text-sm"
-                    placeholder="+91 99999 99999"
+                    placeholder="  99999 99999"
                   />
                 </div>
 
