@@ -5,20 +5,10 @@ import {
   ArrowRight,
   FileText, 
   Building, 
-  Shield, 
-  Globe, 
-  Database, 
+  Database,
   Users, 
-  Home, 
-  Rocket, 
   Handshake, 
-  Copyright, 
-  Monitor, 
-  Settings, 
-  Calculator, 
-  Brain,
-  Award,
-  TrendingUp
+  Monitor
 } from 'lucide-react';
 import Link from 'next/link';
 import { useState } from 'react';

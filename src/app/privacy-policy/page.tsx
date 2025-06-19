@@ -1,7 +1,5 @@
 import { Shield } from 'lucide-react';
 
-import Footer from '../components/Footer';
-
 export const metadata = {
   title: 'Privacy Policy - HRA Legal',
   description: 'Privacy Policy for HRA Legal website and services, outlining how we collect, use, and protect your personal information.',

@@ -101,7 +101,7 @@ export default function ServicesSection() {
             className="mb-12 bg-gradient-to-r from-red-50 to-white rounded-2xl p-8 border-l-4 border-red-600"
           >
             <p className="text-lg text-gray-700 leading-relaxed text-center">
-              HRA Legal offers <strong>end-to-end Legal services</strong>, including, structuring, drafting, negotiation and execution of all types of contracts/agreements/documents/paperwork (including definitive agreements, long form agreements, founder agreements, non-disclosure agreements, no objection certificates, letters, agency agreements, et al), sending notices & replies, legal research and analysis, consultations and advisory services, policy drafting and its implementation manual, tabulating databases, setting up of processes, systems, SOP's (standard operating procedures), providing opinions & solutions, et al for established and emerging businesses, and/or managing entire legal department of your company.
+              HRA Legal offers <strong>end-to-end Legal services</strong>, including, structuring, drafting, negotiation and execution of all types of contracts/agreements/documents/paperwork (including definitive agreements, long form agreements, founder agreements, non-disclosure agreements, no objection certificates, letters, agency agreements, et al), sending notices &amp; replies, legal research and analysis, consultations and advisory services, policy drafting and its implementation manual, tabulating databases, setting up of processes, systems, SOP&apos;s (standard operating procedures), providing opinions &amp; solutions, et al for established and emerging businesses, and/or managing entire legal department of your company.
             </p>
           </motion.div>
 

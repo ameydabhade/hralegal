@@ -33,7 +33,7 @@ export default function ContactPage() {
                   Get In Touch
                 </h2>
                 <p className="text-base text-gray-700 mb-8">
-                  We're here to help you navigate your legal challenges. Reach out to us for a consultation and discover how we can assist you.
+                  We&apos;re here to help you navigate your legal challenges. Reach out to us for a consultation and discover how we can assist you.
                 </p>
               </div>
 
@@ -170,7 +170,7 @@ export default function ContactPage() {
                     <option value="employment">Employment, Labour & Industrial Relations</option>
                     <option value="realestate">Real Estate</option>
                     <option value="startups">Startups & Emerging Businesses</option>
-                    <option value="ma">Mergers and Acquisitions, JV's, Strategic Alliances</option>
+                    <option value="ma">Mergers and Acquisitions, JV&apos;s, Strategic Alliances</option>
                     <option value="ip">Intellectual Property</option>
                     <option value="media">Media, Technology, and Telecommunications</option>
                     <option value="project">Project Management</option>

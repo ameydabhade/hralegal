@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Scale, Shield, Award, Phone, ArrowRight, CheckCircle } from 'lucide-react';
+import { Phone, ArrowRight } from 'lucide-react';
 
 export default function HeroSection() {
 
@@ -82,7 +82,7 @@ export default function HeroSection() {
                 {/* Quote or Mission */}
                 <div className="text-center space-y-4">
                   <blockquote className="text-lg italic text-gray-200 leading-relaxed">
-                    "Office Image Goes Here w/ full height "
+                    "Office Image Goes Here w/ full height"
                   </blockquote>
                   
             

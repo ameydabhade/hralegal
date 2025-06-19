@@ -94,7 +94,7 @@ export default function AboutPage() {
                         ))}
                       </div>
                       <p className="text-gray-700 text-sm leading-relaxed">
-                        With her good educational foundation and enriching experience in Legal, Corporate Affairs and Business Affairs, she is adept in structuring, negotiating and executing complex agreements for multifarious businesses, advising on corporate, commercial and intellectual property matters, standard & practices/content regulation, setting up legal processes/systems/standard operating procedures and leading corporate matters including mergers and acquisitions.
+                        With her good educational foundation and enriching experience in Legal, Corporate Affairs and Business Affairs, she is adept in structuring, negotiating and executing complex agreements for multifarious businesses, advising on corporate, commercial and intellectual property matters, standard &amp; practices/content regulation, setting up legal processes/systems/standard operating procedures and leading corporate matters including mergers and acquisitions.
                       </p>
                     </div>
                   </div>
