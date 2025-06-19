@@ -19,12 +19,12 @@ const founders = [
 
 export default function HomeFoundersSection() {
   return (
-    <section className="py-20 bg-gradient-to-b from-beige-50 to-beige-100">
+    <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
       <div className="max-w-7xl mx-auto px-4 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center px-4 py-2 bg-beige-200 border border-beige-300 rounded-full mb-6">
-            <span className="text-sm font-medium text-beige-600">Leadership</span>
+          <div className="inline-flex items-center px-4 py-2 bg-red-100 border border-red-200 rounded-full mb-6">
+            <span className="text-sm font-medium text-red-600">Leadership</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Meet Our Founder
@@ -42,7 +42,7 @@ export default function HomeFoundersSection() {
               <div className="space-y-6">
                 {/* Header */}
                 <div className="text-center">
-                  <div className="w-24 h-24 bg-gradient-to-br from-beige-300 to-beige-400 rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <div className="w-24 h-24 bg-gradient-to-br from-red-500 to-red-600 rounded-full mx-auto mb-4 flex items-center justify-center">
                     <span className="text-3xl font-bold text-white">
                       {founder.name.split(' ').map(n => n[0]).join('')}
                     </span>
@@ -50,10 +50,10 @@ export default function HomeFoundersSection() {
                   <h3 className="text-2xl font-bold text-gray-900 mb-1">
                     {founder.name}
                   </h3>
-                  <p className="text-lg text-beige-500 font-semibold mb-2">
+                  <p className="text-lg text-red-600 font-semibold mb-2">
                     {founder.title}
                   </p>
-                  <div className="inline-flex items-center px-3 py-1 bg-beige-200 text-beige-600 text-sm font-medium rounded-full">
+                  <div className="inline-flex items-center px-3 py-1 bg-red-100 text-red-600 text-sm font-medium rounded-full">
                     {founder.experience}
                   </div>
                 </div>
@@ -61,7 +61,7 @@ export default function HomeFoundersSection() {
                 {/* Education */}
                 <div>
                   <div className="flex items-center gap-2 mb-3">
-                    <GraduationCap className="w-5 h-5 text-beige-400" />
+                    <GraduationCap className="w-5 h-5 text-red-500" />
                     <h4 className="font-semibold text-gray-900">Education & Qualifications</h4>
                   </div>
                   <div className="flex flex-wrap gap-2">
@@ -76,7 +76,7 @@ export default function HomeFoundersSection() {
                 {/* Specialization */}
                 <div>
                   <div className="flex items-center gap-2 mb-3">
-                    <Award className="w-5 h-5 text-beige-400" />
+                    <Award className="w-5 h-5 text-red-500" />
                     <h4 className="font-semibold text-gray-900">Specialization</h4>
                   </div>
                   <p className="text-gray-600">{founder.expertise}</p>
@@ -85,13 +85,13 @@ export default function HomeFoundersSection() {
                 {/* Highlights */}
                 <div>
                   <div className="flex items-center gap-2 mb-3">
-                    <Users className="w-5 h-5 text-beige-400" />
+                    <Users className="w-5 h-5 text-red-500" />
                     <h4 className="font-semibold text-gray-900">Career Highlights</h4>
                   </div>
                   <div className="space-y-2">
                     {founder.highlights.map((highlight, highlightIndex) => (
                       <div key={highlightIndex} className="flex items-start gap-2">
-                        <div className="w-1.5 h-1.5 bg-beige-400 rounded-full mt-2 flex-shrink-0"></div>
+                        <div className="w-1.5 h-1.5 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
                         <span className="text-sm text-gray-600">{highlight}</span>
                       </div>
                     ))}
@@ -102,31 +102,7 @@ export default function HomeFoundersSection() {
           ))}
         </div>
 
-        {/* Founder Experience */}
-        <div className="bg-gradient-to-br from-beige-100 to-beige-200 rounded-3xl p-8 lg:p-12  text-center mb-16">
-          <h3 className="text-3xl font-bold mb-4">
-            Legal Excellence & Leadership
-          </h3>
-          <p className=" text-lg mb-8 max-w-2xl mx-auto">
-            Our founder brings 15+ years of experience across diverse legal domains, 
-            offering comprehensive solutions backed by deep industry knowledge.
-          </p>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="text-4xl font-bold  mb-2">15+</div>
-              <div className="">Years Experience</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold  mb-2">3</div>
-              <div className="">Advanced Qualifications</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold  mb-2">3</div>
-              <div className="">Major Corporate Roles</div>
-            </div>
-          </div>
-        </div>
+
 
         {/* Call to Action */}
         <div className="text-center">
@@ -141,7 +117,7 @@ export default function HomeFoundersSection() {
             
             <Link 
               href="/about" 
-              className="inline-flex items-center gap-2 px-8 py-3 bg-beige-400 text-white font-semibold rounded-lg hover:bg-beige-500 transition-colors"
+              className="inline-flex items-center gap-2 px-8 py-3 bg-red-600 text-white font-semibold rounded-lg hover:bg-red-700 transition-colors"
             >
               Learn More About Us
               <ArrowRight className="w-5 h-5" />
