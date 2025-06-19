@@ -340,7 +340,7 @@ export default function Header() {
                             onMouseLeave={handleMegaMenuLeave}
                           >
                             <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-6">
-                              {practiceAreaGroups.map((group, index) => (
+                              {practiceAreaGroups.map((group) => (
                                 <div key={group.title} className="space-y-3">
                                   {/* Group Header */}
                                   <div>
@@ -391,7 +391,7 @@ export default function Header() {
                             onMouseLeave={handleMegaMenuLeave}
                           >
                             <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-6">
-                              {sectorGroups.map((group, index) => (
+                              {sectorGroups.map((group) => (
                                 <div key={group.title} className="space-y-3">
                                   {/* Group Header */}
                                   <div>
