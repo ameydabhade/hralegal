@@ -2,6 +2,12 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 
+interface DropdownItem {
+  label: string;
+  href: string;
+  description?: string;
+}
+
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -40,7 +46,7 @@ export default function Header() {
   };
 
   // Navigation items with actual page sections
-  const navItems = [
+  const navItems: { label: string; href: string; dropdown: DropdownItem[] }[] = [
     {
       label: 'Home',
       href: '/',
@@ -55,20 +61,11 @@ export default function Header() {
       ]
     },
     {
-      label: 'Practice Areas',
+      label: 'Expertise',
       href: '/practice-areas',
       dropdown: [
-        { label: 'expertise areas', href: '/practice-areas#expertise' },
-        { label: 'developing areas', href: '/practice-areas#developing' }
-      ]
-    },
-    {
-      label: 'Sectors',
-      href: '/sectors',
-      dropdown: [
-        { label: 'sectors we serve', href: '/sectors#sectors' },
-        { label: 'media & entertainment', href: '/sectors#featured' },
-        { label: 'cross-sector expertise', href: '/sectors#expertise' }
+        { label: 'Practice Areas', href: '/practice-areas' },
+        { label: 'Sectors', href: '/sectors' }
       ]
     },
     {
@@ -154,7 +151,7 @@ export default function Header() {
                         key={subsection.label}
                         href={subsection.href}
                         className="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors duration-200 lowercase"
-                                                 onClick={() => {
+                        onClick={() => {
                            setActiveDropdown(null);
                            if (hoverTimeout) {
                              clearTimeout(hoverTimeout);
