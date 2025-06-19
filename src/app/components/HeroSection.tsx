@@ -77,20 +77,12 @@ export default function HeroSection() {
               {/* Content */}
               <div className="relative z-10 space-y-6">
                 {/* Logo/Header */}
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Scale className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-red-400 border-b-2 border-red-400 pb-2 inline-block">
-                    HRA LEGAL
-                  </h3>
-                  <p className="text-gray-300 text-sm mt-2">Professional Legal Services</p>
-                </div>
+         
                 
                 {/* Quote or Mission */}
                 <div className="text-center space-y-4">
                   <blockquote className="text-lg italic text-gray-200 leading-relaxed">
-                    "Office Image Goes Here"
+                    "Office Image Goes Here w/ full height "
                   </blockquote>
                   
             
@@ -98,10 +90,7 @@ export default function HeroSection() {
                 
                 {/* Bottom signature */}
                 <div className="border-t border-gray-700 pt-4 flex justify-between items-center text-sm">
-                  <div className="flex items-center">
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                    <span className="text-gray-300">Trusted & Verified</span>
-                  </div>
+           
                   <div className="text-red-400 font-semibold">
                     Mumbai, India
                   </div>
@@ -109,13 +98,7 @@ export default function HeroSection() {
               </div>
             </div>
 
-            {/* Floating Elements */}
-            <div className="absolute -top-3 -right-3 w-12 h-12 bg-red-500 rounded-full flex items-center justify-center shadow-lg">
-              <Award className="w-6 h-6 text-white" />
-            </div>
-            <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-red-600 rounded-full flex items-center justify-center shadow-lg">
-              <Shield className="w-8 h-8 text-white" />
-            </div>
+     
           </div>
         </div>
 

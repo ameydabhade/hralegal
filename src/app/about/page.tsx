@@ -32,7 +32,7 @@ export default function AboutPage() {
       </section>
 
       {/* Meet the Founder */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-beige-100 to-beige-50">
+      <section id="founder" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-beige-100 to-beige-50">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -181,7 +181,7 @@ export default function AboutPage() {
       </section>
 
       {/* Our Story - Placeholder for new content */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section id="story" className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 50 }}

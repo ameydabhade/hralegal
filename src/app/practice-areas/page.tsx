@@ -350,7 +350,7 @@ export default function PracticeAreasPage() {
       </section>
 
       {/* Expertise Areas */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section id="expertise" className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
  
 
@@ -431,7 +431,7 @@ export default function PracticeAreasPage() {
       </section>
 
       {/* Developing Areas */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 to-white">
+      <section id="developing" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 to-white">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}

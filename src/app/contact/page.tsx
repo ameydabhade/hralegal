@@ -23,7 +23,7 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Information & Form */}
-      <section className="pb-16">
+      <section id="info" className="pb-16">
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16">
             {/* Contact Information */}
@@ -100,7 +100,7 @@ export default function ContactPage() {
             </div>
 
             {/* Contact Form */}
-            <div className="bg-white rounded-lg shadow-xl border border-gray-100 p-8">
+            <div id="form" className="bg-white rounded-lg shadow-xl border border-gray-100 p-8">
               <h3 className="text-xl font-bold text-red-600 mb-6 border-b-2 border-red-600 pb-2 inline-block">
                 Send Us a Message
               </h3>

@@ -96,7 +96,7 @@ export default function SectorsPage() {
       </section>
 
       {/* Sectors Grid */}
-      <section className="pb-16">
+      <section id="sectors" className="pb-16">
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
           <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
             {sectors.map((sector, index) => {
@@ -120,7 +120,7 @@ export default function SectorsPage() {
       </section>
 
       {/* Featured Sector Highlight - Media & Entertainment */}
-      <section className="bg-gradient-to-r from-red-50 to-red-100 py-16">
+      <section id="featured" className="bg-gradient-to-r from-red-50 to-red-100 py-16">
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-red-600 mb-6 border-b-2 border-red-600 pb-2 inline-block">
@@ -176,7 +176,7 @@ export default function SectorsPage() {
       </section>
 
       {/* Experience and Expertise */}
-      <section className="py-16">
+      <section id="expertise" className="py-16">
         <div className="max-w-6xl mx-auto px-4 lg:px-8">
           <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-8">
             <div className="text-center mb-12">

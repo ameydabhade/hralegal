@@ -14,13 +14,13 @@ export default function Home() {
       <ServicesSection />
       
       {/* Ready to Work With Us Section */}
-      <section className="py-16 bg-gradient-to-r from-red-600 to-red-700">
+      <section className="py-16 bg-gradient-to-r from-red-200 to-red-300">
         <div className="max-w-6xl mx-auto px-4 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Work With Us?
             <div className="h-1 bg-white w-24 mx-auto mt-4"></div>
           </h2>
-          <p className="text-xl text-red-100 mb-8 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl  mb-8 max-w-3xl mx-auto leading-relaxed">
             Experience the HRA Legal difference. Let us help you navigate your legal challenges with our expertise, values, and commitment to excellence.
           </p>
           

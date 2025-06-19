@@ -5,6 +5,8 @@ import Link from 'next/link';
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [hoverTimeout, setHoverTimeout] = useState<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -13,7 +15,77 @@ export default function Header() {
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+      }, []);
+
+  const handleMouseEnter = (label: string) => {
+    if (hoverTimeout) {
+      clearTimeout(hoverTimeout);
+      setHoverTimeout(null);
+    }
+    setActiveDropdown(label);
+  };
+
+  const handleMouseLeave = () => {
+    const timeout = setTimeout(() => {
+      setActiveDropdown(null);
+    }, 300); // 300ms delay before hiding
+    setHoverTimeout(timeout);
+  };
+
+  const handleDropdownMouseEnter = () => {
+    if (hoverTimeout) {
+      clearTimeout(hoverTimeout);
+      setHoverTimeout(null);
+    }
+  };
+
+  // Navigation items with actual page sections
+  const navItems = [
+    {
+      label: 'Home',
+      href: '/',
+      dropdown: []
+    },
+    {
+      label: 'About Us',
+      href: '/about',
+      dropdown: [
+        { label: 'meet the founder', href: '/about#founder' },
+        { label: 'our story', href: '/about#story' }
+      ]
+    },
+    {
+      label: 'Practice Areas',
+      href: '/practice-areas',
+      dropdown: [
+        { label: 'expertise areas', href: '/practice-areas#expertise' },
+        { label: 'developing areas', href: '/practice-areas#developing' }
+      ]
+    },
+    {
+      label: 'Sectors',
+      href: '/sectors',
+      dropdown: [
+        { label: 'sectors we serve', href: '/sectors#sectors' },
+        { label: 'media & entertainment', href: '/sectors#featured' },
+        { label: 'cross-sector expertise', href: '/sectors#expertise' }
+      ]
+    },
+    {
+      label: 'Careers',
+      href: '/careers',
+      dropdown: [
+        { label: 'why choose us', href: '/careers#why' },
+        { label: 'opportunities', href: '/careers#opportunities' },
+        { label: 'application process', href: '/careers#process' }
+      ]
+    },
+    {
+      label: 'Contact',
+      href: '/contact',
+      dropdown: []
+    }
+  ];
 
   return (
         <header className={`fixed top-4 left-4 right-4 z-50 backdrop-blur-sm border border-beige-300 rounded-[32px] transition-all duration-500 ease-out mx-auto max-w-7xl hover:shadow-xl ${
@@ -58,49 +130,49 @@ export default function Header() {
           </Link>
 
           {/* Desktop Navigation - Clean single titles */}
-          <div className="hidden lg:flex items-center gap-4">
-            <Link 
-              href="/" 
-              className="relative text-red-600 hover:text-red-700 transition-all duration-300 text-sm font-semibold group transform hover:-translate-y-0.5"
-            >
-              Home
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-red-600 transition-all duration-300 group-hover:w-full"></span>
-            </Link>
-            <Link 
-              href="/about" 
-              className="relative text-red-600 hover:text-red-700 transition-all duration-300 text-sm font-semibold group transform hover:-translate-y-0.5"
-            >
-              About Us
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-red-600 transition-all duration-300 group-hover:w-full"></span>
-            </Link>
-            <Link 
-              href="/practice-areas" 
-              className="relative text-red-600 hover:text-red-700 transition-all duration-300 text-sm font-semibold group transform hover:-translate-y-0.5"
-            >
-              Practice Areas
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-red-600 transition-all duration-300 group-hover:w-full"></span>
-            </Link>
-            <Link 
-              href="/sectors" 
-              className="relative text-red-600 hover:text-red-700 transition-all duration-300 text-sm font-semibold group transform hover:-translate-y-0.5"
-            >
-              Sectors
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-red-600 transition-all duration-300 group-hover:w-full"></span>
-            </Link>
-            <Link 
-              href="/learners-page" 
-              className="relative text-red-600 hover:text-red-700 transition-all duration-300 text-sm font-semibold group transform hover:-translate-y-0.5"
-            >
-              Knowledge Centre
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-red-600 transition-all duration-300 group-hover:w-full"></span>
-            </Link>
-            <Link 
-              href="/contact" 
-              className="relative text-red-600 hover:text-red-700 transition-all duration-300 text-sm font-semibold group transform hover:-translate-y-0.5"
-            >
-              Contact Us
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-red-600 transition-all duration-300 group-hover:w-full"></span>
-            </Link>
+          <div className="hidden lg:flex items-center gap-6">
+            {navItems.map((item) => (
+                             <div
+                 key={item.label}
+                 className="relative"
+                 onMouseEnter={() => handleMouseEnter(item.label)}
+                 onMouseLeave={handleMouseLeave}
+               >
+                <Link 
+                  href={item.href} 
+                  className="relative text-red-600 hover:text-red-700 transition-all duration-300 text-sm font-semibold group transform hover:-translate-y-0.5"
+                >
+                  {item.label}
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-red-600 transition-all duration-300 group-hover:w-full"></span>
+                </Link>
+                
+                                 {/* Dropdown Menu */}
+                 {item.dropdown.length > 0 && activeDropdown === item.label && (
+                   <div 
+                     className="absolute top-full left-0 mt-1 w-56 bg-white rounded-lg shadow-lg border border-gray-100 py-3 z-50"
+                     onMouseEnter={handleDropdownMouseEnter}
+                     onMouseLeave={handleMouseLeave}
+                   >
+                    {item.dropdown.map((subsection) => (
+                      <Link
+                        key={subsection.label}
+                        href={subsection.href}
+                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors duration-200 lowercase"
+                                                 onClick={() => {
+                           setActiveDropdown(null);
+                           if (hoverTimeout) {
+                             clearTimeout(hoverTimeout);
+                             setHoverTimeout(null);
+                           }
+                         }}
+                      >
+                        {subsection.label}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ))}
           </div>
 
           {/* CTA Button - Optimized size */}
@@ -140,48 +212,16 @@ export default function Header() {
         }`}>
           <div className="pb-3 border-t border-beige-200 mt-3 pt-3">
             <div className="flex flex-col gap-3 animate-in slide-in-from-top duration-300">
-              <Link 
-                href="/" 
-                className="text-red-600 hover:text-red-700 transition-colors text-xs font-medium"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Home
-              </Link>
-              <Link 
-                href="/about" 
-                className="text-red-600 hover:text-red-700 transition-colors text-xs font-medium"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                About Us
-              </Link>
-              <Link 
-                href="/practice-areas" 
-                className="text-red-600 hover:text-red-700 transition-colors text-xs font-medium"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Practice Areas
-              </Link>
-              <Link 
-                href="/sectors" 
-                className="text-red-600 hover:text-red-700 transition-colors text-xs font-medium"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Sectors
-              </Link>
-              <Link 
-                href="/learners-page" 
-                className="text-red-600 hover:text-red-700 transition-colors text-xs font-medium"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Knowledge Centre
-              </Link>
-              <Link 
-                href="/contact" 
-                className="text-red-600 hover:text-red-700 transition-colors text-xs font-medium"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Contact Us
-              </Link>
+              {navItems.map((item) => (
+                <Link 
+                  key={item.label}
+                  href={item.href} 
+                  className="text-red-600 hover:text-red-700 transition-colors text-xs font-medium"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  {item.label}
+                </Link>
+              ))}
               <div onClick={() => setIsMobileMenuOpen(false)}>
                 <Link 
                   href="/contact"
