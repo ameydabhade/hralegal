@@ -125,9 +125,7 @@ export default function AboutPage() {
                   <div className="bg-gradient-to-r from-red-50 to-white p-6 rounded-xl border-l-4 border-red-600">
                     <h4 className="text-lg font-bold text-red-600 mb-3">Media & Entertainment Expert</h4>
                     <p className="text-gray-600 text-sm leading-relaxed">
-                      Specialized experience with global giants in media and entertainment industry, 
-                      bringing deep understanding of content creation, distribution, and licensing.
-                    </p>
+                    Possess specialized experience working with leading global names in the media and entertainment industry, including Sony Pictures Networks India Pvt. Ltd. (now Culver Max), Shemaroo Entertainment Ltd., Goldmines Telefilms Ltd., Reliance Industries Ltd. – Jio Studios, Sony Music (India) Pvt. Ltd., Maddock Films, and as a consultant with Reliance Retail. This background brings a deep understanding of content creation, distribution, and licensing.    </p>
                   </div>
 
                   {/* Core Strengths */}
