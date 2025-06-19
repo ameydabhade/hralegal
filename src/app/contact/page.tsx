@@ -80,19 +80,22 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              {/* Location Map Placeholder */}
+              {/* Location Map */}
               <div className="mt-8">
                 <h3 className="text-lg font-bold text-red-600 mb-4 border-b border-red-600 pb-1 inline-block">
                   Our Location
                 </h3>
-                <div className="bg-red-50 border border-red-200 rounded-lg p-8 text-center">
-                  <MapPin className="w-16 h-16 text-red-600 mx-auto mb-4" />
-                  <p className="text-red-600 font-medium text-sm">
-                    📍 Interactive map will be integrated here
-                  </p>
-                  <p className="text-gray-600 text-xs mt-2">
-                    Google Maps integration showing office location
-                  </p>
+                <div className="bg-red-50 border border-red-200 rounded-lg p-4 overflow-hidden">
+                  <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.664612282363!2d72.86162357515582!3d19.122363850515416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9c51880bb29%3A0x4960ca342b959585!2s93%20East!5e0!3m2!1sen!2sin!4v1750357109857!5m2!1sen!2sin" 
+                    width="100%" 
+                    height="300" 
+                    style={{border: 0, borderRadius: '8px'}} 
+                    allowFullScreen 
+                    loading="lazy" 
+                    referrerPolicy="no-referrer-when-downgrade"
+                    className="rounded-lg"
+                  />
                 </div>
               </div>
 
