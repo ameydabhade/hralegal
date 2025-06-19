@@ -260,7 +260,7 @@ export default function Header() {
                         {/* Mega Menu for Practice Areas */}
                         {subsection.label === 'Practice Areas' && activeMegaMenu === 'practice-areas' && (
                           <div 
-                            className="fixed left-1/2 transform -translate-x-1/2 top-24 w-[90vw] max-w-6xl bg-white rounded-lg shadow-xl border border-gray-100 p-6 z-60"
+                            className="fixed left-1/2 transform -translate-x-1/2 top-32 w-[90vw] max-w-6xl bg-white rounded-lg shadow-xl border border-gray-100 p-6 z-60"
                             onMouseEnter={() => {
                               setActiveMegaMenu('practice-areas');
                               if (hoverTimeout) {
