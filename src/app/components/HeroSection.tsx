@@ -82,7 +82,7 @@ export default function HeroSection() {
                 {/* Quote or Mission */}
                 <div className="text-center space-y-4">
                   <blockquote className="text-lg italic text-gray-200 leading-relaxed">
-                    "Office Image Goes Here w/ full height"
+                    &quot;Office Image Goes Here w/ full height&quot;
                   </blockquote>
                   
             

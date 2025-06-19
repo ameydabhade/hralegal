@@ -45,7 +45,7 @@ export default function AboutPage() {
               Meet the Founder
             </h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              Meet the visionary leader driving HRA Legal's success with her expertise and passion for excellence.
+              Meet the visionary leader driving HRA Legal&apos;s success with her expertise and passion for excellence.
             </p>
           </motion.div>
 
