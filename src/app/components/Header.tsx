@@ -110,6 +110,7 @@ export default function Header() {
   const handleMouseLeave = () => {
     const timeout = setTimeout(() => {
       setActiveDropdown(null);
+      setActiveMegaMenu(null);
     }, 300); // 300ms delay before hiding
     setHoverTimeout(timeout);
   };
@@ -119,6 +120,13 @@ export default function Header() {
       clearTimeout(hoverTimeout);
       setHoverTimeout(null);
     }
+  };
+
+  const handleMegaMenuLeave = () => {
+    const timeout = setTimeout(() => {
+      setActiveMegaMenu(null);
+    }, 200);
+    setHoverTimeout(timeout);
   };
 
   // Navigation items with actual page sections
@@ -224,18 +232,20 @@ export default function Header() {
                    >
                     {item.dropdown.map((subsection) => (
                       <div key={subsection.label} className="relative">
-                        <Link
-                          href={subsection.href}
-                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors duration-200 lowercase"
+                        <div
+                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors duration-200 lowercase cursor-pointer"
                           onMouseEnter={() => {
                             if (subsection.label === 'Practice Areas') {
                               setActiveMegaMenu('practice-areas');
+                            } else {
+                              setActiveMegaMenu(null);
                             }
                           }}
                           onMouseLeave={() => {
-                            // Don't clear immediately - allow time to move to mega menu
+                            // Keep mega menu open when moving to it
                           }}
                           onClick={() => {
+                             window.location.href = subsection.href;
                              setActiveDropdown(null);
                              setActiveMegaMenu(null);
                              if (hoverTimeout) {
@@ -245,42 +255,67 @@ export default function Header() {
                            }}
                         >
                           {subsection.label}
-                        </Link>
+                        </div>
                         
                         {/* Mega Menu for Practice Areas */}
                         {subsection.label === 'Practice Areas' && activeMegaMenu === 'practice-areas' && (
                           <div 
-                            className="absolute left-full top-0 ml-2 w-[800px] bg-white rounded-lg shadow-xl border border-gray-100 p-6 z-60"
-                            onMouseEnter={() => setActiveMegaMenu('practice-areas')}
-                            onMouseLeave={() => setActiveMegaMenu(null)}
+                            className="fixed left-1/2 transform -translate-x-1/2 top-24 w-[90vw] max-w-6xl bg-white rounded-lg shadow-xl border border-gray-100 p-6 z-60"
+                            onMouseEnter={() => {
+                              setActiveMegaMenu('practice-areas');
+                              if (hoverTimeout) {
+                                clearTimeout(hoverTimeout);
+                                setHoverTimeout(null);
+                              }
+                            }}
+                            onMouseLeave={handleMegaMenuLeave}
                           >
-                            <div className="grid grid-cols-4 gap-8">
+                            <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-6">
                               {practiceAreaGroups.map((group, index) => (
-                                <div key={group.title} className="space-y-4">
+                                <div key={group.title} className="space-y-3">
                                   {/* Group Header */}
                                   <div>
-                                    <h3 className={`text-lg font-bold ${group.textColor} mb-2`}>
+                                    <h3 className={`text-base font-bold ${group.textColor} mb-2`}>
                                       {group.title}
                                     </h3>
-                                    <div className={`h-1 w-16 ${group.underlineColor}`}></div>
+                                    <div className={`h-0.5 w-12 ${group.underlineColor}`}></div>
                                   </div>
 
                                   {/* Practice Items */}
-                                  <div className="space-y-2">
-                                    {group.items.map((item, itemIndex) => (
+                                  <div className="space-y-1.5">
+                                    {group.items.slice(0, 6).map((item, itemIndex) => (
                                       <div
                                         key={itemIndex}
                                         className="flex items-start group cursor-pointer"
                                       >
-                                        <div className="w-1.5 h-1.5 bg-gray-400 rounded-full mt-2 mr-2 flex-shrink-0 group-hover:bg-red-500 transition-colors"></div>
+                                        <div className="w-1 h-1 bg-gray-400 rounded-full mt-1.5 mr-2 flex-shrink-0 group-hover:bg-red-500 transition-colors"></div>
                                         <span className="text-xs text-gray-700 leading-relaxed hover:text-red-600 transition-colors">
                                           {item}
                                         </span>
                                       </div>
                                     ))}
+                                    {group.items.length > 6 && (
+                                      <div className="text-xs text-red-600 font-medium cursor-pointer hover:text-red-700">
+                                        + {group.items.length - 6} more areas
+                                      </div>
+                                    )}
                                   </div>
                                 </div>
                               ))}
+                            </div>
+                            
+                            {/* View All Button */}
+                            <div className="mt-6 text-center border-t border-gray-100 pt-4">
+                              <Link 
+                                href="/practice-areas"
+                                className="inline-flex items-center px-6 py-2 bg-red-600 text-white text-sm font-semibold rounded-lg hover:bg-red-700 transition-colors"
+                                onClick={() => {
+                                  setActiveDropdown(null);
+                                  setActiveMegaMenu(null);
+                                }}
+                              >
+                                View All Practice Areas
+                              </Link>
                             </div>
                           </div>
                         )}
