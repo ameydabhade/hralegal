@@ -90,7 +90,7 @@ export default function HeroSection() {
                 {/* Quote or Mission */}
                 <div className="text-center space-y-4">
                   <blockquote className="text-lg italic text-gray-200 leading-relaxed">
-                    "Excellence in legal practice through innovative solutions and unwavering commitment to client success"
+                    "Office Image Goes Here"
                   </blockquote>
                   
             
