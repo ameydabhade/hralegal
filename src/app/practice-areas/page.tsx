@@ -93,7 +93,7 @@ const developingAreas = [
 
 export default function PracticeAreasPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+    <div className="min-h-screen bg-gradient-to-b from-beige-100 to-white">
       {/* Hero Section */}
       <section className="pt-24 pb-12 bg-gradient-to-br from-red-50 to-white">
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
@@ -156,7 +156,7 @@ export default function PracticeAreasPage() {
       </section>
 
       {/* Developing Areas */}
-      <section id="developing" className="py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 to-white">
+      <section id="developing" className="py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-beige-100 to-beige-50">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
