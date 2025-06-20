@@ -45,7 +45,7 @@ const features = [
 
 export default function WhyChooseUsSection() {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-white via-beige-50 to-beige-100">
+    <section className="py-4 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-white via-beige-50 to-beige-100">
       <div className="max-w-7xl mx-auto">
         {/* Header - Only badge, no duplicate title */}
         <motion.div
@@ -53,7 +53,7 @@ export default function WhyChooseUsSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-4"
         >
           <div className="inline-flex items-center px-4 py-2 bg-red-100 border border-red-300 rounded-full mb-6">
             <span className="text-sm font-medium text-red-600">Why Choose Us</span>
