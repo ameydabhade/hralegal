@@ -4,16 +4,35 @@ import Link from 'next/link';
 const founders = [
   {
     name: "Rushi Upadhyaya",
-    title: "Founding Partner",
+    title: "Founder & Legal Expert",
     experience: "15+ Years",
-    specialization: "Corporate Law & IP",
-    education: ["MBL", "Company Secretary", "PGIPR"],
-    highlights: [
-      "Worked with Sony Pictures Networks India",
-      "Legal Head at Reliance Entertainment",
-      "Entertainment & Media Law Expert"
+    specialization: "Media & Entertainment, Corporate Affairs & Business Affairs",
+    education: [
+      "Masters of Business Laws (MBL)", 
+      "Qualified Company Secretary", 
+      "Diploma in IP Laws (PGIPR)", 
+      "Law Graduate (LLB)", 
+      "Management Graduate (BMS)"
     ],
-    expertise: "Civil/Business Law, IP, Media & Entertainment"
+    highlights: [
+      "Sony Pictures Networks India Pvt. Ltd. (now Culver Max)",
+      "Shemaroo Entertainment Ltd.",
+      "Goldmines Telefilms Ltd.",
+      "Reliance Industries Ltd. – Jio Studios",
+      "Sony Music (India) Pvt. Ltd.",
+      "Maddock Films",
+      "Consultant with Reliance Retail"
+    ],
+    expertise: "Legal, Corporate Affairs and Business Affairs in Media & Entertainment sector",
+    description: "Extensive experience of 15+ years as an in-house Counsel with global and multinational companies. Adept in structuring, negotiating and executing complex agreements for multifarious businesses, advising on corporate, commercial and intellectual property matters.",
+    coreStrengths: [
+      "Sharp Leadership Mindset",
+      "Prompt Decision Making", 
+      "Strong Analytical Approach",
+      "Strategic Solutions",
+      "Meticulous Approach",
+      "Win-Win Closure"
+    ]
   }
 ];
 
@@ -73,13 +92,16 @@ export default function HomeFoundersSection() {
                   </div>
                 </div>
 
-                {/* Specialization */}
+                {/* Description */}
                 <div>
                   <div className="flex items-center gap-2 mb-3">
                     <Award className="w-5 h-5 text-red-500" />
-                    <h4 className="font-semibold text-gray-900">Specialization</h4>
+                    <h4 className="font-semibold text-gray-900">Professional Background</h4>
                   </div>
-                  <p className="text-gray-600">{founder.expertise}</p>
+                  <div className="bg-red-50 p-4 rounded-lg border-l-4 border-red-500">
+                    <p className="text-gray-600 text-sm leading-relaxed mb-3">{founder.description}</p>
+                    <p className="text-gray-700 text-sm font-medium">Specialization: {founder.specialization}</p>
+                  </div>
                 </div>
 
                 {/* Highlights */}
@@ -89,14 +111,36 @@ export default function HomeFoundersSection() {
                     <h4 className="font-semibold text-gray-900">Career Highlights</h4>
                   </div>
                   <div className="space-y-2">
-                    {founder.highlights.map((highlight, highlightIndex) => (
+                    {founder.highlights.slice(0, 4).map((highlight, highlightIndex) => (
                       <div key={highlightIndex} className="flex items-start gap-2">
                         <div className="w-1.5 h-1.5 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
                         <span className="text-sm text-gray-600">{highlight}</span>
                       </div>
                     ))}
+                    {founder.highlights.length > 4 && (
+                      <div className="text-sm text-red-600 font-medium">
+                        + {founder.highlights.length - 4} more global companies
+                      </div>
+                    )}
                   </div>
                 </div>
+
+                {/* Core Strengths */}
+                {founder.coreStrengths && (
+                  <div>
+                    <div className="flex items-center gap-2 mb-3">
+                      <Award className="w-5 h-5 text-red-500" />
+                      <h4 className="font-semibold text-gray-900">Core Strengths</h4>
+                    </div>
+                    <div className="grid grid-cols-2 gap-2">
+                      {founder.coreStrengths.map((strength, strengthIndex) => (
+                        <div key={strengthIndex} className="bg-red-50 p-3 rounded-lg text-center border border-red-200">
+                          <span className="text-red-600 text-xs font-medium">{strength}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           ))}
