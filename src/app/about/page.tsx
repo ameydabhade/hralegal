@@ -19,7 +19,7 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-beige-100 to-white">
       {/* Hero Section */}
-      <section className="pb-20">
+      <section className="pt-24 pb-12">
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -32,21 +32,21 @@ export default function AboutPage() {
       </section>
 
       {/* Meet the Founder */}
-      <section id="founder" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-beige-100 to-beige-50">
+      <section id="founder" className="py-6 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-beige-100 to-beige-50">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center mb-20"
+            className="text-center mb-6"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-red-600 mb-6 border-b-4 border-red-600 pb-4 inline-block">
-              Meet the Founder
-            </h2>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              Meet the visionary leader driving HRA Legal&apos;s success with her expertise and passion for excellence.
-            </p>
+                          <h2 className="text-3xl md:text-4xl font-bold text-red-600 mb-4 border-b-4 border-red-600 pb-2 inline-block">
+                Meet the Founder
+              </h2>
+              <p className="text-base text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                Meet the visionary leader driving HRA Legal&apos;s success with her expertise and passion for excellence.
+              </p>
           </motion.div>
 
           <div className="max-w-4xl mx-auto">
@@ -60,26 +60,26 @@ export default function AboutPage() {
             >
               <div className="bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden">
                 {/* Header */}
-                <div className="bg-gradient-to-r from-red-500 to-red-600 p-8 text-center">
-                  <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
-                    <Users className="w-12 h-12 text-red-600" />
+                <div className="bg-gradient-to-r from-red-500 to-red-600 p-6 text-center">
+                  <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-3 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                    <Users className="w-8 h-8 text-red-600" />
                   </div>
-                  <h3 className="text-2xl text-white font-bold mb-2">Rushi Upadhyaya</h3>
-                  <p className="text-red-100 font-medium">Founder & Legal Expert</p>
-                  <div className="mt-4 bg-red-400 bg-opacity-20 rounded-full px-4 py-2 inline-block">
-                    <span className="text-white text-sm font-semibold">15+ Years Experience</span>
+                  <h3 className="text-xl text-white font-bold mb-1">Rushi Upadhyaya</h3>
+                  <p className="text-red-100 font-medium text-sm">Founder & Legal Expert</p>
+                  <div className="mt-2 bg-red-400 bg-opacity-20 rounded-full px-3 py-1 inline-block">
+                    <span className="text-white text-xs font-semibold">15+ Years Experience</span>
                   </div>
                 </div>
 
                 {/* Content */}
-                <div className="p-8 space-y-6">
+                <div className="p-6 space-y-4">
                   {/* Professional Background */}
                   <div>
                     <h4 className="text-lg font-bold text-red-600 mb-4 flex items-center border-b-2 border-red-600 pb-2 inline-block">
                       <Building className="w-5 h-5 text-red-600 mr-2" />
                       Professional Background
                     </h4>
-                    <div className="bg-red-50 p-6 rounded-xl border-l-4 border-red-600">
+                    <div className="bg-red-50 p-4 rounded-xl border-l-4 border-red-600">
                       <p className="text-gray-700 text-sm leading-relaxed mb-4">
                         Rushi has an extensive experience of 15+ years as an in-house Counsel - Legal, Corporate Affairs and Business Affairs in Media & Entertainment sector, and has worked with global and multinational companies including:
                       </p>
@@ -113,7 +113,7 @@ export default function AboutPage() {
                         'Law Graduate (LLB)', 
                         'Management Graduate (BMS)'
                       ].map((qual, index) => (
-                        <div key={index} className="flex items-center bg-red-50 p-3 rounded-lg">
+                        <div key={index} className="flex items-center bg-red-50 p-2 rounded-lg">
                           <div className="w-2 h-2 bg-red-600 rounded-full mr-3"></div>
                           <span className="text-gray-700 text-sm">{qual}</span>
                         </div>
@@ -122,7 +122,7 @@ export default function AboutPage() {
                   </div>
 
                   {/* Experience Highlight */}
-                  <div className="bg-gradient-to-r from-red-50 to-white p-6 rounded-xl border-l-4 border-red-600">
+                  <div className="bg-gradient-to-r from-red-50 to-white p-4 rounded-xl border-l-4 border-red-600">
                     <h4 className="text-lg font-bold text-red-600 mb-3">Media & Entertainment Expert</h4>
                     <p className="text-gray-600 text-sm leading-relaxed">
                     Possess specialized experience working with leading global names in the media and entertainment industry, including Sony Pictures Networks India Pvt. Ltd. (now Culver Max), Shemaroo Entertainment Ltd., Goldmines Telefilms Ltd., Reliance Industries Ltd. – Jio Studios, Sony Music (India) Pvt. Ltd., Maddock Films, and as a consultant with Reliance Retail. This background brings a deep understanding of content creation, distribution, and licensing.    </p>
@@ -138,10 +138,10 @@ export default function AboutPage() {
                       <p className="text-gray-700 text-sm leading-relaxed mb-4">
                         Core skills that define her includes a sharp leadership mindset, prompt decision making, strong analytical and meticulous approach, proficiency to provide strategic and prolific suggestions, and competence to provide balanced solutions for a win-win closure.
                       </p>
-                      <div className="grid grid-cols-2 gap-3">
+                      <div className="grid grid-cols-2 gap-2">
                         {['Sharp Leadership Mindset', 'Prompt Decision Making', 'Strong Analytical Approach', 'Strategic Solutions', 'Meticulous Approach', 'Win-Win Closure'].map((skill, index) => (
-                          <div key={index} className="bg-red-50 p-3 rounded-lg text-center border border-red-200">
-                            <span className="text-red-600 text-sm font-medium">{skill}</span>
+                          <div key={index} className="bg-red-50 p-2 rounded-lg text-center border border-red-200">
+                            <span className="text-red-600 text-xs font-medium">{skill}</span>
                           </div>
                         ))}
                       </div>
@@ -152,34 +152,12 @@ export default function AboutPage() {
             </motion.div>
           </div>
 
-          {/* Bottom Call-to-Action - Experience Excellence (Optional) */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            viewport={{ once: true }}
-            className="text-center mt-16"
-          >
-            <div className="bg-white rounded-2xl p-8 shadow-lg border border-red-200">
-              <h3 className="text-2xl font-bold text-red-600 mb-4 border-b-2 border-red-600 pb-2 inline-block">
-                Experience Excellence in Leadership
-              </h3>
-              <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-                Our founder brings 15+ years of expertise in legal services, 
-                ensuring comprehensive solutions for your business needs.
-              </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <span className="bg-red-100 text-red-700 px-4 py-2 rounded-full text-sm font-medium">Legal Excellence</span>
-                <span className="bg-red-100 text-red-700 px-4 py-2 rounded-full text-sm font-medium">Strategic Leadership</span>
-                <span className="bg-red-100 text-red-700 px-4 py-2 rounded-full text-sm font-medium">Global Experience</span>
-              </div>
-            </div>
-          </motion.div>
+
         </div>
       </section>
 
       {/* Our Story - Placeholder for new content */}
-      <section id="story" className="py-20 px-4 sm:px-6 lg:px-8">
+      <section id="story" className="py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -189,7 +167,7 @@ export default function AboutPage() {
             className="bg-gradient-to-br from-white to-beige-50 rounded-3xl p-12 shadow-xl border border-beige-100"
           >
             <div className="text-center mb-12">
-              <h2 className="text-4xl md:text-5xl font-bold text-red-600 mb-6 border-b-4 border-red-600 pb-4 inline-block">
+              <h2 className="text-3xl md:text-4xl font-bold text-red-600 mb-6 border-b-4 border-red-600 pb-4 inline-block">
                 Our Story
               </h2>
             </div>
@@ -200,11 +178,11 @@ export default function AboutPage() {
                   📝 Story content will be updated when you provide the new content
                 </p>
               </div>
-              <p className="text-xl text-gray-700 leading-relaxed text-center">
+              <p className="text-lg text-gray-700 leading-relaxed text-center">
                 HRA Legal works on an ever evolving and diverse outlook consistently aligned with the 
                 prevalent market dynamics, and technology shifts.
               </p>
-              <p className="text-xl text-gray-700 leading-relaxed text-center">
+              <p className="text-lg text-gray-700 leading-relaxed text-center">
                 Just like technology, law is continuously evolving, and so does HRA Legal.
               </p>
             </div>
@@ -213,7 +191,7 @@ export default function AboutPage() {
       </section>
 
       {/* Mission */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-beige-100 to-beige-50">
+      <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-beige-100 to-beige-50">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -233,7 +211,7 @@ export default function AboutPage() {
                 <h3 className="text-2xl font-bold text-red-600 mb-6 border-b-2 border-red-600 pb-2 inline-block">
                   Our Mission
                 </h3>
-                <p className="text-lg text-gray-700 leading-relaxed">
+                <p className="text-base text-gray-700 leading-relaxed">
                   Our mission is to deliver outstanding professional legal services to a diverse range of global 
                   and domestic clients, including governments and economic entities, while upholding a strong 
                   focus on our Core Values, consistent profitability, long term sustainability, and social 
@@ -247,7 +225,7 @@ export default function AboutPage() {
       </section>
 
       {/* Vision */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, x: 50 }}
@@ -263,7 +241,7 @@ export default function AboutPage() {
                     Our Vision
                   </h3>
                   <div className="bg-red-50 rounded-2xl p-8 border-l-4 border-red-600">
-                    <p className="text-2xl text-gray-800 leading-relaxed font-semibold text-center">
+                    <p className="text-lg text-gray-800 leading-relaxed font-semibold text-center">
                       Our vision is to be a renowned profitable premier law firm globally.
                     </p>
                   </div>
@@ -281,7 +259,7 @@ export default function AboutPage() {
       </section>
 
       {/* Core Values */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-beige-50 to-white">
+      <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-beige-50 to-white">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -290,10 +268,10 @@ export default function AboutPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-red-600 mb-6 border-b-4 border-red-600 pb-4 inline-block">
+            <h2 className="text-3xl md:text-4xl font-bold text-red-600 mb-6 border-b-4 border-red-600 pb-4 inline-block">
               Core Values
             </h2>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
               Our core values of <strong>Integrity, Trust, Respect, Humility, and Unity</strong> are consistently 
               reflected in our business ethics and are embedded in the professional legal services we offer worldwide.
             </p>
@@ -330,7 +308,7 @@ export default function AboutPage() {
       </section>
 
       {/* Culture */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -339,10 +317,10 @@ export default function AboutPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-red-600 mb-6 border-b-4 border-red-600 pb-4 inline-block">
+            <h2 className="text-3xl md:text-4xl font-bold text-red-600 mb-6 border-b-4 border-red-600 pb-4 inline-block">
               Our Culture
             </h2>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
               Our culture is driven by an <strong>entrepreneurial mindset, strong conviction, principled leadership, 
               resilience, continuous learning, and focus on work-life balance</strong>, all fostered within a vibrant 
               and enjoyable workspace.

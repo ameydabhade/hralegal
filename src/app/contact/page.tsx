@@ -7,15 +7,15 @@ export const metadata = {
 
 export default function ContactPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-beige-100 to-white py-20">
+    <div className="min-h-screen bg-gradient-to-b from-beige-100 to-white py-12">
       {/* Hero Section */}
-      <section className="pt-32 pb-16">
+      <section className="pt-24 pb-12">
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl lg:text-5xl font-bold text-red-600 mb-6 border-b-4 border-red-600 pb-4 inline-block">
+                      <div className="text-center mb-12">
+            <h1 className="text-3xl lg:text-4xl font-bold text-red-600 mb-6 border-b-4 border-red-600 pb-4 inline-block">
               Contact Us
             </h1>
-            <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-base text-gray-700 max-w-3xl mx-auto leading-relaxed">
               For inquiries, please fill in the form below and we will revert shortly.
             </p>
           </div>
@@ -23,7 +23,7 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Information & Form */}
-      <section id="info" className="pb-16">
+      <section id="info" className="pb-12">
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16">
             {/* Contact Information */}

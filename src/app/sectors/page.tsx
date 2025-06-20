@@ -87,14 +87,14 @@ export default function SectorsPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-gradient-to-br from-red-50 to-white">
+      <section className="pt-24 pb-12 bg-gradient-to-br from-red-50 to-white">
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
           <div className="text-center">
-            <h1 className="text-5xl lg:text-6xl font-bold text-red-600 mb-6">
+            <h1 className="text-3xl lg:text-4xl font-bold text-red-600 mb-6">
               Sectors We Serve
               <div className="h-1 bg-red-600 w-32 mx-auto mt-4"></div>
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
               Leveraging sector-specific expertise to provide tailored legal solutions across 
               diverse industries and evolving business environments.
             </p>
@@ -103,7 +103,7 @@ export default function SectorsPage() {
       </section>
 
       {/* Sectors Grid */}
-      <section id="sectors" className="py-20 px-4 sm:px-6 lg:px-8">
+      <section id="sectors" className="py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-12">
             {sectorGroups.map((group, index) => (
@@ -148,7 +148,7 @@ export default function SectorsPage() {
       </section>
 
       {/* Emerging Sectors */}
-      <section id="emerging" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 to-white">
+      <section id="emerging" className="py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 to-white">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -157,11 +157,11 @@ export default function SectorsPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-red-600 mb-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-red-600 mb-6">
               Emerging Sectors
               <div className="h-1 bg-red-600 w-24 mx-auto mt-4"></div>
             </h2>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+            <p className="text-lg text-gray-600 max-w-4xl mx-auto">
               Next-generation industries where we are building specialized expertise 
               to support innovative businesses and future market leaders.
             </p>
@@ -190,7 +190,7 @@ export default function SectorsPage() {
       </section>
 
       {/* Featured Sector Highlight - Media & Entertainment */}
-      <section id="featured" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-red-50 to-red-100">
+      <section id="featured" className="py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-red-50 to-red-100">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -199,11 +199,11 @@ export default function SectorsPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-red-600 mb-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-red-600 mb-6">
               Featured Expertise
               <div className="h-1 bg-red-600 w-24 mx-auto mt-4"></div>
             </h2>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+            <p className="text-lg text-gray-600 max-w-4xl mx-auto">
               Our deep expertise in Media & Entertainment showcases our commitment to 
               understanding complex industry dynamics and delivering specialized solutions.
             </p>
@@ -250,7 +250,7 @@ export default function SectorsPage() {
       </section>
 
       {/* Call to Action */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-red-50 to-red-100">
+      <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-red-50 to-red-100">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -258,11 +258,11 @@ export default function SectorsPage() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-red-600 mb-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-red-600 mb-6">
               Need Sector-Specific Expertise?
               <div className="h-1 bg-red-600 w-24 mx-auto mt-4"></div>
             </h2>
-            <p className="text-xl text-gray-700 mb-8 leading-relaxed">
+            <p className="text-base text-gray-700 mb-8 leading-relaxed">
               Our industry-focused approach ensures that you receive legal guidance that understands 
               the unique challenges and opportunities within your sector.
             </p>

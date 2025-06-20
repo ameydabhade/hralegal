@@ -4,12 +4,12 @@ export default function TermsOfUsePage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-beige-50 to-white">
       {/* Hero Section */}
-      <section className="pt-32 pb-16">
+      <section className="pt-24 pb-12">
         <div className="max-w-4xl mx-auto px-4 lg:px-8">
           <div className="text-center mb-16">
             <div className="flex items-center justify-center mb-6">
               <FileText className="w-12 h-12 text-beige-400 mr-4" />
-              <h1 className="text-5xl lg:text-6xl font-bold text-gray-900">
+              <h1 className="text-3xl lg:text-4xl font-bold text-gray-900">
                 Terms of Use
               </h1>
             </div>

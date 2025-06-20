@@ -87,12 +87,12 @@ export default function KnowledgeCentrePage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-beige-100 to-white py-20">
+    <div className="min-h-screen bg-gradient-to-b from-beige-100 to-white py-12">
       {/* Hero Section */}
-      <section className="pt-32 pb-16">
+      <section className="pt-24 pb-12">
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl lg:text-6xl font-bold text-red-600 mb-6 border-b-4 border-red-600 pb-4 inline-block">
+                      <div className="text-center mb-12">
+            <h1 className="text-3xl lg:text-4xl font-bold text-red-600 mb-6 border-b-4 border-red-600 pb-4 inline-block">
               Learners Page
             </h1>
        
@@ -149,7 +149,7 @@ export default function KnowledgeCentrePage() {
       </section>
 
       {/* Content Sections */}
-      <section className="pb-16">
+      <section className="pb-12">
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
           {/* Blogs Tab */}
           {activeTab === 'blogs' && (
@@ -158,7 +158,7 @@ export default function KnowledgeCentrePage() {
                 <h2 className="text-3xl font-bold text-red-600 mb-4 border-b-2 border-red-600 pb-2 inline-block">
                   Latest Legal Insights & Articles
                 </h2>
-                <p className="text-lg text-gray-700">
+                <p className="text-base text-gray-700">
                   Expert analysis and practical guidance on legal matters affecting businesses and individuals.
                 </p>
               </div>

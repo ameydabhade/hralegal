@@ -15,13 +15,12 @@ const founders = [
       "Management Graduate (BMS)"
     ],
     highlights: [
-      "Sony Pictures Networks India Pvt. Ltd. (now Culver Max)",
-      "Shemaroo Entertainment Ltd.",
-      "Goldmines Telefilms Ltd.",
-      "Reliance Industries Ltd. – Jio Studios",
-      "Sony Music (India) Pvt. Ltd.",
-      "Maddock Films",
-      "Consultant with Reliance Retail"
+      "15+ years experience as in-house Counsel",
+      "Legal expertise with global and multinational companies",
+      "Specialized in Media & Entertainment sector",
+      "Expert in complex agreement structuring and negotiation",
+      "Corporate, commercial and intellectual property advisory",
+      "Content regulation and standard practices expertise"
     ],
     expertise: "Legal, Corporate Affairs and Business Affairs in Media & Entertainment sector",
     description: "Extensive experience of 15+ years as an in-house Counsel with global and multinational companies. Adept in structuring, negotiating and executing complex agreements for multifarious businesses, advising on corporate, commercial and intellectual property matters.",
@@ -38,16 +37,16 @@ const founders = [
 
 export default function HomeFoundersSection() {
   return (
-    <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
+    <section className="py-16 bg-gradient-to-b from-gray-50 to-white">
       <div className="max-w-7xl mx-auto px-4 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-4 py-2 bg-red-100 border border-red-200 rounded-full mb-6">
             <span className="text-sm font-medium text-red-600">Leadership</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Meet Our Founder
-          </h2>
+                      <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              Meet Our Founder
+            </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Our founding partner brings 15+ years of experience in corporate law, 
             intellectual property, and media & entertainment law, with deep industry expertise.
@@ -111,17 +110,12 @@ export default function HomeFoundersSection() {
                     <h4 className="font-semibold text-gray-900">Career Highlights</h4>
                   </div>
                   <div className="space-y-2">
-                    {founder.highlights.slice(0, 4).map((highlight, highlightIndex) => (
+                    {founder.highlights.map((highlight, highlightIndex) => (
                       <div key={highlightIndex} className="flex items-start gap-2">
                         <div className="w-1.5 h-1.5 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
                         <span className="text-sm text-gray-600">{highlight}</span>
                       </div>
                     ))}
-                    {founder.highlights.length > 4 && (
-                      <div className="text-sm text-red-600 font-medium">
-                        + {founder.highlights.length - 4} more global companies
-                      </div>
-                    )}
                   </div>
                 </div>
 

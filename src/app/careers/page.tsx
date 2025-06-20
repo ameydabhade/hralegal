@@ -61,13 +61,13 @@ export default function CareersPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       {/* Hero Section */}
-      <section className="pt-32 pb-16">
+      <section className="pt-24 pb-12">
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl lg:text-6xl font-bold text-red-600 mb-6 border-b-4 border-red-600 pb-4 inline-block">
+                      <div className="text-center mb-12">
+            <h1 className="text-3xl lg:text-4xl font-bold text-red-600 mb-6 border-b-4 border-red-600 pb-4 inline-block">
               Careers
             </h1>
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
               Join HRA Legal and build your career with a team committed to excellence, integrity, and professional growth.
             </p>
           </div>
@@ -75,11 +75,11 @@ export default function CareersPage() {
       </section>
 
       {/* Why Join Us */}
-      <section id="why" className="pb-16">
+      <section id="why" className="pb-12">
         <div className="max-w-6xl mx-auto px-4 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-red-600 mb-6 border-b-2 border-red-600 pb-2 inline-block">Why Choose HRA Legal?</h2>
-            <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+            <p className="text-base text-gray-700 max-w-3xl mx-auto">
               At HRA Legal, we foster a culture driven by entrepreneurial mindset, strong conviction, principled leadership, resilience, continuous learning, and focus on work-life balance.
             </p>
           </div>
@@ -102,11 +102,11 @@ export default function CareersPage() {
       </section>
 
       {/* Career Opportunities */}
-      <section id="opportunities" className="bg-red-50 py-16">
+      <section id="opportunities" className="bg-red-50 py-12">
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-red-600 mb-6 border-b-2 border-red-600 pb-2 inline-block">Career Opportunities</h2>
-            <p className="text-lg text-gray-700">
+            <p className="text-base text-gray-700">
               Explore opportunities to grow your legal career with HRA Legal.
             </p>
           </div>
@@ -157,12 +157,12 @@ export default function CareersPage() {
       </section>
 
       {/* Application Process */}
-      <section id="process" className="py-16">
+      <section id="process" className="py-12">
         <div className="max-w-6xl mx-auto px-4 lg:px-8">
           <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-8">
             <div className="text-center mb-8">
               <h2 className="text-3xl font-bold text-red-600 mb-4 border-b-2 border-red-600 pb-2 inline-block">Application Process</h2>
-              <p className="text-lg text-gray-700">
+              <p className="text-base text-gray-700">
                 We welcome applications from passionate legal professionals who share our values and commitment to excellence.
               </p>
             </div>

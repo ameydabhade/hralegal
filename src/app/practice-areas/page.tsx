@@ -95,14 +95,14 @@ export default function PracticeAreasPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-gradient-to-br from-red-50 to-white">
+      <section className="pt-24 pb-12 bg-gradient-to-br from-red-50 to-white">
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
           <div className="text-center">
-            <h1 className="text-5xl lg:text-6xl font-bold text-red-600 mb-6">
+            <h1 className="text-3xl lg:text-4xl font-bold text-red-600 mb-6">
               Our Practices
               <div className="h-1 bg-red-600 w-32 mx-auto mt-4"></div>
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
               We provide comprehensive legal services across multiple practice areas, delivering expert 
               counsel tailored to your specific industry and business needs.
             </p>
@@ -111,7 +111,7 @@ export default function PracticeAreasPage() {
       </section>
 
       {/* Practice Areas Grid */}
-      <section id="expertise" className="py-20 px-4 sm:px-6 lg:px-8">
+      <section id="expertise" className="py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-12">
             {practiceAreaGroups.map((group, index) => (
@@ -156,7 +156,7 @@ export default function PracticeAreasPage() {
       </section>
 
       {/* Developing Areas */}
-      <section id="developing" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 to-white">
+      <section id="developing" className="py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 to-white">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -165,11 +165,11 @@ export default function PracticeAreasPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-red-600 mb-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-red-600 mb-6">
               Developing Areas
               <div className="h-1 bg-red-600 w-24 mx-auto mt-4"></div>
             </h2>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+            <p className="text-lg text-gray-600 max-w-4xl mx-auto">
               Emerging practice areas where we are building our expertise 
               to meet evolving market demands and client needs.
             </p>
@@ -198,7 +198,7 @@ export default function PracticeAreasPage() {
       </section>
 
       {/* Call to Action */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-red-50 to-red-100">
+      <section className="py-4 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-red-50 to-red-100">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -206,11 +206,11 @@ export default function PracticeAreasPage() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-red-600 mb-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-red-600 mb-6">
               Need Legal Expertise?
               <div className="h-1 bg-red-600 w-24 mx-auto mt-4"></div>
             </h2>
-            <p className="text-xl text-gray-700 mb-8 leading-relaxed">
+            <p className="text-base text-gray-700 mb-8 leading-relaxed">
               Whether you need assistance in our core practice areas or developing practice areas, 
               our experienced team is ready to provide comprehensive legal solutions tailored to your needs.
             </p>
