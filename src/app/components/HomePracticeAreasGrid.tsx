@@ -78,17 +78,16 @@ const practiceAreaGroups = [
 ];
 
 const developingAreas = [
-  'Antitrust & Competition',
-  'Construction & Infrastructure',
-  'Criminal Law',
-  'Environment & Climate Change',
-  'Family Law',
-  'Healthcare & Life Sciences',
+  'Admiralty & Maritime',
+  'Banking and Finance',
+  'Defence, Aviation & Space',
+  'Foreign Investment and Exchange Control',
+  'Healthcare & Lifesciences',
   'Immigration',
-  'Insurance',
+  'Insurance & Reinsurance',
   'Mining & Resources',
   'Oil, Gas, Energy & Infrastructure',
-  'Private Equity & Venture Capital'
+  'Private Equity, Venture Capital & Funds'
 ];
 
 export default function HomePracticeAreasGrid() {

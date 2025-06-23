@@ -9,14 +9,10 @@ const sectorGroups = [
     underlineColor: 'bg-blue-500',
     textColor: 'text-blue-600',
     items: [
-      'Banking & Financial Services',
-      'Insurance & Risk Management',
-      'Real Estate & Construction',
-      'Infrastructure Development',
-      'Energy & Power Distribution',
-      'Textiles & Manufacturing',
-      'Pharmaceuticals & Healthcare',
-      'Publishing & Print Media'
+      'Energy',
+      'Infrastructure',
+      'Insurance',
+      'Real Estate'
     ]
   },
   {
@@ -26,13 +22,8 @@ const sectorGroups = [
     textColor: 'text-purple-600',
     items: [
       'Technology & Telecommunications',
-      'E-Commerce & Digital Platforms',
-      'Internet & Online Services',
-      'Software & Tech Startups',
-      'Fintech & Digital Banking',
-      'EdTech & E-Learning',
-      'Digital Media & Streaming',
-      'Cybersecurity & Data Privacy'
+      'E-Commerce & Retail',
+      'Internet'
     ]
   },
   {
@@ -41,47 +32,24 @@ const sectorGroups = [
     underlineColor: 'bg-orange-500',
     textColor: 'text-orange-600',
     items: [
-      'Film & Television Production',
-      'Theatre & Live Entertainment',
-      'Music & Recording Industry',
-      'Satellite & Broadcasting',
-      'Digital Content Creation',
-      'OTT & Streaming Platforms',
-      'Gaming & Interactive Media',
-      'Content Licensing & Distribution'
+      'Media & Entertainment',
+      'Publishing',
+      'Education & Learning'
     ]
   },
   {
-    title: 'Consumer & Retail',
+    title: 'Healthcare & Consumer',
     color: 'green',
     underlineColor: 'bg-green-500',
     textColor: 'text-green-600',
     items: [
-      'FMCG & Consumer Goods',
-      'Retail & Distribution',
-      'Food & Beverage',
-      'Fashion & Lifestyle',
-      'Automotive & Transportation',
-      'Travel & Hospitality',
-      'Sports & Recreation',
-      'Consumer Electronics'
+      'Pharmaceuticals, Healthcare & Life Sciences',
+      'Food & Beverages'
     ]
   }
 ];
 
-const emergingSectors = [
-  'Renewable Energy & Clean Tech',
-  'Artificial Intelligence & Machine Learning',
-  'Blockchain & Cryptocurrency',
-  'Biotechnology & Life Sciences',
-  'Space Technology & Aerospace',
-  'Electric Vehicles & Mobility',
-  'Sustainable Agriculture & FoodTech',
-  'Virtual Reality & Metaverse',
-  'Climate Technology & ESG',
-  'Quantum Computing',
-  'Robotics & Automation'
-];
+
 
 export default function SectorsPage() {
   return (
