@@ -3,7 +3,7 @@ import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram } from 'luc
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white py-8">
+    <footer className="bg-gray-900 text-white py-6">
       <div className="max-w-7xl mx-auto px-4 lg:px-6">
         {/* Main Footer Content */}
         <div className="grid md:grid-cols-3 gap-6 mb-6">
@@ -139,15 +139,10 @@ export default function Footer() {
             </div>
           </div>
         </div>
-
-        {/* Bottom Bar */}
-        <div className="border-t border-gray-800 pt-4">
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
-            {/* <div className="text-xs text-gray-400">
+ {/* <div className="text-xs text-gray-400">
               leave this as it is.
             </div> */}
-          </div>
-        </div>
+
       </div>
     </footer>
   );
