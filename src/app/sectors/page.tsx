@@ -58,9 +58,9 @@ export default function SectorsPage() {
       <section className="pt-24 pb-12 bg-gradient-to-br from-red-50 to-white">
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
           <div className="text-center">
-            <h1 className="text-3xl lg:text-4xl font-bold text-red-600 mb-6">
+            <h1 className="text-4xl lg:text-5xl font-bold text-gray-800 mb-6">
               Sectors We Serve
-              <div className="h-1 bg-red-600 w-32 mx-auto mt-4"></div>
+              <div className="h-1 bg-gray-800 w-32 mx-auto mt-4"></div>
             </h1>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
               Leveraging sector-specific expertise to provide tailored legal solutions across 
@@ -102,8 +102,8 @@ export default function SectorsPage() {
                       viewport={{ once: true }}
                       className="flex items-start group cursor-pointer"
                     >
-                      <div className="w-2 h-2 bg-gray-400 rounded-full mt-2 mr-3 flex-shrink-0 group-hover:bg-red-500 transition-colors"></div>
-                      <span className="text-gray-700 text-sm leading-relaxed hover:text-red-600 transition-colors">
+                      <div className="w-2 h-2 bg-gray-400 rounded-full mt-2 mr-3 flex-shrink-0 group-hover:bg-gray-600 transition-colors"></div>
+                      <span className="text-gray-700 text-sm leading-relaxed hover:text-gray-900 transition-colors">
                         {item}
                       </span>
                     </motion.div>
@@ -127,9 +127,9 @@ export default function SectorsPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-2xl md:text-3xl font-bold text-red-600 mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
               Featured Expertise
-              <div className="h-1 bg-red-600 w-24 mx-auto mt-4"></div>
+              <div className="h-1 bg-gray-800 w-24 mx-auto mt-4"></div>
             </h2>
             <p className="text-lg text-gray-600 max-w-4xl mx-auto">
               Our deep expertise in Media & Entertainment showcases our commitment to 
@@ -162,11 +162,11 @@ export default function SectorsPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white p-6 rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition-all duration-300 hover:border-red-200"
+                className="bg-white p-6 rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition-all duration-300 hover:border-gray-300"
               >
                 <div className="flex items-center mb-3">
-                  <div className="w-3 h-3 bg-red-500 rounded-full mr-3"></div>
-                  <h3 className="text-lg font-semibold text-red-600">
+                  <div className="w-3 h-3 bg-gray-500 rounded-full mr-3"></div>
+                  <h3 className="text-lg font-semibold text-gray-800">
                     {item.title}
                   </h3>
                 </div>
@@ -186,19 +186,19 @@ export default function SectorsPage() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-2xl md:text-3xl font-bold text-red-600 mb-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6">
               Need Sector-Specific Expertise?
-              <div className="h-1 bg-red-600 w-24 mx-auto mt-4"></div>
+              <div className="h-1 bg-gray-800 w-24 mx-auto mt-4"></div>
             </h2>
             <p className="text-base text-gray-700 mb-8 leading-relaxed">
               Our industry-focused approach ensures that you receive legal guidance that understands 
               the unique challenges and opportunities within your sector.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-red-600 text-white font-bold px-8 py-4 rounded-lg hover:bg-red-700 transition-colors duration-200 shadow-lg">
+              <button className="bg-gray-800 text-white font-bold px-8 py-4 rounded-lg hover:bg-gray-900 transition-colors duration-200 shadow-lg">
                 Schedule Consultation
               </button>
-              <button className="border-2 border-red-600 text-red-600 font-bold px-8 py-4 rounded-lg hover:bg-red-600 hover:text-white transition-colors duration-200">
+              <button className="border-2 border-gray-800 text-gray-800 font-bold px-8 py-4 rounded-lg hover:bg-gray-800 hover:text-white transition-colors duration-200">
                 Explore Our Services
               </button>
             </div>

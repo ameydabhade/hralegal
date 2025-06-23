@@ -93,9 +93,9 @@ export default function ContractsAgreementsAdvisoryPage() {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h1 className="text-3xl lg:text-4xl font-bold text-red-600 mb-6">
+            <h1 className="text-4xl lg:text-5xl font-bold text-gray-800 mb-6">
               Contracts/Agreements & Advisory
-              <div className="h-1 bg-red-600 w-32 mx-auto mt-4"></div>
+              <div className="h-1 bg-gray-800 w-32 mx-auto mt-4"></div>
             </h1>
             <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
               Comprehensive legal services for drafting, reviewing, and negotiating various types of 
@@ -118,7 +118,7 @@ export default function ContractsAgreementsAdvisoryPage() {
                 viewport={{ once: true }}
                 className="bg-white p-6 rounded-lg shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300"
               >
-                <h3 className="text-xl font-bold text-red-600 mb-3 border-b-2 border-red-600 pb-1 inline-block">{area.title}</h3>
+                <h3 className="text-xl font-bold text-gray-800 mb-3 border-b-2 border-gray-800 pb-1 inline-block">{area.title}</h3>
                 <p className="text-gray-700 leading-relaxed">{area.description}</p>
               </motion.div>
             ))}
@@ -136,9 +136,9 @@ export default function ContractsAgreementsAdvisoryPage() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-2xl md:text-3xl font-bold text-red-600 mb-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6">
               E-Commerce / Retail Businesses
-              <div className="h-1 bg-red-600 w-24 mx-auto mt-4"></div>
+              <div className="h-1 bg-gray-800 w-24 mx-auto mt-4"></div>
             </h2>
           </motion.div>
 
@@ -152,7 +152,7 @@ export default function ContractsAgreementsAdvisoryPage() {
                 viewport={{ once: true }}
                 className="bg-white p-6 rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition-all duration-300"
               >
-                <h3 className="text-lg font-bold text-red-600 mb-3 border-b border-red-600 pb-1 inline-block">{area.title}</h3>
+                <h3 className="text-lg font-bold text-gray-800 mb-3 border-b border-gray-800 pb-1 inline-block">{area.title}</h3>
                 <p className="text-gray-700 leading-relaxed">{area.description}</p>
               </motion.div>
             ))}
@@ -170,9 +170,9 @@ export default function ContractsAgreementsAdvisoryPage() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-2xl md:text-3xl font-bold text-red-600 mb-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6">
               Intellectual Property
-              <div className="h-1 bg-red-600 w-24 mx-auto mt-4"></div>
+              <div className="h-1 bg-gray-800 w-24 mx-auto mt-4"></div>
             </h2>
           </motion.div>
 
@@ -186,7 +186,7 @@ export default function ContractsAgreementsAdvisoryPage() {
                 viewport={{ once: true }}
                 className="bg-white p-6 rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition-all duration-300"
               >
-                <h3 className="text-lg font-bold text-red-600 mb-3 border-b border-red-600 pb-1 inline-block">{area.title}</h3>
+                <h3 className="text-lg font-bold text-gray-800 mb-3 border-b border-gray-800 pb-1 inline-block">{area.title}</h3>
                 <p className="text-gray-700 leading-relaxed">{area.description}</p>
               </motion.div>
             ))}
@@ -204,9 +204,9 @@ export default function ContractsAgreementsAdvisoryPage() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-2xl md:text-3xl font-bold text-red-600 mb-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6">
               Indemnity, Liability and Dispute Resolution
-              <div className="h-1 bg-red-600 w-24 mx-auto mt-4"></div>
+              <div className="h-1 bg-gray-800 w-24 mx-auto mt-4"></div>
             </h2>
           </motion.div>
 
@@ -220,7 +220,7 @@ export default function ContractsAgreementsAdvisoryPage() {
                 viewport={{ once: true }}
                 className="bg-white p-6 rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition-all duration-300"
               >
-                <h3 className="text-lg font-bold text-red-600 mb-3 border-b border-red-600 pb-1 inline-block">{area.title}</h3>
+                <h3 className="text-lg font-bold text-gray-800 mb-3 border-b border-gray-800 pb-1 inline-block">{area.title}</h3>
                 <p className="text-gray-700 leading-relaxed">{area.description}</p>
               </motion.div>
             ))}
@@ -238,9 +238,9 @@ export default function ContractsAgreementsAdvisoryPage() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-2xl md:text-3xl font-bold text-red-600 mb-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6">
               General End-to-End Documentation
-              <div className="h-1 bg-red-600 w-24 mx-auto mt-4"></div>
+              <div className="h-1 bg-gray-800 w-24 mx-auto mt-4"></div>
             </h2>
           </motion.div>
 
@@ -254,7 +254,7 @@ export default function ContractsAgreementsAdvisoryPage() {
                 viewport={{ once: true }}
                 className="bg-white p-6 rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition-all duration-300"
               >
-                <h3 className="text-lg font-bold text-red-600 mb-3 border-b border-red-600 pb-1 inline-block">{area.title}</h3>
+                <h3 className="text-lg font-bold text-gray-800 mb-3 border-b border-gray-800 pb-1 inline-block">{area.title}</h3>
                 <p className="text-gray-700 leading-relaxed">{area.description}</p>
               </motion.div>
             ))}
@@ -263,7 +263,7 @@ export default function ContractsAgreementsAdvisoryPage() {
       </section>
 
       {/* Call to Action */}
-      <section className="py-4 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-red-50 to-red-100">
+      <section className="py-4 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-50 to-gray-100">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -271,19 +271,19 @@ export default function ContractsAgreementsAdvisoryPage() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-2xl md:text-3xl font-bold text-red-600 mb-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6">
               Need Contract or Agreement Services?
-              <div className="h-1 bg-red-600 w-24 mx-auto mt-4"></div>
+              <div className="h-1 bg-gray-800 w-24 mx-auto mt-4"></div>
             </h2>
             <p className="text-base text-gray-700 mb-8 leading-relaxed">
               Our experienced team provides comprehensive contract and agreement services 
               to protect your business interests and ensure legal compliance.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-red-600 text-white font-bold px-8 py-4 rounded-lg hover:bg-red-700 transition-colors duration-200 shadow-lg">
+              <button className="bg-gray-800 text-white font-bold px-8 py-4 rounded-lg hover:bg-gray-900 transition-colors duration-200 shadow-lg">
                 Schedule Consultation
               </button>
-              <button className="border-2 border-red-600 text-red-600 font-bold px-8 py-4 rounded-lg hover:bg-red-600 hover:text-white transition-colors duration-200">
+              <button className="border-2 border-gray-800 text-gray-800 font-bold px-8 py-4 rounded-lg hover:bg-gray-800 hover:text-white transition-colors duration-200">
                 Contact Our Team
               </button>
             </div>

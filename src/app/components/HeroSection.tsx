@@ -24,7 +24,7 @@ export default function HeroSection() {
             <div className="space-y-4">
               {/* Main Title with Red Theme and Underlines */}
               <div className="space-y-3">
-                <h1 className="text-3xl lg:text-4xl font-bold text-red-600 leading-tight border-b-4 border-red-600 pb-3 inline-block">
+                <h1 className="text-4xl lg:text-5xl font-bold text-gray-800 leading-tight border-b-4 border-gray-800 pb-3 inline-block">
                   Your Legal Partners
                 </h1>
                 <div className="text-xl lg:text-2xl text-gray-700 font-medium">

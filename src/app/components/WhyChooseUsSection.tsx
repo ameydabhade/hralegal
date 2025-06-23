@@ -55,8 +55,8 @@ export default function WhyChooseUsSection() {
           viewport={{ once: true }}
           className="text-center mb-4"
         >
-          <div className="inline-flex items-center px-4 py-2 bg-red-100 border border-red-300 rounded-full mb-6">
-            <span className="text-sm font-medium text-red-600">Why Choose Us</span>
+          <div className="inline-flex items-center px-4 py-2 bg-gray-100 border border-gray-300 rounded-full mb-6">
+            <span className="text-sm font-medium text-gray-700">Why Choose Us</span>
           </div>
           <p className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto">
             Experience excellence in legal services with our comprehensive approach to your business needs
@@ -76,11 +76,11 @@ export default function WhyChooseUsSection() {
               className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100"
             >
               <div className="flex items-start">
-                <div className="p-4 bg-red-600 rounded-xl shadow-lg mr-4 flex-shrink-0">
+                <div className="p-4 bg-gray-800 rounded-xl shadow-lg mr-4 flex-shrink-0">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-lg font-semibold text-red-600 mb-3 leading-tight border-b border-red-300 pb-1 inline-block">
+                  <h3 className="text-lg font-semibold text-gray-800 mb-3 leading-tight border-b border-gray-300 pb-1 inline-block">
                     {feature.title}
                   </h3>
                   <p className="text-gray-600 text-sm leading-relaxed">

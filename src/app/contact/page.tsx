@@ -12,7 +12,7 @@ export default function ContactPage() {
       <section className="pt-24 pb-12">
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
                       <div className="text-center mb-12">
-            <h1 className="text-3xl lg:text-4xl font-bold text-red-600 mb-6 border-b-4 border-red-600 pb-4 inline-block">
+            <h1 className="text-4xl lg:text-5xl font-bold text-gray-800 mb-6 border-b-4 border-gray-800 pb-4 inline-block">
               Contact Us
             </h1>
             <p className="text-base text-gray-700 max-w-3xl mx-auto leading-relaxed">

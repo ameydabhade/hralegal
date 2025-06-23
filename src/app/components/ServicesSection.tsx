@@ -82,8 +82,8 @@ export default function ServicesSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center px-4 py-2 bg-red-100 border border-red-300 rounded-full mb-6">
-            <span className="text-sm font-medium text-red-600">Our Services</span>
+          <div className="inline-flex items-center px-4 py-2 bg-gray-100 border border-gray-300 rounded-full mb-6">
+            <span className="text-sm font-medium text-gray-700">Our Services</span>
           </div>
           <p className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto">
             Comprehensive legal solutions tailored to your business needs
@@ -98,7 +98,7 @@ export default function ServicesSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="mb-12 bg-gradient-to-r from-red-50 to-white rounded-2xl p-8 border-l-4 border-red-600"
+            className="mb-12 bg-gradient-to-r from-gray-50 to-white rounded-2xl p-8 border-l-4 border-gray-600"
           >
             <p className="text-lg text-gray-700 leading-relaxed text-center">
               HRA Legal offers services including structuring, drafting, negotiation and execution of all types of contracts/agreements/documents/paperwork (including definitive agreements, long form agreements, founder agreements, non-disclosure agreements, no objection certificates, letters, agency agreements, et al), sending notices &amp; replies, legal research and analysis, consultations and advisory services, policy drafting and its implementation manual, tabulating databases, setting up of processes, systems, SOP&apos;s (standard operating procedures), providing opinions &amp; solutions, et al for established and emerging businesses, and/or managing entire legal department of your company.
@@ -110,7 +110,7 @@ export default function ServicesSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-4xl font-bold text-red-600 mb-12 text-center border-b-4 border-red-600 pb-4 inline-block w-full"
+            className="text-4xl md:text-5xl font-bold text-gray-800 mb-12 text-center border-b-4 border-gray-800 pb-4 inline-block w-full"
           >
             Primary Services
           </motion.h3>
@@ -127,11 +127,11 @@ export default function ServicesSection() {
                 className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100"
               >
                 <div className="flex items-start">
-                  <div className="p-3 bg-red-600 rounded-xl shadow-lg mr-4 flex-shrink-0">
+                  <div className="p-3 bg-gray-800 rounded-xl shadow-lg mr-4 flex-shrink-0">
                     <service.icon className="w-5 h-5 text-white" />
                   </div>
                   <div className="flex-1">
-                    <h4 className="text-lg font-semibold text-red-600 mb-2 leading-tight border-b border-red-300 pb-1 inline-block">
+                    <h4 className="text-lg font-semibold text-gray-800 mb-2 leading-tight border-b border-gray-300 pb-1 inline-block">
                       {service.title}
                     </h4>
                     <p className="text-gray-600 text-sm leading-relaxed mt-3">
@@ -151,7 +151,7 @@ export default function ServicesSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-4xl font-bold text-red-600 mb-12 text-center border-b-4 border-red-600 pb-4 inline-block w-full"
+            className="text-4xl md:text-5xl font-bold text-gray-800 mb-12 text-center border-b-4 border-gray-800 pb-4 inline-block w-full"
           >
             Secondary Services
           </motion.h3>
@@ -168,11 +168,11 @@ export default function ServicesSection() {
                 className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100"
               >
                 <div className="flex items-start">
-                  <div className="p-3 bg-red-600 rounded-xl shadow-lg mr-4 flex-shrink-0">
+                  <div className="p-3 bg-gray-800 rounded-xl shadow-lg mr-4 flex-shrink-0">
                     <service.icon className="w-5 h-5 text-white" />
                   </div>
                   <div className="flex-1">
-                    <h4 className="text-lg font-semibold text-red-600 mb-2 leading-tight border-b border-red-300 pb-1 inline-block">
+                    <h4 className="text-lg font-semibold text-gray-800 mb-2 leading-tight border-b border-gray-300 pb-1 inline-block">
                       {service.title}
                     </h4>
                     <p className="text-gray-600 text-sm leading-relaxed mt-3">

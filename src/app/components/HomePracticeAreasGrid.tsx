@@ -4,75 +4,51 @@ import { motion } from 'framer-motion';
 
 const practiceAreaGroups = [
   {
-    title: 'HRA Corporate',
+    title: 'Corporate, Commercial & Company Law',
     color: 'blue',
     underlineColor: 'bg-blue-500',
     textColor: 'text-blue-600',
     items: [
-      'Company Secretarial & Corporate Governance',
-      'Corporate Structure & Formation',
-      'Board Governance & Compliance',
-      'Corporate Financing & Restructuring',
-      'Investment Agreements',
-      'CSR, Sustainability and ESG',
-      'Mergers & Acquisitions',
-      'Joint Ventures & Strategic Alliances',
-      'Due Diligence',
-      'Corporate Reorganization'
+      'Contracts/Agreements & Advisory',
+      'Company Secretarial & Governance',
+      'Mergers & Acquisitions, JVs & Strategic Alliances',
+      'Employment, Labour & Industrial Relations',
+      'Intellectual Property',
+      'Startups & Emerging Businesses'
     ]
   },
   {
-    title: 'HRA Finance',
+    title: 'Finance, Taxation & Regulatory',
     color: 'amber',
     underlineColor: 'bg-amber-500',
     textColor: 'text-amber-600',
     items: [
-      'Banking & Finance Advisory',
-      'Debt & Refinancing',
-      'Capital Markets',
-      'Financial Regulatory Compliance',
-      'Fintech Legal Framework',
-      'Investment Fund Advisory',
-      'Transaction Documentation',
-      'Tax Planning & Advisory',
-      'International Tax Structuring',
-      'Corporate Tax Compliance'
+      'Corporate Financing',
+      'Restructuring, Insolvency & Bankruptcy',
+      'Taxation',
+      'Compliance, Bribery & White Collar Crime'
     ]
   },
   {
-    title: 'HRA Dispute Resolution',
+    title: 'Technology, Media & Data',
     color: 'orange',
     underlineColor: 'bg-orange-500',
     textColor: 'text-orange-600',
     items: [
-      'Commercial Litigation',
-      'Arbitration & Mediation',
-      'Contract Disputes',
-      'Employment Disputes',
-      'IP Disputes & Enforcement',
-      'Regulatory Enforcement',
-      'White Collar Crime',
-      'Anti-Corruption & Compliance',
-      'Insolvency & Bankruptcy',
-      'Cross-Border Disputes'
+      'Technology & Digital Contracts',
+      'Media, Entertainment & Telecommunications',
+      'Data Privacy, Cybersecurity & Protection'
     ]
   },
   {
-    title: 'HRA Markets',
+    title: 'Real Estate, Trade & Other Advisory',
     color: 'green',
     underlineColor: 'bg-green-500',
     textColor: 'text-green-600',
     items: [
-      'Intellectual Property Protection',
-      'Technology & Digital Innovation',
-      'Data Privacy & Cybersecurity',
-      'Media & Entertainment Law',
-      'International Trade Advisory',
-      'Regulatory Advisory',
-      'Employment & Labour Relations',
-      'Real Estate Transactions',
-      'Startup & Emerging Business',
-      'Contract Drafting & Compliance'
+      'Real Estate',
+      'International Trade',
+      'Project Management'
     ]
   }
 ];
@@ -96,10 +72,10 @@ export default function HomePracticeAreasGrid() {
       <div className="max-w-7xl mx-auto px-4 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-red-600 mb-6">
-            Our Practices
-            <div className="h-1 bg-red-600 w-24 mx-auto mt-4"></div>
-          </h2>
+                      <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+              Our Practices
+              <div className="h-1 bg-gray-800 w-24 mx-auto mt-4"></div>
+            </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
             We provide comprehensive legal services across multiple practice areas, delivering expert 
             counsel tailored to your specific industry and business needs.
@@ -136,8 +112,8 @@ export default function HomePracticeAreasGrid() {
                     viewport={{ once: true }}
                     className="flex items-start group cursor-pointer"
                   >
-                    <div className="w-2 h-2 bg-gray-400 rounded-full mt-2 mr-3 flex-shrink-0 group-hover:bg-red-500 transition-colors"></div>
-                    <span className="text-gray-700 text-sm leading-relaxed hover:text-red-600 transition-colors">
+                    <div className="w-2 h-2 bg-gray-400 rounded-full mt-2 mr-3 flex-shrink-0 group-hover:bg-gray-600 transition-colors"></div>
+                    <span className="text-gray-700 text-sm leading-relaxed hover:text-gray-900 transition-colors">
                       {item}
                     </span>
                   </motion.div>
@@ -156,9 +132,9 @@ export default function HomePracticeAreasGrid() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h3 className="text-2xl md:text-3xl font-bold text-red-600 mb-4">
+            <h3 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
               Developing Areas
-              <div className="h-1 bg-red-600 w-20 mx-auto mt-2"></div>
+              <div className="h-1 bg-gray-800 w-20 mx-auto mt-2"></div>
             </h3>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Emerging practice areas where we are building our expertise 
@@ -174,11 +150,11 @@ export default function HomePracticeAreasGrid() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white p-6 rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition-all duration-300 hover:border-red-200"
+                className="bg-white p-6 rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition-all duration-300 hover:border-gray-300"
               >
                 <div className="flex items-center">
-                  <div className="w-3 h-3 bg-red-500 rounded-full mr-3"></div>
-                  <h3 className="text-lg font-semibold text-gray-700 hover:text-red-600 transition-colors">
+                  <div className="w-3 h-3 bg-gray-500 rounded-full mr-3"></div>
+                  <h3 className="text-lg font-semibold text-gray-700 hover:text-gray-900 transition-colors">
                     {area}
                   </h3>
                 </div>

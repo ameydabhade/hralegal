@@ -240,7 +240,7 @@ export default function Header() {
                >
                 <Link 
                   href={item.href} 
-                  className="relative text-red-600 hover:text-red-700 transition-all duration-300 text-sm font-semibold group transform hover:-translate-y-0.5"
+                  className="relative text-gray-700 hover:text-gray-900 transition-all duration-300 text-sm font-semibold group transform hover:-translate-y-0.5"
                 >
                   {item.label}
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-red-600 transition-all duration-300 group-hover:w-full"></span>
@@ -256,7 +256,7 @@ export default function Header() {
                     {item.dropdown.map((subsection) => (
                       <div key={subsection.label} className="relative">
                         <div
-                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors duration-200 lowercase cursor-pointer"
+                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors duration-200 lowercase cursor-pointer"
                           onMouseEnter={() => {
                             if (subsection.label === 'Practice Areas') {
                               setActiveMegaMenu('practice-areas');
@@ -313,14 +313,14 @@ export default function Header() {
                                         key={itemIndex}
                                         className="flex items-start group cursor-pointer"
                                       >
-                                        <div className="w-1 h-1 bg-gray-400 rounded-full mt-1.5 mr-2 flex-shrink-0 group-hover:bg-red-500 transition-colors"></div>
-                                        <span className="text-sm text-gray-700 leading-relaxed hover:text-red-600 transition-colors">
+                                        <div className="w-1 h-1 bg-gray-400 rounded-full mt-1.5 mr-2 flex-shrink-0 group-hover:bg-gray-600 transition-colors"></div>
+                                        <span className="text-sm text-gray-700 leading-relaxed hover:text-gray-900 transition-colors">
                                           {item}
                                         </span>
                                       </div>
                                     ))}
                                     {group.items.length > 6 && (
-                                      <div className="text-sm text-red-600 font-medium cursor-pointer hover:text-red-700">
+                                      <div className="text-sm text-gray-600 font-medium cursor-pointer hover:text-gray-800">
                                         + {group.items.length - 6} more areas
                                       </div>
                                     )}
@@ -364,14 +364,14 @@ export default function Header() {
                                         key={itemIndex}
                                         className="flex items-start group cursor-pointer"
                                       >
-                                        <div className="w-1 h-1 bg-gray-400 rounded-full mt-1.5 mr-2 flex-shrink-0 group-hover:bg-red-500 transition-colors"></div>
-                                        <span className="text-sm text-gray-700 leading-relaxed hover:text-red-600 transition-colors">
+                                        <div className="w-1 h-1 bg-gray-400 rounded-full mt-1.5 mr-2 flex-shrink-0 group-hover:bg-gray-600 transition-colors"></div>
+                                        <span className="text-sm text-gray-700 leading-relaxed hover:text-gray-900 transition-colors">
                                           {item}
                                         </span>
                                       </div>
                                     ))}
                                     {group.items.length > 6 && (
-                                      <div className="text-sm text-red-600 font-medium cursor-pointer hover:text-red-700">
+                                      <div className="text-sm text-gray-600 font-medium cursor-pointer hover:text-gray-800">
                                         + {group.items.length - 6} more sectors
                                       </div>
                                     )}
@@ -393,7 +393,7 @@ export default function Header() {
           <div className="hidden lg:block relative z-10">
             <Link 
               href="/contact"
-              className="inline-flex items-center justify-center px-5 py-2 bg-red-600 text-white text-sm font-semibold rounded-md hover:bg-red-700 transition-colors duration-200"
+              className="inline-flex items-center justify-center px-5 py-2 bg-gray-800 text-white text-sm font-semibold rounded-md hover:bg-gray-900 transition-colors duration-200"
             >
               Get Legal Consultation
             </Link>
@@ -430,7 +430,7 @@ export default function Header() {
                 <Link 
                   key={item.label}
                   href={item.href} 
-                  className="text-red-600 hover:text-red-700 transition-colors text-xs font-medium"
+                  className="text-gray-700 hover:text-gray-900 transition-colors text-xs font-medium"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {item.label}
@@ -439,7 +439,7 @@ export default function Header() {
               <div onClick={() => setIsMobileMenuOpen(false)}>
                 <Link 
                   href="/contact"
-                  className="text-red-600 hover:text-red-700 transition-colors text-xs font-medium relative w-full text-center block mt-2"
+                  className="text-gray-700 hover:text-gray-900 transition-colors text-xs font-medium relative w-full text-center block mt-2"
                 >
                   Get Legal Consultation
                   <span className="absolute bottom-0 left-0 w-full h-0.5 bg-red-600"></span>
