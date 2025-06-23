@@ -9,16 +9,12 @@ const practiceAreaGroups = [
     underlineColor: 'bg-blue-500',
     textColor: 'text-blue-600',
     items: [
-      'Company Secretarial & Corporate Governance',
-      'Corporate Structure & Formation',
-      'Board Governance & Compliance',
-      'Corporate Financing & Restructuring',
-      'Investment Agreements',
-      'CSR, Sustainability and ESG',
-      'Mergers & Acquisitions',
-      'Joint Ventures & Strategic Alliances',
-      'Due Diligence',
-      'Corporate Reorganization'
+      'Contracts/Agreements & Advisory',
+      'Company Secretarial & Governance',
+      'Mergers & Acquisitions, JVs & Strategic Alliances',
+      'Employment, Labour & Industrial Relations',
+      'Intellectual Property',
+      'Startups & Emerging Businesses'
     ]
   },
   {
@@ -27,16 +23,10 @@ const practiceAreaGroups = [
     underlineColor: 'bg-amber-500',
     textColor: 'text-amber-600',
     items: [
-      'Banking & Finance Advisory',
-      'Debt & Refinancing',
-      'Capital Markets',
-      'Financial Regulatory Compliance',
-      'Fintech Legal Framework',
-      'Investment Fund Advisory',
-      'Transaction Documentation',
-      'Tax Planning & Advisory',
-      'International Tax Structuring',
-      'Corporate Tax Compliance'
+      'Corporate Financing',
+      'Restructuring, Insolvency & Bankruptcy',
+      'Taxation',
+      'Compliance, Bribery & White Collar Crime'
     ]
   },
   {
@@ -45,16 +35,9 @@ const practiceAreaGroups = [
     underlineColor: 'bg-orange-500',
     textColor: 'text-orange-600',
     items: [
-      'Commercial Litigation',
-      'Arbitration & Mediation',
-      'Contract Disputes',
-      'Employment Disputes',
-      'IP Disputes & Enforcement',
-      'Regulatory Enforcement',
-      'White Collar Crime',
-      'Anti-Corruption & Compliance',
-      'Insolvency & Bankruptcy',
-      'Cross-Border Disputes'
+      'Technology & Digital Contracts',
+      'Media, Entertainment & Telecommunications',
+      'Data Privacy, Cybersecurity & Protection'
     ]
   },
   {
@@ -63,16 +46,9 @@ const practiceAreaGroups = [
     underlineColor: 'bg-green-500',
     textColor: 'text-green-600',
     items: [
-      'Intellectual Property Protection',
-      'Technology & Digital Innovation',
-      'Data Privacy & Cybersecurity',
-      'Media & Entertainment Law',
-      'International Trade Advisory',
-      'Regulatory Advisory',
-      'Employment & Labour Relations',
-      'Real Estate Transactions',
-      'Startup & Emerging Business',
-      'Contract Drafting & Compliance'
+      'Real Estate',
+      'International Trade',
+      'Project Management'
     ]
   }
 ];
