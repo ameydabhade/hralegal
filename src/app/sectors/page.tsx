@@ -53,9 +53,9 @@ const sectorGroups = [
 
 export default function SectorsPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+    <div className="min-h-screen bg-[#ECE5DE]">
       {/* Hero Section */}
-      <section className="pt-24 pb-12 bg-gradient-to-br from-red-50 to-white">
+      <section className="pt-24 pb-12 bg-[#ECE5DE]">
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl lg:text-5xl font-bold text-gray-800 mb-6">
@@ -117,8 +117,8 @@ export default function SectorsPage() {
 
 
 
-      {/* Featured Sector Highlight - Media & Entertainment */}
-      <section id="featured" className="py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-red-50 to-red-100">
+      {/* Featured Expertise - Media & Entertainment */}
+      <section id="featured" className="py-12 px-4 sm:px-6 lg:px-8 bg-[#ECE5DE]">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -128,32 +128,33 @@ export default function SectorsPage() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
-              Featured Expertise
+              Featured Expertise: Media & Entertainment
               <div className="h-1 bg-gray-800 w-24 mx-auto mt-4"></div>
             </h2>
-            <p className="text-lg text-gray-600 max-w-4xl mx-auto">
-              Our deep expertise in Media & Entertainment showcases our commitment to 
-              understanding complex industry dynamics and delivering specialized solutions.
-            </p>
+            <div className="max-w-5xl mx-auto">
+              <p className="text-lg text-gray-700 leading-relaxed">
+                HRA Legal have enriching experience of close to 2 decades in Media and Entertainment sector, with a nuanced understanding of all the paperwork, processes, procedure involved during the stages of content making i.e., pre-development, development, production, releases, and post release of the content via any modes and medium of communication.
+              </p>
+            </div>
           </motion.div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
-                title: 'Productions',
-                description: 'Pre-production, production, and post-production legal services'
+                title: 'Pre-Development',
+                description: 'Rights acquisition, concept development, and initial legal framework setup'
               },
               {
-                title: 'Theatres',
-                description: 'Theatrical distribution and exhibition agreements'
+                title: 'Development & Production',
+                description: 'Production agreements, talent contracts, and on-set legal compliance'
               },
               {
-                title: 'Satellite & Digital',
-                description: 'Broadcasting rights and digital platform agreements'
+                title: 'Releases',
+                description: 'Distribution agreements, theatrical and digital release strategies'
               },
               {
-                title: 'Music',
-                description: 'Music rights, licensing, and synchronization agreements'
+                title: 'Post Release',
+                description: 'Licensing, merchandising, and ongoing rights management'
               }
             ].map((item, index) => (
               <motion.div

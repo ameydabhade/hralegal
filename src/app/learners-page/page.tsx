@@ -87,7 +87,7 @@ export default function KnowledgeCentrePage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-beige-100 to-white py-12">
+    <div className="min-h-screen bg-[#ECE5DE] py-12">
       {/* Hero Section */}
       <section className="pt-24 pb-12">
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
@@ -163,7 +163,7 @@ export default function KnowledgeCentrePage() {
               <div className="grid lg:grid-cols-2 gap-8">
                 {blogPosts.map((post) => (
                   <article key={post.id} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                    <div className="h-48 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
+                    <div className="h-48 bg-gray-100 flex items-center justify-center">
                       <BookOpen className="w-16 h-16 text-gray-600" />
                     </div>
                     
@@ -261,7 +261,7 @@ export default function KnowledgeCentrePage() {
       </section>
 
       {/* Newsletter Subscription - Updated Text */}
-      <section className="bg-gray-50 py-16">
+      <section className="bg-[#ECE5DE] py-16">
         <div className="max-w-4xl mx-auto px-4 lg:px-8 text-center">
           <h2 className="text-4xl font-bold text-gray-800 mb-6 border-b-2 border-gray-800 pb-2 inline-block">
             Stay Updated with Legal Insights
@@ -277,7 +277,7 @@ export default function KnowledgeCentrePage() {
                 placeholder="Enter your email address"
                 className="flex-1 px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-gray-400 focus:border-gray-400 transition-colors"
               />
-              <button className="px-6 py-3 bg-gray-800 text-white font-semibold rounded-md hover:bg-gray-900 transition-colors duration-200">
+              <button className="px-6 py-3 bg-[#B39F96] text-white font-semibold rounded-md hover:bg-[#A08B80] transition-colors duration-200">
                 Subscribe
               </button>
             </div>

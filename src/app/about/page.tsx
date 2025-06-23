@@ -17,7 +17,7 @@ import {
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-beige-100 to-white">
+    <div className="min-h-screen bg-[#ECE5DE]">
       {/* Hero Section */}
       <section className="pt-24 pb-12">
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
@@ -32,7 +32,7 @@ export default function AboutPage() {
       </section>
 
       {/* Meet the Founder */}
-      <section id="founder" className="py-6 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-beige-100 to-beige-50">
+      <section id="founder" className="py-6 px-4 sm:px-6 lg:px-8 bg-[#ECE5DE]">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -127,7 +127,7 @@ export default function AboutPage() {
                   </div>
 
                   {/* Experience Highlight */}
-                  <div className="bg-gradient-to-r from-gray-50 to-white p-4 rounded-xl border-l-4 border-gray-600">
+                                      <div className="bg-white p-4 rounded-xl border-l-4 border-gray-600 shadow-sm">
                     <h4 className="text-lg font-bold text-gray-800 mb-3">Media & Entertainment Expert</h4>
                     <p className="text-gray-600 text-sm leading-relaxed">
                     Possess specialized experience working with leading global names in the media and entertainment industry, including Sony Pictures Networks India Pvt. Ltd. (now Culver Max), Shemaroo Entertainment Ltd., Goldmines Telefilms Ltd., Reliance Industries Ltd. – Jio Studios, Sony Music (India) Pvt. Ltd., Maddock Films, and as a consultant with Reliance Retail. This background brings a deep understanding of content creation, distribution, and licensing.    </p>
@@ -169,7 +169,7 @@ export default function AboutPage() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="bg-gradient-to-br from-white to-beige-50 rounded-3xl p-12 shadow-xl border border-beige-100"
+            className="bg-[#ECE5DE] rounded-3xl p-12 shadow-xl border border-gray-200"
           >
             <div className="text-center mb-12">
               <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6 border-b-4 border-gray-800 pb-4 inline-block">
@@ -210,7 +210,7 @@ export default function AboutPage() {
       </section>
 
       {/* Mission */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-beige-100 to-beige-50">
+              <section className="py-12 px-4 sm:px-6 lg:px-8 bg-[#ECE5DE]">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -278,7 +278,7 @@ export default function AboutPage() {
       </section>
 
       {/* Core Values */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-beige-50 to-white">
+      <section className="py-12 px-4 sm:px-6 lg:px-8 bg-[#ECE5DE]">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -312,7 +312,7 @@ export default function AboutPage() {
                 viewport={{ once: true }}
                 className="bg-white rounded-2xl p-6 lg:p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 text-center"
               >
-                <div className="p-3 bg-gray-800 rounded-2xl inline-block mb-4">
+                <div className="p-3 bg-[#B39F96] rounded-2xl inline-block mb-4">
                   <value.icon className="w-6 h-6 lg:w-8 lg:h-8 text-white" />
                 </div>
                 <h3 className="text-lg lg:text-xl font-bold text-gray-800 mb-3">
@@ -364,7 +364,7 @@ export default function AboutPage() {
                 className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100"
               >
                 <div className="flex items-start">
-                  <div className="p-3 bg-gray-800 rounded-xl mr-4 flex-shrink-0">
+                  <div className="p-3 bg-[#B39F96] rounded-xl mr-4 flex-shrink-0">
                     <culture.icon className="w-6 h-6 text-white" />
                   </div>
                   <div>

@@ -83,9 +83,9 @@ const documentationAreas = [
 
 export default function ContractsAgreementsAdvisoryPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-beige-100 to-white">
+    <div className="min-h-screen bg-[#ECE5DE]">
       {/* Hero Section */}
-      <section className="pt-24 pb-12 bg-gradient-to-br from-red-50 to-white">
+      <section className="pt-24 pb-12 bg-[#ECE5DE]">
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -127,7 +127,7 @@ export default function ContractsAgreementsAdvisoryPage() {
       </section>
 
       {/* E-Commerce / Retail Businesses */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-beige-100 to-beige-50">
+      <section className="py-12 px-4 sm:px-6 lg:px-8 bg-[#ECE5DE]">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -195,7 +195,7 @@ export default function ContractsAgreementsAdvisoryPage() {
       </section>
 
       {/* Indemnity, Liability and Dispute Resolution */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-beige-100 to-beige-50">
+      <section className="py-12 px-4 sm:px-6 lg:px-8 bg-[#ECE5DE]">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}

@@ -188,10 +188,10 @@ export default function Header() {
   ];
 
   return (
-        <header className={`fixed top-4 left-4 right-4 z-50 backdrop-blur-sm border border-beige-300 rounded-[32px] transition-all duration-500 ease-out mx-auto max-w-7xl hover:shadow-xl ${
+            <header className={`fixed top-4 left-4 right-4 z-50 backdrop-blur-sm border border-gray-300 rounded-[32px] transition-all duration-500 ease-out mx-auto max-w-7xl hover:shadow-xl ${
       isScrolled 
-        ? 'bg-beige-200/98 shadow-2xl border-beige-400' 
-        : 'bg-beige-100/95 shadow-lg hover:bg-beige-200/98'
+        ? 'bg-[#ECE5DE]/98 shadow-2xl border-gray-400'
+        : 'bg-[#ECE5DE]/95 shadow-lg hover:bg-[#ECE5DE]/98'
     }`}>
         <nav className="max-w-7xl mx-auto px-4 lg:px-6">
           <div className="flex items-center justify-between py-2">
@@ -224,7 +224,7 @@ export default function Header() {
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-red-600 transition-all duration-300 group-hover:w-full"></span>
                 
                 {/* Background shape that changes on hover */}
-                <span className="absolute inset-0 bg-beige-700 transform scale-x-0 transition-all duration-300 group-hover:scale-x-100 origin-left opacity-0 group-hover:opacity-10 rounded"></span>
+                                  <span className="absolute inset-0 bg-gray-700 transform scale-x-0 transition-all duration-300 group-hover:scale-x-100 origin-left opacity-0 group-hover:opacity-10 rounded"></span>
               </div>
             </div>
           </Link>
@@ -393,7 +393,7 @@ export default function Header() {
           <div className="hidden lg:block relative z-10">
             <Link 
               href="/contact"
-              className="inline-flex items-center justify-center px-5 py-2 bg-gray-800 text-white text-sm font-semibold rounded-md hover:bg-gray-900 transition-colors duration-200"
+              className="inline-flex items-center justify-center px-5 py-2 bg-[#B39F96] text-white text-sm font-semibold rounded-md hover:bg-[#A08B80] transition-colors duration-200"
             >
               Get Legal Consultation
             </Link>
@@ -401,7 +401,7 @@ export default function Header() {
 
           {/* Mobile Menu Button */}
           <button 
-            className="lg:hidden p-2 rounded-lg bg-beige-100 hover:bg-beige-200 transition-all duration-300 transform hover:scale-110 hover:rotate-3 group"
+                          className="lg:hidden p-2 rounded-lg bg-gray-100 hover:bg-gray-200 transition-all duration-300 transform hover:scale-110 hover:rotate-3 group"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle mobile menu"
           >
@@ -424,7 +424,7 @@ export default function Header() {
         <div className={`lg:hidden overflow-hidden transition-all duration-500 ease-out ${
           isMobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
         }`}>
-          <div className="pb-3 border-t border-beige-200 mt-3 pt-3">
+          <div className="pb-3 border-t border-gray-200 mt-3 pt-3">
             <div className="flex flex-col gap-3 animate-in slide-in-from-top duration-300">
               {navItems.map((item) => (
                 <Link 

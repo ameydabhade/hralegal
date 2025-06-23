@@ -45,7 +45,7 @@ const features = [
 
 export default function WhyChooseUsSection() {
   return (
-    <section className="py-4 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-white via-beige-50 to-beige-100">
+    <section className="py-4 px-4 sm:px-6 lg:px-8 bg-[#ECE5DE]">
       <div className="max-w-7xl mx-auto">
         {/* Header - Only badge, no duplicate title */}
         <motion.div
@@ -76,7 +76,7 @@ export default function WhyChooseUsSection() {
               className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100"
             >
               <div className="flex items-start">
-                <div className="p-4 bg-gray-800 rounded-xl shadow-lg mr-4 flex-shrink-0">
+                <div className="p-4 bg-[#B39F96] rounded-xl shadow-lg mr-4 flex-shrink-0">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
                 <div className="flex-1">

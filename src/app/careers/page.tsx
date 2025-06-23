@@ -59,7 +59,7 @@ export default function CareersPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+    <div className="min-h-screen bg-[#ECE5DE]">
       {/* Hero Section */}
       <section className="pt-24 pb-12">
         <div className="max-w-7xl mx-auto px-4 lg:px-8">

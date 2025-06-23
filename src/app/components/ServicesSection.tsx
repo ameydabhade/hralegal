@@ -72,7 +72,7 @@ const secondaryServices = [
 
 export default function ServicesSection() {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-beige-50 via-white to-beige-100">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-[#ECE5DE]">
       <div className="max-w-7xl mx-auto">
         {/* Header - Only badge, no duplicate title */}
         <motion.div
@@ -98,7 +98,7 @@ export default function ServicesSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="mb-12 bg-gradient-to-r from-gray-50 to-white rounded-2xl p-8 border-l-4 border-gray-600"
+            className="mb-12 bg-white rounded-2xl p-8 border-l-4 border-gray-600 shadow-sm"
           >
             <p className="text-lg text-gray-700 leading-relaxed text-center">
               HRA Legal offers services including structuring, drafting, negotiation and execution of all types of contracts/agreements/documents/paperwork (including definitive agreements, long form agreements, founder agreements, non-disclosure agreements, no objection certificates, letters, agency agreements, et al), sending notices &amp; replies, legal research and analysis, consultations and advisory services, policy drafting and its implementation manual, tabulating databases, setting up of processes, systems, SOP&apos;s (standard operating procedures), providing opinions &amp; solutions, et al for established and emerging businesses, and/or managing entire legal department of your company.
@@ -127,7 +127,7 @@ export default function ServicesSection() {
                 className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100"
               >
                 <div className="flex items-start">
-                  <div className="p-3 bg-gray-800 rounded-xl shadow-lg mr-4 flex-shrink-0">
+                  <div className="p-3 bg-[#B39F96] rounded-xl shadow-lg mr-4 flex-shrink-0">
                     <service.icon className="w-5 h-5 text-white" />
                   </div>
                   <div className="flex-1">
@@ -168,7 +168,7 @@ export default function ServicesSection() {
                 className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100"
               >
                 <div className="flex items-start">
-                  <div className="p-3 bg-gray-800 rounded-xl shadow-lg mr-4 flex-shrink-0">
+                  <div className="p-3 bg-[#B39F96] rounded-xl shadow-lg mr-4 flex-shrink-0">
                     <service.icon className="w-5 h-5 text-white" />
                   </div>
                   <div className="flex-1">

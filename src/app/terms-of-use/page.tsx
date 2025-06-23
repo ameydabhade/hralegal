@@ -2,13 +2,13 @@ import { FileText } from 'lucide-react';
 
 export default function TermsOfUsePage() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-beige-50 to-white">
+    <div className="min-h-screen bg-[#ECE5DE]">
       {/* Hero Section */}
       <section className="pt-24 pb-12">
         <div className="max-w-4xl mx-auto px-4 lg:px-8">
           <div className="text-center mb-16">
             <div className="flex items-center justify-center mb-6">
-              <FileText className="w-12 h-12 text-beige-400 mr-4" />
+              <FileText className="w-12 h-12 text-gray-400 mr-4" />
               <h1 className="text-3xl lg:text-4xl font-bold text-gray-900">
                 Terms of Use
               </h1>
@@ -209,7 +209,7 @@ export default function TermsOfUsePage() {
                   <strong>a)</strong> HRA Legal affirms its commitment to respecting the intellectual property rights of third parties. Upon receipt of a valid and properly submitted notice of copyright infringement, HRA Legal will promptly remove or disable access to any User Submissions or other Site content that is alleged to violate the Copyright Act, 1957 or the Information Technology Act, 2000, including any applicable amendments or rules.
                 </p>
                 <p>
-                  <strong>b)</strong> To initiate a takedown, the copyright owner or their authorized agent must submit a written Infringement Notification containing the following details vide email at <a href="mailto:info@hralegal.com" className="text-beige-600 hover:text-beige-700 font-semibold">info@hralegal.com</a>:
+                  <strong>b)</strong> To initiate a takedown, the copyright owner or their authorized agent must submit a written Infringement Notification containing the following details vide email at <a href="mailto:info@hralegal.com" className="text-gray-600 hover:text-gray-700 font-semibold">info@hralegal.com</a>:
                 </p>
                 <ul className="space-y-2 ml-6">
                   <li>(i) identification of the copyrighted work allegedly infringed;</li>
@@ -236,10 +236,10 @@ export default function TermsOfUsePage() {
                 <p>
                   For any questions, concerns, or communications relating to these Terms of Use or any legal matter associated with the Website, Users may contact us at below mentioned co-ordinates. All legal notices, including notices of dispute, copyright infringement, or formal complaints, must be sent in writing to the above address or email and shall be deemed received upon confirmation of delivery.
                 </p>
-                <div className="bg-beige-50 rounded-lg p-6 mt-4">
+                <div className="bg-gray-50 rounded-lg p-6 mt-4">
                   <p><strong>Legal Department</strong></p>
                   <p><strong>HRA Legal</strong></p>
-                  <p>Email: <a href="mailto:info@hralegal.com" className="text-beige-600 hover:text-beige-700 font-semibold">info@hralegal.com</a></p>
+                  <p>Email: <a href="mailto:info@hralegal.com" className="text-gray-600 hover:text-gray-700 font-semibold">info@hralegal.com</a></p>
                   <p>Address: 705, 93 East Building,</p>
                   <p>Mahakali Caves Road, Andheri East,</p>
                   <p>Mumbai 400093, Maharashtra, India.</p>

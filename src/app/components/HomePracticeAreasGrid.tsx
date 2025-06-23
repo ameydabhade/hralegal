@@ -68,7 +68,7 @@ const developingAreas = [
 
 export default function HomePracticeAreasGrid() {
   return (
-    <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
+    <section className="py-20 bg-[#ECE5DE]">
       <div className="max-w-7xl mx-auto px-4 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">

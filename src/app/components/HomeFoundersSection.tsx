@@ -46,7 +46,7 @@ const founders = [
 
 export default function HomeFoundersSection() {
   return (
-    <section className="py-16 bg-gradient-to-b from-gray-50 to-white">
+    <section className="py-16 bg-[#ECE5DE]">
       <div className="max-w-7xl mx-auto px-4 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -172,7 +172,7 @@ export default function HomeFoundersSection() {
             
             <Link 
               href="/about" 
-              className="inline-flex items-center gap-2 px-8 py-3 bg-gray-800 text-white font-semibold rounded-lg hover:bg-gray-900 transition-colors"
+              className="inline-flex items-center gap-2 px-8 py-3 bg-[#B39F96] text-white font-semibold rounded-lg hover:bg-[#A08B80] transition-colors"
             >
               Learn More About Us
               <ArrowRight className="w-5 h-5" />

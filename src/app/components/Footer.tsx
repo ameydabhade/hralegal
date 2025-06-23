@@ -109,28 +109,28 @@ export default function Footer() {
               <div className="flex gap-2">
                 <a 
                   href="#" 
-                  className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors"
+                  className="w-8 h-8 bg-[#B39F96] rounded-full flex items-center justify-center hover:bg-[#A08B80] transition-colors"
                   aria-label="Facebook"
                 >
                   <Facebook className="w-4 h-4" />
                 </a>
                 <a 
                   href="#" 
-                  className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors"
+                  className="w-8 h-8 bg-[#B39F96] rounded-full flex items-center justify-center hover:bg-[#A08B80] transition-colors"
                   aria-label="Twitter"
                 >
                   <Twitter className="w-4 h-4" />
                 </a>
                 <a 
                   href="#" 
-                  className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors"
+                  className="w-8 h-8 bg-[#B39F96] rounded-full flex items-center justify-center hover:bg-[#A08B80] transition-colors"
                   aria-label="LinkedIn"
                 >
                   <Linkedin className="w-4 h-4" />
                 </a>
                 <a 
                   href="#" 
-                  className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors"
+                  className="w-8 h-8 bg-[#B39F96] rounded-full flex items-center justify-center hover:bg-[#A08B80] transition-colors"
                   aria-label="Instagram"
                 >
                   <Instagram className="w-4 h-4" />

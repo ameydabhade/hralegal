@@ -7,13 +7,13 @@ export const metadata = {
 
 export default function PrivacyPolicyPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-beige-50 to-white">
+    <div className="min-h-screen bg-[#ECE5DE]">
       {/* Hero Section */}
       <section className="pt-24 pb-12">
         <div className="max-w-4xl mx-auto px-4 lg:px-8">
           <div className="text-center mb-16">
             <div className="flex items-center justify-center mb-6">
-              <Shield className="w-12 h-12 text-beige-400 mr-4" />
+              <Shield className="w-12 h-12 text-gray-400 mr-4" />
               <h1 className="text-3xl lg:text-4xl font-bold text-gray-900">
                 Privacy Policy
               </h1>
@@ -92,7 +92,7 @@ export default function PrivacyPolicyPage() {
                   </li>
                 </ul>
                 <p className="mt-4">
-                  If You would like us to delete any Personal Data or information provided by You, You may write to us at <a href="mailto:info@hralegal.com" className="text-beige-600 hover:text-beige-700 font-semibold">info@hralegal.com</a>. You may further choose not to provide us with such Personal Data or withdraw your consent at any time. Notwithstanding anything contained in this privacy policy or elsewhere, HRA Legal shall not be held responsible for any loss, damage or misuse of the Personal Data or Usage Information.
+                  If You would like us to delete any Personal Data or information provided by You, You may write to us at <a href="mailto:info@hralegal.com" className="text-gray-600 hover:text-gray-700 font-semibold">info@hralegal.com</a>. You may further choose not to provide us with such Personal Data or withdraw your consent at any time. Notwithstanding anything contained in this privacy policy or elsewhere, HRA Legal shall not be held responsible for any loss, damage or misuse of the Personal Data or Usage Information.
                 </p>
               </div>
 
@@ -156,7 +156,7 @@ export default function PrivacyPolicyPage() {
                   <strong>e. Amendment:</strong> You also have right to request us to update, amend, correct, complete or delete your Personal Data retained by us through email.
                 </p>
                 <p>
-                  <strong>f. Contact:</strong> You may exercise your rights under this section in relation to your Personal Data by writing to us at <a href="mailto:info@hralegal.com" className="text-beige-600 hover:text-beige-700 font-semibold">info@hralegal.com</a>.
+                  <strong>f. Contact:</strong> You may exercise your rights under this section in relation to your Personal Data by writing to us at <a href="mailto:info@hralegal.com" className="text-gray-600 hover:text-gray-700 font-semibold">info@hralegal.com</a>.
                 </p>
               </div>
 
@@ -177,7 +177,7 @@ export default function PrivacyPolicyPage() {
               <div>
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">11. Grievances</h2>
                 <p>
-                  If you have grievances or concerns about this policy, You can reach out to us at <a href="mailto:info@hralegal.com" className="text-beige-600 hover:text-beige-700 font-semibold">info@hralegal.com</a>
+                  If you have grievances or concerns about this policy, You can reach out to us at <a href="mailto:info@hralegal.com" className="text-gray-600 hover:text-gray-700 font-semibold">info@hralegal.com</a>
                 </p>
               </div>
 

@@ -7,7 +7,7 @@ export const metadata = {
 
 export default function DisclaimerPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-beige-50 to-white">
+    <div className="min-h-screen bg-[#ECE5DE]">
       {/* Hero Section */}
       <section className="pt-24 pb-12">
         <div className="max-w-4xl mx-auto px-4 lg:px-8">

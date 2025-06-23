@@ -29,11 +29,11 @@ const stats = [
 
 export default function HomeOverviewSection() {
   return (
-    <section className="py-20 bg-gradient-to-b from-beige-100 to-beige-50">
+    <section className="py-20 bg-[#ECE5DE]">
       <div className="max-w-7xl mx-auto px-4 lg:px-8">
         <div className="text-center mb-16">
-          <div className="inline-flex items-center px-4 py-2 bg-beige-200 border border-beige-300 rounded-full mb-6">
-            <span className="text-sm font-medium text-beige-600">About HRA Legal</span>
+          <div className="inline-flex items-center px-4 py-2 bg-gray-200 border border-gray-300 rounded-full mb-6">
+            <span className="text-sm font-medium text-gray-600">About HRA Legal</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Your Trusted Legal Partners
@@ -51,10 +51,10 @@ export default function HomeOverviewSection() {
               key={index} 
               className="text-center bg-white rounded-2xl p-6 shadow-lg border border-gray-100"
             >
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-beige-400 rounded-2xl shadow-lg mb-4">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-gray-400 rounded-2xl shadow-lg mb-4">
                 <stat.icon className="w-8 h-8 text-white" strokeWidth={1.5} />
               </div>
-              <div className="text-3xl md:text-4xl font-bold text-beige-500 mb-2">
+              <div className="text-3xl md:text-4xl font-bold text-gray-500 mb-2">
                 {stat.number}
               </div>
               <div className="text-lg font-semibold text-gray-900 mb-1">
