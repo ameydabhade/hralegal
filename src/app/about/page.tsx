@@ -172,18 +172,32 @@ export default function AboutPage() {
               </h2>
             </div>
             <div className="max-w-4xl mx-auto space-y-6">
-              {/* Placeholder - Will be replaced with your story content */}
-              <div className="bg-red-50 border border-red-200 rounded-lg p-6 text-center">
-                <p className="text-red-600 font-medium">
-                  📝 Story content will be updated when you provide the new content
-                </p>
-              </div>
-              <p className="text-lg text-gray-700 leading-relaxed text-center">
-                HRA Legal works on an ever evolving and diverse outlook consistently aligned with the 
-                prevalent market dynamics, and technology shifts.
+              <p className="text-lg text-gray-700 leading-relaxed">
+                After spending over 2 decades in the whirlwind of Media and Entertainment—where creativity power-packed with chaos and my deadlines chased each other endlessly—one quiet dream always stayed with me: to create something of my own!.
               </p>
-              <p className="text-lg text-gray-700 leading-relaxed text-center">
-                Just like technology, law is continuously evolving, and so does HRA Legal.
+              <p className="text-lg text-gray-700 leading-relaxed">
+                That quiet dream wasn't random—it was woven into my roots. As a Gujarati, the spirit of entrepreneurship has always been part of my worldview. It just needed the right moment, and the right kind of courage, to take shape.
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                That persistent thought, that gentle nudge, became the spark behind what is now "HRA Legal". It wasn't born from a moment—it was carved from many. More than a year of silent but determined groundwork, countless late nights fuelled by resilience and coffee, intense conversations, scribbled notes, and the comforting presence of the dear ones who believed in my "someday."
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                That "someday" finally arrived for me. Wrapped in uncertainty, yes—but illuminated by purpose!
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                Starting HRA Legal wasn't just a career leap. It's a decision made from an unwavering belief that law could be practiced with empathy, integrity, and excellence. A belief that we could build a firm where innovation meets experience, where professionalism walks hand-in-hand with personal connection, a space where clients aren't just advised—they're understood, a firm where solutions come wrapped in clarity, and support is always delivered with heart.
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                Our firm stands on a rock-solid foundation: decades of real-world industry experience, strong-rooted academic grounding, and meaningful collaborations with inspiring minds and mentors. But above all, it's built on confidence, passion, perseverance, and the unshakable spirit of entrepreneurship.
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                We're here for the contracts, the complex codes, the compliance checks—but also for the comfort, the reassurance, and the honest conversations in between.
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                Our story is still unfolding. But one truth anchors us: dreams fuelled by grit and grace are unstoppable.
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed font-semibold text-center text-red-600">
+                Welcome to HRA Legal—a legal firm powered by passion, and guided by heart.
               </p>
             </div>
           </motion.div>

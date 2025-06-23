@@ -300,7 +300,7 @@ export default function Header() {
                                 <div key={group.title} className="space-y-3">
                                   {/* Group Header */}
                                   <div>
-                                    <h3 className={`text-base font-bold ${group.textColor} mb-2`}>
+                                    <h3 className={`text-lg font-bold ${group.textColor} mb-2`}>
                                       {group.title}
                                     </h3>
                                     <div className={`h-0.5 w-12 ${group.underlineColor}`}></div>
@@ -314,13 +314,13 @@ export default function Header() {
                                         className="flex items-start group cursor-pointer"
                                       >
                                         <div className="w-1 h-1 bg-gray-400 rounded-full mt-1.5 mr-2 flex-shrink-0 group-hover:bg-red-500 transition-colors"></div>
-                                        <span className="text-xs text-gray-700 leading-relaxed hover:text-red-600 transition-colors">
+                                        <span className="text-sm text-gray-700 leading-relaxed hover:text-red-600 transition-colors">
                                           {item}
                                         </span>
                                       </div>
                                     ))}
                                     {group.items.length > 6 && (
-                                      <div className="text-xs text-red-600 font-medium cursor-pointer hover:text-red-700">
+                                      <div className="text-sm text-red-600 font-medium cursor-pointer hover:text-red-700">
                                         + {group.items.length - 6} more areas
                                       </div>
                                     )}
@@ -351,7 +351,7 @@ export default function Header() {
                                 <div key={group.title} className="space-y-3">
                                   {/* Group Header */}
                                   <div>
-                                    <h3 className={`text-base font-bold ${group.textColor} mb-2`}>
+                                    <h3 className={`text-lg font-bold ${group.textColor} mb-2`}>
                                       {group.title}
                                     </h3>
                                     <div className={`h-0.5 w-12 ${group.underlineColor}`}></div>
@@ -365,13 +365,13 @@ export default function Header() {
                                         className="flex items-start group cursor-pointer"
                                       >
                                         <div className="w-1 h-1 bg-gray-400 rounded-full mt-1.5 mr-2 flex-shrink-0 group-hover:bg-red-500 transition-colors"></div>
-                                        <span className="text-xs text-gray-700 leading-relaxed hover:text-red-600 transition-colors">
+                                        <span className="text-sm text-gray-700 leading-relaxed hover:text-red-600 transition-colors">
                                           {item}
                                         </span>
                                       </div>
                                     ))}
                                     {group.items.length > 6 && (
-                                      <div className="text-xs text-red-600 font-medium cursor-pointer hover:text-red-700">
+                                      <div className="text-sm text-red-600 font-medium cursor-pointer hover:text-red-700">
                                         + {group.items.length - 6} more sectors
                                       </div>
                                     )}
