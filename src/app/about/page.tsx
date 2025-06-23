@@ -60,13 +60,13 @@ export default function AboutPage() {
             >
               <div className="bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden">
                 {/* Header */}
-                <div className="bg-gradient-to-r from-red-500 to-red-600 p-6 text-center">
+                <div className="bg-gradient-to-r from-gray-600 to-gray-700 p-6 text-center">
                   <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-3 shadow-lg group-hover:scale-110 transition-transform duration-300">
                     <Users className="w-8 h-8 text-gray-700" />
                   </div>
                   <h3 className="text-xl text-white font-bold mb-1">Rushi Upadhyaya</h3>
-                  <p className="text-red-100 font-medium text-sm">Founder & Legal Expert</p>
-                  <div className="mt-2 bg-red-400 bg-opacity-20 rounded-full px-3 py-1 inline-block">
+                  <p className="text-gray-100 font-medium text-sm">Founder & Legal Expert</p>
+                  <div className="mt-2 bg-gray-500 bg-opacity-30 rounded-full px-3 py-1 inline-block">
                     <span className="text-white text-xs font-semibold">15+ Years Experience</span>
                   </div>
                 </div>
@@ -83,14 +83,19 @@ export default function AboutPage() {
                       <p className="text-gray-700 text-sm leading-relaxed mb-4">
                         Rushi has an extensive experience of 15+ years as an in-house Counsel - Legal, Corporate Affairs and Business Affairs in Media & Entertainment sector, and has worked with global and multinational companies including:
                       </p>
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-2 mb-4">
+                      <div className="flex flex-wrap gap-2 mb-4">
                         {[
-                          
+                          "Sony Pictures Networks India Pvt. Ltd. (now Culver Max)",
+                          "Shemaroo Entertainment Ltd.",
+                          "Goldmines Telefilms Ltd.",
+                          "Reliance Industries Ltd. – Jio Studios",
+                          "Sony Music (India) Pvt. Ltd.",
+                          "Maddock Films",
+                          "Reliance Retail (Consultant)"
                         ].map((company, index) => (
-                          <div key={index} className="flex items-center text-sm">
-                            <div className="w-1.5 h-1.5 bg-gray-600 rounded-full mr-2"></div>
-                            <span className="text-gray-700">{company}</span>
-                          </div>
+                          <span key={index} className="inline-flex items-center px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-lg border border-gray-200">
+                            {company}
+                          </span>
                         ))}
                       </div>
                       <p className="text-gray-700 text-sm leading-relaxed">
@@ -215,7 +220,7 @@ export default function AboutPage() {
             className="bg-white rounded-3xl shadow-xl overflow-hidden"
           >
             <div className="lg:flex">
-              <div className="lg:w-1/3 bg-gradient-to-br from-red-500 to-red-600 p-12 flex items-center justify-center">
+              <div className="lg:w-1/3 bg-gradient-to-br from-gray-600 to-gray-700 p-12 flex items-center justify-center">
                 <div className="text-center">
                   <Target className="w-20 h-20 text-white mx-auto mb-6" />
                   <h2 className="text-4xl font-bold text-white">Mission</h2>
@@ -261,7 +266,7 @@ export default function AboutPage() {
                   </div>
                 </div>
               </div>
-              <div className="lg:w-1/3 bg-gradient-to-br from-red-500 to-red-600 p-12 flex items-center justify-center">
+              <div className="lg:w-1/3 bg-gradient-to-br from-gray-600 to-gray-700 p-12 flex items-center justify-center">
                 <div className="text-center">
                   <Eye className="w-20 h-20 text-white mx-auto mb-6" />
                   <h2 className="text-4xl font-bold text-white">Vision</h2>

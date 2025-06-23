@@ -18,7 +18,7 @@ export default function HeroSection() {
           <div className="space-y-6">
             {/* Badge */}
             <div className="inline-flex items-center px-3 py-1.5 bg-red-100 border border-red-300 rounded-full">
-              <span className="text-xs font-medium text-red-700">🏆 15+ Years of Legal Excellence</span>
+              <span className="text-xs font-medium text-red-700">🏆 Close to Two Decades of Legal Excellence</span>
             </div>
 
             <div className="space-y-4">

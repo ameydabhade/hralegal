@@ -262,34 +262,7 @@ export default function ContractsAgreementsAdvisoryPage() {
         </div>
       </section>
 
-      {/* Call to Action */}
-      <section className="py-4 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-50 to-gray-100">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6">
-              Need Contract or Agreement Services?
-              <div className="h-1 bg-gray-800 w-24 mx-auto mt-4"></div>
-            </h2>
-            <p className="text-base text-gray-700 mb-8 leading-relaxed">
-              Our experienced team provides comprehensive contract and agreement services 
-              to protect your business interests and ensure legal compliance.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gray-800 text-white font-bold px-8 py-4 rounded-lg hover:bg-gray-900 transition-colors duration-200 shadow-lg">
-                Schedule Consultation
-              </button>
-              <button className="border-2 border-gray-800 text-gray-800 font-bold px-8 py-4 rounded-lg hover:bg-gray-800 hover:text-white transition-colors duration-200">
-                Contact Our Team
-              </button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+
     </div>
   );
 } 

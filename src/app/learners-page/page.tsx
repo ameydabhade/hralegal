@@ -158,9 +158,6 @@ export default function KnowledgeCentrePage() {
                 <h2 className="text-4xl font-bold text-gray-800 mb-4 border-b-2 border-gray-800 pb-2 inline-block">
                   Latest Legal Insights & Articles
                 </h2>
-                <p className="text-base text-gray-700">
-                  Expert analysis and practical guidance on legal matters affecting businesses and individuals.
-                </p>
               </div>
 
               <div className="grid lg:grid-cols-2 gap-8">
@@ -216,9 +213,6 @@ export default function KnowledgeCentrePage() {
                 <h2 className="text-4xl font-bold text-gray-800 mb-4 border-b-2 border-gray-800 pb-2 inline-block">
                   Latest Legal News & Updates
                 </h2>
-                <p className="text-lg text-gray-700">
-                  Stay current with the latest legal developments, regulatory changes, and industry news.
-                </p>
               </div>
 
               <div className="space-y-6">

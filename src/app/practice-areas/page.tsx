@@ -179,34 +179,7 @@ export default function PracticeAreasPage() {
         </div>
       </section>
 
-      {/* Call to Action */}
-      <section className="py-4 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-red-50 to-red-100">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6">
-              Need Legal Expertise?
-              <div className="h-1 bg-gray-800 w-24 mx-auto mt-4"></div>
-            </h2>
-            <p className="text-base text-gray-700 mb-8 leading-relaxed">
-              Whether you need assistance in our core practice areas or developing practice areas, 
-              our experienced team is ready to provide comprehensive legal solutions tailored to your needs.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gray-800 text-white font-bold px-8 py-4 rounded-lg hover:bg-gray-900 transition-colors duration-200 shadow-lg">
-                Schedule Consultation
-              </button>
-              <button className="border-2 border-gray-800 text-gray-800 font-bold px-8 py-4 rounded-lg hover:bg-gray-800 hover:text-white transition-colors duration-200">
-                View Our Services
-              </button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+
     </div>
   );
 } 

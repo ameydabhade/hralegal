@@ -14,16 +14,25 @@ const founders = [
       "Law Graduate (LLB)", 
       "Management Graduate (BMS)"
     ],
+    companies: [
+      "Sony Pictures Networks India Pvt. Ltd. (now Culver Max)",
+      "Shemaroo Entertainment Ltd.",
+      "Goldmines Telefilms Ltd.",
+      "Reliance Industries Ltd. – Jio Studios",
+      "Sony Music (India) Pvt. Ltd.",
+      "Maddock Films",
+      "Reliance Retail (Consultant)"
+    ],
     highlights: [
-      "15+ years experience as in-house Counsel",
-      "Legal expertise with global and multinational companies",
-      "Specialized in Media & Entertainment sector",
-      "Expert in complex agreement structuring and negotiation",
-      "Corporate, commercial and intellectual property advisory",
-      "Content regulation and standard practices expertise"
+      "Successfully structured and negotiated high-value media agreements",
+      "Led corporate governance and compliance for multinational companies",
+      "Established legal frameworks for content creation and distribution",
+      "Expertise in intellectual property protection and enforcement",
+      "Managed complex mergers & acquisitions in entertainment sector",
+      "Developed standard operating procedures for legal departments"
     ],
     expertise: "Legal, Corporate Affairs and Business Affairs in Media & Entertainment sector",
-    description: "Extensive experience of 15+ years as an in-house Counsel with global and multinational companies. Adept in structuring, negotiating and executing complex agreements for multifarious businesses, advising on corporate, commercial and intellectual property matters.",
+    description: "She has been Legal and Business Affairs Counsel at top media companies, bringing extensive expertise in structuring, negotiating and executing complex agreements for multifarious businesses, advising on corporate, commercial and intellectual property matters.",
     coreStrengths: [
       "Sharp Leadership Mindset",
       "Prompt Decision Making", 
@@ -41,14 +50,14 @@ export default function HomeFoundersSection() {
       <div className="max-w-7xl mx-auto px-4 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center px-4 py-2 bg-red-100 border border-red-200 rounded-full mb-6">
-            <span className="text-sm font-medium text-red-600">Leadership</span>
+          <div className="inline-flex items-center px-4 py-2 bg-gray-100 border border-gray-200 rounded-full mb-6">
+            <span className="text-sm font-medium text-gray-600">Leadership</span>
           </div>
                       <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Meet Our Founder
             </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Our founding partner brings 15+ years of experience in corporate law, 
+            Our founder brings close to two decades of experience in corporate law, 
             intellectual property, and media & entertainment law, with deep industry expertise.
           </p>
         </div>
@@ -60,7 +69,7 @@ export default function HomeFoundersSection() {
               <div className="space-y-6">
                 {/* Header */}
                 <div className="text-center">
-                  <div className="w-24 h-24 bg-gradient-to-br from-red-500 to-red-600 rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <div className="w-24 h-24 bg-gradient-to-br from-gray-600 to-gray-700 rounded-full mx-auto mb-4 flex items-center justify-center">
                     <span className="text-3xl font-bold text-white">
                       {founder.name.split(' ').map(n => n[0]).join('')}
                     </span>
@@ -68,10 +77,10 @@ export default function HomeFoundersSection() {
                   <h3 className="text-2xl font-bold text-gray-900 mb-1">
                     {founder.name}
                   </h3>
-                  <p className="text-lg text-red-600 font-semibold mb-2">
+                  <p className="text-lg text-gray-600 font-semibold mb-2">
                     {founder.title}
                   </p>
-                  <div className="inline-flex items-center px-3 py-1 bg-red-100 text-red-600 text-sm font-medium rounded-full">
+                  <div className="inline-flex items-center px-3 py-1 bg-gray-100 text-gray-600 text-sm font-medium rounded-full">
                     {founder.experience}
                   </div>
                 </div>
@@ -79,7 +88,7 @@ export default function HomeFoundersSection() {
                 {/* Education */}
                 <div>
                   <div className="flex items-center gap-2 mb-3">
-                    <GraduationCap className="w-5 h-5 text-red-500" />
+                    <GraduationCap className="w-5 h-5 text-gray-500" />
                     <h4 className="font-semibold text-gray-900">Education & Qualifications</h4>
                   </div>
                   <div className="flex flex-wrap gap-2">
@@ -91,28 +100,36 @@ export default function HomeFoundersSection() {
                   </div>
                 </div>
 
-                {/* Description */}
+                {/* Professional Background */}
                 <div>
                   <div className="flex items-center gap-2 mb-3">
-                    <Award className="w-5 h-5 text-red-500" />
+                    <Award className="w-5 h-5 text-gray-500" />
                     <h4 className="font-semibold text-gray-900">Professional Background</h4>
                   </div>
-                  <div className="bg-red-50 p-4 rounded-lg border-l-4 border-red-500">
+                  <div className="bg-gray-50 p-4 rounded-lg border-l-4 border-gray-500">
                     <p className="text-gray-600 text-sm leading-relaxed mb-3">{founder.description}</p>
-                    <p className="text-gray-700 text-sm font-medium">Specialization: {founder.specialization}</p>
+                    <p className="text-gray-700 text-sm font-medium mb-3">Key Companies:</p>
+                    <div className="grid grid-cols-1 gap-1">
+                      {founder.companies.map((company, companyIndex) => (
+                        <div key={companyIndex} className="flex items-start gap-2">
+                          <div className="w-1.5 h-1.5 bg-gray-500 rounded-full mt-1.5 flex-shrink-0"></div>
+                          <span className="text-xs text-gray-700">{company}</span>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 </div>
 
                 {/* Highlights */}
                 <div>
                   <div className="flex items-center gap-2 mb-3">
-                    <Users className="w-5 h-5 text-red-500" />
+                    <Users className="w-5 h-5 text-gray-500" />
                     <h4 className="font-semibold text-gray-900">Career Highlights</h4>
                   </div>
                   <div className="space-y-2">
                     {founder.highlights.map((highlight, highlightIndex) => (
                       <div key={highlightIndex} className="flex items-start gap-2">
-                        <div className="w-1.5 h-1.5 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
+                        <div className="w-1.5 h-1.5 bg-gray-500 rounded-full mt-2 flex-shrink-0"></div>
                         <span className="text-sm text-gray-600">{highlight}</span>
                       </div>
                     ))}
@@ -123,13 +140,13 @@ export default function HomeFoundersSection() {
                 {founder.coreStrengths && (
                   <div>
                     <div className="flex items-center gap-2 mb-3">
-                      <Award className="w-5 h-5 text-red-500" />
+                      <Award className="w-5 h-5 text-gray-500" />
                       <h4 className="font-semibold text-gray-900">Core Strengths</h4>
                     </div>
                     <div className="grid grid-cols-2 gap-2">
                       {founder.coreStrengths.map((strength, strengthIndex) => (
-                        <div key={strengthIndex} className="bg-red-50 p-3 rounded-lg text-center border border-red-200">
-                          <span className="text-red-600 text-xs font-medium">{strength}</span>
+                        <div key={strengthIndex} className="bg-gray-50 p-3 rounded-lg text-center border border-gray-200">
+                          <span className="text-gray-600 text-xs font-medium">{strength}</span>
                         </div>
                       ))}
                     </div>
@@ -149,13 +166,13 @@ export default function HomeFoundersSection() {
               Experienced Legal Leadership
             </h3>
             <p className="text-gray-600 mb-8">
-              Our founding partner brings 15+ years of experience across corporate law, 
+              Our founder brings close to two decades of experience across corporate law, 
               intellectual property, and media & entertainment law to deliver exceptional legal services.
             </p>
             
             <Link 
               href="/about" 
-              className="inline-flex items-center gap-2 px-8 py-3 bg-red-600 text-white font-semibold rounded-lg hover:bg-red-700 transition-colors"
+              className="inline-flex items-center gap-2 px-8 py-3 bg-gray-800 text-white font-semibold rounded-lg hover:bg-gray-900 transition-colors"
             >
               Learn More About Us
               <ArrowRight className="w-5 h-5" />
