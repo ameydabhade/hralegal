@@ -1,54 +1,55 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 const practiceAreaGroups = [
   {
-    title: 'HRA Corporate',
+    title: 'Corporate, Commercial & Company Law',
     color: 'blue',
     underlineColor: 'bg-blue-500',
     textColor: 'text-blue-600',
     items: [
-      'Contracts/Agreements & Advisory',
-      'Company Secretarial & Governance',
-      'Mergers & Acquisitions, JVs & Strategic Alliances',
-      'Employment, Labour & Industrial Relations',
-      'Intellectual Property',
-      'Startups & Emerging Businesses'
+      { name: 'Contracts/Agreements & Advisory', url: '/practice-areas/contracts-agreements-advisory' },
+      { name: 'Company Secretarial & Governance', url: null },
+      { name: 'Mergers & Acquisitions, JVs & Strategic Alliances', url: null },
+      { name: 'Employment, Labour & Industrial Relations', url: null },
+      { name: 'Intellectual Property', url: null },
+      { name: 'Startups & Emerging Businesses', url: null }
     ]
   },
   {
-    title: 'HRA Finance',
+    title: 'Finance, Taxation & Regulatory',
     color: 'amber',
     underlineColor: 'bg-amber-500',
     textColor: 'text-amber-600',
     items: [
-      'Corporate Financing',
-      'Restructuring, Insolvency & Bankruptcy',
-      'Taxation',
-      'Compliance, Bribery & White Collar Crime'
+      { name: 'Corporate Financing', url: null },
+      { name: 'Restructuring, Insolvency & Bankruptcy', url: null },
+      { name: 'Taxation', url: null },
+      { name: 'Compliance, Bribery & White Collar Crime', url: null }
     ]
   },
   {
-    title: 'HRA Dispute Resolution',
+    title: 'Technology, Media & Data',
     color: 'orange',
     underlineColor: 'bg-orange-500',
     textColor: 'text-orange-600',
     items: [
-      'Technology & Digital Contracts',
-      'Media, Entertainment & Telecommunications',
-      'Data Privacy, Cybersecurity & Protection'
+      { name: 'Technology & Digital Contracts', url: null },
+      { name: 'Media, Entertainment & Telecommunications', url: null },
+      { name: 'Data Privacy, Cybersecurity & Protection', url: null }
     ]
   },
   {
-    title: 'HRA Markets',
+    title: 'Real Estate, Trade & Other Advisory',
     color: 'green',
     underlineColor: 'bg-green-500',
     textColor: 'text-green-600',
     items: [
-      'Real Estate',
-      'International Trade',
-      'Project Management'
+      { name: 'Real Estate', url: null },
+      { name: 'International Trade', url: null },
+      { name: 'Project Management', url: null }
     ]
   }
 ];
@@ -116,12 +117,18 @@ export default function PracticeAreasPage() {
                       whileInView={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.4, delay: (index * 0.1) + (itemIndex * 0.05) }}
                       viewport={{ once: true }}
-                      className="flex items-start group cursor-pointer"
+                      className={`flex items-start group ${item.url ? 'cursor-pointer' : ''}`}
                     >
                       <div className="w-2 h-2 bg-gray-400 rounded-full mt-2 mr-3 flex-shrink-0 group-hover:bg-red-500 transition-colors"></div>
-                      <span className="text-gray-700 text-sm leading-relaxed hover:text-red-600 transition-colors">
-                        {item}
-                      </span>
+                      {item.url ? (
+                        <Link href={item.url} className="text-gray-700 text-sm leading-relaxed hover:text-red-600 transition-colors">
+                          {item.name}
+                        </Link>
+                      ) : (
+                        <span className="text-gray-700 text-sm leading-relaxed">
+                          {item.name}
+                        </span>
+                      )}
                     </motion.div>
                   ))}
                 </div>
