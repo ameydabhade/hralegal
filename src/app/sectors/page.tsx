@@ -115,47 +115,7 @@ export default function SectorsPage() {
         </div>
       </section>
 
-      {/* Emerging Sectors */}
-      <section id="emerging" className="py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 to-white">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-2xl md:text-3xl font-bold text-red-600 mb-6">
-              Emerging Sectors
-              <div className="h-1 bg-red-600 w-24 mx-auto mt-4"></div>
-            </h2>
-            <p className="text-lg text-gray-600 max-w-4xl mx-auto">
-              Next-generation industries where we are building specialized expertise 
-              to support innovative businesses and future market leaders.
-            </p>
-          </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {emergingSectors.map((sector, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white p-6 rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition-all duration-300 hover:border-red-200"
-              >
-                <div className="flex items-center">
-                  <div className="w-3 h-3 bg-red-500 rounded-full mr-3"></div>
-                  <h3 className="text-lg font-semibold text-gray-700 hover:text-red-600 transition-colors">
-                    {sector}
-                  </h3>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Featured Sector Highlight - Media & Entertainment */}
       <section id="featured" className="py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-red-50 to-red-100">

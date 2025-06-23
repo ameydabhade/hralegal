@@ -10,75 +10,51 @@ interface DropdownItem {
 
 const practiceAreaGroups = [
   {
-    title: 'HRA Corporate',
+    title: 'Corporate, Commercial & Company Law',
     color: 'blue',
     underlineColor: 'bg-blue-500',
     textColor: 'text-blue-600',
     items: [
-      'Company Secretarial & Corporate Governance',
-      'Corporate Structure & Formation',
-      'Board Governance & Compliance',
-      'Corporate Financing & Restructuring',
-      'Investment Agreements',
-      'CSR, Sustainability and ESG',
-      'Mergers & Acquisitions',
-      'Joint Ventures & Strategic Alliances',
-      'Due Diligence',
-      'Corporate Reorganization'
+      'Contracts/Agreements & Advisory',
+      'Company Secretarial & Governance',
+      'Mergers & Acquisitions, JVs & Strategic Alliances',
+      'Employment, Labour & Industrial Relations',
+      'Intellectual Property',
+      'Startups & Emerging Businesses'
     ]
   },
   {
-    title: 'HRA Finance',
+    title: 'Finance, Taxation & Regulatory',
     color: 'amber',
     underlineColor: 'bg-amber-500',
     textColor: 'text-amber-600',
     items: [
-      'Banking & Finance Advisory',
-      'Debt & Refinancing',
-      'Capital Markets',
-      'Financial Regulatory Compliance',
-      'Fintech Legal Framework',
-      'Investment Fund Advisory',
-      'Transaction Documentation',
-      'Tax Planning & Advisory',
-      'International Tax Structuring',
-      'Corporate Tax Compliance'
+      'Corporate Financing',
+      'Restructuring, Insolvency & Bankruptcy',
+      'Taxation',
+      'Compliance, Bribery & White Collar Crime'
     ]
   },
   {
-    title: 'HRA Dispute Resolution',
+    title: 'Technology, Media & Data',
     color: 'orange',
     underlineColor: 'bg-orange-500',
     textColor: 'text-orange-600',
     items: [
-      'Commercial Litigation',
-      'Arbitration & Mediation',
-      'Contract Disputes',
-      'Employment Disputes',
-      'IP Disputes & Enforcement',
-      'Regulatory Enforcement',
-      'White Collar Crime',
-      'Anti-Corruption & Compliance',
-      'Insolvency & Bankruptcy',
-      'Cross-Border Disputes'
+      'Technology & Digital Contracts',
+      'Media, Entertainment & Telecommunications',
+      'Data Privacy, Cybersecurity & Protection'
     ]
   },
   {
-    title: 'HRA Markets',
+    title: 'Real Estate, Trade & Other Advisory',
     color: 'green',
     underlineColor: 'bg-green-500',
     textColor: 'text-green-600',
     items: [
-      'Intellectual Property Protection',
-      'Technology & Digital Innovation',
-      'Data Privacy & Cybersecurity',
-      'Media & Entertainment Law',
-      'International Trade Advisory',
-      'Regulatory Advisory',
-      'Employment & Labour Relations',
-      'Real Estate Transactions',
-      'Startup & Emerging Business',
-      'Contract Drafting & Compliance'
+      'Real Estate',
+      'International Trade',
+      'Project Management'
     ]
   }
 ];
@@ -90,14 +66,10 @@ const sectorGroups = [
     underlineColor: 'bg-blue-500',
     textColor: 'text-blue-600',
     items: [
-      'Banking & Financial Services',
-      'Insurance & Risk Management',
-      'Real Estate & Construction',
-      'Infrastructure Development',
-      'Energy & Power Distribution',
-      'Textiles & Manufacturing',
-      'Pharmaceuticals & Healthcare',
-      'Publishing & Print Media'
+      'Energy',
+      'Infrastructure',
+      'Insurance',
+      'Real Estate'
     ]
   },
   {
@@ -107,13 +79,8 @@ const sectorGroups = [
     textColor: 'text-purple-600',
     items: [
       'Technology & Telecommunications',
-      'E-Commerce & Digital Platforms',
-      'Internet & Online Services',
-      'Software & Tech Startups',
-      'Fintech & Digital Banking',
-      'EdTech & E-Learning',
-      'Digital Media & Streaming',
-      'Cybersecurity & Data Privacy'
+      'E-Commerce & Retail',
+      'Internet'
     ]
   },
   {
@@ -122,30 +89,19 @@ const sectorGroups = [
     underlineColor: 'bg-orange-500',
     textColor: 'text-orange-600',
     items: [
-      'Film & Television Production',
-      'Theatre & Live Entertainment',
-      'Music & Recording Industry',
-      'Satellite & Broadcasting',
-      'Digital Content Creation',
-      'OTT & Streaming Platforms',
-      'Gaming & Interactive Media',
-      'Content Licensing & Distribution'
+      'Media & Entertainment',
+      'Publishing',
+      'Education & Learning'
     ]
   },
   {
-    title: 'Consumer & Retail',
+    title: 'Healthcare & Consumer',
     color: 'green',
     underlineColor: 'bg-green-500',
     textColor: 'text-green-600',
     items: [
-      'FMCG & Consumer Goods',
-      'Retail & Distribution',
-      'Food & Beverage',
-      'Fashion & Lifestyle',
-      'Automotive & Transportation',
-      'Travel & Hospitality',
-      'Sports & Recreation',
-      'Consumer Electronics'
+      'Pharmaceuticals, Healthcare & Life Sciences',
+      'Food & Beverages'
     ]
   }
 ];
