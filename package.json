@@ -7,9 +7,13 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "sanity": "sanity dev"
   },
   "dependencies": {
+    "@sanity/client": "^7.6.0",
+    "@sanity/image-url": "^1.1.0",
+    "@sanity/vision": "^3.94.0",
     "@tailwindcss/forms": "^0.5.10",
     "clsx": "^2.1.1",
     "framer-motion": "^12.16.0",
@@ -18,11 +22,13 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-intersection-observer": "^9.16.0",
+    "sanity": "^3.94.0",
+    "styled-components": "^6.1.19",
     "tailwind-merge": "^3.3.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
-    "@tailwindcss/postcss": "^4",
+    "@tailwindcss/postcss": "^4.1.10",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
