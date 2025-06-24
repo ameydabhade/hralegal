@@ -29,7 +29,7 @@ export default function ContactPage() {
             {/* Contact Information */}
             <div className="space-y-8">
               <div>
-                <h2 className="text-2xl font-bold text-red-600 mb-6 border-b-2 border-red-600 pb-2 inline-block">
+                <h2 className="text-2xl font-bold text-gray-800 mb-6 border-b-2 border-gray-800 pb-2 inline-block">
                   Get In Touch
                 </h2>
                 <p className="text-base text-gray-700 mb-8">
@@ -39,11 +39,11 @@ export default function ContactPage() {
 
               <div className="space-y-6">
                 <div className="flex items-start">
-                  <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mr-4">
-                    <Mail className="w-6 h-6 text-red-600" />
+                  <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mr-4">
+                    <Mail className="w-6 h-6 text-gray-700" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold text-red-600 mb-2 border-b border-red-600 pb-1 inline-block">
+                    <h3 className="text-lg font-bold text-gray-800 mb-2 border-b border-gray-800 pb-1 inline-block">
                       Email
                     </h3>
                     <p className="text-gray-700 text-sm">info@hralegal.com</p>
@@ -51,11 +51,11 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex items-start">
-                  <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mr-4">
-                    <Phone className="w-6 h-6 text-red-600" />
+                  <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mr-4">
+                    <Phone className="w-6 h-6 text-gray-700" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold text-red-600 mb-2 border-b border-red-600 pb-1 inline-block">
+                    <h3 className="text-lg font-bold text-gray-800 mb-2 border-b border-gray-800 pb-1 inline-block">
                       Phone Number
                     </h3>
                     <p className="text-gray-700 text-sm">To Be Added</p>
@@ -63,11 +63,11 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex items-start">
-                  <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mr-4">
-                    <MapPin className="w-6 h-6 text-red-600" />
+                  <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mr-4">
+                    <MapPin className="w-6 h-6 text-gray-700" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold text-red-600 mb-2 border-b border-red-600 pb-1 inline-block">
+                    <h3 className="text-lg font-bold text-gray-800 mb-2 border-b border-gray-800 pb-1 inline-block">
                       Office Address
                     </h3>
                     <p className="text-gray-700 text-sm">
@@ -82,10 +82,10 @@ export default function ContactPage() {
 
               {/* Location Map */}
               <div className="mt-8">
-                <h3 className="text-lg font-bold text-red-600 mb-4 border-b border-red-600 pb-1 inline-block">
+                <h3 className="text-lg font-bold text-gray-800 mb-4 border-b border-gray-800 pb-1 inline-block">
                   Our Location
                 </h3>
-                <div className="bg-red-50 border border-red-200 rounded-lg p-4 overflow-hidden">
+                <div className="bg-gray-50 border border-gray-200 rounded-lg p-4 overflow-hidden">
                   <iframe 
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.664612282363!2d72.86162357515582!3d19.122363850515416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9c51880bb29%3A0x4960ca342b959585!2s93%20East!5e0!3m2!1sen!2sin!4v1750357109857!5m2!1sen!2sin" 
                     width="100%" 
@@ -104,7 +104,7 @@ export default function ContactPage() {
 
             {/* Contact Form */}
             <div id="form" className="bg-white rounded-lg shadow-xl border border-gray-100 p-8">
-              <h3 className="text-xl font-bold text-red-600 mb-6 border-b-2 border-red-600 pb-2 inline-block">
+              <h3 className="text-xl font-bold text-gray-800 mb-6 border-b-2 border-gray-800 pb-2 inline-block">
                 Send Us a Message
               </h3>
               <form className="space-y-6">
@@ -116,7 +116,7 @@ export default function ContactPage() {
                     <input
                       type="text"
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-red-400 focus:border-red-400 transition-colors text-sm"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-gray-400 focus:border-gray-400 transition-colors text-sm"
                       placeholder="Your first name"
                     />
                   </div>
@@ -127,7 +127,7 @@ export default function ContactPage() {
                     <input
                       type="text"
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-red-400 focus:border-red-400 transition-colors text-sm"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-gray-400 focus:border-gray-400 transition-colors text-sm"
                       placeholder="Your last name"
                     />
                   </div>
@@ -140,7 +140,7 @@ export default function ContactPage() {
                   <input
                     type="email"
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-red-400 focus:border-red-400 transition-colors text-sm"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-gray-400 focus:border-gray-400 transition-colors text-sm"
                     placeholder="your.email@example.com"
                   />
                 </div>
@@ -151,7 +151,7 @@ export default function ContactPage() {
                   </label>
                   <input
                     type="tel"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-red-400 focus:border-red-400 transition-colors text-sm"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-gray-400 focus:border-gray-400 transition-colors text-sm"
                     placeholder="  99999 99999"
                   />
                 </div>
@@ -160,7 +160,7 @@ export default function ContactPage() {
                   <label className="block text-sm font-semibold text-gray-900 mb-2">
                     Legal Service Needed
                   </label>
-                  <select className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-red-400 focus:border-red-400 transition-colors text-sm">
+                  <select className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-gray-400 focus:border-gray-400 transition-colors text-sm">
                     <option value="">Select a service</option>
                     <option value="contracts">Contracts, Compliances, and Advisory</option>
                     <option value="corporate">Company Secretarial and Corporate Governance</option>
@@ -187,14 +187,14 @@ export default function ContactPage() {
                   <textarea
                     required
                     rows={5}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-red-400 focus:border-red-400 transition-colors text-sm"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-gray-400 focus:border-gray-400 transition-colors text-sm"
                     placeholder="Please describe your legal needs and how we can help you..."
                   ></textarea>
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full inline-flex items-center justify-center px-6 py-3 bg-red-600 text-white font-semibold rounded-md hover:bg-red-700 transition-colors duration-200 text-sm"
+                  className="w-full inline-flex items-center justify-center px-6 py-3 bg-gray-600 text-white font-semibold rounded-md hover:bg-gray-700 transition-colors duration-200 text-sm"
                 >
                   <Send className="w-5 h-5 mr-2" />
                   Send Message
@@ -202,11 +202,11 @@ export default function ContactPage() {
 
                 <p className="text-xs text-gray-600 text-center">
                   By submitting this form, you agree to our{' '}
-                  <a href="/privacy-policy" className="text-red-600 hover:text-red-700 underline">
+                  <a href="/privacy-policy" className="text-gray-600 hover:text-gray-700 underline">
                     Privacy Policy
                   </a>{' '}
                   and{' '}
-                  <a href="/terms-of-use" className="text-red-600 hover:text-red-700 underline">
+                  <a href="/terms-of-use" className="text-gray-600 hover:text-gray-700 underline">
                     Terms of Use
                   </a>
                   .
