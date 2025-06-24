@@ -32,132 +32,127 @@ export default function AboutPage() {
       </section>
 
       {/* Meet the Founder */}
-      <section id="founder" className="py-6 px-4 sm:px-6 lg:px-8 bg-[#ECE5DE]">
+      <section id="founder" className="py-8 px-4 sm:px-6 lg:px-8 bg-[#ECE5DE]">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center mb-6"
+            className="text-center mb-8"
           >
-                                      <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4 border-b-4 border-gray-800 pb-2 inline-block">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4 border-b-4 border-gray-800 pb-2 inline-block">
               Meet the Founder
             </h2>
-              <p className="text-base text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                Meet the visionary leader driving HRA Legal&apos;s success with her expertise and passion for excellence.
-              </p>
+            <p className="text-base text-gray-600 max-w-2xl mx-auto leading-relaxed">
+              Meet the visionary leader driving HRA Legal&apos;s success with her expertise and passion for excellence.
+            </p>
           </motion.div>
 
-          <div className="max-w-4xl mx-auto">
-            {/* Rushi Upadhyaya */}
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="group"
-            >
-              <div className="bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden">
-                {/* Header */}
-                <div className="bg-gradient-to-r from-gray-600 to-gray-700 p-6 text-center">
-                  <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-3 shadow-lg group-hover:scale-110 transition-transform duration-300">
+          {/* Compact Single Card Layout */}
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="bg-white rounded-3xl shadow-xl overflow-hidden"
+          >
+            {/* Header Section */}
+            <div className="bg-gradient-to-r from-gray-600 to-gray-700 p-6">
+              <div className="flex flex-col lg:flex-row items-center justify-between">
+                <div className="flex items-center mb-4 lg:mb-0">
+                  <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mr-4 shadow-lg">
                     <Users className="w-8 h-8 text-gray-700" />
                   </div>
-                  <h3 className="text-xl text-white font-bold mb-1">Rushi Upadhyaya</h3>
-                  <p className="text-gray-100 font-medium text-sm">Founder & Legal Expert</p>
-                  <div className="mt-2 bg-gray-500 bg-opacity-30 rounded-full px-3 py-1 inline-block">
-                    <span className="text-white text-xs font-semibold">15+ Years Experience</span>
+                  <div>
+                    <h3 className="text-xl text-white font-bold">Rushi Upadhyaya</h3>
+                    <p className="text-gray-100 font-medium text-sm">Founder & Legal Expert</p>
                   </div>
                 </div>
+                <div className="bg-gray-500 bg-opacity-30 rounded-full px-4 py-2">
+                  <span className="text-white text-sm font-semibold">15+ Years Experience</span>
+                </div>
+              </div>
+            </div>
 
-                {/* Content */}
-                <div className="p-6 space-y-4">
-                  {/* Professional Background */}
-                  <div>
-                    <h4 className="text-lg font-bold text-gray-800 mb-4 flex items-center border-b-2 border-gray-800 pb-2 inline-block">
-                      <Building className="w-5 h-5 text-gray-700 mr-2" />
-                      Professional Background
-                    </h4>
-                    <div className="bg-gray-50 p-4 rounded-xl border-l-4 border-gray-600">
-                      <p className="text-gray-700 text-sm leading-relaxed mb-4">
-                        Rushi has an extensive experience of 15+ years as an in-house Counsel - Legal, Corporate Affairs and Business Affairs in Media & Entertainment sector, and has worked with global and multinational companies including:
-                      </p>
-                      <div className="flex flex-wrap gap-2 mb-4">
-                        {[
-                          "Sony Pictures Networks India Pvt. Ltd. (now Culver Max)",
-                          "Shemaroo Entertainment Ltd.",
-                          "Goldmines Telefilms Ltd.",
-                          "Reliance Industries Ltd. – Jio Studios",
-                          "Sony Music (India) Pvt. Ltd.",
-                          "Maddock Films",
-                          "Reliance Retail (Consultant)"
-                        ].map((company, index) => (
-                          <span key={index} className="inline-flex items-center px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-lg border border-gray-200">
-                            {company}
-                          </span>
-                        ))}
-                      </div>
-                      <p className="text-gray-700 text-sm leading-relaxed">
-                        With her good educational foundation and enriching experience in Legal, Corporate Affairs and Business Affairs, she is adept in structuring, negotiating and executing complex agreements for multifarious businesses, advising on corporate, commercial and intellectual property matters, standard &amp; practices/content regulation, setting up legal processes/systems/standard operating procedures and leading corporate matters including mergers and acquisitions.
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Qualifications */}
-                  <div>
-                    <h4 className="text-lg font-bold text-gray-800 mb-4 flex items-center border-b-2 border-gray-800 pb-2 inline-block">
-                      <Award className="w-5 h-5 text-gray-700 mr-2" />
-                      Qualifications
-                    </h4>
-                    <div className="space-y-2">
+            {/* Content Grid */}
+            <div className="p-6 lg:p-8">
+              <div className="grid lg:grid-cols-3 gap-6">
+                
+                {/* Professional Background */}
+                <div className="lg:col-span-2">
+                  <h4 className="text-lg font-bold text-gray-800 mb-4 flex items-center border-b-2 border-gray-800 pb-2 inline-block">
+                    <Building className="w-5 h-5 text-gray-700 mr-2" />
+                    Professional Background
+                  </h4>
+                  <div className="space-y-4">
+                    <p className="text-gray-700 text-sm leading-relaxed">
+                      15+ years experience as in-house Counsel in Media & Entertainment sector with global companies:
+                    </p>
+                    <div className="grid grid-cols-2 gap-2 text-xs">
                       {[
-                        'Masters of Business Laws (MBL)', 
-                        'Qualified Company Secretary', 
-                        'Diploma in IP Laws (PGIPR)', 
-                        'Law Graduate (LLB)', 
-                        'Management Graduate (BMS)'
-                      ].map((qual, index) => (
-                        <div key={index} className="flex items-center bg-gray-50 p-2 rounded-lg">
-                          <div className="w-2 h-2 bg-gray-600 rounded-full mr-3"></div>
-                          <span className="text-gray-700 text-sm">{qual}</span>
+                        "Sony Pictures Networks India",
+                        "Shemaroo Entertainment Ltd.",
+                        "Goldmines Telefilms Ltd.",
+                        "Reliance Industries – Jio Studios",
+                        "Sony Music (India) Pvt. Ltd.",
+                        "Maddock Films"
+                      ].map((company, index) => (
+                        <div key={index} className="bg-gray-50 p-2 rounded-lg border border-gray-200">
+                          <span className="text-gray-700 font-medium">{company}</span>
                         </div>
                       ))}
                     </div>
+                    <p className="text-gray-700 text-sm leading-relaxed">
+                      Expert in structuring, negotiating complex agreements, corporate matters, IP laws, and M&A.
+                    </p>
                   </div>
+                </div>
 
-                  {/* Experience Highlight */}
-                                      <div className="bg-white p-4 rounded-xl border-l-4 border-gray-600 shadow-sm">
-                    <h4 className="text-lg font-bold text-gray-800 mb-3">Media & Entertainment Expert</h4>
-                    <p className="text-gray-600 text-sm leading-relaxed">
-                    Possess specialized experience working with leading global names in the media and entertainment industry, including Sony Pictures Networks India Pvt. Ltd. (now Culver Max), Shemaroo Entertainment Ltd., Goldmines Telefilms Ltd., Reliance Industries Ltd. – Jio Studios, Sony Music (India) Pvt. Ltd., Maddock Films, and as a consultant with Reliance Retail. This background brings a deep understanding of content creation, distribution, and licensing.    </p>
-                  </div>
-
-                  {/* Core Strengths */}
-                  <div>
-                    <h4 className="text-lg font-bold text-gray-800 mb-4 flex items-center border-b-2 border-gray-800 pb-2 inline-block">
-                      <Trophy className="w-5 h-5 text-gray-700 mr-2" />
-                      Core Strengths
-                    </h4>
-                    <div className="space-y-3">
-                      <p className="text-gray-700 text-sm leading-relaxed mb-4">
-                        Core skills that define her includes a sharp leadership mindset, prompt decision making, strong analytical and meticulous approach, proficiency to provide strategic and prolific suggestions, and competence to provide balanced solutions for a win-win closure.
-                      </p>
-                      <div className="grid grid-cols-2 gap-2">
-                        {['Sharp Leadership Mindset', 'Prompt Decision Making', 'Strong Analytical Approach', 'Strategic Solutions', 'Meticulous Approach', 'Win-Win Closure'].map((skill, index) => (
-                          <div key={index} className="bg-gray-50 p-2 rounded-lg text-center border border-gray-200">
-                            <span className="text-gray-700 text-xs font-medium">{skill}</span>
-                          </div>
-                        ))}
+                {/* Qualifications */}
+                <div>
+                  <h4 className="text-lg font-bold text-gray-800 mb-4 flex items-center border-b-2 border-gray-800 pb-2 inline-block">
+                    <Award className="w-5 h-5 text-gray-700 mr-2" />
+                    Qualifications
+                  </h4>
+                  <div className="space-y-2">
+                    {[
+                      'Masters of Business Laws (MBL)', 
+                      'Qualified Company Secretary', 
+                      'Diploma in IP Laws (PGIPR)', 
+                      'Law Graduate (LLB)', 
+                      'Management Graduate (BMS)'
+                    ].map((qual, index) => (
+                      <div key={index} className="flex items-center bg-gray-50 p-2 rounded-lg">
+                        <div className="w-2 h-2 bg-gray-600 rounded-full mr-3 flex-shrink-0"></div>
+                        <span className="text-gray-700 text-xs font-medium">{qual}</span>
                       </div>
-                    </div>
+                    ))}
                   </div>
                 </div>
               </div>
-            </motion.div>
-          </div>
 
-
+              {/* Core Strengths */}
+              <div className="mt-6 pt-6 border-t border-gray-200">
+                <h4 className="text-lg font-bold text-gray-800 mb-4 flex items-center border-b-2 border-gray-800 pb-2 inline-block">
+                  <Trophy className="w-5 h-5 text-gray-700 mr-2" />
+                  Core Strengths & Expertise
+                </h4>
+                <div className="grid grid-cols-2 md:grid-cols-6 gap-3">
+                  {['Sharp Leadership', 'Quick Decision Making', 'Analytical Approach', 'Strategic Solutions', 'Meticulous Planning', 'Win-Win Closure'].map((skill, index) => (
+                    <div key={index} className="bg-gray-50 p-3 rounded-lg text-center border border-gray-200 hover:shadow-md transition-shadow">
+                      <span className="text-gray-700 text-xs font-medium">{skill}</span>
+                    </div>
+                  ))}
+                </div>
+                <div className="mt-4 bg-gray-50 p-4 rounded-xl border-l-4 border-gray-600">
+                  <p className="text-gray-700 text-sm leading-relaxed">
+                    <strong>Media & Entertainment Specialist:</strong> Deep understanding of content creation, distribution, licensing with proven track record across major studios and production houses.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 
