@@ -18,6 +18,13 @@ export const newsUpdate = defineType({
       options: {
         source: 'title',
         maxLength: 96,
+        slugify: (input: string) => input
+          .toLowerCase()
+          .replace(/\s+/g, '-')
+          .replace(/[^\w\-]+/g, '')
+          .replace(/\-\-+/g, '-')
+          .replace(/^-+/, '')
+          .replace(/-+$/, ''),
       },
       validation: (Rule) => Rule.required(),
     }),
