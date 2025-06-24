@@ -12,7 +12,8 @@ interface NewsUpdatePageProps {
 
 export default async function NewsUpdatePage({ params }: NewsUpdatePageProps) {
   try {
-    const news = await getNewsUpdate(params.slug);
+    const { slug } = await params;
+    const news = await getNewsUpdate(slug);
 
     if (!news) {
       notFound();
@@ -158,7 +159,8 @@ export default async function NewsUpdatePage({ params }: NewsUpdatePageProps) {
 // Generate metadata for SEO
 export async function generateMetadata({ params }: NewsUpdatePageProps) {
   try {
-    const news = await getNewsUpdate(params.slug);
+    const { slug } = await params;
+    const news = await getNewsUpdate(slug);
     
     if (!news) {
       return {
