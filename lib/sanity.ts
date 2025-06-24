@@ -5,9 +5,9 @@ import { SanityImageSource } from '@sanity/image-url/lib/types/types'
 export const client = createClient({
   projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || 'yrzpw3be',
   dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || 'production',
-  useCdn: process.env.NODE_ENV === 'production',
-  apiVersion: '2024-01-01',
-})
+  useCdn: false,
+  apiVersion: '2023-05-03',
+});
 
 const builder = imageUrlBuilder(client)
 
@@ -86,11 +86,23 @@ export const newsUpdatesQuery = `
 
 // Fetch functions
 export async function getBlogPosts(): Promise<BlogPost[]> {
-  return await client.fetch(blogPostsQuery)
+  try {
+    const result = await client.fetch(blogPostsQuery)
+    return Array.isArray(result) ? result : []
+  } catch (error) {
+    console.error('Error fetching blog posts:', error)
+    return []
+  }
 }
 
 export async function getNewsUpdates(): Promise<NewsUpdate[]> {
-  return await client.fetch(newsUpdatesQuery)
+  try {
+    const result = await client.fetch(newsUpdatesQuery)
+    return Array.isArray(result) ? result : []
+  } catch (error) {
+    console.error('Error fetching news updates:', error)
+    return []
+  }
 }
 
 export async function getBlogPost(slug: string): Promise<BlogPost> {

@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import { BookOpen, TrendingUp, Calendar, Clock, User, ChevronRight, Search } from 'lucide-react';
 import { getBlogPosts, getNewsUpdates, urlFor, BlogPost, NewsUpdate } from '../../../lib/sanity';
+import Link from 'next/link';
 
 export default function KnowledgeCentrePage() {
   const [activeTab, setActiveTab] = useState('blogs');
@@ -14,15 +15,20 @@ export default function KnowledgeCentrePage() {
     async function fetchData() {
       try {
         setLoading(true);
-        const [blogs, news] = await Promise.all([
-          getBlogPosts(),
-          getNewsUpdates()
-        ]);
-        setBlogPosts(blogs);
-        setNewsUpdates(news);
+        setError(null);
+        
+        // Fetch data separately to handle partial failures
+        const blogs = await getBlogPosts();
+        const news = await getNewsUpdates();
+        
+        setBlogPosts(blogs || []);
+        setNewsUpdates(news || []);
       } catch (err) {
         console.error('Error fetching data:', err);
         setError('Failed to load content. Please try again later.');
+        // Still set empty arrays so the UI doesn't break
+        setBlogPosts([]);
+        setNewsUpdates([]);
       } finally {
         setLoading(false);
       }
@@ -160,9 +166,11 @@ export default function KnowledgeCentrePage() {
                               )}
                             </div>
                             
-                            <h3 className="text-xl font-bold text-gray-800 mb-3 hover:text-gray-900 transition-colors cursor-pointer border-b border-gray-800 pb-1 inline-block">
-                              {post.title}
-                            </h3>
+                            <Link href={`/blog/${post.slug.current}`}>
+                              <h3 className="text-xl font-bold text-gray-800 mb-3 hover:text-gray-900 transition-colors cursor-pointer border-b border-gray-800 pb-1 inline-block">
+                                {post.title}
+                              </h3>
+                            </Link>
                             
                             <p className="text-gray-700 mb-4 line-clamp-3">
                               {post.excerpt}
@@ -176,10 +184,13 @@ export default function KnowledgeCentrePage() {
                                 <span className="text-sm text-gray-600">{formatDate(post.publishedAt)}</span>
                               </div>
                               
-                              <button className="flex items-center text-gray-700 hover:text-gray-900 transition-colors">
+                              <Link 
+                                href={`/blog/${post.slug.current}`}
+                                className="flex items-center text-gray-700 hover:text-gray-900 transition-colors"
+                              >
                                 Read More
                                 <ChevronRight className="w-4 h-4 ml-1" />
-                              </button>
+                              </Link>
                             </div>
                           </div>
                         </article>
@@ -220,9 +231,11 @@ export default function KnowledgeCentrePage() {
                                 </span>
                               </div>
                               
-                              <h3 className="text-xl font-bold text-gray-800 mb-3 hover:text-gray-900 transition-colors cursor-pointer border-b border-gray-800 pb-1 inline-block">
-                                {news.title}
-                              </h3>
+                              <Link href={`/news/${news.slug.current}`}>
+                                <h3 className="text-xl font-bold text-gray-800 mb-3 hover:text-gray-900 transition-colors cursor-pointer border-b border-gray-800 pb-1 inline-block">
+                                  {news.title}
+                                </h3>
+                              </Link>
                               
                               <p className="text-gray-700 mb-4">
                                 {news.excerpt}
@@ -236,10 +249,13 @@ export default function KnowledgeCentrePage() {
                               </div>
                             </div>
                             
-                            <button className="ml-6 flex items-center text-gray-700 hover:text-gray-900 transition-colors">
+                            <Link 
+                              href={`/news/${news.slug.current}`}
+                              className="ml-6 flex items-center text-gray-700 hover:text-gray-900 transition-colors"
+                            >
                               Read Full Update
                               <ChevronRight className="w-4 h-4 ml-1" />
-                            </button>
+                            </Link>
                           </div>
                         </article>
                       ))}
