@@ -1,13 +1,13 @@
-import { getNewsUpdate, urlFor } from '../../../../lib/sanity';
+import { getNewsUpdate } from '../../../../lib/sanity';
 import { PortableText } from '@portabletext/react';
 import { notFound } from 'next/navigation';
 import { Calendar, User, ArrowLeft, AlertTriangle } from 'lucide-react';
 import Link from 'next/link';
 
 interface NewsUpdatePageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 export default async function NewsUpdatePage({ params }: NewsUpdatePageProps) {
@@ -150,8 +150,8 @@ export default async function NewsUpdatePage({ params }: NewsUpdatePageProps) {
         </div>
       </div>
     );
-  } catch (error) {
-    console.error('Error fetching news update:', error);
+  } catch {
+    console.error('Error fetching news update');
     notFound();
   }
 }
@@ -176,7 +176,7 @@ export async function generateMetadata({ params }: NewsUpdatePageProps) {
         description: news.seo?.description || news.excerpt,
       },
     };
-  } catch (error) {
+  } catch {
     return {
       title: 'News Update Not Found',
     };

@@ -3,11 +3,12 @@ import { PortableText } from '@portabletext/react';
 import { notFound } from 'next/navigation';
 import { Calendar, Clock, User, ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 interface BlogPostPageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
@@ -79,9 +80,11 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           {/* Featured Image */}
           {post.featuredImage && (
             <div className="mb-8">
-              <img
+              <Image
                 src={urlFor(post.featuredImage).width(800).height(400).url()}
                 alt={post.title}
+                width={800}
+                height={400}
                 className="w-full h-64 lg:h-96 object-cover rounded-lg shadow-lg"
               />
             </div>
@@ -161,8 +164,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         </div>
       </div>
     );
-  } catch (error) {
-    console.error('Error fetching blog post:', error);
+  } catch {
+    console.error('Error fetching blog post');
     notFound();
   }
 }
@@ -188,7 +191,7 @@ export async function generateMetadata({ params }: BlogPostPageProps) {
         images: post.featuredImage ? [urlFor(post.featuredImage).width(1200).height(630).url()] : [],
       },
     };
-  } catch (error) {
+  } catch {
     return {
       title: 'Blog Post Not Found',
     };

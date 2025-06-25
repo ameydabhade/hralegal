@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { BookOpen, TrendingUp, Calendar, Clock, User, ChevronRight, Search } from 'lucide-react';
 import { getBlogPosts, getNewsUpdates, urlFor, BlogPost, NewsUpdate } from '../../../lib/sanity';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function KnowledgeCentrePage() {
   const [activeTab, setActiveTab] = useState('blogs');
@@ -143,9 +144,11 @@ export default function KnowledgeCentrePage() {
                         <article key={post._id} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                           <div className="h-48 bg-gray-100 flex items-center justify-center">
                             {post.featuredImage ? (
-                              <img
+                              <Image
                                 src={urlFor(post.featuredImage).width(400).height(200).url()}
                                 alt={post.title}
+                                width={400}
+                                height={200}
                                 className="w-full h-full object-cover"
                               />
                             ) : (

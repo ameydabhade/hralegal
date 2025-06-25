@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import DisclaimerModal from "./components/DisclaimerModal";
+import LayoutWrapper from "./components/LayoutWrapper";
 
 const kohinoor = localFont({
   src: [
@@ -77,10 +75,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${kohinoor.variable} font-sans antialiased`}>
-        <Header />
-        <main >{children}</main>
-        <Footer />
-        <DisclaimerModal />
+        <LayoutWrapper>
+          {children}
+        </LayoutWrapper>
       </body>
     </html>
   );

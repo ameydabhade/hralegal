@@ -1,9 +1,14 @@
 'use client';
 import { useEffect, useState } from 'react';
-import { getBlogPosts, client } from '../../../lib/sanity';
+import { getBlogPosts, client, BlogPost } from '../../../lib/sanity';
+
+interface TestData {
+  direct: BlogPost[];
+  helper: BlogPost[];
+}
 
 export default function TestSanityPage() {
-  const [data, setData] = useState<any>(null);
+  const [data, setData] = useState<TestData | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
 

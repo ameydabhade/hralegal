@@ -15,4 +15,14 @@ export default defineConfig({
   schema: {
     types: schemaTypes,
   },
+
+  basePath: '/admin',
+
+  studio: {
+    components: {
+      layout: (props) => {
+        return props.renderDefault(props)
+      }
+    }
+  }
 }) 

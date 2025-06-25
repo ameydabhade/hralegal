@@ -1,6 +1,7 @@
 import { createClient } from '@sanity/client'
 import imageUrlBuilder from '@sanity/image-url'
 import { SanityImageSource } from '@sanity/image-url/lib/types/types'
+import { PortableTextBlock } from '@portabletext/types'
 
 export const client = createClient({
   projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || 'yrzpw3be',
@@ -23,12 +24,12 @@ export interface BlogPost {
     current: string
   }
   excerpt: string
-  content: any[]
+  content: PortableTextBlock[]
   author: string
   publishedAt: string
   readTime?: string
   category: string
-  featuredImage?: any
+  featuredImage?: SanityImageSource
   seo?: {
     title?: string
     description?: string
@@ -43,7 +44,7 @@ export interface NewsUpdate {
     current: string
   }
   excerpt: string
-  content: any[]
+  content: PortableTextBlock[]
   publishedAt: string
   source: string
   category: string
