@@ -1,4 +1,4 @@
-import { Shield } from 'lucide-react';
+import PageWrapper from '../components/PageWrapper';
 
 export const metadata = {
   title: 'Privacy Policy - HRA Legal',
@@ -7,22 +7,7 @@ export const metadata = {
 
 export default function PrivacyPolicyPage() {
   return (
-    <div className="min-h-screen bg-[#ECE5DE]">
-      {/* Hero Section */}
-      <section className="pt-24 pb-12">
-        <div className="max-w-4xl mx-auto px-4 lg:px-8">
-          <div className="text-center mb-16">
-            <div className="flex items-center justify-center mb-6">
-              <Shield className="w-12 h-12 text-gray-400 mr-4" />
-              <h1 className="text-3xl lg:text-4xl font-bold text-gray-900">
-                Privacy Policy
-              </h1>
-            </div>
-         
-          </div>
-        </div>
-      </section>
-
+    <PageWrapper title="Privacy Policy">
       {/* Content */}
       <section className="pb-16">
         <div className="max-w-4xl mx-auto px-4 lg:px-8">
@@ -192,7 +177,6 @@ export default function PrivacyPolicyPage() {
           </div>
         </div>
       </section>
-    
-    </div>
+    </PageWrapper>
   );
 } 

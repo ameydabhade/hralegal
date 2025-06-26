@@ -1,4 +1,4 @@
-import { AlertTriangle } from 'lucide-react';
+import PageWrapper from '../components/PageWrapper';
 
 export const metadata = {
   title: 'Disclaimer - HRA Legal',
@@ -7,22 +7,7 @@ export const metadata = {
 
 export default function DisclaimerPage() {
   return (
-    <div className="min-h-screen bg-[#ECE5DE]">
-      {/* Hero Section */}
-      <section className="pt-24 pb-12">
-        <div className="max-w-4xl mx-auto px-4 lg:px-8">
-          <div className="text-center mb-16">
-            <div className="flex items-center justify-center mb-6">
-              <AlertTriangle className="w-12 h-12 text-gray-700 mr-4" />
-              <h1 className="text-3xl lg:text-4xl font-bold text-gray-800">
-                Disclaimer
-              </h1>
-            </div>
-       
-          </div>
-        </div>
-      </section>
-
+    <PageWrapper title="Disclaimer">
       {/* Content */}
       <section className="pb-16">
         <div className="max-w-4xl mx-auto px-4 lg:px-8">
@@ -40,6 +25,6 @@ export default function DisclaimerPage() {
           </div>
         </div>
       </section>
-    </div>
+    </PageWrapper>
   );
 } 

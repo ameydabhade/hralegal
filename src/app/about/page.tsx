@@ -14,41 +14,17 @@ import {
   Trophy,
   Building
 } from 'lucide-react';
+import PageWrapper from '../components/PageWrapper';
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-[#ECE5DE]">
-      {/* Hero Section */}
-      <section className="pt-24 pb-12">
-        <div className="max-w-7xl mx-auto px-4 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Meet the Founder */}
+    <PageWrapper 
+      title="Meet the Founder"
+      subtitle="Meet the visionary leader driving HRA Legal's success with her expertise and passion for excellence."
+    >
+      {/* Founder Details */}
       <section id="founder" className="py-8 px-4 sm:px-6 lg:px-8 bg-[#ECE5DE]">
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-8"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4 border-b-4 border-gray-800 pb-2 inline-block">
-              Meet the Founder
-            </h2>
-            <p className="text-base text-gray-600 max-w-2xl mx-auto leading-relaxed">
-              Meet the visionary leader driving HRA Legal&apos;s success with her expertise and passion for excellence.
-            </p>
-          </motion.div>
-
           {/* Compact Single Card Layout */}
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -374,6 +350,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-    </div>
+    </PageWrapper>
   );
 } 
