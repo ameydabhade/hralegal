@@ -143,7 +143,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               </div>
               <div>
                 <p className="font-semibold text-gray-800">{post.author}</p>
-                <p className="text-gray-600">Legal Expert at HRA Legal</p>
+         
               </div>
             </div>
           </div>
