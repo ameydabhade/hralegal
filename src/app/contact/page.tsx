@@ -5,7 +5,7 @@ import { useState } from 'react';
 import PageWrapper from '../components/PageWrapper';
 
 // Google Apps Script Web App URL
-const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycby_2Vc4dYFY9tkiUr5ycNKaGAPnBmnr24XQivZwnf2KkjOg2AzpSgWynW3jsaU115ahMw/exec';
+const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzICywAGgvs8c6BKJOcSW9aAbpjA2AmxDtlqkRGVhecJr8q2Vgs31O-75NJ_MiYtLgA/exec';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({

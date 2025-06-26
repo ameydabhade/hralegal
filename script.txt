@@ -1,0 +1,216 @@
+/**
+ * Updated Google Apps Script with New Sheet ID
+ */
+
+const SHEET_ID = '1bAQ17EfqrqK-p93aLGzmz3Zeu8OFUh4bEYwwPOYOEZo';
+const SHEET_NAME = 'Contact Form Submissions';
+
+function doPost(e) {
+  console.log('=== doPost called ===');
+  console.log('Full event object:', JSON.stringify(e, null, 2));
+  console.log('Parameters received:', e.parameter);
+  console.log('Post data:', e.postData);
+  
+  try {
+    let formData = {};
+    
+    // Handle form submissions (from your website)
+    if (e.parameter && Object.keys(e.parameter).length > 0) {
+      console.log('Processing FORM submission data');
+      formData = e.parameter;
+      console.log('Form data received:', formData);
+    }
+    // Handle JSON submissions (from testScript)
+    else if (e.postData && e.postData.contents) {
+      console.log('Processing JSON submission data');
+      formData = JSON.parse(e.postData.contents);
+      console.log('JSON data received:', formData);
+    }
+    else {
+      console.log('No data found in request');
+      console.log('e.parameter:', e.parameter);
+      console.log('e.postData:', e.postData);
+      throw new Error('No form data received');
+    }
+    
+    // Validate required fields
+    if (!formData.firstName || !formData.lastName || !formData.email) {
+      console.log('Missing required fields:', {
+        firstName: formData.firstName,
+        lastName: formData.lastName, 
+        email: formData.email
+      });
+      throw new Error('Missing required fields: firstName, lastName, or email');
+    }
+    
+    console.log('Processed form data:', formData);
+    
+    // Get the spreadsheet
+    console.log('Opening spreadsheet with ID:', SHEET_ID);
+    const spreadsheet = SpreadsheetApp.openById(SHEET_ID);
+    console.log('Opened spreadsheet:', spreadsheet.getName());
+    
+    let sheet = spreadsheet.getSheetByName(SHEET_NAME);
+    
+    if (!sheet) {
+      console.log('Sheet not found, creating new sheet:', SHEET_NAME);
+      sheet = spreadsheet.insertSheet(SHEET_NAME);
+      
+      // Add headers
+      const headers = ['Timestamp', 'First Name', 'Last Name', 'Email', 'Phone', 'Legal Service', 'Message', 'Status'];
+      sheet.getRange(1, 1, 1, headers.length).setValues([headers]);
+      sheet.getRange(1, 1, 1, headers.length).setFontWeight('bold');
+      sheet.getRange(1, 1, 1, headers.length).setBackground('#f0f0f0');
+      console.log('Headers added to new sheet');
+    } else {
+      console.log('Found existing sheet:', SHEET_NAME);
+    }
+    
+    // Prepare the data
+    const timestamp = new Date();
+    const rowData = [
+      timestamp,
+      formData.firstName || '',
+      formData.lastName || '',
+      formData.email || '',
+      formData.phone || '',
+      formData.legalService || '',
+      formData.message || '',
+      'New'
+    ];
+    
+    console.log('Prepared row data:', rowData);
+    
+    // Add the data to the sheet
+    const result = sheet.appendRow(rowData);
+    console.log('Row appended successfully');
+    console.log('New row range:', result);
+    
+    // Get the current number of rows to confirm
+    const numRows = sheet.getLastRow();
+    console.log('Sheet now has', numRows, 'rows');
+    
+    // Try to send email notification
+    try {
+      console.log('Attempting to send email notification');
+      const subject = 'New Contact Form Submission - HRA Legal';
+      const emailBody = `
+New contact form submission received on ${timestamp.toLocaleString()}:
+
+Name: ${formData.firstName} ${formData.lastName}
+Email: ${formData.email}
+Phone: ${formData.phone || 'Not provided'}
+Legal Service: ${formData.legalService || 'Not specified'}
+
+Message:
+${formData.message}
+
+---
+Automated notification from HRA Legal website
+      `;
+      
+      MailApp.sendEmail({
+        to: 'info@hralegal.com',
+        subject: subject,
+        body: emailBody
+      });
+      console.log('Email sent successfully to info@hralegal.com');
+    } catch (emailError) {
+      console.error('Email failed but continuing:', emailError);
+    }
+    
+    console.log('=== Form submission completed successfully ===');
+    
+    return ContentService
+      .createTextOutput(JSON.stringify({
+        success: true,
+        message: 'Data saved successfully',
+        timestamp: timestamp.toISOString(),
+        rowCount: numRows
+      }))
+      .setMimeType(ContentService.MimeType.JSON);
+      
+  } catch (error) {
+    console.error('=== ERROR in doPost ===');
+    console.error('Error message:', error.message);
+    console.error('Error stack:', error.stack);
+    console.error('========================');
+    
+    return ContentService
+      .createTextOutput(JSON.stringify({
+        success: false,
+        message: 'Script error: ' + error.message,
+        error: error.toString()
+      }))
+      .setMimeType(ContentService.MimeType.JSON);
+  }
+}
+
+function doGet() {
+  return ContentService.createTextOutput('HRA Legal Contact Form Handler is running - Updated with new Sheet ID');
+}
+
+// Test function that mimics form submission
+function testFormSubmission() {
+  console.log('=== Testing form submission ===');
+  
+  const mockFormEvent = {
+    parameter: {
+      firstName: 'John',
+      lastName: 'Doe', 
+      email: 'john.doe@example.com',
+      phone: '1234567890',
+      legalService: 'contracts',
+      message: 'This is a test form submission'
+    }
+  };
+  
+  const result = doPost(mockFormEvent);
+  console.log('Form test result:', result.getContent());
+  return result.getContent();
+}
+
+// Original test function with JSON
+function testScript() {
+  console.log('=== Testing JSON submission ===');
+  
+  const testEvent = {
+    postData: {
+      contents: JSON.stringify({
+        firstName: 'Jane',
+        lastName: 'Smith',
+        email: 'jane.smith@example.com',
+        phone: '0987654321',
+        legalService: 'corporate',
+        message: 'This is a test JSON submission'
+      })
+    }
+  };
+  
+  const result = doPost(testEvent);
+  console.log('JSON test result:', result.getContent());
+  return result.getContent();
+}
+
+// Initialize function
+function initializeSheet() {
+  try {
+    const spreadsheet = SpreadsheetApp.openById(SHEET_ID);
+    let sheet = spreadsheet.getSheetByName(SHEET_NAME);
+    
+    if (!sheet) {
+      sheet = spreadsheet.insertSheet(SHEET_NAME);
+      const headers = ['Timestamp', 'First Name', 'Last Name', 'Email', 'Phone', 'Legal Service', 'Message', 'Status'];
+      sheet.getRange(1, 1, 1, headers.length).setValues([headers]);
+      sheet.getRange(1, 1, 1, headers.length).setFontWeight('bold');
+      sheet.getRange(1, 1, 1, headers.length).setBackground('#f0f0f0');
+    }
+    
+    console.log('Sheet initialized successfully');
+    console.log('Spreadsheet URL:', spreadsheet.getUrl());
+    return 'Sheet initialized successfully';
+  } catch (error) {
+    console.error('Error initializing sheet:', error);
+    throw error;
+  }
+}
