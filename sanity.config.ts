@@ -5,7 +5,7 @@ import {schemaTypes} from './schemas'
 
 export default defineConfig({
   name: 'default',
-  title: 'HRA Legal - Lunera Website',
+  title: 'HRA Legal Website',
 
   projectId: 'yrzpw3be',
   dataset: 'production',
