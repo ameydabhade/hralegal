@@ -15,7 +15,6 @@
     "@portabletext/types": "^2.0.13",
     "@sanity/client": "^7.6.0",
     "@sanity/image-url": "^1.1.0",
-    "@sanity/vision": "^3.94.0",
     "@tailwindcss/forms": "^0.5.10",
     "clsx": "^2.1.1",
     "framer-motion": "^12.16.0",
