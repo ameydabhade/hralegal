@@ -12,11 +12,11 @@ const practiceAreaGroups = [
     textColor: 'text-blue-600',
     items: [
       { name: 'Contracts/Agreements & Advisory', url: '/practice-areas/contracts-agreements-advisory' },
-      { name: 'Company Secretarial & Governance', url: null },
-      { name: 'Mergers & Acquisitions, JVs & Strategic Alliances', url: null },
-      { name: 'Employment, Labour & Industrial Relations', url: null },
-      { name: 'Intellectual Property', url: null },
-      { name: 'Startups & Emerging Businesses', url: null }
+      { name: 'Company Secretarial & Governance', url: '/practice-areas/company-secretarial-governance' },
+      { name: 'Mergers & Acquisitions, JVs & Strategic Alliances', url: '/practice-areas/mergers-acquisitions-jvs-strategic-alliances' },
+      { name: 'Employment, Labour & Industrial Relations', url: '/practice-areas/employment-labour-industrial-relations' },
+      { name: 'Intellectual Property', url: '/practice-areas/intellectual-property' },
+      { name: 'Startups & Emerging Businesses', url: '/practice-areas/startups-emerging-businesses' }
     ]
   },
   {
@@ -25,10 +25,10 @@ const practiceAreaGroups = [
     underlineColor: 'bg-amber-500',
     textColor: 'text-amber-600',
     items: [
-      { name: 'Corporate Financing', url: null },
-      { name: 'Restructuring, Insolvency & Bankruptcy', url: null },
-      { name: 'Taxation', url: null },
-      { name: 'Compliance, Bribery & White Collar Crime', url: null }
+      { name: 'Corporate Financing', url: '/practice-areas/corporate-financing' },
+      { name: 'Restructuring, Insolvency & Bankruptcy', url: '/practice-areas/restructuring-insolvency-bankruptcy' },
+      { name: 'Taxation', url: '/practice-areas/taxation' },
+      { name: 'Compliance, Bribery & White Collar Crime', url: '/practice-areas/compliance-bribery-white-collar-crime' }
     ]
   },
   {
@@ -37,9 +37,9 @@ const practiceAreaGroups = [
     underlineColor: 'bg-orange-500',
     textColor: 'text-orange-600',
     items: [
-      { name: 'Technology & Digital Contracts', url: null },
-      { name: 'Media, Entertainment & Telecommunications', url: null },
-      { name: 'Data Privacy, Cybersecurity & Protection', url: null }
+      { name: 'Technology & Digital Contracts', url: '/practice-areas/technology-digital-contracts' },
+      { name: 'Media, Entertainment & Telecommunications', url: '/practice-areas/media-entertainment-telecommunications' },
+      { name: 'Data Privacy, Cybersecurity & Protection', url: '/practice-areas/data-privacy-cybersecurity-protection' }
     ]
   },
   {
@@ -48,9 +48,9 @@ const practiceAreaGroups = [
     underlineColor: 'bg-green-500',
     textColor: 'text-green-600',
     items: [
-      { name: 'Real Estate', url: null },
-      { name: 'International Trade', url: null },
-      { name: 'Project Management', url: null }
+      { name: 'Real Estate', url: '/practice-areas/real-estate' },
+      { name: 'International Trade', url: '/practice-areas/international-trade' },
+      { name: 'Project Management', url: '/practice-areas/project-management' }
     ]
   }
 ];

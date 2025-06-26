@@ -103,21 +103,55 @@ export default function HomePracticeAreasGrid() {
 
               {/* Practice Items */}
               <div className="space-y-3">
-                {group.items.map((item, itemIndex) => (
-                  <motion.div
-                    key={itemIndex}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.4, delay: (index * 0.1) + (itemIndex * 0.05) }}
-                    viewport={{ once: true }}
-                    className="flex items-start group cursor-pointer"
-                  >
-                    <div className="w-2 h-2 bg-gray-400 rounded-full mt-2 mr-3 flex-shrink-0 group-hover:bg-gray-600 transition-colors"></div>
-                    <span className="text-gray-700 text-sm leading-relaxed hover:text-gray-900 transition-colors">
-                      {item}
-                    </span>
-                  </motion.div>
-                ))}
+                {group.items.map((item, itemIndex) => {
+                  // Convert practice area name to URL slug
+                                     const getUrlSlug = (name: string) => {
+                     const urlMap: { [key: string]: string } = {
+                       'Contracts/Agreements & Advisory': '/practice-areas/contracts-agreements-advisory',
+                       'Company Secretarial & Governance': '/practice-areas/company-secretarial-governance',
+                       'Mergers & Acquisitions, JVs & Strategic Alliances': '/practice-areas/mergers-acquisitions-jvs-strategic-alliances',
+                       'Employment, Labour & Industrial Relations': '/practice-areas/employment-labour-industrial-relations',
+                       'Intellectual Property': '/practice-areas/intellectual-property',
+                       'Startups & Emerging Businesses': '/practice-areas/startups-emerging-businesses',
+                       'Real Estate': '/practice-areas/real-estate',
+                       'International Trade': '/practice-areas/international-trade',
+                       'Project Management': '/practice-areas/project-management',
+                       'Technology & Digital Contracts': '/practice-areas/technology-digital-contracts',
+                       'Media, Entertainment & Telecommunications': '/practice-areas/media-entertainment-telecommunications',
+                       'Data Privacy, Cybersecurity & Protection': '/practice-areas/data-privacy-cybersecurity-protection',
+                       'Corporate Financing': '/practice-areas/corporate-financing',
+                       'Restructuring, Insolvency & Bankruptcy': '/practice-areas/restructuring-insolvency-bankruptcy',
+                       'Taxation': '/practice-areas/taxation',
+                       'Compliance, Bribery & White Collar Crime': '/practice-areas/compliance-bribery-white-collar-crime'
+                     };
+                     return urlMap[name] || null;
+                   };
+                  
+                  const url = getUrlSlug(item);
+                  
+                  return (
+                    <motion.div
+                      key={itemIndex}
+                      initial={{ opacity: 0, x: -20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.4, delay: (index * 0.1) + (itemIndex * 0.05) }}
+                      viewport={{ once: true }}
+                      className="flex items-start group cursor-pointer"
+                      onClick={() => {
+                        if (url) {
+                          window.location.href = url;
+                        }
+                      }}
+                    >
+                      <div className="w-2 h-2 bg-gray-400 rounded-full mt-2 mr-3 flex-shrink-0 group-hover:bg-gray-600 transition-colors"></div>
+                      <span className={`text-sm leading-relaxed transition-colors ${
+                        url ? 'text-gray-700 hover:text-gray-900 cursor-pointer' : 'text-gray-500'
+                      }`}>
+                        {item}
+                      </span>
+                    </motion.div>
+                  );
+                })}
               </div>
             </motion.div>
           ))}
