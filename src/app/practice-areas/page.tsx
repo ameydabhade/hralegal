@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import PageWrapper from '../components/PageWrapper';
 
 const practiceAreaGroups = [
   {
@@ -69,23 +70,10 @@ const developingAreas = [
 
 export default function PracticeAreasPage() {
   return (
-    <div className="min-h-screen bg-[#ECE5DE]">
-      {/* Hero Section */}
-      <section className="pt-24 pb-12 bg-[#ECE5DE]">
-        <div className="max-w-7xl mx-auto px-4 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl lg:text-5xl font-bold text-gray-800 mb-6">
-              Our Practices
-              <div className="h-1 bg-gray-800 w-32 mx-auto mt-4"></div>
-            </h1>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              We provide comprehensive legal services across multiple practice areas, delivering expert 
-              counsel tailored to your specific industry and business needs.
-            </p>
-          </div>
-        </div>
-      </section>
-
+    <PageWrapper 
+      title="Our Practices"
+      subtitle="We provide comprehensive legal services across multiple practice areas, delivering expert counsel tailored to your specific industry and business needs."
+    >
       {/* Practice Areas Grid */}
       <section id="expertise" className="py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -165,7 +153,7 @@ export default function PracticeAreasPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white p-6 rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition-all duration-300 hover:border-gray-300"
+                className="bg-white p-6 cursor-pointer rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition-all duration-300 hover:border-gray-300"
               >
                 <div className="flex items-center">
                   <div className="w-3 h-3 bg-gray-500 rounded-full mr-3"></div>
@@ -178,8 +166,6 @@ export default function PracticeAreasPage() {
           </div>
         </div>
       </section>
-
-
-    </div>
+    </PageWrapper>
   );
 } 

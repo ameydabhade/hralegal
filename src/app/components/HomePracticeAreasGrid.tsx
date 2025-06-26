@@ -150,7 +150,7 @@ export default function HomePracticeAreasGrid() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white p-6 rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition-all duration-300 hover:border-gray-300"
+                className="bg-white p-6 rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition-all duration-300 cursor-pointer hover:border-gray-300"
               >
                 <div className="flex items-center">
                   <div className="w-3 h-3 bg-gray-500 rounded-full mr-3"></div>

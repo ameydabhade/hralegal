@@ -1,4 +1,5 @@
 import { Phone, Mail, MapPin, Send } from 'lucide-react';
+import PageWrapper from '../components/PageWrapper';
 
 export const metadata = {
   title: 'Contact Us - HRA Legal',
@@ -7,21 +8,10 @@ export const metadata = {
 
 export default function ContactPage() {
   return (
-    <div className="min-h-screen bg-[#ECE5DE] py-12">
-      {/* Hero Section */}
-      <section className="pt-24 pb-12">
-        <div className="max-w-7xl mx-auto px-4 lg:px-8">
-                      <div className="text-center mb-12">
-            <h1 className="text-4xl lg:text-5xl font-bold text-gray-800 mb-6 border-b-4 border-gray-800 pb-4 inline-block">
-              Contact Us
-            </h1>
-            <p className="text-base text-gray-700 max-w-3xl mx-auto leading-relaxed">
-              For inquiries, please fill in the form below and we will revert shortly.
-            </p>
-          </div>
-        </div>
-      </section>
-
+    <PageWrapper 
+      title="Contact Us"
+      subtitle="For inquiries, please fill in the form below and we will revert shortly."
+    >
       {/* Contact Information & Form */}
       <section id="info" className="pb-12">
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
@@ -98,8 +88,6 @@ export default function ContactPage() {
                   />
                 </div>
               </div>
-
-
             </div>
 
             {/* Contact Form */}
@@ -216,8 +204,6 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
-
-   
-    </div>
+    </PageWrapper>
   );
 } 

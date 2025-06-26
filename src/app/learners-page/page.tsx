@@ -4,6 +4,7 @@ import { BookOpen, TrendingUp, Calendar, Clock, User, ChevronRight, Search } fro
 import { getBlogPosts, getNewsUpdates, urlFor, BlogPost, NewsUpdate } from '../../../lib/sanity';
 import Link from 'next/link';
 import Image from 'next/image';
+import PageWrapper from '../components/PageWrapper';
 
 export default function KnowledgeCentrePage() {
   const [activeTab, setActiveTab] = useState('blogs');
@@ -47,17 +48,10 @@ export default function KnowledgeCentrePage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#ECE5DE] py-12">
-      {/* Hero Section */}
-      <section className="pt-24 pb-12">
+    <PageWrapper title="Learners Page">
+      {/* Search Bar */}
+      <section className="pb-8">
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl lg:text-5xl font-bold text-gray-800 mb-6 border-b-4 border-gray-800 pb-4 inline-block">
-              Learners Page
-            </h1>
-          </div>
-
-          {/* Search Bar */}
           <div className="max-w-2xl mx-auto mb-12">
             <div className="relative">
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -298,6 +292,6 @@ export default function KnowledgeCentrePage() {
           </div>
         </div>
       </section>
-    </div>
+    </PageWrapper>
   );
 } 
