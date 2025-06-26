@@ -16,7 +16,7 @@ const practiceAreaGroups = [
       { name: 'Mergers & Acquisitions, JVs & Strategic Alliances', url: '/practice-areas/mergers-acquisitions-jvs-strategic-alliances' },
       { name: 'Employment, Labour & Industrial Relations', url: '/practice-areas/employment-labour-industrial-relations' },
       { name: 'Intellectual Property', url: '/practice-areas/intellectual-property' },
-      { name: 'Startups & Emerging Businesses', url: '/practice-areas/startups-emerging-businesses' }
+      { name: 'Startups & Emerging Businesses', url: '/practice-areas/startups-emerging-businesses' } 
     ]
   },
   {

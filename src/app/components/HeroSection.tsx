@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Phone, ArrowRight } from 'lucide-react';
 
 export default function HeroSection() {
@@ -63,50 +64,43 @@ export default function HeroSection() {
             </div>
           </div>
 
-          {/* Visual Element - Professional Background with HRA Legal Info */}
+          {/* Visual Element - Professional Office Image */}
           <div className="relative">
-            {/* Professional Background Card */}
-            <div className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 rounded-2xl shadow-2xl p-8 border border-gray-700 text-white relative overflow-hidden">
-              {/* Background Pattern */}
-              <div className="absolute inset-0 opacity-10">
-                <div className="absolute top-4 right-4 w-20 h-20 border border-white rounded-full"></div>
-                <div className="absolute bottom-8 left-8 w-16 h-16 border border-white rounded-full"></div>
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 border border-white rounded-full"></div>
-              </div>
-
-              {/* Content */}
-              <div className="relative z-10 space-y-6">
-                {/* Logo/Header */}
-         
-                
-                {/* Quote or Mission */}
-                <div className="text-center space-y-4">
-                  <blockquote className="text-lg italic text-gray-200 leading-relaxed">
-                    &quot;Office Image Goes Here w/ full height&quot;
-                  </blockquote>
-                  
-            
-                </div>
-                
-                {/* Bottom signature */}
-                <div className="border-t border-gray-700 pt-4 flex justify-between items-center text-sm">
-           
-                  <div className="text-gray-400 font-semibold">
-                    Mumbai, India
+            {/* Professional Office Image */}
+            <div className="relative rounded-2xl shadow-2xl overflow-hidden">
+              <Image 
+                src="/hero1.jpeg" 
+                alt="HRA Legal Office - Professional Legal Environment" 
+                width={800}
+                height={600}
+                className="w-full h-[600px] object-cover rounded-2xl"
+                priority
+              />
+              
+              {/* Overlay with company info */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent rounded-2xl">
+                <div className="absolute bottom-0 left-0 right-0 p-8">
+                  <div className="text-white space-y-4">
+                    <blockquote className="text-xl italic text-gray-100 leading-relaxed">
+                      &quot;Excellence in Action&quot;
+                    </blockquote>
+                    
+                    <div className="border-t border-gray-300 pt-4 flex justify-between items-center text-sm">
+                      <div className="text-gray-200 font-semibold">
+                        HRA Legal
+                      </div>
+                      <div className="text-gray-300 font-semibold">
+                        Mumbai, India
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-
-     
           </div>
         </div>
 
-        {/* Note for office photos */}
-        <div className="text-center text-gray-600 text-sm mt-8 p-4 bg-gray-100 rounded-lg border-l-4 border-gray-600">
-          <p className="font-medium text-gray-700 mb-1">Visual Enhancement Option</p>
-          <p>The visual section above can be enhanced with your office photos as watermark background, or we can use a professional legal environment image. Please provide office photos  </p>
-        </div>
+
       </div>
     </section>
   );
