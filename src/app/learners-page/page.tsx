@@ -93,7 +93,7 @@ export default function KnowledgeCentrePage() {
               >
                 <div className="flex items-center">
                   <TrendingUp className="w-5 h-5 mr-2" />
-                  Latest News & Updates
+                  News & Updates
                 </div>
               </button>
             </nav>
@@ -123,7 +123,7 @@ export default function KnowledgeCentrePage() {
                 <div>
                   <div className="mb-8">
                     <h2 className="text-4xl font-bold text-gray-800 mb-4 border-b-2 border-gray-800 pb-2 inline-block">
-                      Latest Legal Insights & Articles
+                      Legal Insights & Articles
                     </h2>
                   </div>
 
@@ -197,12 +197,12 @@ export default function KnowledgeCentrePage() {
                 </div>
               )}
 
-              {/* Latest News Tab */}
+          
               {activeTab === 'news' && (
                 <div>
                   <div className="mb-8">
                     <h2 className="text-4xl font-bold text-gray-800 mb-4 border-b-2 border-gray-800 pb-2 inline-block">
-                      Latest Legal News & Updates
+                      Legal News & Updates
                     </h2>
                   </div>
 
