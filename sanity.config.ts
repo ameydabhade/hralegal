@@ -6,7 +6,7 @@ export default defineConfig({
   name: 'default',
   title: 'HRA Legal Website',
 
-  projectId: 'yrzpw3be',
+  projectId: 'mvclci23',
   dataset: 'production',
 
   plugins: [deskTool()],

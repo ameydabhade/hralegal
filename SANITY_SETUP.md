@@ -19,7 +19,7 @@ Your learners page has been successfully integrated with Sanity CMS! This allows
 Create a `.env.local` file in your project root with:
 
 ```
-NEXT_PUBLIC_SANITY_PROJECT_ID=your-actual-project-id
+NEXT_PUBLIC_SANITY_PROJECT_ID=mvclci23
 NEXT_PUBLIC_SANITY_DATASET=production
 ```
 

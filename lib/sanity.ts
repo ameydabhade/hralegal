@@ -4,7 +4,7 @@ import { SanityImageSource } from '@sanity/image-url/lib/types/types'
 import { PortableTextBlock } from '@portabletext/types'
 
 export const client = createClient({
-  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || 'yrzpw3be',
+  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || 'mvclci23',
   dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || 'production',
   useCdn: false,
   apiVersion: '2023-05-03',
