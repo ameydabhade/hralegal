@@ -128,7 +128,6 @@ export default async function NewsUpdatePage({ params }: NewsUpdatePageProps) {
               </div>
               <div>
                 <p className="font-semibold text-gray-800">{news.source}</p>
-                <p className="text-gray-600">Official Legal Authority</p>
                 <p className="text-sm text-gray-500 mt-1">Published on {formatDate(news.publishedAt)}</p>
               </div>
             </div>
