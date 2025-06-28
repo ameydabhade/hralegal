@@ -1,4 +1,4 @@
-import { getNewsUpdate } from '../../../../lib/sanity';
+import { getNewsUpdate, getNewsUpdates } from '../../../../lib/sanity';
 import { PortableText } from '@portabletext/react';
 import { notFound } from 'next/navigation';
 import { Calendar, User, ArrowLeft, AlertTriangle } from 'lucide-react';
@@ -152,6 +152,19 @@ export default async function NewsUpdatePage({ params }: NewsUpdatePageProps) {
   } catch {
     console.error('Error fetching news update');
     notFound();
+  }
+}
+
+// Generate static paths for all news updates
+export async function generateStaticParams() {
+  try {
+    const newsUpdates = await getNewsUpdates();
+    return newsUpdates.map((news) => ({
+      slug: news.slug.current,
+    }));
+  } catch (error) {
+    console.error('Error generating static params for news updates:', error);
+    return [];
   }
 }
 

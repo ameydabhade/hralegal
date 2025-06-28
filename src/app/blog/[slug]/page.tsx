@@ -1,4 +1,4 @@
-import { getBlogPost, urlFor } from '../../../../lib/sanity';
+import { getBlogPost, getBlogPosts, urlFor } from '../../../../lib/sanity';
 import { PortableText } from '@portabletext/react';
 import { notFound } from 'next/navigation';
 import { Calendar, Clock, User, ArrowLeft } from 'lucide-react';
@@ -167,6 +167,19 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   } catch {
     console.error('Error fetching blog post');
     notFound();
+  }
+}
+
+// Generate static paths for all blog posts
+export async function generateStaticParams() {
+  try {
+    const posts = await getBlogPosts();
+    return posts.map((post) => ({
+      slug: post.slug.current,
+    }));
+  } catch (error) {
+    console.error('Error generating static params for blog posts:', error);
+    return [];
   }
 }
 
