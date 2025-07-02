@@ -49,6 +49,26 @@ export interface NewsUpdate {
   }
 }
 
+// Job posting type
+export interface JobPosting {
+  _id: string
+  title: string
+  department: string
+  type: string
+  location: string
+  experience: string
+  summary: string
+  description: PortableTextBlock[]
+  responsibilities: string[]
+  qualifications: string[]
+  skills?: string[]
+  postedAt: string
+  applicationDeadline?: string
+  isActive: boolean
+  applicationInstructions?: string
+  contactEmail?: string
+}
+
 // GROQ queries - Updated to handle category references
 export const blogPostsQuery = `
   *[_type == "blogPost"] | order(publishedAt desc) {
@@ -77,6 +97,21 @@ export const newsUpdatesQuery = `
   }
 `
 
+export const jobPostingsQuery = `
+  *[_type == "jobPosting" && isActive == true] | order(postedAt desc) {
+    _id,
+    title,
+    department,
+    type,
+    location,
+    experience,
+    summary,
+    postedAt,
+    applicationDeadline,
+    isActive
+  }
+`
+
 // Fetch functions
 export async function getBlogPosts(): Promise<BlogPost[]> {
   try {
@@ -94,6 +129,16 @@ export async function getNewsUpdates(): Promise<NewsUpdate[]> {
     return Array.isArray(result) ? result : []
   } catch (error) {
     console.error('Error fetching news updates:', error)
+    return []
+  }
+}
+
+export async function getJobPostings(): Promise<JobPosting[]> {
+  try {
+    const result = await client.fetch(jobPostingsQuery)
+    return Array.isArray(result) ? result : []
+  } catch (error) {
+    console.error('Error fetching job postings:', error)
     return []
   }
 }
@@ -128,6 +173,30 @@ export async function getNewsUpdate(id: string): Promise<NewsUpdate> {
       "category": category->title,
       urgent,
       seo
+    }`,
+    { id }
+  )
+}
+
+export async function getJobPosting(id: string): Promise<JobPosting> {
+  return await client.fetch(
+    `*[_type == "jobPosting" && _id == $id][0] {
+      _id,
+      title,
+      department,
+      type,
+      location,
+      experience,
+      summary,
+      description,
+      responsibilities,
+      qualifications,
+      skills,
+      postedAt,
+      applicationDeadline,
+      isActive,
+      applicationInstructions,
+      contactEmail
     }`,
     { id }
   )
