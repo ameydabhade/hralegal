@@ -163,7 +163,7 @@ export default function KnowledgeCentrePage() {
                               )}
                             </div>
                             
-                            <Link href={`/blog/${post.slug.current}`}>
+                            <Link href={`/blog?post=${post._id}`}>
                               <h3 className="text-xl font-bold text-gray-800 mb-3 hover:text-gray-900 transition-colors cursor-pointer border-b border-gray-800 pb-1 inline-block">
                                 {post.title}
                               </h3>
@@ -182,7 +182,7 @@ export default function KnowledgeCentrePage() {
                               </div>
                               
                               <Link 
-                                href={`/blog/${post.slug.current}`}
+                                href={`/blog?post=${post._id}`}
                                 className="flex items-center text-gray-700 hover:text-gray-900 transition-colors"
                               >
                                 Read More
@@ -228,7 +228,7 @@ export default function KnowledgeCentrePage() {
                                 </span>
                               </div>
                               
-                              <Link href={`/news/${news.slug.current}`}>
+                              <Link href={`/news?news=${news._id}`}>
                                 <h3 className="text-xl font-bold text-gray-800 mb-3 hover:text-gray-900 transition-colors cursor-pointer border-b border-gray-800 pb-1 inline-block">
                                   {news.title}
                                 </h3>
@@ -247,7 +247,7 @@ export default function KnowledgeCentrePage() {
                             </div>
                             
                             <Link 
-                              href={`/news/${news.slug.current}`}
+                              href={`/news?news=${news._id}`}
                               className="ml-6 flex items-center text-gray-700 hover:text-gray-900 transition-colors"
                             >
                               Read Full Update

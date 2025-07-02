@@ -55,7 +55,7 @@ export interface NewsUpdate {
   }
 }
 
-// GROQ queries
+// GROQ queries - Updated to handle category references
 export const blogPostsQuery = `
   *[_type == "blogPost"] | order(publishedAt desc) {
     _id,
@@ -65,7 +65,7 @@ export const blogPostsQuery = `
     author,
     publishedAt,
     readTime,
-    category,
+    "category": category->title,
     featuredImage,
     seo
   }
@@ -79,7 +79,7 @@ export const newsUpdatesQuery = `
     excerpt,
     publishedAt,
     source,
-    category,
+    "category": category->title,
     urgent,
     seo
   }
@@ -117,7 +117,7 @@ export async function getBlogPost(slug: string): Promise<BlogPost> {
       author,
       publishedAt,
       readTime,
-      category,
+      "category": category->title,
       featuredImage,
       seo
     }`,
@@ -135,7 +135,7 @@ export async function getNewsUpdate(slug: string): Promise<NewsUpdate> {
       content,
       publishedAt,
       source,
-      category,
+      "category": category->title,
       urgent,
       seo
     }`,
