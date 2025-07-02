@@ -155,29 +155,27 @@ export default async function NewsUpdatePage({ params }: NewsUpdatePageProps) {
   }
 }
 
-// Generate static paths for all news updates
+// Enable ISR (Incremental Static Regeneration)
+// Pages will be generated on-demand and cached for 60 seconds
+export const revalidate = 60;
+
+// For ISR, we can optionally pre-generate some popular news updates
 export async function generateStaticParams() {
   try {
-    console.log('🔍 Generating static params for news updates...');
-    console.log('📋 Sanity Config:', {
-      projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
-      dataset: process.env.NEXT_PUBLIC_SANITY_DATASET,
-      hasEnvVars: !!(process.env.NEXT_PUBLIC_SANITY_PROJECT_ID && process.env.NEXT_PUBLIC_SANITY_DATASET)
-    });
-    
+    console.log('🔍 Pre-generating popular news updates for ISR...');
     const newsUpdates = await getNewsUpdates();
-    console.log(`✅ Found ${newsUpdates.length} news updates:`, newsUpdates.map(n => n.slug.current));
     
-    return newsUpdates.map((news) => ({
+    // Pre-generate only the first few news updates, others will be generated on-demand
+    const popularNews = newsUpdates.slice(0, 5);
+    console.log(`✅ Pre-generating ${popularNews.length} popular news updates:`, popularNews.map(n => n.slug.current));
+    
+    return popularNews.map((news) => ({
       slug: news.slug.current,
     }));
   } catch (error) {
-    console.error('❌ Error generating static params for news updates:', error);
-    console.error('🔧 Check your Sanity configuration and network connection');
-    
-    // Return empty array - this will cause build to fail if Sanity is not accessible  
-    // This is better than hardcoded fallbacks that prevent new content from appearing
-    console.log('⚠️ Returning empty array - build will only succeed if Sanity is properly configured');
+    console.error('❌ Error pre-generating news updates:', error);
+    // For ISR, we can return empty array - pages will still be generated on-demand
+    console.log('⚠️ No news pre-generated, but ISR will generate them on-demand');
     return [];
   }
 }

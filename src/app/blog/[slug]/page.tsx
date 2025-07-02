@@ -170,29 +170,27 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   }
 }
 
-// Generate static paths for all blog posts
+// Enable ISR (Incremental Static Regeneration)
+// Pages will be generated on-demand and cached for 60 seconds
+export const revalidate = 60;
+
+// For ISR, we can optionally pre-generate some popular posts
 export async function generateStaticParams() {
   try {
-    console.log('🔍 Generating static params for blog posts...');
-    console.log('📋 Sanity Config:', {
-      projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
-      dataset: process.env.NEXT_PUBLIC_SANITY_DATASET,
-      hasEnvVars: !!(process.env.NEXT_PUBLIC_SANITY_PROJECT_ID && process.env.NEXT_PUBLIC_SANITY_DATASET)
-    });
-    
+    console.log('🔍 Pre-generating popular blog posts for ISR...');
     const posts = await getBlogPosts();
-    console.log(`✅ Found ${posts.length} blog posts:`, posts.map(p => p.slug.current));
     
-    return posts.map((post) => ({
+    // Pre-generate only the first few posts, others will be generated on-demand
+    const popularPosts = posts.slice(0, 5);
+    console.log(`✅ Pre-generating ${popularPosts.length} popular posts:`, popularPosts.map(p => p.slug.current));
+    
+    return popularPosts.map((post) => ({
       slug: post.slug.current,
     }));
   } catch (error) {
-    console.error('❌ Error generating static params for blog posts:', error);
-    console.error('🔧 Check your Sanity configuration and network connection');
-    
-    // Return empty array - this will cause build to fail if Sanity is not accessible
-    // This is better than hardcoded fallbacks that prevent new content from appearing
-    console.log('⚠️ Returning empty array - build will only succeed if Sanity is properly configured');
+    console.error('❌ Error pre-generating blog posts:', error);
+    // For ISR, we can return empty array - pages will still be generated on-demand
+    console.log('⚠️ No posts pre-generated, but ISR will generate them on-demand');
     return [];
   }
 }
