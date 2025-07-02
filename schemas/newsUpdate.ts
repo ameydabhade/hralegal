@@ -61,19 +61,8 @@ export const newsUpdate = defineType({
     defineField({
       name: 'category',
       title: 'Category',
-      type: 'string',
-      options: {
-        list: [
-          {title: 'Privacy Law', value: 'Privacy Law'},
-          {title: 'Tax Law', value: 'Tax Law'},
-          {title: 'Corporate Law', value: 'Corporate Law'},
-          {title: 'Environmental Law', value: 'Environmental Law'},
-          {title: 'Trade Law', value: 'Trade Law'},
-          {title: 'Employment Law', value: 'Employment Law'},
-          {title: 'Intellectual Property', value: 'Intellectual Property'},
-          {title: 'Media Law', value: 'Media Law'},
-        ],
-      },
+      type: 'reference',
+      to: [{type: 'category'}],
       validation: (Rule) => Rule.required(),
     }),
     defineField({

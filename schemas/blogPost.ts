@@ -66,18 +66,8 @@ export const blogPost = defineType({
     defineField({
       name: 'category',
       title: 'Category',
-      type: 'string',
-      options: {
-        list: [
-          {title: 'Intellectual Property', value: 'Intellectual Property'},
-          {title: 'Corporate Law', value: 'Corporate Law'},
-          {title: 'Media Law', value: 'Media Law'},
-          {title: 'Employment Law', value: 'Employment Law'},
-          {title: 'Tax Law', value: 'Tax Law'},
-          {title: 'Environmental Law', value: 'Environmental Law'},
-          {title: 'Trade Law', value: 'Trade Law'},
-        ],
-      },
+      type: 'reference',
+      to: [{type: 'category'}],
       validation: (Rule) => Rule.required(),
     }),
     defineField({
