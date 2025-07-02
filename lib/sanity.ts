@@ -53,7 +53,6 @@ export interface NewsUpdate {
 export interface JobPosting {
   _id: string
   title: string
-  department: string
   type: string
   location: string
   experience: string
@@ -101,7 +100,6 @@ export const jobPostingsQuery = `
   *[_type == "jobPosting" && isActive == true] | order(postedAt desc) {
     _id,
     title,
-    department,
     type,
     location,
     experience,
@@ -183,7 +181,6 @@ export async function getJobPosting(id: string): Promise<JobPosting> {
     `*[_type == "jobPosting" && _id == $id][0] {
       _id,
       title,
-      department,
       type,
       location,
       experience,

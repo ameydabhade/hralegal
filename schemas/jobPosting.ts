@@ -12,21 +12,6 @@ export const jobPosting = defineType({
       validation: (Rule: any) => Rule.required(),
     }),
     defineField({
-      name: 'department',
-      title: 'Department',
-      type: 'string',
-      options: {
-        list: [
-          {title: 'Legal', value: 'legal'},
-          {title: 'Litigation', value: 'litigation'},
-          {title: 'Compliance', value: 'compliance'},
-          {title: 'Intellectual Property', value: 'ip'},
-          {title: 'Real Estate', value: 'realestate'},
-        ]
-      },
-      validation: (Rule: any) => Rule.required(),
-    }),
-    defineField({
       name: 'type',
       title: 'Employment Type',
       type: 'string',
@@ -76,7 +61,6 @@ export const jobPosting = defineType({
           type: 'block',
         },
       ],
-      validation: (Rule: any) => Rule.required(),
     }),
     defineField({
       name: 'responsibilities',
@@ -87,7 +71,6 @@ export const jobPosting = defineType({
           type: 'string',
         },
       ],
-      validation: (Rule: any) => Rule.required().min(3),
     }),
     defineField({
       name: 'qualifications',
@@ -98,7 +81,6 @@ export const jobPosting = defineType({
           type: 'string',
         },
       ],
-      validation: (Rule: any) => Rule.required().min(3),
     }),
     defineField({
       name: 'skills',
@@ -147,15 +129,14 @@ export const jobPosting = defineType({
   preview: {
     select: {
       title: 'title',
-      department: 'department',
       type: 'type',
       isActive: 'isActive',
     },
     prepare(selection) {
-      const {title, department, type, isActive} = selection
+      const {title, type, isActive} = selection
       return {
         title: title,
-        subtitle: `${department} • ${type} ${isActive ? '(Active)' : '(Inactive)'}`,
+        subtitle: `${type} ${isActive ? '(Active)' : '(Inactive)'}`,
       }
     },
   },

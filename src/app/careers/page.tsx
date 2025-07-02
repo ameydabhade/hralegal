@@ -59,10 +59,15 @@ function CareersContent() {
     setLoading(true)
     try {
       const fullJob = await getJobPosting(job._id)
+      if (!fullJob) {
+        console.error('Job not found')
+        return
+      }
       setSelectedJob(fullJob)
       router.push(`/careers?job=${job._id}`, { scroll: false })
     } catch (error) {
       console.error('Error fetching job:', error)
+      // Show error state or fallback
     } finally {
       setLoading(false)
     }
@@ -199,51 +204,63 @@ function CareersContent() {
               <section className="bg-white rounded-lg shadow-lg p-8">
                 <h2 className="text-2xl font-bold text-gray-800 mb-6">Job Description</h2>
                 <div className="prose prose-lg max-w-none">
-                  <PortableText 
-                    value={selectedJob.description}
-                    components={{
-                      block: {
-                        normal: ({children}) => <p className="mb-4 text-gray-700 leading-relaxed">{children}</p>,
-                        h2: ({children}) => <h3 className="text-xl font-bold text-gray-800 mb-3 mt-6">{children}</h3>,
-                        h3: ({children}) => <h4 className="text-lg font-bold text-gray-800 mb-2 mt-4">{children}</h4>,
-                      },
-                      list: {
-                        bullet: ({children}) => <ul className="list-disc list-inside mb-4 text-gray-700">{children}</ul>,
-                        number: ({children}) => <ol className="list-decimal list-inside mb-4 text-gray-700">{children}</ol>,
-                      },
-                      listItem: {
-                        bullet: ({children}) => <li className="mb-1">{children}</li>,
-                        number: ({children}) => <li className="mb-1">{children}</li>,
-                      },
-                    }}
-                  />
+                  {selectedJob.description && selectedJob.description.length > 0 ? (
+                    <PortableText 
+                      value={selectedJob.description}
+                      components={{
+                        block: {
+                          normal: ({children}) => <p className="mb-4 text-gray-700 leading-relaxed">{children}</p>,
+                          h2: ({children}) => <h3 className="text-xl font-bold text-gray-800 mb-3 mt-6">{children}</h3>,
+                          h3: ({children}) => <h4 className="text-lg font-bold text-gray-800 mb-2 mt-4">{children}</h4>,
+                        },
+                        list: {
+                          bullet: ({children}) => <ul className="list-disc list-inside mb-4 text-gray-700">{children}</ul>,
+                          number: ({children}) => <ol className="list-decimal list-inside mb-4 text-gray-700">{children}</ol>,
+                        },
+                        listItem: {
+                          bullet: ({children}) => <li className="mb-1">{children}</li>,
+                          number: ({children}) => <li className="mb-1">{children}</li>,
+                        },
+                      }}
+                    />
+                  ) : (
+                    <p className="text-gray-700">Job description will be provided during the application process.</p>
+                  )}
                 </div>
               </section>
 
               {/* Responsibilities */}
               <section className="bg-white rounded-lg shadow-lg p-8">
                 <h2 className="text-2xl font-bold text-gray-800 mb-6">Key Responsibilities</h2>
-                <ul className="space-y-3">
-                  {selectedJob.responsibilities.map((responsibility, index) => (
-                    <li key={index} className="flex items-start">
-                      <div className="w-2 h-2 bg-[#B39F96] rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                      <span className="text-gray-700">{responsibility}</span>
-                    </li>
-                  ))}
-                </ul>
+                {selectedJob.responsibilities && selectedJob.responsibilities.length > 0 ? (
+                  <ul className="space-y-3">
+                    {selectedJob.responsibilities.map((responsibility, index) => (
+                      <li key={index} className="flex items-start">
+                        <div className="w-2 h-2 bg-[#B39F96] rounded-full mr-3 mt-2 flex-shrink-0"></div>
+                        <span className="text-gray-700">{responsibility}</span>
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p className="text-gray-700">Responsibilities will be provided during the application process.</p>
+                )}
               </section>
 
               {/* Qualifications */}
               <section className="bg-white rounded-lg shadow-lg p-8">
                 <h2 className="text-2xl font-bold text-gray-800 mb-6">Qualifications & Requirements</h2>
-                <ul className="space-y-3">
-                  {selectedJob.qualifications.map((qualification, index) => (
-                    <li key={index} className="flex items-start">
-                      <div className="w-2 h-2 bg-[#B39F96] rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                      <span className="text-gray-700">{qualification}</span>
-                    </li>
-                  ))}
-                </ul>
+                {selectedJob.qualifications && selectedJob.qualifications.length > 0 ? (
+                  <ul className="space-y-3">
+                    {selectedJob.qualifications.map((qualification, index) => (
+                      <li key={index} className="flex items-start">
+                        <div className="w-2 h-2 bg-[#B39F96] rounded-full mr-3 mt-2 flex-shrink-0"></div>
+                        <span className="text-gray-700">{qualification}</span>
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p className="text-gray-700">Qualifications will be provided during the application process.</p>
+                )}
               </section>
 
               {/* Skills */}
