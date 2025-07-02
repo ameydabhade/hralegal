@@ -134,7 +134,7 @@ export default function Header() {
     const timeout = setTimeout(() => {
       setActiveDropdown(null);
       setActiveMegaMenu(null);
-    }, 3000); // 3 seconds delay before hiding
+    }, 3500); // 3 seconds delay before hiding
     setHoverTimeout(timeout);
   };
 
@@ -153,11 +153,10 @@ export default function Header() {
   };
 
   const handleMegaMenuLeave = () => {
-    // Don't close immediately when leaving mega menu - only when leaving the entire dropdown system
     const timeout = setTimeout(() => {
       setActiveMegaMenu(null);
       setActiveDropdown(null);
-    }, 300); // Short delay to allow moving between elements
+    }, 3500); // 3 seconds delay before hiding
     setHoverTimeout(timeout);
   };
 
@@ -276,10 +275,7 @@ export default function Header() {
                             }
                           }}
                           onMouseLeave={() => {
-                            // Start timeout only if not moving to mega menu
-                            if (!activeMegaMenu) {
-                              handleMouseLeave();
-                            }
+                            // Keep mega menu open when moving to it
                           }}
                           onClick={() => {
                              window.location.href = subsection.href;
