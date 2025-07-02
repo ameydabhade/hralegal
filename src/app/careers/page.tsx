@@ -61,7 +61,7 @@ export default function CareersPage() {
   return (
     <div className="min-h-screen bg-[#ECE5DE]">
       {/* Hero Section */}
-      <section className="pt-24 pb-12">
+      <section className="pt-24 pb-6">
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
                       <div className="text-center mb-12">
             <h1 className="text-4xl lg:text-5xl font-bold text-gray-800 mb-6 border-b-4 border-gray-800 pb-4 inline-block">

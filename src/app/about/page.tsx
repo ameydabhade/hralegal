@@ -23,7 +23,7 @@ export default function AboutPage() {
       subtitle="Meet the visionary leader driving HRA Legal's success with her expertise and passion for excellence."
     >
       {/* Founder Details */}
-      <section id="founder" className="py-8 px-4 sm:px-6 lg:px-8 bg-[#ECE5DE]">
+      <section id="founder" className="py-4 px-4 sm:px-6 lg:px-8 bg-[#ECE5DE]">
         <div className="max-w-7xl mx-auto">
           {/* Compact Single Card Layout */}
           <motion.div
@@ -133,7 +133,7 @@ export default function AboutPage() {
       </section>
 
       {/* Our Story - Placeholder for new content */}
-      <section id="story" className="py-12 px-4 sm:px-6 lg:px-8">
+      <section id="story" className="py-6 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
