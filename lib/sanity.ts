@@ -6,9 +6,18 @@ import { PortableTextBlock } from '@portabletext/types'
 export const client = createClient({
   projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || 'mvclci23',
   dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || 'production',
-  useCdn: false,
+  useCdn: process.env.NODE_ENV === 'production', // Use CDN in production for better performance
   apiVersion: '2023-05-03',
+  ignoreBrowserTokenWarning: true, // Suppress warnings in static builds
 });
+
+// Ensure client is properly configured
+if (!client.config().projectId) {
+  console.error('❌ Sanity client: projectId is missing');
+}
+if (!client.config().dataset) {
+  console.error('❌ Sanity client: dataset is missing');
+}
 
 const builder = imageUrlBuilder(client)
 
@@ -106,39 +115,67 @@ export async function getNewsUpdates(): Promise<NewsUpdate[]> {
   }
 }
 
-export async function getBlogPost(slug: string): Promise<BlogPost> {
-  return await client.fetch(
-    `*[_type == "blogPost" && slug.current == $slug][0] {
-      _id,
-      title,
-      slug,
-      excerpt,
-      content,
-      author,
-      publishedAt,
-      readTime,
-      category,
-      featuredImage,
-      seo
-    }`,
-    { slug }
-  )
+export async function getBlogPost(slug: string): Promise<BlogPost | null> {
+  try {
+    console.log(`🔍 Fetching blog post with slug: ${slug}`);
+    const post = await client.fetch(
+      `*[_type == "blogPost" && slug.current == $slug][0] {
+        _id,
+        title,
+        slug,
+        excerpt,
+        content,
+        author,
+        publishedAt,
+        readTime,
+        category,
+        featuredImage,
+        seo
+      }`,
+      { slug }
+    );
+    
+    if (post) {
+      console.log(`✅ Found blog post: ${post.title}`);
+    } else {
+      console.log(`❌ No blog post found with slug: ${slug}`);
+    }
+    
+    return post || null;
+  } catch (error) {
+    console.error(`❌ Error fetching blog post "${slug}":`, error);
+    return null;
+  }
 }
 
-export async function getNewsUpdate(slug: string): Promise<NewsUpdate> {
-  return await client.fetch(
-    `*[_type == "newsUpdate" && slug.current == $slug][0] {
-      _id,
-      title,
-      slug,
-      excerpt,
-      content,
-      publishedAt,
-      source,
-      category,
-      urgent,
-      seo
-    }`,
-    { slug }
-  )
+export async function getNewsUpdate(slug: string): Promise<NewsUpdate | null> {
+  try {
+    console.log(`🔍 Fetching news update with slug: ${slug}`);
+    const news = await client.fetch(
+      `*[_type == "newsUpdate" && slug.current == $slug][0] {
+        _id,
+        title,
+        slug,
+        excerpt,
+        content,
+        publishedAt,
+        source,
+        category,
+        urgent,
+        seo
+      }`,
+      { slug }
+    );
+    
+    if (news) {
+      console.log(`✅ Found news update: ${news.title}`);
+    } else {
+      console.log(`❌ No news update found with slug: ${slug}`);
+    }
+    
+    return news || null;
+  } catch (error) {
+    console.error(`❌ Error fetching news update "${slug}":`, error);
+    return null;
+  }
 } 

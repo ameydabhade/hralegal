@@ -157,14 +157,36 @@ export default async function NewsUpdatePage({ params }: NewsUpdatePageProps) {
 
 // Generate static paths for all news updates
 export async function generateStaticParams() {
+  // Known news update slugs as fallback
+  const fallbackSlugs = [
+    { slug: 'test-news' },
+    // Add other news update slugs here as needed
+  ];
+
   try {
+    console.log('🔍 Generating static params for news updates...');
+    console.log('📋 Sanity Config:', {
+      projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
+      dataset: process.env.NEXT_PUBLIC_SANITY_DATASET,
+      hasEnvVars: !!(process.env.NEXT_PUBLIC_SANITY_PROJECT_ID && process.env.NEXT_PUBLIC_SANITY_DATASET)
+    });
+    
     const newsUpdates = await getNewsUpdates();
-    return newsUpdates.map((news) => ({
-      slug: news.slug.current,
-    }));
+    console.log(`✅ Found ${newsUpdates.length} news updates:`, newsUpdates.map(n => n.slug.current));
+    
+    if (newsUpdates.length > 0) {
+      return newsUpdates.map((news) => ({
+        slug: news.slug.current,
+      }));
+    } else {
+      console.log('⚠️ No news updates found from Sanity, using fallback slugs');
+      return fallbackSlugs;
+    }
   } catch (error) {
-    console.error('Error generating static params for news updates:', error);
-    return [];
+    console.error('❌ Error generating static params for news updates:', error);
+    console.error('🔧 Check your Sanity configuration and network connection');
+    console.log('📝 Using fallback news update slugs...');
+    return fallbackSlugs;
   }
 }
 

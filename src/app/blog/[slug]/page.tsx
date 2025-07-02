@@ -172,14 +172,37 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
 // Generate static paths for all blog posts
 export async function generateStaticParams() {
+  // Known blog post slugs as fallback
+  const fallbackSlugs = [
+    { slug: 'legal-news' },
+    { slug: 'test-post-new-acc' },
+    // Add other blog post slugs here as needed
+  ];
+
   try {
+    console.log('🔍 Generating static params for blog posts...');
+    console.log('📋 Sanity Config:', {
+      projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
+      dataset: process.env.NEXT_PUBLIC_SANITY_DATASET,
+      hasEnvVars: !!(process.env.NEXT_PUBLIC_SANITY_PROJECT_ID && process.env.NEXT_PUBLIC_SANITY_DATASET)
+    });
+    
     const posts = await getBlogPosts();
-    return posts.map((post) => ({
-      slug: post.slug.current,
-    }));
+    console.log(`✅ Found ${posts.length} blog posts:`, posts.map(p => p.slug.current));
+    
+    if (posts.length > 0) {
+      return posts.map((post) => ({
+        slug: post.slug.current,
+      }));
+    } else {
+      console.log('⚠️ No posts found from Sanity, using fallback slugs');
+      return fallbackSlugs;
+    }
   } catch (error) {
-    console.error('Error generating static params for blog posts:', error);
-    return [];
+    console.error('❌ Error generating static params for blog posts:', error);
+    console.error('🔧 Check your Sanity configuration and network connection');
+    console.log('📝 Using fallback blog post slugs...');
+    return fallbackSlugs;
   }
 }
 
