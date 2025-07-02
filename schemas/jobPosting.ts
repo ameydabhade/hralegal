@@ -18,7 +18,7 @@ export const jobPosting = defineType({
       options: {
         list: [
           {title: 'Legal', value: 'legal'},
-          {title: 'Litigation', value: 'litigation'},
+          image.png          {title: 'Litigation', value: 'litigation'},
           {title: 'Compliance', value: 'compliance'},
           {title: 'Intellectual Property', value: 'ip'},
           {title: 'Real Estate', value: 'realestate'},

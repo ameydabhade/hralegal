@@ -18,7 +18,6 @@ import {
   Clock,
   ArrowLeft,
   Search,
-  Filter,
   Building
 } from 'lucide-react';
 
@@ -408,7 +407,7 @@ function CareersContent() {
               <h3 className="text-xl font-semibold text-gray-600 mb-2">No job openings found</h3>
               <p className="text-gray-500">
                 {jobs.length === 0 
-                  ? "We don't have any active job postings at the moment. Please check back later."
+                  ? "We don&apos;t have any active job postings at the moment. Please check back later."
                   : "No jobs match your current filters. Try adjusting your search criteria."
                 }
               </p>
