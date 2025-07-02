@@ -1,13 +1,13 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useState, Suspense } from 'react'
 import { useSearchParams, useRouter } from 'next/navigation'
 import { getNewsUpdates, getNewsUpdate, NewsUpdate } from '../../../lib/sanity'
 import { PortableText } from '@portabletext/react'
 import { Calendar, User, ArrowLeft, Search, AlertCircle } from 'lucide-react'
 import Link from 'next/link'
 
-export default function NewsPage() {
+function NewsContent() {
   const [news, setNews] = useState<NewsUpdate[]>([])
   const [selectedNews, setSelectedNews] = useState<NewsUpdate | null>(null)
   const [loading, setLoading] = useState(true)
@@ -293,5 +293,24 @@ export default function NewsPage() {
         )}
       </div>
     </div>
+  )
+}
+
+function LoadingFallback() {
+  return (
+    <div className="min-h-screen bg-[#ECE5DE] flex items-center justify-center">
+      <div className="text-center">
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-gray-800 mx-auto mb-4"></div>
+        <p className="text-gray-600">Loading...</p>
+      </div>
+    </div>
+  )
+}
+
+export default function NewsPage() {
+  return (
+    <Suspense fallback={<LoadingFallback />}>
+      <NewsContent />
+    </Suspense>
   )
 } 
