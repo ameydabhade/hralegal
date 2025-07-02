@@ -170,27 +170,15 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   }
 }
 
-// Enable ISR (Incremental Static Regeneration)
-// Pages will be generated on-demand and cached for 60 seconds
-export const revalidate = 60;
-
-// For ISR, we can optionally pre-generate some popular posts
+// Generate static paths for all blog posts
 export async function generateStaticParams() {
   try {
-    console.log('🔍 Pre-generating popular blog posts for ISR...');
     const posts = await getBlogPosts();
-    
-    // Pre-generate only the first few posts, others will be generated on-demand
-    const popularPosts = posts.slice(0, 5);
-    console.log(`✅ Pre-generating ${popularPosts.length} popular posts:`, popularPosts.map(p => p.slug.current));
-    
-    return popularPosts.map((post) => ({
+    return posts.map((post) => ({
       slug: post.slug.current,
     }));
   } catch (error) {
-    console.error('❌ Error pre-generating blog posts:', error);
-    // For ISR, we can return empty array - pages will still be generated on-demand
-    console.log('⚠️ No posts pre-generated, but ISR will generate them on-demand');
+    console.error('Error generating static params for blog posts:', error);
     return [];
   }
 }

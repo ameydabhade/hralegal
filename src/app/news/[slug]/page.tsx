@@ -155,27 +155,15 @@ export default async function NewsUpdatePage({ params }: NewsUpdatePageProps) {
   }
 }
 
-// Enable ISR (Incremental Static Regeneration)
-// Pages will be generated on-demand and cached for 60 seconds
-export const revalidate = 60;
-
-// For ISR, we can optionally pre-generate some popular news updates
+// Generate static paths for all news updates
 export async function generateStaticParams() {
   try {
-    console.log('🔍 Pre-generating popular news updates for ISR...');
     const newsUpdates = await getNewsUpdates();
-    
-    // Pre-generate only the first few news updates, others will be generated on-demand
-    const popularNews = newsUpdates.slice(0, 5);
-    console.log(`✅ Pre-generating ${popularNews.length} popular news updates:`, popularNews.map(n => n.slug.current));
-    
-    return popularNews.map((news) => ({
+    return newsUpdates.map((news) => ({
       slug: news.slug.current,
     }));
   } catch (error) {
-    console.error('❌ Error pre-generating news updates:', error);
-    // For ISR, we can return empty array - pages will still be generated on-demand
-    console.log('⚠️ No news pre-generated, but ISR will generate them on-demand');
+    console.error('Error generating static params for news updates:', error);
     return [];
   }
 }
