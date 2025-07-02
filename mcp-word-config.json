@@ -1,8 +1,0 @@
-{
-  "mcpServers": {
-    "word-document-tools": {
-      "command": "npx",
-      "args": ["@puchunjie/doc-tools-mcp"]
-    }
-  }
-} 
