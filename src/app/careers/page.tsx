@@ -78,7 +78,7 @@ export default function CareersPage() {
       <section id="why" className="pb-12">
         <div className="max-w-6xl mx-auto px-4 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-red-600 mb-6 border-b-2 border-red-600 pb-2 inline-block">Why Choose HRA Legal?</h2>
+            <h2 className="text-3xl font-bold text-gray-800 mb-6 border-b-2 border-gray-800 pb-2 inline-block">Why Choose HRA Legal?</h2>
             <p className="text-base text-gray-700 max-w-3xl mx-auto">
               At HRA Legal, we foster a culture driven by entrepreneurial mindset, strong conviction, principled leadership, resilience, continuous learning, and focus on work-life balance.
             </p>
@@ -89,10 +89,10 @@ export default function CareersPage() {
               const IconComponent = benefit.icon;
               return (
                 <div key={index} className="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition-shadow duration-300">
-                                  <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <IconComponent className="w-8 h-8 text-red-600" />
+                                  <div className="w-16 h-16 bg-[#ECE5DE] rounded-full flex items-center justify-center mx-auto mb-4">
+                  <IconComponent className="w-8 h-8 text-[#B39F96]" />
                   </div>
-                  <h3 className="text-lg font-bold text-red-600 mb-3 border-b border-red-600 pb-1 inline-block">{benefit.title}</h3>
+                  <h3 className="text-lg font-bold text-gray-800 mb-3 border-b border-gray-800 pb-1 inline-block">{benefit.title}</h3>
                   <p className="text-gray-700 text-sm">{benefit.description}</p>
                 </div>
               );
@@ -102,10 +102,10 @@ export default function CareersPage() {
       </section>
 
       {/* Career Opportunities */}
-      <section id="opportunities" className="bg-red-50 py-12">
+      <section id="opportunities" className="bg-gray-50 py-12">
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-red-600 mb-6 border-b-2 border-red-600 pb-2 inline-block">Career Opportunities</h2>
+            <h2 className="text-3xl font-bold text-gray-800 mb-6 border-b-2 border-gray-800 pb-2 inline-block">Career Opportunities</h2>
             <p className="text-base text-gray-700">
               Explore opportunities to grow your legal career with HRA Legal.
             </p>
@@ -117,34 +117,34 @@ export default function CareersPage() {
               return (
                 <div key={opportunity.id} className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
                   <div className="flex items-center mb-6">
-                    <div className="w-16 h-16 bg-red-600 rounded-xl flex items-center justify-center mr-6">
+                    <div className="w-16 h-16 bg-[#B39F96] rounded-xl flex items-center justify-center mr-6">
                       <IconComponent className="w-8 h-8 text-white" />
                     </div>
                     <div>
-                      <h3 className="text-2xl font-bold text-red-600 mb-2 border-b border-red-600 pb-1 inline-block">{opportunity.title}</h3>
+                      <h3 className="text-2xl font-bold text-gray-800 mb-2 border-b border-gray-800 pb-1 inline-block">{opportunity.title}</h3>
                       <p className="text-gray-700">{opportunity.description}</p>
                     </div>
                   </div>
                   
                   <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-red-600 mb-4 border-b border-red-600 pb-1 inline-block">What We Look For:</h4>
+                    <h4 className="text-lg font-semibold text-gray-800 mb-4 border-b border-gray-800 pb-1 inline-block">What We Look For:</h4>
                     <ul className="space-y-2">
                       {opportunity.requirements.map((requirement, index) => (
                         <li key={index} className="flex items-start">
-                          <div className="w-2 h-2 bg-red-600 rounded-full mr-3 mt-2 flex-shrink-0"></div>
+                          <div className="w-2 h-2 bg-[#B39F96] rounded-full mr-3 mt-2 flex-shrink-0"></div>
                           <span className="text-gray-700">{requirement}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
 
-                  <div className="bg-red-50 rounded-lg p-6">
-                    <h4 className="text-lg font-semibold text-red-600 mb-3 flex items-center border-b border-red-600 pb-1 inline-block">
-                      <FileText className="w-5 h-5 mr-2 text-red-600" />
+                  <div className="bg-[#ECE5DE] rounded-lg p-6">
+                    <h4 className="text-lg font-semibold text-gray-800 mb-3 flex items-center border-b border-gray-800 pb-1 inline-block">
+                      <FileText className="w-5 h-5 mr-2 text-[#B39F96]" />
                       How to Apply
                     </h4>
                     <p className="text-gray-700 mb-4">{opportunity.application}</p>
-                    <div className="flex items-center text-red-600">
+                    <div className="flex items-center text-[#B39F96]">
                       <Mail className="w-5 h-5 mr-2" />
                       <span className="font-semibold">info@hralegal.com</span>
                     </div>
@@ -161,7 +161,7 @@ export default function CareersPage() {
         <div className="max-w-6xl mx-auto px-4 lg:px-8">
           <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-8">
             <div className="text-center mb-8">
-              <h2 className="text-3xl font-bold text-red-600 mb-4 border-b-2 border-red-600 pb-2 inline-block">Application Process</h2>
+              <h2 className="text-3xl font-bold text-gray-800 mb-4 border-b-2 border-gray-800 pb-2 inline-block">Application Process</h2>
               <p className="text-base text-gray-700">
                 We welcome applications from passionate legal professionals who share our values and commitment to excellence.
               </p>
@@ -169,26 +169,26 @@ export default function CareersPage() {
             
             <div className="grid md:grid-cols-3 gap-8">
               <div className="text-center">
-                <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <FileText className="w-8 h-8 text-red-600" />
+                <div className="w-16 h-16 bg-[#ECE5DE] rounded-full flex items-center justify-center mx-auto mb-4">
+                  <FileText className="w-8 h-8 text-[#B39F96]" />
                 </div>
-                <h3 className="text-xl font-bold text-red-600 mb-3 border-b border-red-600 pb-1 inline-block">1. Submit Application</h3>
+                <h3 className="text-xl font-bold text-gray-800 mb-3 border-b border-gray-800 pb-1 inline-block">1. Submit Application</h3>
                 <p className="text-gray-600">Send your letter of interest along with educational qualifications and career goals</p>
               </div>
               
               <div className="text-center">
-                <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Users className="w-8 h-8 text-red-600" />
+                <div className="w-16 h-16 bg-[#ECE5DE] rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Users className="w-8 h-8 text-[#B39F96]" />
                 </div>
-                <h3 className="text-xl font-bold text-red-600 mb-3 border-b border-red-600 pb-1 inline-block">2. Review Process</h3>
+                <h3 className="text-xl font-bold text-gray-800 mb-3 border-b border-gray-800 pb-1 inline-block">2. Review Process</h3>
                 <p className="text-gray-600">Our team reviews applications and conducts interviews with suitable candidates</p>
               </div>
               
               <div className="text-center">
-                <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Award className="w-8 h-8 text-red-600" />
+                <div className="w-16 h-16 bg-[#ECE5DE] rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Award className="w-8 h-8 text-[#B39F96]" />
                 </div>
-                <h3 className="text-xl font-bold text-red-600 mb-3 border-b border-red-600 pb-1 inline-block">3. Welcome Aboard</h3>
+                <h3 className="text-xl font-bold text-gray-800 mb-3 border-b border-gray-800 pb-1 inline-block">3. Welcome Aboard</h3>
                 <p className="text-gray-600">Successful candidates join our team and begin their growth journey with HRA Legal</p>
               </div>
             </div>
@@ -197,9 +197,9 @@ export default function CareersPage() {
       </section>
 
       {/* Contact Section */}
-      <section className="bg-red-50 py-16">
+      <section className="bg-gray-50 py-16">
                   <div className="max-w-4xl mx-auto px-4 lg:px-8 text-center">
-            <h2 className="text-3xl font-bold text-red-600 mb-6 border-b-2 border-red-600 pb-2 inline-block">
+            <h2 className="text-3xl font-bold text-gray-800 mb-6 border-b-2 border-gray-800 pb-2 inline-block">
             Ready to Start Your Career Journey?
           </h2>
           <p className="text-lg text-gray-700 mb-8">
@@ -208,14 +208,14 @@ export default function CareersPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
               href="mailto:info@hralegal.com"
-              className="inline-flex items-center justify-center px-8 py-4 bg-red-600 text-white font-semibold rounded-lg hover:bg-red-700 transition-colors duration-200"
+              className="inline-flex items-center justify-center px-8 py-4 bg-[#B39F96] text-white font-semibold rounded-lg hover:bg-[#A08B80] transition-colors duration-200"
             >
               <Mail className="w-5 h-5 mr-2" />
               Apply Now
             </a>
             <a 
               href="/about"
-              className="inline-flex items-center justify-center px-8 py-4 border-2 border-red-600 text-red-600 font-semibold rounded-lg hover:bg-red-600 hover:text-white transition-colors duration-200"
+              className="inline-flex items-center justify-center px-8 py-4 border-2 border-[#B39F96] text-[#B39F96] font-semibold rounded-lg hover:bg-[#B39F96] hover:text-white transition-colors duration-200"
             >
               Learn More About Us
             </a>

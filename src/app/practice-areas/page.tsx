@@ -145,7 +145,7 @@ export default function PracticeAreasPage() {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
             {developingAreas.map((area, index) => (
               <motion.div
                 key={index}
@@ -153,11 +153,11 @@ export default function PracticeAreasPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white p-6 cursor-pointer rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition-all duration-300 hover:border-gray-300"
+                className="bg-gray-50 p-4 rounded border border-gray-200 hover:bg-gray-100 transition-colors duration-200"
               >
                 <div className="flex items-center">
-                  <div className="w-3 h-3 bg-gray-500 rounded-full mr-3"></div>
-                  <h3 className="text-lg font-semibold text-gray-700 hover:text-gray-900 transition-colors">
+                  <div className="w-2 h-2 bg-gray-400 rounded-full mr-2"></div>
+                  <h3 className="text-sm font-medium text-gray-600 hover:text-gray-700 transition-colors">
                     {area}
                   </h3>
                 </div>
