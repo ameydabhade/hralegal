@@ -20,9 +20,6 @@ export function urlFor(source: SanityImageSource) {
 export interface BlogPost {
   _id: string
   title: string
-  slug: {
-    current: string
-  }
   excerpt: string
   content: PortableTextBlock[]
   author: string
@@ -40,9 +37,6 @@ export interface BlogPost {
 export interface NewsUpdate {
   _id: string
   title: string
-  slug: {
-    current: string
-  }
   excerpt: string
   content: PortableTextBlock[]
   publishedAt: string
@@ -60,7 +54,6 @@ export const blogPostsQuery = `
   *[_type == "blogPost"] | order(publishedAt desc) {
     _id,
     title,
-    slug,
     excerpt,
     author,
     publishedAt,
@@ -75,7 +68,6 @@ export const newsUpdatesQuery = `
   *[_type == "newsUpdate"] | order(publishedAt desc) {
     _id,
     title,
-    slug,
     excerpt,
     publishedAt,
     source,
@@ -106,12 +98,11 @@ export async function getNewsUpdates(): Promise<NewsUpdate[]> {
   }
 }
 
-export async function getBlogPost(slug: string): Promise<BlogPost> {
+export async function getBlogPost(id: string): Promise<BlogPost> {
   return await client.fetch(
-    `*[_type == "blogPost" && slug.current == $slug][0] {
+    `*[_type == "blogPost" && _id == $id][0] {
       _id,
       title,
-      slug,
       excerpt,
       content,
       author,
@@ -121,16 +112,15 @@ export async function getBlogPost(slug: string): Promise<BlogPost> {
       featuredImage,
       seo
     }`,
-    { slug }
+    { id }
   )
 }
 
-export async function getNewsUpdate(slug: string): Promise<NewsUpdate> {
+export async function getNewsUpdate(id: string): Promise<NewsUpdate> {
   return await client.fetch(
-    `*[_type == "newsUpdate" && slug.current == $slug][0] {
+    `*[_type == "newsUpdate" && _id == $id][0] {
       _id,
       title,
-      slug,
       excerpt,
       content,
       publishedAt,
@@ -139,6 +129,6 @@ export async function getNewsUpdate(slug: string): Promise<NewsUpdate> {
       urgent,
       seo
     }`,
-    { slug }
+    { id }
   )
 } 

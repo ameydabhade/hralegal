@@ -28,7 +28,7 @@ export default function BlogPage() {
         if (postId) {
           const post = blogPosts.find(p => p._id === postId)
           if (post) {
-            const fullPost = await getBlogPost(post.slug.current)
+            const fullPost = await getBlogPost(post._id)
             setSelectedPost(fullPost)
           }
         }
@@ -45,7 +45,7 @@ export default function BlogPage() {
   const handlePostClick = async (post: BlogPost) => {
     setLoading(true)
     try {
-      const fullPost = await getBlogPost(post.slug.current)
+      const fullPost = await getBlogPost(post._id)
       setSelectedPost(fullPost)
       router.push(`/blog?post=${post._id}`, { scroll: false })
     } catch (error) {

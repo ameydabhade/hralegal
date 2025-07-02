@@ -27,7 +27,7 @@ export default function NewsPage() {
         if (newsId) {
           const newsItem = newsUpdates.find(n => n._id === newsId)
           if (newsItem) {
-            const fullNews = await getNewsUpdate(newsItem.slug.current)
+            const fullNews = await getNewsUpdate(newsItem._id)
             setSelectedNews(fullNews)
           }
         }
@@ -44,7 +44,7 @@ export default function NewsPage() {
   const handleNewsClick = async (newsItem: NewsUpdate) => {
     setLoading(true)
     try {
-      const fullNews = await getNewsUpdate(newsItem.slug.current)
+      const fullNews = await getNewsUpdate(newsItem._id)
       setSelectedNews(fullNews)
       router.push(`/news?news=${newsItem._id}`, { scroll: false })
     } catch (error) {

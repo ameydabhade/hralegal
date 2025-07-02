@@ -50,7 +50,6 @@ Choose a unique studio hostname when prompted.
 
 ### Blog Posts
 - **Title**: The main heading of the blog post
-- **Slug**: URL-friendly version of the title (auto-generated)
 - **Excerpt**: Short description shown in the listing
 - **Content**: Full blog post content (rich text)
 - **Author**: Author name
@@ -62,7 +61,6 @@ Choose a unique studio hostname when prompted.
 
 ### News Updates
 - **Title**: The main heading of the news update
-- **Slug**: URL-friendly version of the title (auto-generated)
 - **Excerpt**: Short description shown in the listing
 - **Content**: Full news content (rich text)
 - **Published Date**: When the news was published

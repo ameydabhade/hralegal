@@ -12,23 +12,6 @@ export const newsUpdate = defineType({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
-      name: 'slug',
-      title: 'Slug',
-      type: 'slug',
-      options: {
-        source: 'title',
-        maxLength: 96,
-        slugify: (input: string) => input
-          .toLowerCase()
-          .replace(/\s+/g, '-')
-          .replace(/[^\w\-]+/g, '')
-          .replace(/\-\-+/g, '-')
-          .replace(/^-+/, '')
-          .replace(/-+$/, ''),
-      },
-      validation: (Rule) => Rule.required(),
-    }),
-    defineField({
       name: 'excerpt',
       title: 'Excerpt',
       type: 'text',
