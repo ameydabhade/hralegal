@@ -172,13 +172,6 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
 // Generate static paths for all blog posts
 export async function generateStaticParams() {
-  // Known blog post slugs as fallback
-  const fallbackSlugs = [
-    { slug: 'legal-news' },
-    { slug: 'test-post-new-acc' },
-    // Add other blog post slugs here as needed
-  ];
-
   try {
     console.log('🔍 Generating static params for blog posts...');
     console.log('📋 Sanity Config:', {
@@ -190,19 +183,17 @@ export async function generateStaticParams() {
     const posts = await getBlogPosts();
     console.log(`✅ Found ${posts.length} blog posts:`, posts.map(p => p.slug.current));
     
-    if (posts.length > 0) {
-      return posts.map((post) => ({
-        slug: post.slug.current,
-      }));
-    } else {
-      console.log('⚠️ No posts found from Sanity, using fallback slugs');
-      return fallbackSlugs;
-    }
+    return posts.map((post) => ({
+      slug: post.slug.current,
+    }));
   } catch (error) {
     console.error('❌ Error generating static params for blog posts:', error);
     console.error('🔧 Check your Sanity configuration and network connection');
-    console.log('📝 Using fallback blog post slugs...');
-    return fallbackSlugs;
+    
+    // Return empty array - this will cause build to fail if Sanity is not accessible
+    // This is better than hardcoded fallbacks that prevent new content from appearing
+    console.log('⚠️ Returning empty array - build will only succeed if Sanity is properly configured');
+    return [];
   }
 }
 

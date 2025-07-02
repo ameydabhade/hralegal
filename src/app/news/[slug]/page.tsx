@@ -157,12 +157,6 @@ export default async function NewsUpdatePage({ params }: NewsUpdatePageProps) {
 
 // Generate static paths for all news updates
 export async function generateStaticParams() {
-  // Known news update slugs as fallback
-  const fallbackSlugs = [
-    { slug: 'test-news' },
-    // Add other news update slugs here as needed
-  ];
-
   try {
     console.log('🔍 Generating static params for news updates...');
     console.log('📋 Sanity Config:', {
@@ -174,19 +168,17 @@ export async function generateStaticParams() {
     const newsUpdates = await getNewsUpdates();
     console.log(`✅ Found ${newsUpdates.length} news updates:`, newsUpdates.map(n => n.slug.current));
     
-    if (newsUpdates.length > 0) {
-      return newsUpdates.map((news) => ({
-        slug: news.slug.current,
-      }));
-    } else {
-      console.log('⚠️ No news updates found from Sanity, using fallback slugs');
-      return fallbackSlugs;
-    }
+    return newsUpdates.map((news) => ({
+      slug: news.slug.current,
+    }));
   } catch (error) {
     console.error('❌ Error generating static params for news updates:', error);
     console.error('🔧 Check your Sanity configuration and network connection');
-    console.log('📝 Using fallback news update slugs...');
-    return fallbackSlugs;
+    
+    // Return empty array - this will cause build to fail if Sanity is not accessible  
+    // This is better than hardcoded fallbacks that prevent new content from appearing
+    console.log('⚠️ Returning empty array - build will only succeed if Sanity is properly configured');
+    return [];
   }
 }
 
