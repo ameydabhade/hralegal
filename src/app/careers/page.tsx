@@ -489,7 +489,7 @@ function CareersContent() {
                   <FileText className="w-8 h-8 text-[#B39F96]" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-800 mb-3 border-b border-gray-800 pb-1 inline-block">1. Submit Application</h3>
-                <p className="text-gray-600">Send your application for the specific role you're interested in</p>
+                <p className="text-gray-600">Send your application for the specific role you&apos;re interested in</p>
               </div>
               
               <div className="text-center">
