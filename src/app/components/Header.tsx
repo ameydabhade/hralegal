@@ -134,7 +134,7 @@ export default function Header() {
     const timeout = setTimeout(() => {
       setActiveDropdown(null);
       setActiveMegaMenu(null);
-    }, 300); // 300ms delay before hiding
+    }, 3000); // 3 seconds delay before hiding
     setHoverTimeout(timeout);
   };
 
@@ -145,10 +145,19 @@ export default function Header() {
     }
   };
 
+  const handleMegaMenuEnter = () => {
+    if (hoverTimeout) {
+      clearTimeout(hoverTimeout);
+      setHoverTimeout(null);
+    }
+  };
+
   const handleMegaMenuLeave = () => {
+    // Don't close immediately when leaving mega menu - only when leaving the entire dropdown system
     const timeout = setTimeout(() => {
       setActiveMegaMenu(null);
-    }, 200);
+      setActiveDropdown(null);
+    }, 300); // Short delay to allow moving between elements
     setHoverTimeout(timeout);
   };
 
@@ -267,7 +276,10 @@ export default function Header() {
                             }
                           }}
                           onMouseLeave={() => {
-                            // Keep mega menu open when moving to it
+                            // Start timeout only if not moving to mega menu
+                            if (!activeMegaMenu) {
+                              handleMouseLeave();
+                            }
                           }}
                           onClick={() => {
                              window.location.href = subsection.href;
@@ -286,18 +298,19 @@ export default function Header() {
                         {subsection.label === 'Practice Areas' && activeMegaMenu === 'practice-areas' && (
                           <div 
                             className="fixed left-1/2 transform -translate-x-1/2 top-32 w-[90vw] max-w-6xl bg-white rounded-lg shadow-xl border border-gray-100 p-6 z-60"
-                            onMouseEnter={() => {
-                              setActiveMegaMenu('practice-areas');
-                              if (hoverTimeout) {
-                                clearTimeout(hoverTimeout);
-                                setHoverTimeout(null);
-                              }
-                            }}
+                            onMouseEnter={handleMegaMenuEnter}
                             onMouseLeave={handleMegaMenuLeave}
                           >
-                            <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-6">
+                            <div 
+                              className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-6"
+                              onMouseEnter={handleMegaMenuEnter}
+                            >
                               {practiceAreaGroups.map((group) => (
-                                <div key={group.title} className="space-y-3">
+                                <div 
+                                  key={group.title} 
+                                  className="space-y-3"
+                                  onMouseEnter={handleMegaMenuEnter}
+                                >
                                   {/* Group Header */}
                                   <div>
                                     <h3 className={`text-lg font-bold ${group.textColor} mb-2`}>
@@ -307,7 +320,10 @@ export default function Header() {
                                   </div>
 
                                   {/* Practice Items */}
-                                  <div className="space-y-1.5">
+                                  <div 
+                                    className="space-y-1.5"
+                                    onMouseEnter={handleMegaMenuEnter}
+                                  >
                                     {group.items.slice(0, 6).map((item, itemIndex) => {
                                       // Convert practice area name to URL slug
                                                                              const getUrlSlug = (name: string) => {
@@ -338,6 +354,7 @@ export default function Header() {
                                         <div
                                           key={itemIndex}
                                           className="flex items-start group cursor-pointer"
+                                          onMouseEnter={handleMegaMenuEnter}
                                           onClick={() => {
                                             if (url) {
                                               window.location.href = url;
@@ -373,18 +390,19 @@ export default function Header() {
                         {subsection.label === 'Sectors' && activeMegaMenu === 'sectors' && (
                           <div 
                             className="fixed left-1/2 transform -translate-x-1/2 top-32 w-[90vw] max-w-6xl bg-white rounded-lg shadow-xl border border-gray-100 p-6 z-60"
-                            onMouseEnter={() => {
-                              setActiveMegaMenu('sectors');
-                              if (hoverTimeout) {
-                                clearTimeout(hoverTimeout);
-                                setHoverTimeout(null);
-                              }
-                            }}
+                            onMouseEnter={handleMegaMenuEnter}
                             onMouseLeave={handleMegaMenuLeave}
                           >
-                            <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-6">
+                            <div 
+                              className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-6"
+                              onMouseEnter={handleMegaMenuEnter}
+                            >
                               {sectorGroups.map((group) => (
-                                <div key={group.title} className="space-y-3">
+                                <div 
+                                  key={group.title} 
+                                  className="space-y-3"
+                                  onMouseEnter={handleMegaMenuEnter}
+                                >
                                   {/* Group Header */}
                                   <div>
                                     <h3 className={`text-lg font-bold ${group.textColor} mb-2`}>
@@ -394,11 +412,15 @@ export default function Header() {
                                   </div>
 
                                   {/* Sector Items */}
-                                  <div className="space-y-1.5">
+                                  <div 
+                                    className="space-y-1.5"
+                                    onMouseEnter={handleMegaMenuEnter}
+                                  >
                                     {group.items.slice(0, 6).map((item, itemIndex) => (
                                       <div
                                         key={itemIndex}
                                         className="flex items-start group cursor-pointer"
+                                        onMouseEnter={handleMegaMenuEnter}
                                       >
                                         <div className="w-1 h-1 bg-gray-400 rounded-full mt-1.5 mr-2 flex-shrink-0 group-hover:bg-gray-600 transition-colors"></div>
                                         <span className="text-sm text-gray-700 leading-relaxed hover:text-gray-900 transition-colors">
