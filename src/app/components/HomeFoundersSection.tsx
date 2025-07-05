@@ -107,7 +107,7 @@ export default function HomeFoundersSection() {
                     <h4 className="font-semibold text-gray-900">Professional Background</h4>
                   </div>
                   <div className="bg-gray-50 p-4 rounded-lg border-l-4 border-gray-500">
-                    <p className="text-gray-600 text-sm leading-relaxed mb-3">{founder.description}</p>
+                    <p className="text-gray-600 text-sm leading-relaxed mb-3 text-justify">{founder.description}</p>
                     <p className="text-gray-700 text-sm font-medium mb-3">Key Companies:</p>
                     <div className="grid grid-cols-1 gap-1">
                       {founder.companies.map((company, companyIndex) => (

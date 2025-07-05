@@ -342,7 +342,7 @@ function CareersContent() {
       {/* Hero Section */}
       <section className="pt-24 pb-6">
         <div className="max-w-7xl mx-auto px-4 lg:px-8">
-          <div className="text-center mb-12">
+                      <div className="text-center mb-12">
             <h1 className="text-4xl lg:text-5xl font-bold text-gray-800 mb-6 border-b-4 border-gray-800 pb-4 inline-block">
               Careers
             </h1>
@@ -368,8 +368,8 @@ function CareersContent() {
               const IconComponent = benefit.icon;
               return (
                 <div key={index} className="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition-shadow duration-300">
-                  <div className="w-16 h-16 bg-[#ECE5DE] rounded-full flex items-center justify-center mx-auto mb-4">
-                    <IconComponent className="w-8 h-8 text-[#B39F96]" />
+                                  <div className="w-16 h-16 bg-[#ECE5DE] rounded-full flex items-center justify-center mx-auto mb-4">
+                  <IconComponent className="w-8 h-8 text-[#B39F96]" />
                   </div>
                   <h3 className="text-lg font-bold text-gray-800 mb-3 border-b border-gray-800 pb-1 inline-block">{benefit.title}</h3>
                   <p className="text-gray-700 text-sm">{benefit.description}</p>
@@ -433,14 +433,14 @@ function CareersContent() {
             <div className="grid lg:grid-cols-2 gap-6">
               {filteredJobs.map((job) => {
                 const IconComponent = getTypeIcon(job.type);
-                return (
+              return (
                   <div key={job._id} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
                     <div className="flex items-start justify-between mb-4">
                       <div className="flex items-center">
                         <div className="w-12 h-12 bg-[#B39F96] rounded-lg flex items-center justify-center mr-4">
                           <IconComponent className="w-6 h-6 text-white" />
-                        </div>
-                        <div>
+                    </div>
+                    <div>
                           <h3 className="text-xl font-bold text-gray-800 mb-1">{job.title}</h3>
                           <div className="flex items-center gap-2 text-sm text-gray-600">
                             <span>{job.type}</span>
@@ -462,8 +462,8 @@ function CareersContent() {
                       <div className="flex items-center">
                         <Calendar className="w-4 h-4 mr-1" />
                         <span>{formatDate(job.postedAt)}</span>
-                      </div>
-
+                  </div>
+                  
                       
                     </div>
 
@@ -472,19 +472,19 @@ function CareersContent() {
                         <span className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded">
                           {job.experience}
                         </span>
-                      </div>
-                      
+                  </div>
+
                       <button
                         onClick={() => handleJobClick(job)}
                         className="px-4 py-2 bg-[#B39F96] text-white font-semibold rounded-md hover:bg-[#A08B80] transition-colors duration-200"
                       >
                         View Details
                       </button>
-                    </div>
                   </div>
-                );
-              })}
-            </div>
+                </div>
+              );
+            })}
+          </div>
           )}
         </div>
       </section>
@@ -531,8 +531,8 @@ function CareersContent() {
 
       {/* Contact Section */}
       <section className="bg-[#ECE5DE] py-16">
-        <div className="max-w-4xl mx-auto px-4 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-gray-800 mb-6 border-b-2 border-gray-800 pb-2 inline-block">
+                  <div className="max-w-4xl mx-auto px-4 lg:px-8 text-center">
+            <h2 className="text-3xl font-bold text-gray-800 mb-6 border-b-2 border-gray-800 pb-2 inline-block">
             Ready to Start Your Career Journey?
           </h2>
           <p className="text-lg text-gray-700 mb-8">

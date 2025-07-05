@@ -45,7 +45,7 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-2 text-gray-400 text-sm">
                 <Phone className="w-4 h-4 text-gray-500 flex-shrink-0" />
-                <a href="tel:To Be Added" className="hover:text-gray-300 transition-colors">  To Be Added</a>
+                <a href="tel:+919967382875" className="hover:text-gray-300 transition-colors">+91 99673 82875</a>
               </div>
               <div className="flex items-center gap-2 text-gray-400 text-sm">
                 <Mail className="w-4 h-4 text-gray-500 flex-shrink-0" />
@@ -108,21 +108,18 @@ export default function Footer() {
               <div className="text-white font-medium mb-2 text-sm">Follow Us</div>
               <div className="flex gap-2">
                 <a 
-                  href="#" 
+                  href="https://x.com/HraLegal" 
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-8 h-8 bg-[#B39F96] rounded-full flex items-center justify-center hover:bg-[#A08B80] transition-colors"
-                  aria-label="Facebook"
-                >
-                  <Facebook className="w-4 h-4" />
-                </a>
-                <a 
-                  href="#" 
-                  className="w-8 h-8 bg-[#B39F96] rounded-full flex items-center justify-center hover:bg-[#A08B80] transition-colors"
-                  aria-label="Twitter"
+                  aria-label="Twitter/X"
                 >
                   <Twitter className="w-4 h-4" />
                 </a>
                 <a 
-                  href="#" 
+                  href="https://www.linkedin.com/company/hra-legal/" 
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-8 h-8 bg-[#B39F96] rounded-full flex items-center justify-center hover:bg-[#A08B80] transition-colors"
                   aria-label="LinkedIn"
                 >
@@ -130,8 +127,15 @@ export default function Footer() {
                 </a>
                 <a 
                   href="#" 
-                  className="w-8 h-8 bg-[#B39F96] rounded-full flex items-center justify-center hover:bg-[#A08B80] transition-colors"
-                  aria-label="Instagram"
+                  className="w-8 h-8 bg-[#B39F96] rounded-full flex items-center justify-center hover:bg-[#A08B80] transition-colors opacity-50 cursor-not-allowed"
+                  aria-label="Facebook (Coming Soon)"
+                >
+                  <Facebook className="w-4 h-4" />
+                </a>
+                <a 
+                  href="#" 
+                  className="w-8 h-8 bg-[#B39F96] rounded-full flex items-center justify-center hover:bg-[#A08B80] transition-colors opacity-50 cursor-not-allowed"
+                  aria-label="Instagram (Coming Soon)"
                 >
                   <Instagram className="w-4 h-4" />
                 </a>

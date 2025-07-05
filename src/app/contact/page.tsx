@@ -193,7 +193,11 @@ export default function ContactPage() {
                     <h3 className="text-lg font-bold text-gray-800 mb-2 border-b border-gray-800 pb-1 inline-block">
                       Phone Number
                     </h3>
-                    <p className="text-gray-700 text-sm">To Be Added</p>
+                    <p className="text-gray-700 text-sm">
+                      <a href="tel:+919967382875" className="hover:text-gray-900 transition-colors">
+                        +91 99673 82875
+                      </a>
+                    </p>
                   </div>
                 </div>
 
@@ -314,7 +318,7 @@ export default function ContactPage() {
                     value={formData.phone}
                     onChange={handleInputChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-gray-400 focus:border-gray-400 transition-colors text-sm"
-                    placeholder="  99999 99999"
+                    placeholder="+91 99999 99999"
                     disabled={isSubmitting}
                   />
                 </div>

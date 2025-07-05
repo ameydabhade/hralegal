@@ -1,5 +1,5 @@
 'use client';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 
 interface DropdownItem {
@@ -111,7 +111,8 @@ export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [activeMegaMenu, setActiveMegaMenu] = useState<string | null>(null);
-  const [hoverTimeout, setHoverTimeout] = useState<NodeJS.Timeout | null>(null);
+  
+  const headerRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -120,44 +121,45 @@ export default function Header() {
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-      }, []);
+  }, []);
 
-  const handleMouseEnter = (label: string) => {
-    if (hoverTimeout) {
-      clearTimeout(hoverTimeout);
-      setHoverTimeout(null);
+  // Click outside to close mega menu
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (headerRef.current && !headerRef.current.contains(event.target as Node)) {
+        setActiveDropdown(null);
+        setActiveMegaMenu(null);
+      }
+    };
+
+    if (activeMegaMenu || activeDropdown) {
+      document.addEventListener('mousedown', handleClickOutside);
     }
-    setActiveDropdown(label);
-  };
 
-  const handleMouseLeave = () => {
-    const timeout = setTimeout(() => {
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [activeMegaMenu, activeDropdown]);
+
+  const handleExpertiseClick = () => {
+    if (activeDropdown === 'Expertise') {
       setActiveDropdown(null);
       setActiveMegaMenu(null);
-    }, 3500); // 3 seconds delay before hiding
-    setHoverTimeout(timeout);
-  };
-
-  const handleDropdownMouseEnter = () => {
-    if (hoverTimeout) {
-      clearTimeout(hoverTimeout);
-      setHoverTimeout(null);
-    }
-  };
-
-  const handleMegaMenuEnter = () => {
-    if (hoverTimeout) {
-      clearTimeout(hoverTimeout);
-      setHoverTimeout(null);
-    }
-  };
-
-  const handleMegaMenuLeave = () => {
-    const timeout = setTimeout(() => {
+    } else {
+      setActiveDropdown('Expertise');
       setActiveMegaMenu(null);
-      setActiveDropdown(null);
-    }, 3500); // 3 seconds delay before hiding
-    setHoverTimeout(timeout);
+    }
+  };
+
+  const handleMegaMenuClick = (type: string, event: React.MouseEvent) => {
+    event.preventDefault();
+    event.stopPropagation();
+    
+    if (activeMegaMenu === type) {
+      setActiveMegaMenu(null);
+    } else {
+      setActiveMegaMenu(type);
+    }
   };
 
   // Navigation items with actual page sections
@@ -196,13 +198,16 @@ export default function Header() {
   ];
 
   return (
-            <header className={`fixed top-4 left-4 right-4 z-50 backdrop-blur-sm border border-gray-300 rounded-[32px] transition-all duration-500 ease-out mx-auto max-w-7xl hover:shadow-xl ${
-      isScrolled 
-        ? 'bg-[#ECE5DE]/98 shadow-2xl border-gray-400'
-        : 'bg-[#ECE5DE]/95 shadow-lg hover:bg-[#ECE5DE]/98'
-    }`}>
-        <nav className="max-w-7xl mx-auto px-4 lg:px-6">
-          <div className="flex items-center justify-between py-2">
+    <header 
+      ref={headerRef}
+      className={`fixed top-4 left-4 right-4 z-50 backdrop-blur-sm border border-gray-300 rounded-[32px] transition-all duration-500 ease-out mx-auto max-w-7xl hover:shadow-xl ${
+        isScrolled 
+          ? 'bg-[#ECE5DE]/98 shadow-2xl border-gray-400'
+          : 'bg-[#ECE5DE]/95 shadow-lg hover:bg-[#ECE5DE]/98'
+      }`}
+    >
+      <nav className="max-w-7xl mx-auto px-4 lg:px-6">
+        <div className="flex items-center justify-between py-2">
           {/* Logo with Corner Bracket Design */}
           <Link 
             href="/" 
@@ -232,7 +237,7 @@ export default function Header() {
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-red-600 transition-all duration-300 group-hover:w-full"></span>
                 
                 {/* Background shape that changes on hover */}
-                                  <span className="absolute inset-0 bg-gray-700 transform scale-x-0 transition-all duration-300 group-hover:scale-x-100 origin-left opacity-0 group-hover:opacity-10 rounded"></span>
+                <span className="absolute inset-0 bg-gray-700 transform scale-x-0 transition-all duration-300 group-hover:scale-x-100 origin-left opacity-0 group-hover:opacity-10 rounded"></span>
               </div>
             </div>
           </Link>
@@ -240,73 +245,53 @@ export default function Header() {
           {/* Desktop Navigation - Clean single titles */}
           <div className="hidden lg:flex items-center gap-6">
             {navItems.map((item) => (
-                             <div
-                 key={item.label}
-                 className="relative"
-                 onMouseEnter={() => handleMouseEnter(item.label)}
-                 onMouseLeave={handleMouseLeave}
-               >
-                <Link 
-                  href={item.href} 
-                  className="relative text-gray-700 hover:text-gray-900 transition-all duration-300 text-sm font-semibold group transform hover:-translate-y-0.5"
-                >
-                  {item.label}
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-red-600 transition-all duration-300 group-hover:w-full"></span>
-                </Link>
+              <div key={item.label} className="relative">
+                {item.label === 'Expertise' ? (
+                  <button 
+                    onClick={handleExpertiseClick}
+                    className="relative text-gray-700 hover:text-gray-900 transition-all duration-300 text-sm font-semibold group transform hover:-translate-y-0.5"
+                  >
+                    {item.label}
+                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-red-600 transition-all duration-300 group-hover:w-full"></span>
+                  </button>
+                ) : (
+                  <Link 
+                    href={item.href} 
+                    className="relative text-gray-700 hover:text-gray-900 transition-all duration-300 text-sm font-semibold group transform hover:-translate-y-0.5"
+                  >
+                    {item.label}
+                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-red-600 transition-all duration-300 group-hover:w-full"></span>
+                  </Link>
+                )}
                 
-                                 {/* Dropdown Menu */}
-                 {item.dropdown.length > 0 && activeDropdown === item.label && (
-                   <div 
-                     className="absolute top-full left-0 mt-1 w-56 bg-white rounded-lg shadow-lg border border-gray-100 py-3 z-50"
-                     onMouseEnter={handleDropdownMouseEnter}
-                     onMouseLeave={handleMouseLeave}
-                   >
+                {/* Dropdown Menu for Expertise */}
+                {item.label === 'Expertise' && activeDropdown === 'Expertise' && (
+                  <div className="absolute top-full left-0 mt-1 w-56 bg-white rounded-lg shadow-lg border border-gray-100 py-3 z-50">
                     {item.dropdown.map((subsection) => (
                       <div key={subsection.label} className="relative">
-                        <div
-                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors duration-200 lowercase cursor-pointer"
-                          onMouseEnter={() => {
+                        <button
+                          className="w-full text-left block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors duration-200 lowercase"
+                          onClick={(e) => {
                             if (subsection.label === 'Practice Areas') {
-                              setActiveMegaMenu('practice-areas');
+                              handleMegaMenuClick('practice-areas', e);
                             } else if (subsection.label === 'Sectors') {
-                              setActiveMegaMenu('sectors');
+                              handleMegaMenuClick('sectors', e);
                             } else {
+                              window.location.href = subsection.href;
+                              setActiveDropdown(null);
                               setActiveMegaMenu(null);
                             }
                           }}
-                          onMouseLeave={() => {
-                            // Keep mega menu open when moving to it
-                          }}
-                          onClick={() => {
-                             window.location.href = subsection.href;
-                             setActiveDropdown(null);
-                             setActiveMegaMenu(null);
-                             if (hoverTimeout) {
-                               clearTimeout(hoverTimeout);
-                               setHoverTimeout(null);
-                             }
-                           }}
                         >
                           {subsection.label}
-                        </div>
+                        </button>
                         
                         {/* Mega Menu for Practice Areas */}
                         {subsection.label === 'Practice Areas' && activeMegaMenu === 'practice-areas' && (
-                          <div 
-                            className="fixed left-1/2 transform -translate-x-1/2 top-32 w-[90vw] max-w-6xl bg-white rounded-lg shadow-xl border border-gray-100 p-6 z-60"
-                            onMouseEnter={handleMegaMenuEnter}
-                            onMouseLeave={handleMegaMenuLeave}
-                          >
-                            <div 
-                              className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-6"
-                              onMouseEnter={handleMegaMenuEnter}
-                            >
+                          <div className="fixed left-1/2 transform -translate-x-1/2 top-32 w-[90vw] max-w-6xl bg-white rounded-lg shadow-xl border border-gray-100 p-6 z-60">
+                            <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-6">
                               {practiceAreaGroups.map((group) => (
-                                <div 
-                                  key={group.title} 
-                                  className="space-y-3"
-                                  onMouseEnter={handleMegaMenuEnter}
-                                >
+                                <div key={group.title} className="space-y-3">
                                   {/* Group Header */}
                                   <div>
                                     <h3 className={`text-lg font-bold ${group.textColor} mb-2`}>
@@ -316,33 +301,30 @@ export default function Header() {
                                   </div>
 
                                   {/* Practice Items */}
-                                  <div 
-                                    className="space-y-1.5"
-                                    onMouseEnter={handleMegaMenuEnter}
-                                  >
+                                  <div className="space-y-1.5">
                                     {group.items.slice(0, 6).map((item, itemIndex) => {
                                       // Convert practice area name to URL slug
-                                                                             const getUrlSlug = (name: string) => {
-                                         const urlMap: { [key: string]: string } = {
-                                           'Contracts/Agreements & Advisory': '/practice-areas/contracts-agreements-advisory',
-                                           'Company Secretarial & Governance': '/practice-areas/company-secretarial-governance',
-                                           'Mergers & Acquisitions, JVs & Strategic Alliances': '/practice-areas/mergers-acquisitions-jvs-strategic-alliances',
-                                           'Employment, Labour & Industrial Relations': '/practice-areas/employment-labour-industrial-relations',
-                                           'Intellectual Property': '/practice-areas/intellectual-property',
-                                           'Startups & Emerging Businesses': '/practice-areas/startups-emerging-businesses',
-                                           'Real Estate': '/practice-areas/real-estate',
-                                           'International Trade': '/practice-areas/international-trade',
-                                           'Project Management': '/practice-areas/project-management',
-                                           'Technology & Digital Contracts': '/practice-areas/technology-digital-contracts',
-                                           'Media, Entertainment & Telecommunications': '/practice-areas/media-entertainment-telecommunications',
-                                           'Data Privacy, Cybersecurity & Protection': '/practice-areas/data-privacy-cybersecurity-protection',
-                                           'Corporate Financing': '/practice-areas/corporate-financing',
-                                           'Restructuring, Insolvency & Bankruptcy': '/practice-areas/restructuring-insolvency-bankruptcy',
-                                           'Taxation': '/practice-areas/taxation',
-                                           'Compliance, Bribery & White Collar Crime': '/practice-areas/compliance-bribery-white-collar-crime'
-                                         };
-                                         return urlMap[name] || null;
-                                       };
+                                      const getUrlSlug = (name: string) => {
+                                        const urlMap: { [key: string]: string } = {
+                                          'Contracts/Agreements & Advisory': '/practice-areas/contracts-agreements-advisory',
+                                          'Company Secretarial & Governance': '/practice-areas/company-secretarial-governance',
+                                          'Mergers & Acquisitions, JVs & Strategic Alliances': '/practice-areas/mergers-acquisitions-jvs-strategic-alliances',
+                                          'Employment, Labour & Industrial Relations': '/practice-areas/employment-labour-industrial-relations',
+                                          'Intellectual Property': '/practice-areas/intellectual-property',
+                                          'Startups & Emerging Businesses': '/practice-areas/startups-emerging-businesses',
+                                          'Real Estate': '/practice-areas/real-estate',
+                                          'International Trade': '/practice-areas/international-trade',
+                                          'Project Management': '/practice-areas/project-management',
+                                          'Technology & Digital Contracts': '/practice-areas/technology-digital-contracts',
+                                          'Media, Entertainment & Telecommunications': '/practice-areas/media-entertainment-telecommunications',
+                                          'Data Privacy, Cybersecurity & Protection': '/practice-areas/data-privacy-cybersecurity-protection',
+                                          'Corporate Financing': '/practice-areas/corporate-financing',
+                                          'Restructuring, Insolvency & Bankruptcy': '/practice-areas/restructuring-insolvency-bankruptcy',
+                                          'Taxation': '/practice-areas/taxation',
+                                          'Compliance, Bribery & White Collar Crime': '/practice-areas/compliance-bribery-white-collar-crime'
+                                        };
+                                        return urlMap[name] || null;
+                                      };
                                       
                                       const url = getUrlSlug(item);
                                       
@@ -350,7 +332,6 @@ export default function Header() {
                                         <div
                                           key={itemIndex}
                                           className="flex items-start group cursor-pointer"
-                                          onMouseEnter={handleMegaMenuEnter}
                                           onClick={() => {
                                             if (url) {
                                               window.location.href = url;
@@ -377,28 +358,15 @@ export default function Header() {
                                 </div>
                               ))}
                             </div>
-                            
-
                           </div>
                         )}
 
                         {/* Mega Menu for Sectors */}
                         {subsection.label === 'Sectors' && activeMegaMenu === 'sectors' && (
-                          <div 
-                            className="fixed left-1/2 transform -translate-x-1/2 top-32 w-[90vw] max-w-6xl bg-white rounded-lg shadow-xl border border-gray-100 p-6 z-60"
-                            onMouseEnter={handleMegaMenuEnter}
-                            onMouseLeave={handleMegaMenuLeave}
-                          >
-                            <div 
-                              className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-6"
-                              onMouseEnter={handleMegaMenuEnter}
-                            >
+                          <div className="fixed left-1/2 transform -translate-x-1/2 top-32 w-[90vw] max-w-6xl bg-white rounded-lg shadow-xl border border-gray-100 p-6 z-60">
+                            <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-6">
                               {sectorGroups.map((group) => (
-                                <div 
-                                  key={group.title} 
-                                  className="space-y-3"
-                                  onMouseEnter={handleMegaMenuEnter}
-                                >
+                                <div key={group.title} className="space-y-3">
                                   {/* Group Header */}
                                   <div>
                                     <h3 className={`text-lg font-bold ${group.textColor} mb-2`}>
@@ -408,15 +376,11 @@ export default function Header() {
                                   </div>
 
                                   {/* Sector Items */}
-                                  <div 
-                                    className="space-y-1.5"
-                                    onMouseEnter={handleMegaMenuEnter}
-                                  >
+                                  <div className="space-y-1.5">
                                     {group.items.slice(0, 6).map((item, itemIndex) => (
                                       <div
                                         key={itemIndex}
                                         className="flex items-start group cursor-pointer"
-                                        onMouseEnter={handleMegaMenuEnter}
                                       >
                                         <div className="w-1 h-1 bg-gray-400 rounded-full mt-1.5 mr-2 flex-shrink-0 group-hover:bg-gray-600 transition-colors"></div>
                                         <span className="text-sm text-gray-700 leading-relaxed hover:text-gray-900 transition-colors">
@@ -455,7 +419,7 @@ export default function Header() {
 
           {/* Mobile Menu Button */}
           <button 
-                          className="lg:hidden p-2 rounded-lg bg-gray-100 hover:bg-gray-200 transition-all duration-300 transform hover:scale-110 hover:rotate-3 group"
+            className="lg:hidden p-2 rounded-lg bg-gray-100 hover:bg-gray-200 transition-all duration-300 transform hover:scale-110 hover:rotate-3 group"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle mobile menu"
           >

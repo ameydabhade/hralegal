@@ -36,11 +36,11 @@ export default function HeroSection() {
                 </div>
               </div>
               
-              <p className="text-base text-gray-800 leading-relaxed max-w-2xl">
+              <p className="text-base text-gray-800 leading-relaxed max-w-2xl text-justify">
                 HRA Legal is a professional law firm with specialized expertise across various legal disciplines, including Civil and Business Law, Intellectual Property Laws (with a niche focus on Media & Entertainment, Technology, and Sports), Corporate and Commercial Law, Company Secretarial and Corporate Governance, Employment and Labor Laws, Environment Law, Property Law, Taxation Law and other developing areas of law.
               </p>
               
-              <p className="text-sm text-gray-700 leading-relaxed max-w-2xl">
+              <p className="text-sm text-gray-700 leading-relaxed max-w-2xl text-justify">
                 At HRA Legal, our seasoned and diligent lawyers provide personalized solutions to cater to the specific requirements of each client. We pride ourselves on delivering prompt, reliable and qualitative services that enables businesses to navigate the complexities of the law with confidence and clarity.
               </p>
             </div>

@@ -132,7 +132,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Our Story - Placeholder for new content */}
+      {/* Our Story - With content */}
       <section id="story" className="py-6 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <motion.div
@@ -147,32 +147,33 @@ export default function AboutPage() {
                 Our Story
               </h2>
             </div>
+            
             <div className="max-w-4xl mx-auto space-y-6">
-              <p className="text-lg text-gray-700 leading-relaxed">
+              <p className="text-lg text-gray-700 leading-relaxed text-justify">
                 After spending over 2 decades in the whirlwind of Media and Entertainment—where creativity power-packed with chaos and my deadlines chased each other endlessly—one quiet dream always stayed with me: to create something of my own!.
               </p>
-              <p className="text-lg text-gray-700 leading-relaxed">
+              <p className="text-lg text-gray-700 leading-relaxed text-justify">
                 That quiet dream wasn&apos;t random—it was woven into my roots. As a Gujarati, the spirit of entrepreneurship has always been part of my worldview. It just needed the right moment, and the right kind of courage, to take shape.
               </p>
-              <p className="text-lg text-gray-700 leading-relaxed">
+              <p className="text-lg text-gray-700 leading-relaxed text-justify">
                 That persistent thought, that gentle nudge, became the spark behind what is now &ldquo;HRA Legal&rdquo;. It wasn&apos;t born from a moment—it was carved from many. More than a year of silent but determined groundwork, countless late nights fuelled by resilience and coffee, intense conversations, scribbled notes, and the comforting presence of the dear ones who believed in my &ldquo;someday.&rdquo;
               </p>
-              <p className="text-lg text-gray-700 leading-relaxed">
+              <p className="text-lg text-gray-700 leading-relaxed text-justify">
                 That &ldquo;someday&rdquo; finally arrived for me. Wrapped in uncertainty, yes—but illuminated by purpose!
               </p>
-              <p className="text-lg text-gray-700 leading-relaxed">
+              <p className="text-lg text-gray-700 leading-relaxed text-justify">
                 Starting HRA Legal wasn&apos;t just a career leap. It&apos;s a decision made from an unwavering belief that law could be practiced with empathy, integrity, and excellence. A belief that we could build a firm where innovation meets experience, where professionalism walks hand-in-hand with personal connection, a space where clients aren&apos;t just advised—they&apos;re understood, a firm where solutions come wrapped in clarity, and support is always delivered with heart.
               </p>
-              <p className="text-lg text-gray-700 leading-relaxed">
+              <p className="text-lg text-gray-700 leading-relaxed text-justify">
                 Our firm stands on a rock-solid foundation: decades of real-world industry experience, strong-rooted academic grounding, and meaningful collaborations with inspiring minds and mentors. But above all, it&apos;s built on confidence, passion, perseverance, and the unshakable spirit of entrepreneurship.
               </p>
-              <p className="text-lg text-gray-700 leading-relaxed">
+              <p className="text-lg text-gray-700 leading-relaxed text-justify">
                 We&apos;re here for the contracts, the complex codes, the compliance checks—but also for the comfort, the reassurance, and the honest conversations in between.
               </p>
-              <p className="text-lg text-gray-700 leading-relaxed">
+              <p className="text-lg text-gray-700 leading-relaxed text-justify">
                 Our story is still unfolding. But one truth anchors us: dreams fuelled by grit and grace are unstoppable.
               </p>
-              <p className="text-lg text-gray-700 leading-relaxed font-semibold text-center text-gray-800">
+              <p className="text-lg text-gray-700 leading-relaxed text-justify font-semibold text-center text-gray-800">
                 Welcome to HRA Legal—a legal firm powered by passion, and guided by heart.
               </p>
             </div>
@@ -181,7 +182,7 @@ export default function AboutPage() {
       </section>
 
       {/* Mission */}
-              <section className="py-12 px-4 sm:px-6 lg:px-8 bg-[#ECE5DE]">
+      <section className="py-12 px-4 sm:px-6 lg:px-8 bg-[#ECE5DE]">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -201,7 +202,7 @@ export default function AboutPage() {
                 <h3 className="text-2xl font-bold text-gray-800 mb-6 border-b-2 border-gray-800 pb-2 inline-block">
                   Our Mission
                 </h3>
-                <p className="text-base text-gray-700 leading-relaxed">
+                <p className="text-base text-gray-700 leading-relaxed text-justify">
                   Our mission is to deliver outstanding professional legal services to a diverse range of global 
                   and domestic clients, including governments and economic entities, while upholding a strong 
                   focus on our Core Values, consistent profitability, long term sustainability, and social 
@@ -352,4 +353,4 @@ export default function AboutPage() {
       </section>
     </PageWrapper>
   );
-} 
+}

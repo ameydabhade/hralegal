@@ -100,7 +100,7 @@ export default function ServicesSection() {
             viewport={{ once: true }}
             className="mb-12 bg-white rounded-2xl p-8 border-l-4 border-gray-600 shadow-sm"
           >
-            <p className="text-lg text-gray-700 leading-relaxed text-center">
+            <p className="text-lg text-gray-700 leading-relaxed text-center text-justify">
               HRA Legal offers services including structuring, drafting, negotiation and execution of all types of contracts/agreements/documents/paperwork (including definitive agreements, long form agreements, founder agreements, non-disclosure agreements, no objection certificates, letters, agency agreements, et al), sending notices &amp; replies, legal research and analysis, consultations and advisory services, policy drafting and its implementation manual, tabulating databases, setting up of processes, systems, SOP&apos;s (standard operating procedures), providing opinions &amp; solutions, et al for established and emerging businesses, and/or managing entire legal department of your company.
             </p>
           </motion.div>
