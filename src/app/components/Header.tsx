@@ -113,6 +113,7 @@ export default function Header() {
   const [activeMegaMenu, setActiveMegaMenu] = useState<string | null>(null);
   
   const headerRef = useRef<HTMLElement>(null);
+  const dropdownTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -141,14 +142,31 @@ export default function Header() {
     };
   }, [activeMegaMenu, activeDropdown]);
 
-  const handleExpertiseClick = () => {
-    if (activeDropdown === 'Expertise') {
+  // Cleanup timeout on unmount
+  useEffect(() => {
+    return () => {
+      if (dropdownTimeoutRef.current) {
+        clearTimeout(dropdownTimeoutRef.current);
+      }
+    };
+  }, []);
+
+  const handleExpertiseHover = () => {
+    // Clear any existing timeout
+    if (dropdownTimeoutRef.current) {
+      clearTimeout(dropdownTimeoutRef.current);
+      dropdownTimeoutRef.current = null;
+    }
+    setActiveDropdown('Expertise');
+    setActiveMegaMenu(null);
+  };
+
+  const handleExpertiseLeave = () => {
+    // Add a delay before closing the dropdown
+    dropdownTimeoutRef.current = setTimeout(() => {
       setActiveDropdown(null);
       setActiveMegaMenu(null);
-    } else {
-      setActiveDropdown('Expertise');
-      setActiveMegaMenu(null);
-    }
+    }, 300); // 300ms delay
   };
 
   const handleMegaMenuClick = (type: string, event: React.MouseEvent) => {
@@ -160,6 +178,16 @@ export default function Header() {
     } else {
       setActiveMegaMenu(type);
     }
+  };
+
+  const closeAllDropdowns = () => {
+    // Clear any pending timeout
+    if (dropdownTimeoutRef.current) {
+      clearTimeout(dropdownTimeoutRef.current);
+      dropdownTimeoutRef.current = null;
+    }
+    setActiveDropdown(null);
+    setActiveMegaMenu(null);
   };
 
   // Navigation items with actual page sections
@@ -212,6 +240,7 @@ export default function Header() {
           <Link 
             href="/" 
             className="relative flex items-center text-lg font-bold text-gray-900 transition-all duration-300 transform hover:scale-105 group"
+            onClick={closeAllDropdowns}
           >
             {/* Corner Bracket Frame */}
             <div className="relative px-3 py-1.5">
@@ -247,17 +276,25 @@ export default function Header() {
             {navItems.map((item) => (
               <div key={item.label} className="relative">
                 {item.label === 'Expertise' ? (
-                  <button 
-                    onClick={handleExpertiseClick}
-                    className="relative text-gray-700 hover:text-gray-900 transition-all duration-300 text-sm font-semibold group transform hover:-translate-y-0.5"
+                  <div 
+                    className="relative"
+                    onMouseEnter={handleExpertiseHover}
+                    onMouseLeave={handleExpertiseLeave}
                   >
-                    {item.label}
-                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-red-600 transition-all duration-300 group-hover:w-full"></span>
-                  </button>
+                    <Link 
+                      href="/practice-areas"
+                      className="relative text-gray-700 hover:text-gray-900 transition-all duration-300 text-sm font-semibold group transform hover:-translate-y-0.5"
+                      onClick={closeAllDropdowns}
+                    >
+                      {item.label}
+                      <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-red-600 transition-all duration-300 group-hover:w-full"></span>
+                    </Link>
+                  </div>
                 ) : (
                   <Link 
                     href={item.href} 
                     className="relative text-gray-700 hover:text-gray-900 transition-all duration-300 text-sm font-semibold group transform hover:-translate-y-0.5"
+                    onClick={closeAllDropdowns}
                   >
                     {item.label}
                     <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-red-600 transition-all duration-300 group-hover:w-full"></span>
@@ -266,7 +303,11 @@ export default function Header() {
                 
                 {/* Dropdown Menu for Expertise */}
                 {item.label === 'Expertise' && activeDropdown === 'Expertise' && (
-                  <div className="absolute top-full left-0 mt-1 w-56 bg-white rounded-lg shadow-lg border border-gray-100 py-3 z-50">
+                  <div 
+                    className="absolute top-full left-0 mt-1 w-56 bg-white rounded-lg shadow-lg border border-gray-100 py-3 z-50"
+                    onMouseEnter={handleExpertiseHover}
+                    onMouseLeave={handleExpertiseLeave}
+                  >
                     {item.dropdown.map((subsection) => (
                       <div key={subsection.label} className="relative">
                         <button
@@ -412,6 +453,7 @@ export default function Header() {
             <Link 
               href="/contact"
               className="inline-flex items-center justify-center px-5 py-2 bg-[#B39F96] text-white text-sm font-semibold rounded-md hover:bg-[#A08B80] transition-colors duration-200"
+              onClick={closeAllDropdowns}
             >
               Get Legal Consultation
             </Link>
@@ -449,12 +491,18 @@ export default function Header() {
                   key={item.label}
                   href={item.href} 
                   className="text-gray-700 hover:text-gray-900 transition-colors text-xs font-medium"
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  onClick={() => {
+                    setIsMobileMenuOpen(false);
+                    closeAllDropdowns();
+                  }}
                 >
                   {item.label}
                 </Link>
               ))}
-              <div onClick={() => setIsMobileMenuOpen(false)}>
+              <div onClick={() => {
+                setIsMobileMenuOpen(false);
+                closeAllDropdowns();
+              }}>
                 <Link 
                   href="/contact"
                   className="text-gray-700 hover:text-gray-900 transition-colors text-xs font-medium relative w-full text-center block mt-2"

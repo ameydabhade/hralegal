@@ -210,9 +210,9 @@ export default function ContactPage() {
                       Office Address
                     </h3>
                     <p className="text-gray-700 text-sm">
-                      93 East Building, 705<br />
+                      93 East, 7th Floor, 705<br />
                       Mahakali Caves Road<br />
-                      Near MIDC/Ahura/Onida<br />
+                      Near Onida / Burger King building<br />
                       Andheri East, Mumbai 400093
                     </p>
                   </div>

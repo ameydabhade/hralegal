@@ -16,12 +16,12 @@ const founders = [
     ],
     companies: [
       "Sony Pictures Networks India Pvt. Ltd. (now Culver Max)",
-      "Shemaroo Entertainment Ltd.",
-      "Goldmines Telefilms Ltd.",
       "Reliance Industries Ltd. – Jio Studios",
       "Sony Music (India) Pvt. Ltd.",
       "Maddock Films",
-      "Reliance Retail (Consultant)"
+      "Reliance Retail (Consultant)",
+      "Shemaroo Entertainment Ltd.",
+      "Goldmines Telefilms Ltd."
     ],
     highlights: [
       "Successfully structured and negotiated high-value media agreements",

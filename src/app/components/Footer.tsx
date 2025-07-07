@@ -38,8 +38,8 @@ export default function Footer() {
                 <MapPin className="w-4 h-4 text-gray-500 flex-shrink-0 mt-0.5" />
                 <div>
                   <div className="font-medium text-white mb-1">Mumbai Office</div>
-                  <div>93 East Building, 705, Mahakali Caves Road,<br />
-                  Near MIDC/Ahura/Onida, Andheri East,<br />
+                  <div>93 East, 7th Floor, 705, Mahakali Caves Road,<br />
+                  Near Onida / Burger King building, Andheri East,<br />
                   Mumbai 400093, India</div>
                 </div>
               </div>
