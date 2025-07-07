@@ -37,7 +37,6 @@ export const category = defineType({
       return {
         title,
         subtitle: description || 'No description',
-        media: '🏷️',
       }
     },
   },
