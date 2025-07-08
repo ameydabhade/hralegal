@@ -114,6 +114,7 @@ export default function Header() {
   
   const headerRef = useRef<HTMLElement>(null);
   const dropdownTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const megaMenuTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -142,11 +143,14 @@ export default function Header() {
     };
   }, [activeMegaMenu, activeDropdown]);
 
-  // Cleanup timeout on unmount
+  // Cleanup timeouts on unmount
   useEffect(() => {
     return () => {
       if (dropdownTimeoutRef.current) {
         clearTimeout(dropdownTimeoutRef.current);
+      }
+      if (megaMenuTimeoutRef.current) {
+        clearTimeout(megaMenuTimeoutRef.current);
       }
     };
   }, []);
@@ -166,25 +170,20 @@ export default function Header() {
     dropdownTimeoutRef.current = setTimeout(() => {
       setActiveDropdown(null);
       setActiveMegaMenu(null);
-    }, 300); // 300ms delay
+    }, 3000); // 300ms delay
   };
 
-  const handleMegaMenuClick = (type: string, event: React.MouseEvent) => {
-    event.preventDefault();
-    event.stopPropagation();
-    
-    if (activeMegaMenu === type) {
-      setActiveMegaMenu(null);
-    } else {
-      setActiveMegaMenu(type);
-    }
-  };
+
 
   const closeAllDropdowns = () => {
-    // Clear any pending timeout
+    // Clear any pending timeouts
     if (dropdownTimeoutRef.current) {
       clearTimeout(dropdownTimeoutRef.current);
       dropdownTimeoutRef.current = null;
+    }
+    if (megaMenuTimeoutRef.current) {
+      clearTimeout(megaMenuTimeoutRef.current);
+      megaMenuTimeoutRef.current = null;
     }
     setActiveDropdown(null);
     setActiveMegaMenu(null);
@@ -283,11 +282,11 @@ export default function Header() {
                   >
                     <Link 
                       href="/practice-areas"
-                      className="relative text-gray-700 hover:text-gray-900 transition-all duration-300 text-sm font-semibold group transform hover:-translate-y-0.5"
+                    className="relative text-gray-700 hover:text-gray-900 transition-all duration-300 text-sm font-semibold group transform hover:-translate-y-0.5"
                       onClick={closeAllDropdowns}
-                    >
-                      {item.label}
-                      <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-red-600 transition-all duration-300 group-hover:w-full"></span>
+                  >
+                    {item.label}
+                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-red-600 transition-all duration-300 group-hover:w-full"></span>
                     </Link>
                   </div>
                 ) : (
@@ -312,11 +311,28 @@ export default function Header() {
                       <div key={subsection.label} className="relative">
                         <button
                           className="w-full text-left block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors duration-200 lowercase"
+                          onMouseEnter={() => {
+                            // Clear any existing mega menu timeout
+                            if (megaMenuTimeoutRef.current) {
+                              clearTimeout(megaMenuTimeoutRef.current);
+                              megaMenuTimeoutRef.current = null;
+                            }
+                            
+                            if (subsection.label === 'Practice Areas') {
+                              setActiveMegaMenu('practice-areas');
+                            } else if (subsection.label === 'Sectors') {
+                              setActiveMegaMenu('sectors');
+                            }
+                          }}
                           onClick={(e) => {
                             if (subsection.label === 'Practice Areas') {
-                              handleMegaMenuClick('practice-areas', e);
+                              window.location.href = '/practice-areas';
+                              setActiveDropdown(null);
+                              setActiveMegaMenu(null);
                             } else if (subsection.label === 'Sectors') {
-                              handleMegaMenuClick('sectors', e);
+                              window.location.href = '/sectors';
+                              setActiveDropdown(null);
+                              setActiveMegaMenu(null);
                             } else {
                               window.location.href = subsection.href;
                               setActiveDropdown(null);
@@ -329,7 +345,23 @@ export default function Header() {
                         
                         {/* Mega Menu for Practice Areas */}
                         {subsection.label === 'Practice Areas' && activeMegaMenu === 'practice-areas' && (
-                          <div className="fixed left-1/2 transform -translate-x-1/2 top-32 w-[90vw] max-w-6xl bg-white rounded-lg shadow-xl border border-gray-100 p-6 z-60">
+                          <div 
+                            className="fixed left-1/2 transform -translate-x-1/2 top-32 w-[90vw] max-w-6xl bg-white rounded-lg shadow-xl border border-gray-100 p-6 z-60"
+                            onMouseEnter={() => {
+                              // Clear any existing timeout when hovering over mega menu
+                              if (megaMenuTimeoutRef.current) {
+                                clearTimeout(megaMenuTimeoutRef.current);
+                                megaMenuTimeoutRef.current = null;
+                              }
+                              setActiveMegaMenu('practice-areas');
+                            }}
+                            onMouseLeave={() => {
+                              // Add delay before closing mega menu
+                              megaMenuTimeoutRef.current = setTimeout(() => {
+                                setActiveMegaMenu(null);
+                              }, 3000); // 300ms delay
+                            }}
+                          >
                             <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-6">
                               {practiceAreaGroups.map((group) => (
                                 <div key={group.title} className="space-y-3">
@@ -404,7 +436,23 @@ export default function Header() {
 
                         {/* Mega Menu for Sectors */}
                         {subsection.label === 'Sectors' && activeMegaMenu === 'sectors' && (
-                          <div className="fixed left-1/2 transform -translate-x-1/2 top-32 w-[90vw] max-w-6xl bg-white rounded-lg shadow-xl border border-gray-100 p-6 z-60">
+                          <div 
+                            className="fixed left-1/2 transform -translate-x-1/2 top-32 w-[90vw] max-w-6xl bg-white rounded-lg shadow-xl border border-gray-100 p-6 z-60"
+                            onMouseEnter={() => {
+                              // Clear any existing timeout when hovering over mega menu
+                              if (megaMenuTimeoutRef.current) {
+                                clearTimeout(megaMenuTimeoutRef.current);
+                                megaMenuTimeoutRef.current = null;
+                              }
+                              setActiveMegaMenu('sectors');
+                            }}
+                            onMouseLeave={() => {
+                              // Add delay before closing mega menu
+                              megaMenuTimeoutRef.current = setTimeout(() => {
+                                setActiveMegaMenu(null);
+                              }, 3000); // 300ms delay
+                            }}
+                          >
                             <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-6">
                               {sectorGroups.map((group) => (
                                 <div key={group.title} className="space-y-3">
