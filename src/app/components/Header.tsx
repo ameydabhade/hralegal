@@ -389,7 +389,7 @@ export default function Header() {
                               setActiveMegaMenu('sectors');
                             }
                           }}
-                          onClick={(e) => {
+                          onClick={() => {
                             if (subsection.label === 'Practice Areas') {
                               window.location.href = '/practice-areas';
                               setActiveDropdown(null);
