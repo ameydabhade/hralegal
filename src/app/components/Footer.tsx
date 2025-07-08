@@ -126,16 +126,20 @@ export default function Footer() {
                   <Linkedin className="w-4 h-4" />
                 </a>
                 <a 
-                  href="#" 
-                  className="w-8 h-8 bg-[#B39F96] rounded-full flex items-center justify-center hover:bg-[#A08B80] transition-colors opacity-50 cursor-not-allowed"
-                  aria-label="Facebook (Coming Soon)"
+                  href="https://www.facebook.com/people/HRA-Legal/61578068668053/" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-8 h-8 bg-[#B39F96] rounded-full flex items-center justify-center hover:bg-[#A08B80] transition-colors"
+                  aria-label="Facebook"
                 >
                   <Facebook className="w-4 h-4" />
                 </a>
                 <a 
-                  href="#" 
-                  className="w-8 h-8 bg-[#B39F96] rounded-full flex items-center justify-center hover:bg-[#A08B80] transition-colors opacity-50 cursor-not-allowed"
-                  aria-label="Instagram (Coming Soon)"
+                  href="https://www.instagram.com/hra_legal?igsh=d3J0NGR5b3RjZHF1&utm_source=qr" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-8 h-8 bg-[#B39F96] rounded-full flex items-center justify-center hover:bg-[#A08B80] transition-colors"
+                  aria-label="Instagram"
                 >
                   <Instagram className="w-4 h-4" />
                 </a>
