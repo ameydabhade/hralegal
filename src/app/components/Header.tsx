@@ -200,7 +200,7 @@ export default function Header() {
       label: 'About Us',
       href: '/about',
       dropdown: [
-        { label: 'meet the founder', href: '/about#founder' },
+        { label: 'meet the founder', href: '/about' },
         { label: 'our story', href: '/about#story' }
       ]
     },
@@ -289,6 +289,35 @@ export default function Header() {
                     <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-red-600 transition-all duration-300 group-hover:w-full"></span>
                     </Link>
                   </div>
+                ) : item.label === 'About Us' ? (
+                  <div 
+                    className="relative"
+                    onMouseEnter={() => {
+                      // Clear any existing timeout
+                      if (dropdownTimeoutRef.current) {
+                        clearTimeout(dropdownTimeoutRef.current);
+                        dropdownTimeoutRef.current = null;
+                      }
+                      setActiveDropdown('About Us');
+                      setActiveMegaMenu(null);
+                    }}
+                    onMouseLeave={() => {
+                      // Add a delay before closing the dropdown
+                      dropdownTimeoutRef.current = setTimeout(() => {
+                        setActiveDropdown(null);
+                        setActiveMegaMenu(null);
+                      }, 3000); // 3000ms delay
+                    }}
+                  >
+                    <Link 
+                      href="/about"
+                      className="relative text-gray-700 hover:text-gray-900 transition-all duration-300 text-sm font-semibold group transform hover:-translate-y-0.5"
+                      onClick={closeAllDropdowns}
+                    >
+                      {item.label}
+                      <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-red-600 transition-all duration-300 group-hover:w-full"></span>
+                    </Link>
+                  </div>
                 ) : (
                   <Link 
                     href={item.href} 
@@ -300,6 +329,42 @@ export default function Header() {
                   </Link>
                 )}
                 
+                {/* Dropdown Menu for About Us */}
+                {item.label === 'About Us' && activeDropdown === 'About Us' && (
+                  <div 
+                    className="absolute top-full left-0 mt-1 w-56 bg-white rounded-lg shadow-lg border border-gray-100 py-3 z-50"
+                    onMouseEnter={() => {
+                      // Clear any existing timeout when hovering over dropdown
+                      if (dropdownTimeoutRef.current) {
+                        clearTimeout(dropdownTimeoutRef.current);
+                        dropdownTimeoutRef.current = null;
+                      }
+                      setActiveDropdown('About Us');
+                    }}
+                    onMouseLeave={() => {
+                      // Add a delay before closing the dropdown
+                      dropdownTimeoutRef.current = setTimeout(() => {
+                        setActiveDropdown(null);
+                        setActiveMegaMenu(null);
+                      }, 3000); // 3000ms delay
+                    }}
+                  >
+                    {item.dropdown.map((subsection) => (
+                      <Link
+                        key={subsection.label}
+                        href={subsection.href}
+                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors duration-200 lowercase"
+                        onClick={() => {
+                          setActiveDropdown(null);
+                          setActiveMegaMenu(null);
+                        }}
+                      >
+                        {subsection.label}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+
                 {/* Dropdown Menu for Expertise */}
                 {item.label === 'Expertise' && activeDropdown === 'Expertise' && (
                   <div 
